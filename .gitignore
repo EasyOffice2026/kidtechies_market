@@ -1,0 +1,10 @@
+# Drafts are working output, mirrored to Drive - not source
+drafts/
+# Real client exports never enter the repo (synthetic fixtures do)
+contracts/live-exports/
+*.local.csv
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
