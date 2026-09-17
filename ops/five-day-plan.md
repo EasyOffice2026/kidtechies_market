@@ -18,13 +18,16 @@ exports, the Arabic reviewer, channel approvals. Those stay gates.
 
 ## Day 1 — Access, decisions, knowledge approval
 
-| Task | Output |
-|---|---|
-| Work through `ops/access-checklist.md` with the client | Every row ticked or logged as a blocker |
-| Close decisions D1, D3, D4 (facts source, brand name, scheduled tasks) | `ops/decision-log.md` updated |
-| Walk the client through `knowledge/` and `site-discrepancy-log.md` | Client understands why the site is not the fact source |
-| Hand over both CSV contracts **today**, with the sample fixtures | Client has 4 days to produce a real export |
-| Verify Claude capabilities; if scheduled tasks are unavailable, switch to manual-trigger mode | Decision recorded |
+**Materials: `ops/day-1/`** — all five documents are written and ready to run.
+
+| Task | Run with | Output |
+|---|---|---|
+| Verify Claude capabilities before the session | `day-1/capability-verification.md` | D4 closed; fallback adopted if needed |
+| Run the 90-minute kick-off | `day-1/kickoff-agenda.md` | Session held to a script, critical path protected |
+| Get product facts signed off | `day-1/fact-approval-request.md` *(client-facing)* | D1 + D3 closed; Part 4 gaps answered |
+| Hand over the data contracts **today** | `day-1/data-export-request.md` *(client-facing)* + the two clean fixtures | Client has 4 days and a named owner for the custom events |
+| Walk `ops/access-checklist.md` row by row | | Every row ticked or logged with an owner |
+| Record everything in the room | `day-1/session-record.md` | Committed same day |
 
 **Exit:** access confirmed, D1/D3/D4 closed, knowledge pack with the client for
 approval, CSV contracts delivered.
