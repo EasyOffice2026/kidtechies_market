@@ -1,7 +1,7 @@
 ---
 file: product-facts.md
 owner: KidTechies (client) - founder or nominated approver only
-version: 0.2-DRAFT
+version: 0.3-DRAFT
 last-approved: NOT YET APPROVED
 site-verified: 2026-09-18 against kidtechies.com
 status: AWAITING CLIENT CONFIRMATION (decision D1)
@@ -174,15 +174,36 @@ site and it costs nothing but a decision.
 
 ## Competitor figures - third-party, re-check before use
 
-| Competitor | Price | Status |
-|---|---|---|
-| CodaKid, Create&Learn, Tynker, Juni Learning | approx. $11-25 / month | THIRD-PARTY, UNVERIFIED |
-| Google Teachable Machine, Machine Learning for Kids, Code.org AI units | Free tools, not courses | THIRD-PARTY, UNVERIFIED |
+**Superseded 2026-09-18.** The dossier's "$11-25 / month" band does not match
+what is published today.
 
-From third-party sources via the dossier appendix, which flags them as needing
-re-checking before anything investor-facing. An agent citing a competitor price
-must re-verify it in the same run and cite the source, or mark it approximate
-and dated.
+| Competitor | Observed price | Checked | Status |
+|---|---|---|---|
+| Tynker | from **$7.50** / month | 2026-09-18 | INDICATIVE - from a roundup, not the vendor's own pricing page |
+| CodaKid | from **$29** / month self-study; $249 / month 1:1 | 2026-09-18 | INDICATIVE |
+| Juni Learning | from **$299** / month, one session per week | 2026-09-18 | INDICATIVE |
+| Create&Learn | not found | 2026-09-18 | UNKNOWN |
+| Google Teachable Machine, Machine Learning for Kids, Code.org AI units | Free tools, not courses | - | THIRD-PARTY, UNVERIFIED |
+
+### This breaks a message pillar
+
+Message rank 4 in `audience.md` frames $70 as *"less than three months of the
+alternatives, forever."*
+
+That holds against CodaKid at $29. Against **Tynker at $7.50 it is false** -
+$70 is roughly nine months, not three. An agent using the dossier's framing
+against Tynker's real price would publish a false comparison to a parent who can
+check it in one click.
+
+**Until the client rules on this, agents may not use the "three months" framing
+at all.** See `claims-allowed.md`. The honest version of the argument still
+works - one payment, no recurring charge, nothing to cancel - it just cannot
+lean on an invented multiple.
+
+Prices above are indicative and come from comparison roundups rather than vendor
+pricing pages. An agent citing any of them must re-verify on the vendor's own
+site in the same run and cite that page, or omit the figure. Do not publish a
+price comparison built on this table alone.
 
 ## Gaps remaining for v1.0
 

@@ -26,7 +26,9 @@ lists only five. (Analysis finding F5.)
 
 | # | Item | Source | Persona | Status | Notes |
 |---|---|---|---|---|---|
-| 1 | Your child is about to start AI classes - how to help at home | Dossier S05 channel #1 | Vision 2030 parent | **BLOCKED** | Decision D5. The dossier calls this hook perishable and it is now two weeks past the dossier date, against a 2025-26 rollout. Market Listener's first run decides whether this leads or gets re-angled. Do not write it on assumption. |
+| 1 | **Your child's school starts teaching AI this term — what they'll learn, and what you can do at home** | Dossier S05 channel #1, re-angled | Vision 2030 parent | **READY — URGENT** | Unblocked 2026-09-18 by Agent 1's first run (D5). **UAE-first, Saudi as supporting context only.** The UAE teaches "Artificial Intelligence and Technology" as a standalone subject from this term, KG–G12, public and private schools. Saudi's rollout is a year old and is context, not news. Perishable: this is a September story. English, then Arabic immediately. |
+| 1b | AI sounds certain even when it's wrong — how to teach a nine-year-old to notice | Agent 1 briefing, 2026-09-18 | Worried screen-time parent | READY | The most-cited parent anxiety answered by the product's founding premise. Doubles as nurture email day 4. |
+| 1c | What does an AI course for children actually cost? A plain comparison | Agent 1 briefing, 2026-09-18 | Both parent personas | HOLD | Blocked on the client's price-framing decision. Every competitor price must be re-verified on the vendor's own pricing page before writing — the table in `product-facts.md` is indicative only. |
 | 2 | The lantern that learned the way | Story Shelf | Vision 2030 parent | READY | Story Shelf SEO layer: the story, the AI idea inside it, a discussion question, a printable, internal link to the matching mission. |
 | 3 | The mirror that only knew roses | Story Shelf | Worried screen-time parent | READY | The AI idea here is training-data bias. Strong fit for the safety persona. |
 | 4 | The clockwork nightingale | Story Shelf | Vision 2030 parent | READY | |

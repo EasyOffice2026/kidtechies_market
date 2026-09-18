@@ -43,6 +43,22 @@ These are descriptions of what the product is, all traceable to
 | **Stale privacy claims** | Any privacy statement not currently true in `product-facts.md`. |
 | **The refund promise** | Until it is live on the site and CONFIRMED. Currently PROPOSED. |
 | **Runtime as headline value** | "23:48 of animated film" beside the price. See `product-facts.md`. |
+| **"Less than three months of the alternatives"** | Suspended 2026-09-18. The framing assumed competitors at $11–25/month; Tynker is published at $7.50, where $70 is about nine months. A parent can check this in one click. Awaiting client decision — see `product-facts.md`. |
+
+### The price argument that still works
+
+The suspended framing is not the only way to make the point, and the remaining
+version is stronger because it needs no arithmetic:
+
+> One payment. No subscription, no renewal, nothing to cancel.
+
+That is true against every competitor at every price, it is verifiable on the
+pricing page, and it survives a competitor changing their price next week. Use
+it in place of any multiple-of-months comparison.
+
+A specific comparison against a **named** competitor at a **dated, sourced**
+price remains permitted under the evidence rules below — what is prohibited is
+the generic "three months" claim resting on a band that no longer holds.
 
 ## Evidence-required - permitted only with a cited, current source
 

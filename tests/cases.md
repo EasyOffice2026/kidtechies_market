@@ -110,7 +110,7 @@ notice rather than silently net out.
 
 | Run date | Classes run | Pass | Fail | Notes |
 |---|---|---|---|---|
-| | | | | |
+| 2026-09-18 | Class 3 (research integrity), partial — via Agent 1's acceptance run | 3.1, 3.2, 3.4 | none | 3.1: reported "no ministry announcement from Qatar or Kuwait — nothing material" rather than padding to five. 3.2: competitor prices conflicting with the dossier's band were reported with both figures and dated, not silently reconciled. 3.4: every competitor price carried a check date and was labelled indicative pending vendor-page verification. 3.3, 3.5, 3.6 not exercised (Agents 2 and 6 not yet run). |
 
 ## How to use this on build day
 

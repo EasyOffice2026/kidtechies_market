@@ -70,7 +70,7 @@ also exactly what a school data-protection officer needs to hear.
 | 1 | Understanding, not just using | The AI Detective premise: discover how AI sees, hears, compares and sometimes gets things wrong. No other kids' platform teaches AI's failure modes as the curriculum. |
 | 2 | Nothing about your child leaves the device | No account, no tracking scripts, no advertising SDKs, one-click erase. |
 | 3 | Try it in ten seconds, free | Mission 1 opens with no signup, no card. |
-| 4 | Buy once, keep it | $70 for four courses vs $11-25/month competitors. "Less than three months of the alternatives, forever." |
+| 4 | Buy once, keep it | $70 for four courses, one payment, no subscription, nothing to cancel. ⚠ The "less than three months of the alternatives" framing is **suspended** as of 2026-09-18 — observed competitor prices run $7.50 to $299/month, so the multiple no longer holds. See `claims-allowed.md`. |
 | 5 | Made like a film, not a lecture | 14 hand-animated missions, Maya, Pip and Glitch, six original fairy tales, printables for screen-free days. |
 
 Ranks 1-5 are also the five message pillars the Creative Tester varies and the
