@@ -28,3 +28,7 @@ The founder's Thursday customer calls are the input that keeps
 `brand-voice.md` alive (dossier S09). When a real parent phrase goes into the
 file, log it here with the date it was heard. A voice file that has not changed
 in three months is not being used.
+
+---
+
+| 2026-09-18 | product-facts.md, site-discrepancy-log.md, content-queue.md | 0.2-DRAFT | Live site verification. Recovered all 4 course names, all 6 Story Shelf titles, verified 14 missions and 4 capstones individually. Promoted the 30-day refund from PROPOSED to SITE-VERIFIED (it exists on /terms). Corrected age structure from three equal bands to "9-12, adaptable for 6-8 and 13-16". Added $100 anchor price and per-course figures. Queue items 5-7 unblocked. | NOT YET APPROVED |

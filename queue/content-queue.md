@@ -30,9 +30,9 @@ lists only five. (Analysis finding F5.)
 | 2 | The lantern that learned the way | Story Shelf | Vision 2030 parent | READY | Story Shelf SEO layer: the story, the AI idea inside it, a discussion question, a printable, internal link to the matching mission. |
 | 3 | The mirror that only knew roses | Story Shelf | Worried screen-time parent | READY | The AI idea here is training-data bias. Strong fit for the safety persona. |
 | 4 | The clockwork nightingale | Story Shelf | Vision 2030 parent | READY | |
-| 5 | Story Shelf tale 4 | Story Shelf | - | **BLOCKED** | Title not in source documents. Obtain from client. |
-| 6 | Story Shelf tale 5 | Story Shelf | - | **BLOCKED** | Title not in source documents. |
-| 7 | Story Shelf tale 6 | Story Shelf | - | **BLOCKED** | Title not in source documents. |
+| 5 | The baker who sorted the starfruit | Story Shelf | Vision 2030 parent | READY | Unblocked 2026-09-18 from the live sitemap. |
+| 6 | Wren and the whispering wood | Story Shelf | Worried screen-time parent | READY | Unblocked 2026-09-18 from the live sitemap. |
+| 7 | The two guardians of the amber bridge | Story Shelf | Vision 2030 parent | READY | Unblocked 2026-09-18 from the live sitemap. |
 | 8 | How to explain AI to a 7 year old | Dossier S05 channel #2 | Vision 2030 parent | READY | Answer-first article targeting a real parent query. |
 | 9 | Is ChatGPT safe for kids | Dossier S05 channel #2 | Worried screen-time parent | READY | Highest-intent query on the list. Calm voice, no fear. |
 | 10 | What should a 10 year old know about AI | Dossier S05 channel #2 | Vision 2030 parent | READY | |
@@ -45,7 +45,10 @@ lists only five. (Analysis finding F5.)
 ## Founder instructions
 
 - Reorder freely. The Factory always takes the top `READY` item.
-- Items 5-7 unblock the moment the client supplies three tale titles.
+- Items 5-7 unblocked on 2026-09-18 — all six Story Shelf titles were recovered
+  from the live sitemap, so the full SEO layer is now writable.
 - Item 1 unblocks or gets rewritten after Agent 1's first Monday briefing.
+- Item 14 (the teacher/club article) leans on printable sheets, which could not
+  be verified on the site. Confirm they exist before writing it.
 - Keep at least three `READY` items above any `BLOCKED` one so a Monday,
   Wednesday or Saturday run never stalls.

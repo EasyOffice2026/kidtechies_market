@@ -37,8 +37,8 @@ all.
 |---|---|---|---|
 | Courses | 4 | ☐ | |
 | Missions | 14 | ☐ | |
-| Age range | 6–16 | ☐ | |
-| Age bands | 6–8, 9–12, 13–16 | ☐ | |
+| Core age band | **9–12** | ☐ | |
+| Adaptable to | 6–8 and 13–16 | ☐ | |
 | Guided learning time | 8–9 hours (approx.) | ☐ | |
 | Activities | 28 | ☐ | |
 | Quiz questions | 70 | ☐ | |
@@ -47,6 +47,18 @@ all.
 | Printable activity sheets | Yes | ☐ | |
 | Story Shelf tales | 6 | ☐ | |
 | Animated film runtime | 23:48 | ☐ | |
+
+**On the age range — please read this one carefully.** Your parent page says
+*"ages 9–12, adaptable for 6–8 and 13–16."* The Growth Dossier presents these as
+three equal bands, which reads as three separately built tracks.
+
+Those are different products. A parent of a seven-year-old who is told they are
+buying a course made for their child's age, and then finds material designed for
+nine-to-twelves and adapted downwards, has been misled — and that parent
+reviews, refunds and tells other parents.
+
+So unless you correct us, the agents will write *"designed for 9–12, adaptable
+for younger and older children."* Slightly less tidy, and true.
 
 **On the runtime figure.** We will keep it and use it — as a craft detail,
 phrased as *"every second animated by hand, no filler lectures."* What it will
@@ -65,13 +77,35 @@ the comparison.
 | Free tier | Mission 1 + all 6 Story Shelf tales | ☐ | |
 | Signup for free tier | None required | ☐ | |
 
-**Refund promise — decision needed.** The Growth Dossier recommends a 30-day
-refund line on the pricing page. It is not on the site today, so the agents are
-currently forbidden from mentioning it.
+### Your refund promise already exists — and nobody can see it
 
-☐ We will add a 30-day refund promise — agents may use it from the date it goes live
-☐ We will add a different promise: _________________________________
-☐ No refund promise — agents must never mention one
+The Growth Dossier says your site has no refund promise. That is not right. Your
+terms page says:
+
+> "If the course is not right for your child, ask for a refund within 30 days
+> and you will get one."
+
+That is an excellent promise, plainly written, and it is buried on the one page
+nobody reads. It belongs on the pricing page, beside the price, where it removes
+the last hesitation before someone pays.
+
+☐ Confirmed — 30 days, no form, no reason. Move it to the pricing page.
+☐ The wording needs changing first: _________________________________
+
+### The $100 anchor
+
+Your pricing page shows the bundle as **$100 struck through, $70, "Save $30 ·
+30% off."** This is not mentioned anywhere in the Growth Dossier, so we would
+like your steer before the agents write about price.
+
+The dossier's recommended framing is *"one payment, less than three months of
+the alternatives, forever"* — a permanent-value argument. A struck-through
+anchor is a different argument: a discount, which invites the question of when
+it ends. Both work. They do not work together.
+
+☐ Keep the anchor — agents write price as a discount
+☐ Drop the anchor, $70 is just the price — agents write permanent value
+☐ Let's discuss
 
 ## Part 3 — Privacy claims
 
@@ -79,16 +113,18 @@ These are the most important rows on this form. The privacy architecture is the
 brand's strongest differentiator, and a stale privacy claim in parent-facing copy
 is the single highest-consequence failure this system could produce.
 
-| Fact | We have | Confirm | Correct value |
-|---|---|---|---|
-| Account required | No | ☐ | |
-| Child data sent to a server | None | ☐ | |
-| Progress storage | Browser local storage only | ☐ | |
-| Third-party tracking scripts | None | ☐ | |
-| Advertising SDKs | None | ☐ | |
-| One-click erase child data | Yes | ☐ | |
+These are your own words, taken from your parents page on 18 September. We would
+rather the agents reuse this wording than paraphrase it — it is already better
+than anything we would write.
 
-**⚠ If you install analytics, row 4 changes the same day.** The Growth Dossier
+| Your site says | Confirm still true |
+|---|---|
+| "No account, no sign-up, no email address" | ☐ |
+| "Progress is stored in this browser only, never sent to a server" | ☐ |
+| "No advertising, no tracking scripts, no third-party analytics" | ☐ |
+| "Erase all progress, badges and activity records" | ☐ |
+
+**⚠ If you install analytics, row 3 changes the same day.** The Growth Dossier
 recommends a cookieless, no-personal-data tool so the promise stays literally
 true — but "no third-party analytics" would no longer be accurate, and the
 honest replacement is to name the tool openly on the parent page as a further
@@ -96,15 +132,32 @@ proof point. Tell us the day it goes live and we update the file that morning.
 
 ## Part 4 — Things we could not find
 
+We went through your live site on 18 September and recovered most of what was
+missing — all four course names and all six Story Shelf titles. What follows is
+what the site could not tell us.
+
 The agents cannot write about any of these until you fill them in.
 
 | # | Needed | Why it matters | Your answer |
 |---|---|---|---|
-| 1 | Names of courses 3 and 4 | We have AI Detective Academy and Smart and Safe AI Heroes. Two of four courses are currently unnameable in copy. | |
-| 2 | Titles of the other 3 Story Shelf tales | We have the lantern that learned the way, the mirror that only knew roses, the clockwork nightingale. Three of the six SEO pages are blocked. | |
-| 3 | Founder name — and may we use it in copy? | The pricing page has no human on it at all. | |
-| 4 | Company location | Required trust signal; also what a school asks before replying. | |
-| 5 | Contact email address | Same. | |
+| 1 | Do **28 activities** and **70 quiz questions** exist? | Both appear in the Growth Dossier but nowhere on your site. They are good, concrete numbers and we would like to use them — we just cannot invent them. | |
+| 2 | Is there a **printable certificate**? | Same. Not found anywhere. | |
+| 3 | Do **printable activity sheets** exist? ⚑ | This one is urgent. Your whole pitch to teachers and homeschool leads rests on printables solving the problem of a classroom where half the children have no device. If they do not exist yet, we need to rethink the school outreach before the first emails go out. | |
+| 4 | Are **Maya, Pip and Glitch** current? | The dossier names them as the characters. We could not find them on the pages we checked. | |
+| 5 | Exactly what is **free**? | Which mission, and which stories. The free trial is your single strongest asset and we want to describe it precisely. | |
+| 6 | **Founder name** — and may we use it in copy? | Your pricing page has no human being on it at all. | |
+| 7 | **Company legal name and location** | Required trust signal, and the first thing a school checks before replying. | |
+| 8 | **Contact email address** | See the note below. | |
+
+### One thing you will want to fix today
+
+Your terms page currently says questions should go to *"whoever operates this
+installation of AI for Kids."*
+
+That is unmodified template text, sitting on a page a parent reads before paying
+and a school's data-protection officer reads before replying. It reads as
+abandoned. It is the cheapest trust fix available to you — it costs a decision,
+not a development day.
 
 ## Part 5 — Site corrections that unblock claims
 
