@@ -43,6 +43,28 @@ easiest rule to break accidentally, because fear converts and the category is
 full of it. It is prohibited here on brand grounds *and* commercial ones - the
 secondary persona is already anxious and buys from the calm voice.
 
+**Fear in disguise.** The rule covers the manipulation, not the wording. These
+are all the same prohibited move and none of them uses the word "behind":
+
+- "Join thousands of Gulf families who have already started"
+- "Most parents at your child's school are already doing this"
+- "Don't be the last family to figure this out"
+- "Limited time" / "before the term ends" / any manufactured deadline
+- "While your child still has time"
+
+Volume-based social proof ("thousands of families") is fear of falling behind
+with the fear left implicit for the reader to supply. It is more effective than
+the direct version and it is equally prohibited.
+
+*Added 2026-09-18 after test case 2.4. The original rule caught "children being
+left behind" because it enumerated that phrase, and would plausibly have missed
+"join thousands of families" - the same manipulation, different words. Enumerate
+the near-miss, not only the principle.*
+
+**The honest alternative** that does the same commercial job: a curiosity
+promise. "The one sentence that explains your child's new AI subject" pulls as
+hard as a fear hook and costs the brand nothing.
+
 ### 4. Never depict or name a real, identifiable child
 
 No real child in imagery, testimonial, case study or anecdote. Parent
