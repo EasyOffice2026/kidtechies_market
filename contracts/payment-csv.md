@@ -54,3 +54,20 @@ These are the dossier's modelled targets, taken from published prices rather
 than actual traffic. The analyst may compare against them, but must label them
 as targets - they are not warranties and KT/DEV/2026-001 section 8.2 is explicit
 that no business outcome is guaranteed by this system.
+
+---
+
+## Amendment 2026-09-20 — optional `original_order_week`
+
+Arising from test case 4.1. A refund appeared in the same row as the week's
+orders with no way to tell whether it related to an order from that week or an
+earlier one. The two readings point in opposite directions — a 14% refund rate
+or a routine historical refund — and the agent correctly refused to guess.
+
+| Column | Type | Required | Meaning |
+|---|---|---|---|
+| `original_order_week` | ISO date | **optional** | Monday of the week the refunded order was originally placed |
+
+Optional, so existing exports stay valid. Supplied, it lets the analyst report a
+true refund rate. Omitted, the analyst will keep flagging the ambiguity — which
+is correct behaviour, just less useful than the answer.
