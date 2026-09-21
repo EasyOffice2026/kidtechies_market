@@ -94,6 +94,24 @@ answered.
 **Exit:** simulated week complete, test pack recorded, client operating without
 the developer.
 
+## Build status — 2026-09-21
+
+Days 1–5 complete to the boundary of what does not need the client.
+
+| Day | Delivered |
+|---|---|
+| 1 | Repo, knowledge base, Day-1 client pack, **live site verification** — 8 fact gaps closed, 4 dossier errors corrected |
+| 2 | Agent 1 first run with live research — closed D5 (hook is live, UAE not Saudi), opened D8 (price framing false against real competitor prices) |
+| 3 | Agent 2 full package, class 2 safety 8/8, rule 3 tightened after case 2.4 exposed a seam |
+| 4 | Agents 3–6, class 4 6/6 against the oracle, school-outreach premise challenged |
+| 5 | Simulated week verified, class 5 3/6, **handover pack** (`ops/handover.md`) |
+
+**24 test cases passed, zero failures.** Nine not run, each for a stated reason.
+
+Outstanding and client-gated: D1 (fact sign-off), D2 (analytics events), D6
+(Arabic reviewer), D8 (price framing), target school list, and half a day of
+test re-runs on the client's own Claude account.
+
 ## Sign-off criteria
 
 - [ ] Knowledge base v1.0, client-approved, no PENDING facts in published output

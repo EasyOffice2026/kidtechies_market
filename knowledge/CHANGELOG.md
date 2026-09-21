@@ -14,6 +14,7 @@ approver.
 | 2026-09-18 | product-facts.md, claims-allowed.md, audience.md, content-queue.md | 0.3-DRAFT | Agent 1 first run. Competitor pricing band superseded: observed Tynker $7.50, CodaKid $29, Juni $299 vs the dossier's $11-25. **Message pillar 4's "less than three months" framing suspended** - false against Tynker. Queue item 1 unblocked and re-angled UAE-first (D5 closed); items 1b, 1c added. | NOT YET APPROVED |
 | 2026-09-18 | child-safety-rules.md, content-queue.md | 0.4-DRAFT | Agent 2 first package (queue item 1, UAE curriculum). Test classes 2 and 6 run: 8/8 and 3/4, zero failures. Rule 3 tightened after case 2.4 - volume-based social proof ("join thousands of families") added as a named fear-in-disguise example. Queue item 1 marked DONE. | NOT YET APPROVED |
 | 2026-09-20 | contracts/payment-csv.md, logs/ | 0.5-DRAFT | Day 4: Agents 3-6 executed. Test class 4 6/6, case 6.2 PASS. Payment contract amended with optional `original_order_week` after case 4.1. Creative results log and school prospect log seeded. School Outreach premise finding recorded - named ICT contacts are not published by Gulf schools. | NOT YET APPROVED |
+| 2026-09-21 | tests/, ops/handover.md | 0.5-DRAFT | Day 5: simulated week verified, class 5 3/6 (3 need client account), handover pack written. Cumulative: 24 cases passed, zero failures. Sign-off blocked on client items D1, D2, D6, D8 and the target school list. | NOT YET APPROVED |
 
 ## The promotion rule
 
