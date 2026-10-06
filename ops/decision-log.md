@@ -12,6 +12,8 @@ of leaving it open is visible. Close by editing the row and committing.
 | D3 | **Brand name.** KidTechies vs "AI for Kids" (dossier S02, "Claims to retire"). Two brands split search, shares and word of mouth. | Client | `brand-voice.md` finalisation; every agent output | OPEN - proceeding with KidTechies as brand, "AI for kids" as descriptor |
 | D4 | **Claude scheduled-task capability** on the client's current plan. | Developer to verify, client to confirm plan | All six agent cadences | OPEN - fallback documented in `ops/agent-runbook.md` |
 | D8 | **Price comparison framing.** "Less than three months of the alternatives" assumed competitors at $11-25/month. Observed 2026-09-18: Tynker $7.50, CodaKid $29, Juni $299. At $7.50, $70 is ~9 months and the claim is false. | Client | Message pillar 4; queue item 1c; any price comparison | **OPEN - framing suspended in `claims-allowed.md` until answered** |
+| D9 | **Who owns the GTM plan?** `ops/gtm-plan.md` covers dossier S04-S07, which the development engagement excluded. It has no owner. | Client | All four GTM phases | **OPEN** |
+| D10 | **Do printable activity sheets exist?** Not found anywhere on the live site. The teacher/homeschool persona (15% of effort, reaches ~30 families each) is sold almost entirely on them. | Client | Teacher page, Agent 6 premise, queue item 14 | **OPEN** |
 | D6 | **Native Arabic reviewer.** Named person required before any Arabic publication. | Client | Arabic publication (not Arabic drafting) | OPEN |
 | D7 | **Monthly agent running-cost ceiling.** The plan is budget-framed (<$500/mo total, $150-300 of it ads) with no usage estimate anywhere. | Client + developer | Nothing yet; prevents a surprise later | OPEN |
 
