@@ -40,8 +40,8 @@ No agent may edit this file. Only a client-approved representative may.
 | Animated film runtime | 23:48 total | SITE-VERIFIED - see "How to use runtime" |
 | Activities | 28 | PENDING - not stated on site; plausible as 14 missions x 2 (activity + challenge) but unverified |
 | Quiz questions | 70 | PENDING - not stated on site; plausible as 14 x 5 but unverified |
-| Printable certificate | Yes | PENDING - not found anywhere on the site |
-| Printable activity sheets | Yes | PENDING - not found on the site |
+| Printable certificate | Yes | CODE-VERIFIED 2026-10-07 — `certificate-view.tsx` exists in the live codebase; its public route was not located, so confirm how a family reaches it before featuring it |
+| Printable activity sheets | Yes | **CODE- and SITE-VERIFIED 2026-10-07** — dedicated printable page per lesson, live at e.g. `/courses/ai-detective-academy/picture-clue-patrol/sheet`. Gated behind purchase for paid lessons. Closes D10. |
 | Indexable pages in sitemap | **43** | SITE-VERIFIED - the dossier says 45 |
 
 ### Age range - corrected 2026-09-18
@@ -116,16 +116,65 @@ overstate what a $25 buyer receives.
 
 ## Privacy and data
 
-Quoted from `/for-parents`, verified 2026-09-18. These are the strongest claims
-the brand owns and the wording is already excellent - agents should reuse it
-rather than paraphrase.
+> ⚠ **CORRECTED 2026-10-07. The previous version of this section was wrong, and
+> agents were writing a false claim into parent-facing copy.**
+>
+> The 2026-09-18 verification read `/for-parents` and took its claims as
+> describing the whole product. They describe **guest mode only**. The product
+> also has **parent accounts** — live at `/login` and `/register`, and confirmed
+> in the committed database schema. `/for-parents` states the guest-mode claims as
+> absolutes and has not been updated to match. That page is the error; this file
+> now reflects the product.
 
-| Fact | Site wording | Status |
+### There are two modes
+
+| | **Guest mode** | **Parent account** |
 |---|---|---|
-| Account required | "No account, no sign-up, no email address" | SITE-VERIFIED |
-| Data to server | "Progress is stored in this browser only, never sent to a server" | SITE-VERIFIED |
-| Tracking | "No advertising, no tracking scripts, no third-party analytics" | SITE-VERIFIED |
-| Erase data | "Erase all progress, badges and activity records" | SITE-VERIFIED |
+| Account needed | No | Yes — owned by the **parent** |
+| Email address | None | **Parent's email** (+ optional name, password) |
+| What is stored about the child | Nothing off the device | A **nickname** and an **age group**. No name, email, surname or date of birth. |
+| Where progress lives | This browser only | **Server-side**, per child profile (completed lessons, challenges, badges) |
+| Needed for | Free Mission 1 and the Story Shelf | Paid courses — gated behind purchase |
+
+### Claims agents may make
+
+| Claim | Status |
+|---|---|
+| "Try the first mission. Nothing to sign up for." | ✅ TRUE — free mission is guest mode |
+| "No account needed **to try the first mission**" | ✅ TRUE |
+| "Accounts belong to parents — a child never has a login or an email" | ✅ TRUE — and strong; use it |
+| "We store a nickname and an age group for each child — nothing else" | ✅ TRUE |
+| "No advertising, no tracking scripts, no third-party analytics" | ✅ TRUE — confirmed in code, no analytics installed |
+| "Sparky never asks for a name, school or address" | ✅ TRUE per site |
+
+### Claims agents must NOT make
+
+| Claim | Why |
+|---|---|
+| "No account, no sign-up, no email address" — **as a statement about the product** | ❌ FALSE. True of guest mode only. Paid courses need a parent account with an email. |
+| "Progress never sent to a server" | ❌ FALSE for account holders. Server-side copy exists. |
+| "Nothing about your child leaves the device" | ❌ FALSE for account holders. Nickname, age group and progress are stored server-side. |
+| "There is no copy anywhere else" | ❌ FALSE for account holders. |
+
+**The rule:** any privacy claim must name the mode it is true of. A guest-mode
+claim with the mode dropped is a false claim about a children's product.
+
+### Why this is still a strong story
+
+The truthful version is arguably a *better* claim than the false absolute. The
+schema is genuinely privacy-respecting: **the account belongs to the parent, and
+the child is a nickname and an age group.** No child email, no surname, no date
+of birth — by design. That is concrete, verifiable, and rarer in this category
+than "we store nothing", which no paid product can honestly say.
+
+### Original 2026-09-18 wording — retained for audit, do not reuse
+
+| Fact | Site wording (guest mode only) |
+|---|---|
+| Account required | "No account, no sign-up, no email address" |
+| Data to server | "Progress is stored in this browser only, never sent to a server" |
+| Tracking | "No advertising, no tracking scripts, no third-party analytics" |
+| Erase data | "Erase all progress, badges and activity records" |
 
 > **The tracking line changes the day analytics is installed (D2).** "No
 > third-party analytics" is currently true and currently published. A cookieless

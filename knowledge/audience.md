@@ -68,7 +68,7 @@ also exactly what a school data-protection officer needs to hear.
 | Rank | Message | Proof available today |
 |---|---|---|
 | 1 | Understanding, not just using | The AI Detective premise: discover how AI sees, hears, compares and sometimes gets things wrong. No other kids' platform teaches AI's failure modes as the curriculum. |
-| 2 | Nothing about your child leaves the device | No account, no tracking scripts, no advertising SDKs, one-click erase. |
+| 2 | Your child is a nickname, not a profile | The account belongs to the parent; a child has no login, no email, no surname, no date of birth — a nickname and an age group only. No tracking scripts, no advertising, no third-party analytics. ⚠ *Reworded 2026-10-07: the previous pillar, "Nothing about your child leaves the device", is false for parent accounts, whose children's progress is stored server-side. Keep the pillar number — it is shared with Agent 5 and the paid tests.* |
 | 3 | Try it in ten seconds, free | Mission 1 opens with no signup, no card. |
 | 4 | Buy once, keep it | $70 for four courses, one payment, no subscription, nothing to cancel. ⚠ The "less than three months of the alternatives" framing is **suspended** as of 2026-09-18 — observed competitor prices run $7.50 to $299/month, so the multiple no longer holds. See `claims-allowed.md`. |
 | 5 | Made like a film, not a lecture | 14 hand-animated missions, Maya, Pip and Glitch, six original fairy tales, printables for screen-free days. |

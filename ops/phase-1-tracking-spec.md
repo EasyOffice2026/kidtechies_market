@@ -11,9 +11,16 @@ blocks: GTM Phase 1 exit test; Agent 4 (Funnel Analyst) live acceptance
 Three things to build on kidtechies.com. Together they unblock four of the six
 weekly metrics and the entire email programme.
 
-Nothing here collects child data. That is a hard constraint, not a preference —
-the brand's strongest claim is that nothing about the child leaves the device,
-and this work must not weaken it.
+Nothing here collects child data. That is a hard constraint, not a preference.
+The product's design already keeps children minimal — in a parent account a
+child is a nickname and an age group, with no login, email, surname or date of
+birth — and this work must not add anything to that.
+
+> **Corrected 2026-10-07.** The first version of this spec said the brand's
+> claim is that "nothing about the child leaves the device." That is true of
+> guest mode only. The codebase (`AI for kid/AI-tutor`) has parent accounts at
+> `/login` and `/register`, and stores children's progress server-side. See
+> `knowledge/product-facts.md` for the two-mode table.
 
 | # | Build | Unblocks | Effort |
 |---|---|---|---|
@@ -134,6 +141,22 @@ traffic is spent blind.
 
 ## 3 · Parent email capture
 
+> **Revised 2026-10-07.** The first version assumed the site collects no email
+> addresses at all. It already does: `/register` creates a parent account with an
+> email and password. So this is not the first email capture — it is a **lighter**
+> one, for the parent who has just watched the free mission work but is not ready
+> to create an account and set a password. Keep both. They capture different
+> moments of intent.
+>
+> | | Mailing-list opt-in (this) | `/register` (exists) |
+> |---|---|---|
+> | Asks for | Email only | Email, password, optional name |
+> | Friction | One field | An account |
+> | Intent | "Tell me more" | "I'm buying" |
+>
+> Count them separately in analytics (`email_captured` vs a registration event),
+> or the weekly number blends two very different funnel stages.
+
 Placed at the **end of free Mission 1**, when the parent has just seen it work.
 
 ### The wording is not optional
@@ -154,8 +177,9 @@ not be softened to "your email" in a later copy pass.
 
 - **One field.** Email only. No name, no child's age, no "which age group" —
   every extra field costs conversions and the age question invites child data.
-- **No account.** This is a mailing list subscription, not a login. The
-  "no account, no sign-up" claim stays true.
+- **No account.** This is a mailing list subscription, not a login — so a parent
+  can join the list without creating an account. (It does not make any
+  product-wide "no account" claim true; paid courses still use one.)
 - **Double opt-in** if the email platform supports it — cleaner list, and it
   sets the consent record the client's legal owner will want.
 - **Unsubscribe in every email.**
@@ -224,3 +248,65 @@ closes.
 - [ ] `email_captured` fires on success only
 - [ ] Weekly CSV exports with exact column names
 - [ ] Exit test passes end to end
+
+---
+
+## Implementation status — 2026-10-07
+
+Built in the product repo, `C:\restuarant\AI for kid\AI-tutor`. **Shipped dark:**
+fully implemented, but inert until `NEXT_PUBLIC_ANALYTICS_DOMAIN` is set, so
+deploying it changes nothing a parent can see and keeps "no third-party
+analytics" literally true until someone deliberately switches it on.
+
+| File | What |
+|---|---|
+| `src/lib/analytics.ts` | `trackMissionStart`, `trackMissionComplete`, `trackEmailCaptured`. Privacy guard enforced in code. |
+| `src/components/analytics/analytics-script.tsx` | Loads the script, or renders nothing when unset |
+| `src/app/layout.tsx` | Mounts it |
+| `.env.example` | Documents the two variables and the privacy warning |
+| `scripts/check-analytics.mjs` | 19 checks proving the guard holds |
+
+**The privacy guard is code, not convention.** Only an allowlisted event name
+and a lesson slug matching `course-id/lesson-id` can leave the browser. A
+nickname, age group, email or free text drops the whole event rather than being
+stripped from it. All 14 real lesson slugs pass the pattern; verified.
+
+**Verified:** 19/19 checks pass · `tsc --noEmit` clean across the whole repo ·
+`next lint` clean on the changed files. **Not run:** `next build` — the repo has
+substantial uncommitted work in progress, and a build would test that too.
+
+### Still to wire — two calls, in files with uncommitted work
+
+Not edited, because both files are mid-change in someone's working tree.
+
+**`src/components/courses/lesson-view.tsx`**
+
+```tsx
+import { trackMissionComplete, trackMissionStart } from '@/lib/analytics';
+
+// Start = leaving the 'plan' overview for real content. Not on mount, which
+// would count a parent previewing the page as a child starting it.
+useEffect(() => {
+  if (index >= 1) trackMissionStart(course.id, lesson.id);
+}, [index, course.id, lesson.id]);
+
+// in handlePass, beside completeLesson — the quiz pass is the genuine end
+const handlePass = (score: number) => {
+  trackMissionComplete(course.id, lesson.id);
+  const earned = completeLesson(course.id, lesson.id);
+  // ...unchanged
+};
+```
+
+`trackMissionComplete` fires on every pass, not only a first-time one — it pairs
+with a start in the same session, so a replay counts as a new start and a new
+completion and the rate stays honest.
+
+**Mailing-list form** (when built) — call `trackEmailCaptured()` on the success
+response only.
+
+### Then
+
+1. Pick a provider and set `NEXT_PUBLIC_ANALYTICS_DOMAIN`.
+2. **Same day:** update `/for-parents` and `knowledge/product-facts.md`.
+3. Run the exit test.

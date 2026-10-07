@@ -20,9 +20,12 @@ These are descriptions of what the product is, all traceable to
   capstones, printables. Numbers exactly as written in `product-facts.md`.
 - The price and the payment model, including the comparison "one payment"
   against monthly alternatives.
-- The privacy architecture: no account, no child data leaving the device,
-  browser-local progress, one-click erase. (Re-check against `product-facts.md`
-  if analytics goes live - D2.)
+- The privacy architecture **with its mode named**: the free mission needs no
+  account; paid courses use a parent account in which each child is a nickname
+  and an age group, with no child email, surname or date of birth. See the two-mode
+  table in `product-facts.md`. *(Corrected 2026-10-07 — the earlier wording here,
+  "no account, no child data leaving the device, browser-local progress", is true
+  of guest mode only and false for account holders.)*
 - That the free first mission opens with no signup and no card.
 - What the curriculum covers - including, distinctively, that AI guesses, makes
   mistakes, and has failure modes children can learn to spot.
@@ -41,6 +44,7 @@ These are descriptions of what the product is, all traceable to
 | **Government endorsement by association** | Referring to Saudi or UAE national AI curricula is permitted as *context*. Implying KidTechies is part of, approved by, or aligned to them is not. This distinction matters and agents get it wrong. |
 | **Claims about a named child** | No real, identifiable child in copy, imagery or testimonial. |
 | **Stale privacy claims** | Any privacy statement not currently true in `product-facts.md`. |
+| **Privacy claims with the mode dropped** | "No account, no sign-up, no email address", "progress never leaves the device", "nothing about your child leaves the device" — stated about the product as a whole. All true of guest mode, all false for parent accounts. Name the mode or do not make the claim. |
 | **The refund promise** | Until it is live on the site and CONFIRMED. Currently PROPOSED. |
 | **Runtime as headline value** | "23:48 of animated film" beside the price. See `product-facts.md`. |
 | **"Less than three months of the alternatives"** | Suspended 2026-09-18. The framing assumed competitors at $11–25/month; Tynker is published at $7.50, where $70 is about nine months. A parent can check this in one click. Awaiting client decision — see `product-facts.md`. |

@@ -1,8 +1,8 @@
 variant_id,pillar,round,format,varied_from,what_varied,copy,platform,spend_usd,impressions,clicks,ctr_pct,status,decision_basis,date_logged
 V-001,1,1,headline,,n/a,"Your child can use AI. Can they tell when it's wrong?",,,,,,pending,,2026-09-20
 V-002,1,1,hook,,n/a,"Most kids can use AI by nine. Almost none can tell when it's lying to them - and it does, confidently, in the same voice it uses when it's right. That second skill is the one that lasts.",,,,,,pending,,2026-09-20
-V-003,2,1,headline,,n/a,"No account. No email. Nothing about your child leaves the device.",,,,,,pending,,2026-09-20
-V-004,2,1,hook,,n/a,"Before you let your child try any AI tool, ask one question: where does what they type go? With most, it goes to a server. With this, it doesn't leave the browser - and one button erases it.",,,,,,pending,,2026-09-20
+V-003,2,1,headline,,n/a,"No account. No email. Nothing about your child leaves the device.",,,,,,kill,"WITHDRAWN 2026-10-07 - false privacy claim. True of guest mode only; parent-account progress is stored server-side. See knowledge/product-facts.md",2026-09-20
+V-004,2,1,hook,,n/a,"Before you let your child try any AI tool, ask one question: where does what they type go? With most, it goes to a server. With this, it doesn't leave the browser - and one button erases it.",,,,,,kill,"WITHDRAWN 2026-10-07 - false privacy claim. True of guest mode only; parent-account progress is stored server-side. See knowledge/product-facts.md",2026-09-20
 V-005,3,1,headline,,n/a,"The first mission is free. There's nothing to sign up for.",,,,,,pending,,2026-09-20
 V-006,3,1,hook,,n/a,"No account. No card. No email address. Your child can start the first mission in about ten seconds - on a school laptop, on your phone, on a link someone sent you. If it isn't for them, you've lost ten seconds.",,,,,,pending,,2026-09-20
 V-007,4,1,headline,,n/a,"One payment. Nothing renews. Nothing to cancel.",,,,,,pending,,2026-09-20

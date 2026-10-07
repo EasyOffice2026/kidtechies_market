@@ -53,12 +53,19 @@ gap without shaming anyone. Specific about time. No urgency, no pitch.*
 *Why: teaches something true in four sentences. The image does the work. The
 last clause flatters the parent without flattering them falsely.*
 
-> Nothing about your child leaves the device. No account, no email, no login,
-> no tracking. Progress lives in the browser and a single button erases it. We
-> built it that way because we could not think of a good reason to do otherwise.
+> Your child never gets a login or an email address. The account is yours; your
+> child is a nickname and an age group — no surname, no date of birth, nothing
+> else. And the first mission needs no account at all. We built it that way
+> because we could not think of a good reason to do otherwise.
 
-*Why: the strongest differentiator, stated flatly. No self-congratulation - the
-last sentence undercuts the boast, which is what makes it credible.*
+*Why: the strongest differentiator, stated flatly and truthfully. Specific about
+what is stored, which is more credible than claiming nothing is. The last
+sentence undercuts the boast, which is what makes it land.*
+
+*Replaced 2026-10-07. The previous example opened "Nothing about your child
+leaves the device… Progress lives in the browser" — true of guest mode, false for
+parent accounts, whose children's progress is stored server-side. It was a
+template agents imitate, so a false example here propagates into every draft.*
 
 ## Three paragraphs we would reject
 
