@@ -428,3 +428,18 @@ else in Part 3 is waiting on them.
 
 **Part 3 cannot progress further without the client.** The one unblocker is
 3.1: five minutes on their Claude account to test a scheduled task.
+
+---
+
+# Client-independent work, 2026-10-17
+
+Done while waiting on the client, both on `feature/part-1-website`:
+
+| Work | Why it needed no request |
+|---|---|
+| **Rate limiting** on sign-up, resend, password reset and the newsletter form — 3 per address and 12 per caller per ten minutes | A gap the code documented itself; the newsletter form widened it. Pure engineering, 7 checks |
+| **"Child profiles" promise removed** from the sign-up and account pages | The feature is not built; the account page said so. Copy now matches the code and the marketing |
+
+The PR body in `ops/pr-part-1-2.md` still describes the branch accurately —
+these are two more commits on it. Remaining client-independent item: the
+staging run of the six agents on the developer's own Claude account.
