@@ -40,7 +40,7 @@ No agent may edit this file. Only a client-approved representative may.
 | Animated film runtime | 23:48 total | SITE-VERIFIED - see "How to use runtime" |
 | Activities | 28 | PENDING - not stated on site; plausible as 14 missions x 2 (activity + challenge) but unverified |
 | Quiz questions | 70 | PENDING - not stated on site; plausible as 14 x 5 but unverified |
-| Printable certificate | Yes | CODE-VERIFIED 2026-10-07 — `certificate-view.tsx` exists in the live codebase; its public route was not located, so confirm how a family reaches it before featuring it |
+| Printable certificate | Yes | **CODE- and SITE-VERIFIED 2026-10-17** — `certificate-view.tsx`, live at `/certificate` |
 | Printable activity sheets | Yes | **CODE- and SITE-VERIFIED 2026-10-07** — dedicated printable page per lesson, live at e.g. `/courses/ai-detective-academy/picture-clue-patrol/sheet`. Gated behind purchase for paid lessons. Closes D10. |
 | Indexable pages in sitemap | **43** | SITE-VERIFIED - the dossier says 45 |
 
