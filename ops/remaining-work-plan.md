@@ -404,3 +404,27 @@ there is a deliberate act, not a side effect of a test run.
 - The welcome email's day-6 offer states the refund and "no subscription", and
   deliberately not the suspended "three months" comparison — enforced by a
   check, not by memory.
+
+---
+
+# Part 3 — progress, 2026-10-17
+
+The two tasks that did not need the client's account are done. Everything
+else in Part 3 is waiting on them.
+
+| # | Task | Status |
+|---|---|---|
+| 3.1 | Capability check on the client's Claude account | ⏸ **Client account** — five minutes, and everything below it depends on the answer |
+| 3.2 | Fact sign-off → knowledge base v1.0 | ⏸ Client (D1) |
+| 3.3 | Setup on the client's account | ⏸ After 3.1 |
+| 3.4 | Re-run tests on the client's account | ⏸ After 3.3 |
+| 3.5 | Regenerate the withdrawn drafts | ✅ `drafts/2026-10-17/`: the UAE article (EN + AR) with the privacy paragraph rebuilt from what the code verifies, a new self-check, and ad variants V-011/V-012 replacing V-003/V-004. Social, email and video hook were never affected and stand. The outreach draft's do-not-publish notice was a **false positive** — "no student accounts, no student data" is true — and was removed. |
+| 3.6 | Agent 6 redesign | ✅ Prompt and schema rewritten around what Gulf schools actually publish: institution-level records, a `contact_channel` (web form / inbox / switchboard) instead of a constructed email, `research_minutes` so the founder can budget, and drafts that ask "who should I send this to?" |
+| 3.7 | Funnel Analyst live | ⏸ After Part 1's tracking is switched on |
+| 3.8 | Arabic reviewer; "your child" gender rule | ⏸ Client (D6). A 16th flag on the Arabic article marks the new privacy sentence for first attention |
+| 3.9 | Price framing | ⏸ Client (D8) |
+| 3.10 | Usage cost ceiling | ⏸ Needs real runs on the client's account (D7) |
+| 3.11 | Handover | ⏸ Last |
+
+**Part 3 cannot progress further without the client.** The one unblocker is
+3.1: five minutes on their Claude account to test a scheduled task.
