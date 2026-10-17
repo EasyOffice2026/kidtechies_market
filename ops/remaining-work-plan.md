@@ -290,3 +290,60 @@ shift by the same amount. Better to say so now than to report it at the end.
 | Five minutes on their Claude account | 3.1 — and with it, everything in Part 3 |
 | Email provider cost approval and DNS access | 2.1, 2.2 |
 | An owner for the GTM plan (D9) | The marketing programme Parts 1–2 enable |
+
+---
+
+# Part 1 — progress, 2026-10-17
+
+Built on branch **`feature/part-1-website`** in the product repo. Seven commits;
+nothing merged to `main`, nothing deployed.
+
+| # | Task | Status |
+|---|---|---|
+| 1.0 | Land the in-progress work | ✅ Committed as found (password reset, migration 0001). Verified first: tsc clean, all 8 unit checks pass |
+| 1.1 | Correct `/for-parents` | ✅ "No account, no sign-up, no email address" replaced; Sparky disclosure added; privacy page description fixed |
+| 1.2 | Analytics module | ✅ Committed, off by default |
+| 1.3 | Wire mission events | ✅ Start on leaving the plan screen; complete on quiz pass |
+| 1.4 | Switch analytics on | ⏸ **Needs you**: choose a provider, set the Vercel env var |
+| 1.5 | Pricing leads with hours | ✅ Header and bundle list; runtime moved down |
+| 1.6 | Refund promise beside price | ✅ Under bundle and course grid, plus an FAQ entry |
+| 1.7 | $100 anchor | ⏸ Client decision (D8) |
+| 1.8 | Founder, location, contact | ⏸ Client to supply |
+| 1.9 | Terms template text | ⏸ Needs the real company name and contact (1.8) |
+| 1.10 | Brand name | ⏸ Client decision (D3) — changing a live brand is not a developer's call |
+| 1.11 | Move build caveats | ✖ **Not needed.** The dossier's concern was caveats on the page where people pay; the pricing page has none. They sit on `/for-parents`, an honesty page, which is the right home. Subtitles still don't exist, so the caveat stays true. |
+| 1.12 | Teacher page | ✅ `/for-teachers`, written for a school's data-protection lead |
+| 1.13 | Arabic page | ⏸ Native reviewer (D6) |
+| 1.14 | Certificate | ✅ Done earlier |
+
+### Verified
+
+`tsc` clean · lint clean · 8/8 unit checks · 19/19 analytics checks ·
+**`check:pages` 29/29 routes render on a dev server**, including `/for-teachers`.
+
+`check:pages` had never run on Windows — the dev-server helper used POSIX-only
+process handling. Fixed (macOS/Linux unchanged), which surfaced two stale
+expectations, both pre-dating this work: a `/login` marker from a form unused
+since the Stripe commit, and Windows file-watcher noise. Both fixed.
+
+### Found along the way
+
+- **The knowledge base was wrong a second time.** On 2026-10-07 I read the
+  database schema as live behaviour and recorded that children's progress is
+  stored server-side. It isn't — nothing writes the child tables. Corrected from
+  what the code actually writes; see `product-facts.md`.
+- **Five fact questions answered from the code**: 28 activities, 70 quiz questions
+  (counted: 25+15+10+20), the certificate, Maya/Pip/Glitch, and the free mission.
+  The client now only needs to supply founder name, company details and contact.
+- **The legal privacy notice is stale** (D11) — the one privacy item I did not
+  touch, because it is a legal document.
+- The register page and sign-in copy mention "children's profiles"; the account
+  page says those "arrive with the next piece of work". A promise of a feature
+  that is not built yet — worth aligning.
+- The new migration in 1.0 must be applied deliberately at merge, not by accident.
+
+### Before merging to `main`
+
+1. Review the seven commits on `feature/part-1-website`
+2. Decide how migration `0001_abnormal_crusher_hogan` reaches production
+3. Merge and deploy — the privacy fix is the reason to do it soon

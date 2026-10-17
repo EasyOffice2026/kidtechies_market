@@ -20,12 +20,14 @@ These are descriptions of what the product is, all traceable to
   capstones, printables. Numbers exactly as written in `product-facts.md`.
 - The price and the payment model, including the comparison "one payment"
   against monthly alternatives.
-- The privacy architecture **with its mode named**: the free mission needs no
-  account; paid courses use a parent account in which each child is a nickname
-  and an age group, with no child email, surname or date of birth. See the two-mode
-  table in `product-facts.md`. *(Corrected 2026-10-07 — the earlier wording here,
-  "no account, no child data leaving the device, browser-local progress", is true
-  of guest mode only and false for account holders.)*
+- The privacy architecture, as it actually is: **nothing about any child is
+  stored on our servers**; progress stays in the browser for everyone; children
+  never sign in; the only account is the parent's, to buy courses. When the tutor
+  comes up, say plainly that what a child types to Sparky goes to Anthropic's
+  Claude for a reply and is not stored. See "What is true today" in
+  `product-facts.md`. *(Corrected 2026-10-17. The 2026-10-07 wording here claimed
+  each child is stored as a nickname and age group — false: nothing writes the
+  child tables yet.)*
 - That the free first mission opens with no signup and no card.
 - What the curriculum covers - including, distinctively, that AI guesses, makes
   mistakes, and has failure modes children can learn to spot.

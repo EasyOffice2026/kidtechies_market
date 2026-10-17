@@ -38,8 +38,8 @@ No agent may edit this file. Only a client-approved representative may.
 | Guided learning time | 8-9 hours (approximate) | SITE-VERIFIED |
 | Story Shelf tales | 6 | SITE-VERIFIED |
 | Animated film runtime | 23:48 total | SITE-VERIFIED - see "How to use runtime" |
-| Activities | 28 | PENDING - not stated on site; plausible as 14 missions x 2 (activity + challenge) but unverified |
-| Quiz questions | 70 | PENDING - not stated on site; plausible as 14 x 5 but unverified |
+| Activities | 28 | **VERIFIED 2026-10-17** — stated on `/pricing` ("28 hands-on activities and challenges"), computed as 14 missions × 2 |
+| Quiz questions | 70 | **VERIFIED 2026-10-17** — stated on `/pricing`, and counted from the course data: 25 + 15 + 10 + 20 |
 | Printable certificate | Yes | **CODE- and SITE-VERIFIED 2026-10-17** — `certificate-view.tsx`, live at `/certificate` |
 | Printable activity sheets | Yes | **CODE- and SITE-VERIFIED 2026-10-07** — dedicated printable page per lesson, live at e.g. `/courses/ai-detective-academy/picture-clue-patrol/sheet`. Gated behind purchase for paid lessons. Closes D10. |
 | Indexable pages in sitemap | **43** | SITE-VERIFIED - the dossier says 45 |
@@ -86,7 +86,7 @@ Counted from the sitemap on 2026-09-18. The 14 figure holds.
 | Four-course bundle | $70 | SITE-VERIFIED |
 | Bundle anchor price | $100, shown struck through as "Save $30 / 30% off" | SITE-VERIFIED - not in the dossier at all |
 | Payment model | One-time. No subscription. | SITE-VERIFIED |
-| Free tier | Mission 1 + Story Shelf | PENDING - free-tier boundary not confirmed on the pricing page |
+| Free tier | The whole of Mission 1, Picture Clue Patrol — film, game, challenge and quiz | **CODE-VERIFIED 2026-10-17** — `FREE_LESSON` in `src/lib/commerce.ts`. Whether the Story Shelf is also free is not yet confirmed. |
 | Signup required | None | SITE-VERIFIED |
 | **Refund promise** | **30 days, no form and no reason required** | **SITE-VERIFIED - it already exists** |
 
@@ -116,56 +116,68 @@ overstate what a $25 buyer receives.
 
 ## Privacy and data
 
-> ⚠ **CORRECTED 2026-10-07. The previous version of this section was wrong, and
-> agents were writing a false claim into parent-facing copy.**
+> ⚠ **CORRECTED TWICE — read this before relying on any earlier version.**
 >
-> The 2026-09-18 verification read `/for-parents` and took its claims as
-> describing the whole product. They describe **guest mode only**. The product
-> also has **parent accounts** — live at `/login` and `/register`, and confirmed
-> in the committed database schema. `/for-parents` states the guest-mode claims as
-> absolutes and has not been updated to match. That page is the error; this file
-> now reflects the product.
+> **2026-09-18** took `/for-parents` at its word: no account, nothing leaves the
+> device. Wrong — parent accounts exist.
+>
+> **2026-10-07** over-corrected. It read the database schema as live behaviour
+> and stated that children's progress and profiles are stored server-side. Also
+> wrong: the `child_profile` and `child_progress` tables exist, but **no code
+> writes to either.**
+>
+> **2026-10-17 — this version is based on what the code actually writes**, not
+> on page copy or the schema. Verified in `AI for kid/AI-tutor`: the only
+> database writes are the parent `users` row, auth tokens, and the Stripe
+> customer id.
 
-### There are two modes
+### What is true today
 
-| | **Guest mode** | **Parent account** |
+| | Fact | How verified |
 |---|---|---|
-| Account needed | No | Yes — owned by the **parent** |
-| Email address | None | **Parent's email** (+ optional name, password) |
-| What is stored about the child | Nothing off the device | A **nickname** and an **age group**. No name, email, surname or date of birth. |
-| Where progress lives | This browser only | **Server-side**, per child profile (completed lessons, challenges, badges) |
-| Needed for | Free Mission 1 and the Story Shelf | Paid courses — gated behind purchase |
+| Parent accounts | Exist, for buying courses. Hold the **parent's** email, optional name and password, plus a Stripe customer id. | `db.insert(users)` in `lib/auth/actions.ts`; `/register` live |
+| Children's accounts | **None.** Children never sign in. | No child login anywhere |
+| Anything about a child on a server | **None.** No profile, no progress, no answers. | Nothing writes `child_profile` or `child_progress` |
+| Where progress lives | **In the browser, for everyone** — guests and account holders alike | `localStorage` key `ai-for-kids:learner:v1` |
+| The one thing that leaves the device | What a child types to **Sparky** or the **Creative Studio** goes to Anthropic's Claude for a reply. Not stored, not linked to anyone. | `api/ai-tutor/route.ts`; disclosed in the privacy notice |
+| Analytics | **None** installed | No analytics in code; module built but switched off |
+| Free without an account | Mission 1, Picture Clue Patrol, in full | `FREE_LESSON` |
 
 ### Claims agents may make
 
 | Claim | Status |
 |---|---|
-| "Try the first mission. Nothing to sign up for." | ✅ TRUE — free mission is guest mode |
-| "No account needed **to try the first mission**" | ✅ TRUE |
-| "Accounts belong to parents — a child never has a login or an email" | ✅ TRUE — and strong; use it |
-| "We store a nickname and an age group for each child — nothing else" | ✅ TRUE |
-| "No advertising, no tracking scripts, no third-party analytics" | ✅ TRUE — confirmed in code, no analytics installed |
+| "Try the first mission. Nothing to sign up for." | ✅ TRUE |
+| "Children never sign in" / "a child never has a login or an email" | ✅ TRUE |
+| "Nothing about your child is stored on our servers" | ✅ TRUE — and the strongest claim available. Use it. |
+| "Your child's progress stays in your browser" | ✅ TRUE, for everyone |
+| "Accounts are for parents, to buy courses — your email, nothing about your child" | ✅ TRUE |
+| "What your child types to Sparky goes to Anthropic's Claude to write a reply, and isn't stored" | ✅ TRUE — say it plainly when the tutor comes up |
+| "No advertising, no tracking scripts, no third-party analytics" | ✅ TRUE **today** — false the day analytics is switched on |
 | "Sparky never asks for a name, school or address" | ✅ TRUE per site |
 
 ### Claims agents must NOT make
 
 | Claim | Why |
 |---|---|
-| "No account, no sign-up, no email address" — **as a statement about the product** | ❌ FALSE. True of guest mode only. Paid courses need a parent account with an email. |
-| "Progress never sent to a server" | ❌ FALSE for account holders. Server-side copy exists. |
-| "Nothing about your child leaves the device" | ❌ FALSE for account holders. Nickname, age group and progress are stored server-side. |
-| "There is no copy anywhere else" | ❌ FALSE for account holders. |
+| "No account", "no sign-up", "no email address" — **about the product** | ❌ FALSE. Buying needs a parent account with an email. Fine when scoped: "no account needed to try the first mission." |
+| "Nothing about your child leaves the device" | ❌ FALSE. Sparky messages go to Anthropic. Use "is stored on our servers" instead. |
+| "We store a nickname and an age group for each child" | ❌ FALSE today — child profiles are not built (the account page says they "arrive with the next piece of work") |
+| "Your progress is saved to your account" | ❌ FALSE today — nothing syncs to the server yet |
 
-**The rule:** any privacy claim must name the mode it is true of. A guest-mode
-claim with the mode dropped is a false claim about a children's product.
+### These change when child-profile sync ships
 
-### Why this is still a strong story
+The schema is built for it, so it will likely happen. **The day anything writes
+`child_profile` or `child_progress`:** "nothing about your child is stored on our
+servers" becomes false, `/for-parents` and its erase section must change, and the
+erase button must delete the server copy too. Update this file that day.
 
-The truthful version is arguably a *better* claim than the false absolute. The
-schema is genuinely privacy-respecting: **the account belongs to the parent, and
-the child is a nickname and an age group.** No child email, no surname, no date
-of birth — by design. That is concrete, verifiable, and rarer in this category
-than "we store nothing", which no paid product can honestly say.
+### Why the true story is strong
+
+"Nothing about your child is stored on our servers" is true, concrete and rare
+for a paid product. The account belongs to the parent and exists only to buy
+courses; the child is never in the database at all. That is a better claim than
+the false absolute it replaces, and it survives a parent checking.
 
 ### Original 2026-09-18 wording — retained for audit, do not reuse
 
@@ -188,7 +200,7 @@ than "we store nothing", which no paid product can honestly say.
 |---|---|---|
 | Courses | AI Detective Academy; Train Your Robot Brain; AI Game Creator Lab; Smart and Safe AI Heroes | SITE-VERIFIED - **all four now named** |
 | Story Shelf | The lantern that learned the way; The mirror that only knew roses; The baker who sorted the starfruit; Wren and the whispering wood; The clockwork nightingale; The two guardians of the amber bridge | SITE-VERIFIED - **all six now named** |
-| Characters | Maya, Pip, Glitch | PENDING - from the dossier, not found on the pages checked |
+| Characters | Maya, Pip, Glitch | **CODE-VERIFIED 2026-10-17** — all three in `src/data/characters.ts` |
 
 ## Build-status caveats - currently published
 
