@@ -347,3 +347,60 @@ since the Stripe commit, and Windows file-watcher noise. Both fixed.
 1. Review the seven commits on `feature/part-1-website`
 2. Decide how migration `0001_abnormal_crusher_hogan` reaches production
 3. Merge and deploy — the privacy fix is the reason to do it soon
+
+---
+
+# Part 2 — progress, 2026-10-17
+
+Built on the same branch, **`feature/part-1-website`**, four more commits. Nothing
+merged, nothing deployed, **migration generated but not applied**.
+
+| # | Task | Status |
+|---|---|---|
+| 2.1 | Provider decision | ✅ **No new provider needed.** The site already sends through Resend or SMTP; the list reuses that transport from its own address (`NEWSLETTER_FROM`), so account email is isolated. The client's offered email-API spend is not required for this. |
+| 2.2 | SPF / DKIM / DMARC | ⏸ **Client DNS** — for the marketing subdomain, before the first real send |
+| 2.3 | Subscriber table | ✅ Email + consent record only. No link to a child or a user account — checked by the DB test |
+| 2.4 | Capture form at end of free mission | ✅ One field, "Parent's email, not your child's" |
+| 2.5 | Double opt-in | ✅ Confirmation link, 7-day expiry, hash stored |
+| 2.6 | Unsubscribe | ✅ One click, no sign-in; `List-Unsubscribe` + RFC 8058 one-click POST |
+| 2.7 | `email_captured` event | ✅ Fires on the confirmation page, not on submit |
+| 2.8 | Six-email sequence | ✅ Five welcome emails + the weekly question. **Draft copy for review** — drawn from product data, no suspended claims. English only |
+| 2.9 | Sequence sender, no double-sends | ✅ Claim-first unique key; one email per subscriber per run |
+| 2.10 | Weekly broadcast | ✅ "Maya's question of the week", keyed by ISO week so everyone gets the same one. Six seed questions |
+| 2.11 | Register opt-in, unchecked | ✅ |
+| 2.12 | `emails_captured` for the CSV | ✅ `npm run newsletter:weekly-count` |
+| 2.13 | Consent / privacy sign-off | ⏸ **Client legal owner.** The privacy notice must mention the list (it also still says "there is no account" — D11) |
+
+### Verified
+
+16/16 logic checks · 33/33 pages render · production build clean · nothing paid
+or secret reaches the browser · typecheck and lint clean.
+
+**Not verified: the database checks.** `check:newsletter-db` proves the
+no-double-send guarantee against a real database, and needs migration
+`0002_newsletter` applied first. I did not apply it — the connection string in
+`.env.local` appears to be the production database, and applying a migration
+there is a deliberate act, not a side effect of a test run.
+
+### To switch it on
+
+1. Apply `drizzle/0002_newsletter.sql` (`npm run db:migrate`), then run
+   `npm run check:newsletter-db` and expect every line to PASS
+2. Set `NEWSLETTER_FROM` to an address on a separate subdomain, with SPF, DKIM
+   and DMARC for it
+3. Set `CRON_SECRET` on the Vercel project — without it the daily job refuses
+   to run, by design
+4. Have the founder read the six emails in `src/lib/newsletter/templates.ts`
+   and `src/data/weekly-questions.ts`; they are drafts
+5. Run the Phase 1 exit test: finish the free mission → leave an email →
+   confirm → receive the welcome email → see all four steps in the export
+
+### Found along the way
+
+- Importing `isFree` into the lesson screen would have shipped **every paid
+  lesson's quiz answers** to the browser, because it lived next to the course
+  data. Moved to its own import-free module; the bundle check confirms nothing
+  leaked.
+- The welcome email's day-6 offer states the refund and "no subscription", and
+  deliberately not the suspended "three months" comparison — enforced by a
+  check, not by memory.
