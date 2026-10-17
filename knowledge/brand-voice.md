@@ -53,19 +53,23 @@ gap without shaming anyone. Specific about time. No urgency, no pitch.*
 *Why: teaches something true in four sentences. The image does the work. The
 last clause flatters the parent without flattering them falsely.*
 
-> Your child never gets a login or an email address. The account is yours; your
-> child is a nickname and an age group — no surname, no date of birth, nothing
-> else. And the first mission needs no account at all. We built it that way
-> because we could not think of a good reason to do otherwise.
+> Nothing about your child is stored on our servers. Their progress stays in your
+> browser, they never sign in, and the only account is yours — for buying a
+> course. When they talk to Sparky, those words go to the AI to get a reply, and
+> no further. We built it that way because we could not think of a good reason to
+> do otherwise.
 
-*Why: the strongest differentiator, stated flatly and truthfully. Specific about
-what is stored, which is more credible than claiming nothing is. The last
-sentence undercuts the boast, which is what makes it land.*
+*Why: the strongest differentiator, stated flatly and truthfully. It names the one
+thing that does leave the device instead of hiding it, which is what makes the
+rest believable. The last sentence undercuts the boast, which is what makes it
+land.*
 
-*Replaced 2026-10-07. The previous example opened "Nothing about your child
-leaves the device… Progress lives in the browser" — true of guest mode, false for
-parent accounts, whose children's progress is stored server-side. It was a
-template agents imitate, so a false example here propagates into every draft.*
+*Replaced twice. The original opened "Nothing about your child leaves the
+device" — false, because Sparky messages go to Anthropic. The 2026-10-07 version
+said "your child is a nickname and an age group" — also false, because no child
+data is stored at all. This one is verified against what the code writes
+(2026-10-17). It is a template agents imitate, so an error here propagates into
+every draft.*
 
 ## Three paragraphs we would reject
 
