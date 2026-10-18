@@ -10,10 +10,20 @@ status: AWAITING CLIENT APPROVAL of the accepted/rejected examples
 
 ## The brand name
 
-**KidTechies** is the brand. "AI for kids" is a descriptor that may sit beneath
-it. Never treat "AI for Kids" as a second brand name in a title, footer, byline
-or signature - two brands split every search, share and word-of-mouth the
-company earns (dossier S02). Pending client confirmation, decision D3.
+**KidTechies** is the brand. **AI for Kids** is the tagline — confirmed by the
+client on 2026-10-18 (decision D3). Write it as "KidTechies — AI for Kids" or
+"KidTechies | AI for Kids" where a tagline belongs; elsewhere, just KidTechies.
+
+Never use "AI for Kids" as the name in a title, byline, signature or sentence
+("AI for Kids teaches…"). Two names split every search, share and
+recommendation the company earns.
+
+The logo artwork still reads "AI for Kids" until a new version exists. That
+is not a reason to name the product that way in copy.
+
+KidTechies is made by Easy Office International, Kuwait. Mention the company
+where trust matters — the footer, the terms, a school's question about who is
+behind it — not in marketing copy.
 
 ## Who we are talking to
 

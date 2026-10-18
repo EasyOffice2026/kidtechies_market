@@ -47,24 +47,35 @@ These are descriptions of what the product is, all traceable to
 | **Claims about a named child** | No real, identifiable child in copy, imagery or testimonial. |
 | **Stale privacy claims** | Any privacy statement not currently true in `product-facts.md`. |
 | **Privacy claims with the mode dropped** | "No account, no sign-up, no email address", "progress never leaves the device", "nothing about your child leaves the device" — stated about the product as a whole. All true of guest mode, all false for parent accounts. Name the mode or do not make the claim. |
-| **The refund promise** | Until it is live on the site and CONFIRMED. Currently PROPOSED. |
 | **Runtime as headline value** | "23:48 of animated film" beside the price. See `product-facts.md`. |
-| **"Less than three months of the alternatives"** | Suspended 2026-09-18. The framing assumed competitors at $11–25/month; Tynker is published at $7.50, where $70 is about nine months. A parent can check this in one click. Awaiting client decision — see `product-facts.md`. |
+| **"Less than three months of the alternatives"** | Retired. The framing assumed competitors at $11–25/month; Tynker is published at $7.50, where $70 is about nine months. A parent can check this in one click. The client chose a different price story on 2026-10-18 — below. |
 
-### The price argument that still works
+*Removed 2026-10-18: a row prohibiting the 30-day refund promise "until it is
+live". It has been live on `/terms` since before this project and is now beside
+the price; `product-facts.md` has listed it as stateable since 2026-09-18. The
+two files contradicted each other for a month.*
 
-The suspended framing is not the only way to make the point, and the remaining
-version is stronger because it needs no arithmetic:
+### How to talk about price — client decision, 2026-10-18
 
-> One payment. No subscription, no renewal, nothing to cancel.
+The client chose the **discount model**: all four courses for **$70 instead of
+$100**, "Save $30". In their words: *"Let's try this model and then we will
+adjust accordingly."* So:
 
-That is true against every competitor at every price, it is verifiable on the
-pricing page, and it survives a competitor changing their price next week. Use
-it in place of any multiple-of-months comparison.
+> All four courses for $70 instead of $100 — one payment, nothing renews,
+> nothing to cancel.
+
+- **The discount** is the headline: $70 instead of $100, save $30. Figures come
+  from `product-facts.md`, never from memory.
+- **"One payment, no subscription, nothing to cancel"** is a fact and stays
+  available — it answers the parent comparing monthly services.
+- **The 30-day refund** goes with any price mention.
+- **No month-multiple comparison** against competitors in general.
 
 A specific comparison against a **named** competitor at a **dated, sourced**
-price remains permitted under the evidence rules below — what is prohibited is
-the generic "three months" claim resting on a band that no longer holds.
+price remains permitted under the evidence rules below.
+
+The client said they will adjust after seeing results. When the price story
+changes, this section changes first — before any agent writes about price.
 
 ## Evidence-required - permitted only with a cited, current source
 

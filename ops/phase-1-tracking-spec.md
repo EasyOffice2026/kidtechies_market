@@ -32,12 +32,28 @@ birth — and this work must not add anything to that.
 
 ## 1 · Analytics
 
-Pick one: **Plausible**, **Fathom**, or self-hosted **Umami**. All three are
-cookieless and collect no personal data, which is why they are the only
-acceptable options here — a standard analytics install would break a published
-privacy claim.
+> **Corrected 2026-10-18.** This section first offered Plausible, Fathom or
+> Umami. The module as built speaks only Plausible's API (`window.plausible`),
+> so Fathom or Umami would record page views and silently drop every mission
+> event. **Use Plausible** — hosted, or a self-hosted Plausible Community
+> Edition. **Approved by the client on 2026-10-18.**
 
-Recommended: Plausible, for the simplest custom-event API.
+Plausible is cookieless and does not identify visitors, which is why it fits —
+a standard analytics install would break a published privacy claim.
+
+### Setup, once
+
+1. Create a Plausible account and add the site `kidtechies.com`.
+2. In the site's settings, add three **goals** (custom events):
+   `mission_start`, `mission_complete`, `email_captured`. Plausible only shows
+   custom events that have a goal.
+3. Enable the custom property `mission`, so completions can be broken down by
+   lesson.
+4. In Vercel → `ai-for-kid` → Settings → Environment Variables, set
+   `NEXT_PUBLIC_ANALYTICS_DOMAIN` = `kidtechies.com`, then redeploy.
+
+The parent page and the privacy notice change their wording **by themselves**
+in that same deploy — see below.
 
 ```html
 <script defer data-domain="kidtechies.com"
@@ -48,27 +64,24 @@ Recommended: Plausible, for the simplest custom-event API.
 > variant before shipping — these change, and this document was written in
 > October 2026.
 
-### ⚠ The day this goes live, a published claim becomes false
+### The public wording switches by itself — changed 2026-10-18
 
-`/for-parents` currently says:
+`/for-parents` and `/privacy` say "no third-party analytics" while analytics is
+off. Both now render one sentence from `analyticsDisclosure()` in
+`src/lib/analytics.ts`, which reads the same setting that loads the script.
+Turning analytics on changes every public statement about it **in the same
+deploy**:
 
-> "No advertising, no tracking scripts, no third-party analytics."
+> "No advertising, and no cookies used for tracking. We count visits with
+> Plausible, a cookieless analytics service. It sets no cookies and does not
+> identify you or your child."
 
-Once analytics is installed, the third clause is **untrue**. Two things must
-happen the same day:
+The original plan relied on someone remembering to edit the page that day.
+There is no longer a page to remember.
 
-1. Update the parent page to the honest version — name the tool, say it is
-   cookieless and collects no personal data, and make it a further proof point
-   rather than a retraction.
-2. Tell the marketing side so `knowledge/product-facts.md` is updated. Agents
-   read that file before every run and will otherwise keep publishing the stale
-   absolute to parents.
-
-Suggested replacement wording:
-
-> "No advertising and no tracking scripts. We use [tool], a cookieless analytics
-> service that records no personal data and sets no cookies, so we can see which
-> pages help and which do not."
+**One manual step remains:** `knowledge/product-facts.md` still says "No third-
+party analytics — TRUE today". Update that row the day analytics goes live, so
+the agents stop writing it.
 
 ---
 
@@ -237,9 +250,9 @@ closes.
 
 ## Checklist
 
-- [ ] Cookieless analytics installed
-- [ ] Parent page privacy wording updated **the same day**
-- [ ] `knowledge/product-facts.md` updated — tell the marketing side
+- [ ] Plausible account, site added, goals `mission_start` / `mission_complete` / `email_captured`
+- [ ] `NEXT_PUBLIC_ANALYTICS_DOMAIN` set on Vercel and redeployed (parent page and privacy notice switch automatically)
+- [ ] `knowledge/product-facts.md` analytics row updated the same day
 - [ ] `mission_start` fires once per session at the real start
 - [ ] `mission_complete` fires only at the completion screen
 - [ ] No child data in any event prop
@@ -307,6 +320,6 @@ response only.
 
 ### Then
 
-1. Pick a provider and set `NEXT_PUBLIC_ANALYTICS_DOMAIN`.
-2. **Same day:** update `/for-parents` and `knowledge/product-facts.md`.
+1. Create the Plausible site and goals; set `NEXT_PUBLIC_ANALYTICS_DOMAIN` (client approved 2026-10-18).
+2. **Same day:** update the analytics row in `knowledge/product-facts.md`. The site's own wording switches by itself.
 3. Run the exit test.

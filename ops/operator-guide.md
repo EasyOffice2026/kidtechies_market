@@ -1,8 +1,8 @@
 ---
 file: operator-guide.md
 owner: Developer -> KidTechies at handover
-audience: The founder. Written to be used at 7am, not studied.
-version: 1.0
+audience: Ibrahim, who runs KidTechies marketing day to day (client decision D9, 2026-10-18). Written to be used at 7am, not studied.
+version: 1.1
 ---
 
 # Operator guide
@@ -10,6 +10,12 @@ version: 1.0
 The promise this system makes is that your marketing preparation becomes a
 review job instead of a writing job. About five hours a week, most of it
 reading. This guide is how you do that without needing the developer.
+
+*Where this guide says "the founder", read "Ibrahim" — he runs the plan day to
+day. Two changes since it was first written: school outreach (Tuesday) is
+paused, because the focus is worldwide online registration; and on Fridays the
+Funnel Analyst can show which countries respond best, once the by-country
+export is in the inbox.*
 
 ## The one rule
 

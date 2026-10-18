@@ -443,3 +443,50 @@ Done while waiting on the client, both on `feature/part-1-website`:
 The PR body in `ops/pr-part-1-2.md` still describes the branch accurately —
 these are two more commits on it. Remaining client-independent item: the
 staging run of the six agents on the developer's own Claude account.
+
+---
+
+# Client answers, 2026-10-18 — what changed
+
+The client answered most of the open questions. Built and recorded the same day.
+
+## In the product (`AI for kid/AI-tutor`, branch `feature/client-decisions`, 4 commits)
+
+| Task | Status |
+|---|---|
+| 1.7 $100 anchor | ✅ **Kept** — the client chose the discount model. No site change needed. |
+| 1.8 Company identity | ✅ Easy Office International, Kuwait, contact@easyofficeq8.com — footer, about page, terms, privacy notice, every email |
+| 1.9 Terms placeholder | ✅ "whoever operates this installation" replaced; refund requests now say where to email |
+| 1.10 Brand | ✅ **KidTechies**, tagline **AI for Kids**: site title, footer, dashboard, certificate, badge, Sparky's introduction. Saved-progress key deliberately unchanged. Logo artwork still reads "AI for Kids" — design task. |
+| 1.4 Analytics | ✅ **Approved.** Public wording now switches by itself with the setting. Plausible signup + one env var remain. |
+| D11 Privacy notice | ✅ Rewritten to match the product: accounts, Stripe, the mailing list, the company. Still marked "pending legal review" — whether a lawyer checks it is the client's call. |
+| Story Shelf | ✅ Confirmed free; now said on the pricing page and in the emails |
+| — | ✅ Fixed my own false claim: "one email a week at most" — the welcome run is five in ten days |
+| — | ✅ Another false line found and fixed: the about page's "nothing about a child leaves their device" |
+| — | ✅ `check:pages` now fails if any retired false claim reappears on any page |
+| — | ✅ Newsletter replies go to the company inbox (Reply-To) |
+
+Verified: tsc clean, lint clean, 8/8 unit checks, analytics 22/22, newsletter
+20/20, rate limit 7/7, 33/33 pages render, production build clean.
+
+## In the marketing system
+
+- Knowledge base: brand, company, discount model, free Story Shelf, worldwide
+  scope; a stale row that still prohibited the refund promise removed.
+- Agent 1: worldwide scope, plus a monthly course-opportunity section.
+- Agent 4: optional "where it is working" country section, with a contract,
+  fixture and test case 4.7.
+- Agent 6: paused — the client is not focusing on schools.
+- GTM plan: owner Ibrahim; the paid lab now finds the message, then the market.
+- `ops/email-setup.md`: Hostinger DNS + Resend, step by step.
+- `ops/client/KidTechies-Email-Review.docx`: the seven emails, generated from
+  the real templates, plus the fact list to approve.
+- `ops/client/course-opportunities-2026-10.md`: the first monthly course brief.
+
+## Still open — the client did not answer these
+
+1. **Scheduled tasks on their Claude account (D4)** — still the biggest blocker
+2. **Who approves content (D14)** — Ibrahim, presumably; they should say so
+3. **Arabic reviewer (D6)**
+4. **Office postal address (D15)** — for US email footers
+5. **"Approved" on the fact list (D1)** — included in the email review pack

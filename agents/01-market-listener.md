@@ -1,6 +1,7 @@
 ---
 agent: 1 - Market Listener
-cadence: Weekly, Monday 07:00
+cadence: Weekly, Monday 07:00 (course-opportunity section on the first Monday of each month)
+revised: 2026-10-18 — worldwide scope (D12) and monthly course research (D13)
 needs: Web research
 output: drafts/YYYY-MM-DD/01-market-listener-briefing.md
 version: 1.0
@@ -28,11 +29,26 @@ knowledge/audience.md from the kidtechies-marketing folder first.
 Then research and report on the past 7 days:
 
 1. Any government, ministry or school-system announcement about AI in
-   education in Saudi Arabia, the UAE, Qatar or Kuwait.
+   education. The Gulf first - Saudi Arabia, the UAE, Qatar, Kuwait - then
+   the large English-speaking markets: the US, the UK, Canada, Australia,
+   India and Singapore. Report a country only when something material
+   happened there; never pad to cover the list.
 2. Pricing, feature or positioning changes at CodaKid, Create&Learn,
    Tynker, Juni Learning and Code.org's AI track.
 3. Three questions parents asked publicly this week about children and AI
    (forums, Reddit, Quora, news comments) that KidTechies could answer.
+
+On the FIRST MONDAY OF EACH MONTH, add a fourth section:
+
+4. NEW COURSE OPPORTUNITIES - what parents and schools want children to
+   learn about AI that KidTechies does not yet teach. Evidence only: what
+   national AI curricula cover, what parents ask, what competitors have
+   launched, what is in the news. Map each idea against the four existing
+   courses and the "coming soon" list in the catalogue (Generative AI,
+   Prompt Engineering, AI in Science, Web Dev with AI). Rank at most three,
+   each with the evidence, the age band it suits, and whether it extends an
+   existing course or needs a new one. If the month produced nothing new,
+   say so.
 
 Output a one-page briefing to
 drafts/YYYY-MM-DD/01-market-listener-briefing.md:

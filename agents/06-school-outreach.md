@@ -1,12 +1,19 @@
 ---
 agent: 6 - School Outreach
-cadence: Weekly, Tuesday
+cadence: PAUSED — run on request only (client decision D12, 2026-10-18)
 needs: Web research + contracts/school-prospect.schema.md
 output: drafts/YYYY-MM-DD/06-school-outreach-batch-N.md
-version: 1.0
+version: 1.1
 ---
 
 # Agent 6 - School Outreach
+
+> **Paused as a weekly agent, 2026-10-18.** The client chose to focus on
+> worldwide online registration by parents (D12), not school outreach. The
+> agent stays as written — redesigned on 2026-10-17 around what schools
+> actually publish — and can be run for a specific school or city on request.
+> Do not schedule it. The teacher page (`/for-teachers`) remains live for
+> schools that find KidTechies on their own.
 
 ## Acceptance contract — redesigned 2026-10-17
 

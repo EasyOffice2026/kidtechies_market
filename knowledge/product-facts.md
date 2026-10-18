@@ -1,11 +1,32 @@
 ---
 file: product-facts.md
 owner: KidTechies (client) - founder or nominated approver only
-version: 0.3-DRAFT
-last-approved: NOT YET APPROVED
-site-verified: 2026-09-18 against kidtechies.com
-status: AWAITING CLIENT CONFIRMATION (decision D1)
+version: 0.8-DRAFT
+last-approved: PARTIAL — client confirmed brand, price model, company and free tier in writing on 2026-10-18
+site-verified: 2026-09-18 against kidtechies.com; code-verified 2026-10-17
+status: ONE STEP FROM v1.0 — the client's "approved" on the full list (D1)
 ---
+
+## Brand — CONFIRMED 2026-10-18
+
+| | |
+|---|---|
+| Brand | **KidTechies** |
+| Tagline | **AI for Kids** |
+| Rule | Never present "AI for Kids" as the name. It is the line beneath the name. The site, emails and Sparky's own introduction now say KidTechies. The logo artwork still reads "AI for Kids" until new artwork exists — describe the product by name, not by its logo. |
+
+## Company — CONFIRMED 2026-10-18
+
+| | |
+|---|---|
+| Legal name | Easy Office International |
+| Registered in | Kuwait |
+| Contact | contact@easyofficeq8.com |
+| Website | www.easyofficeq8.com |
+| Instagram | easyoffice.intl — the **company's** account, not KidTechies'. Do not present it as a KidTechies channel. |
+| Founder name | Not supplied. Copy does not need it. |
+| Postal address | Not supplied — needed for US email footers (D15). |
+| Day-to-day marketing owner | Ibrahim |
 
 # Product facts - canonical
 
@@ -84,9 +105,9 @@ Counted from the sitemap on 2026-09-18. The 14 figure holds.
 |---|---|---|
 | Single course | $25 | SITE-VERIFIED |
 | Four-course bundle | $70 | SITE-VERIFIED |
-| Bundle anchor price | $100, shown struck through as "Save $30 / 30% off" | SITE-VERIFIED - not in the dossier at all |
+| Bundle anchor price | $100, shown struck through: all four for $70, "Save $30 / 30% off" | **CONFIRMED 2026-10-18** â the client chose this discount model: "Let's try this model and then we will adjust accordingly." |
 | Payment model | One-time. No subscription. | SITE-VERIFIED |
-| Free tier | The whole of Mission 1, Picture Clue Patrol — film, game, challenge and quiz | **CODE-VERIFIED 2026-10-17** — `FREE_LESSON` in `src/lib/commerce.ts`. Whether the Story Shelf is also free is not yet confirmed. |
+| Free tier | The whole of Mission 1, Picture Clue Patrol — film, game, challenge and quiz — **and all six Story Shelf tales** | **CONFIRMED 2026-10-18** — Mission 1 is `FREE_LESSON` in code; the client confirmed the Story Shelf stays free "to keep the interest of the kids", and it is ungated in code. |
 | Signup required | None | SITE-VERIFIED |
 | **Refund promise** | **30 days, no form and no reason required** | **SITE-VERIFIED - it already exists** |
 
@@ -219,19 +240,10 @@ to a dated changelog page - honesty relocated, not removed.
 Until they move, agents writing for the teacher persona must not claim
 classroom-readiness without qualification.
 
-## Company identity - still missing
+## Company identity — supplied 2026-10-18
 
-| Needed | Status |
-|---|---|
-| Founder name | **MISSING** - not on the site |
-| Company legal name | **MISSING** |
-| Company location | **MISSING** |
-| Contact email | **MISSING** - terms says questions go to "whoever operates this installation of AI for Kids" |
-
-That quoted line is unmodified template text. On a page a parent reads before
-paying, and on the page a school's data-protection officer reads before
-replying, it reads as abandoned. This is the highest-priority trust fix on the
-site and it costs nothing but a decision.
+See "Company" at the top of this file. The terms page's template text
+("whoever operates this installation") is replaced on `feature/client-decisions`.
 
 ## Competitor figures - third-party, re-check before use
 

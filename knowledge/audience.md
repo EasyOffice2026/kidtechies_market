@@ -8,9 +8,19 @@ status: AWAITING CLIENT APPROVAL
 
 # Audience
 
-Three people. Gulf-first, English-language, parent-paid. Use these for
-persona-specific drafting - **not** as demographic ad-targeting parameters
-invented beyond what is written here.
+Three people. English-language, parent-paid. Use these for persona-specific
+drafting - **not** as demographic ad-targeting parameters invented beyond what
+is written here.
+
+**Market scope — client decision, 2026-10-18 (D12):** worldwide online
+registration, concentrating on the countries that respond best. This replaces
+"Gulf-first". The Gulf stays a priority — the Vision 2030 parent below is still
+the sharpest persona — but it is one market among several, and which countries
+get attention is decided by measured response (visits, mission completions,
+sign-ups, sales by country), not assumed in advance.
+
+Write so a parent anywhere can follow: no Gulf-only references unless the piece
+is aimed at the Gulf, prices in US dollars as the site shows them.
 
 ## Primary - the Vision 2030 parent (~60% of effort)
 
@@ -70,7 +80,7 @@ also exactly what a school data-protection officer needs to hear.
 | 1 | Understanding, not just using | The AI Detective premise: discover how AI sees, hears, compares and sometimes gets things wrong. No other kids' platform teaches AI's failure modes as the curriculum. |
 | 2 | Nothing about your child is stored on our servers | Progress stays in the browser, for everyone. Children never sign in; the only account is the parent's, to buy courses. No advertising, no tracking scripts, no third-party analytics. ⚠ *History: the original pillar, "Nothing about your child leaves the device", was false — Sparky messages go to Anthropic. The 2026-10-07 rewrite ("your child is a nickname") was also false — no child data is stored at all. This wording is verified against what the code writes, 2026-10-17. Keep the pillar number; Agent 5 and the paid tests share it.* |
 | 3 | Try it in ten seconds, free | Mission 1 opens with no signup, no card. |
-| 4 | Buy once, keep it | $70 for four courses, one payment, no subscription, nothing to cancel. ⚠ The "less than three months of the alternatives" framing is **suspended** as of 2026-09-18 — observed competitor prices run $7.50 to $299/month, so the multiple no longer holds. See `claims-allowed.md`. |
+| 4 | All four for $70 — buy once, keep it | $70 instead of $100 for all four courses (client's discount model, 2026-10-18), one payment, no subscription, nothing to cancel, 30-day refund. The "three months of the alternatives" framing is retired. See `claims-allowed.md`. |
 | 5 | Made like a film, not a lecture | 14 hand-animated missions, Maya, Pip and Glitch, six original fairy tales, printables for screen-free days. |
 
 Ranks 1-5 are also the five message pillars the Creative Tester varies and the
