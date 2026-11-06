@@ -136,9 +136,9 @@ for the native reviewer.
 
 ### Acceptance — the Phase 1 exit test
 
-- [ ] A stranger finds the free mission, **finishes it**, leaves an email, **confirms**, and **receives email one**
+- [x] A stranger finds the free mission, **finishes it**, leaves an email, **confirms**, and **receives email one** — on the live site, 2026-11-07 (developer's own Gmail standing in for the stranger)
 - [ ] All of those steps are visible in analytics and the weekly export
-- [ ] Unsubscribe works in one click
+- [x] Unsubscribe works in one click — live, 2026-11-07; the database row reads `unsubscribed`
 - [ ] A re-run of the sequence job sends nothing twice
 
 ### Risks
@@ -490,3 +490,51 @@ Verified: tsc clean, lint clean, 8/8 unit checks, analytics 22/22, newsletter
 3. **Arabic reviewer (D6)**
 4. **Office postal address (D15)** — for US email footers
 5. **"Approved" on the fact list (D1)** — included in the email review pack
+
+---
+
+# Go-live, 2026-11-07
+
+Parts 1 and 2 are live on kidtechies.com. Nothing had moved between 18 October
+and 4 November because the merged work had never deployed; three things were in
+the way, all found and fixed on 6–7 November.
+
+| Blocker | What it was | Fix |
+|---|---|---|
+| The merge never reached the site | Vercel (`ai-for-kid`, Hobby plan, developer's account) deploys from **`schullegerhard/AI-for-KID`**, not `aquacommander/AI-tutor` or `EasyOffice2026/AI-for-kid`. Merges into the other two never deploy. | Branch pushed to `schullegerhard/AI-for-KID` and merged; Vercel deployed it |
+| Mailing-list tables missing | Migration 0002 had never run against the production database | `npm run db:migrate` run by the developer; `check:db` passes |
+| Every email refused | Resend error: "The kidtechies.com domain is not verified". The domain had been added to Resend (account `pochume86`) on 4 September and its DNS records were already at Hostinger, but verification had never been started. This also blocked account sign-up confirmations and password resets. | Verification started 7 Nov; DNS and domain verified within a minute |
+
+### Verified on the live site
+
+- New site: KidTechies name, `/for-teachers`, corrected privacy wording, pricing
+- The daily email job refuses calls without `CRON_SECRET` (401)
+- Full mailing-list path: email box at the end of the free mission → confirmation
+  email (Inbox, from `noreply@kidtechies.com`) → "You are on the list" → welcome
+  email with the printable sheet, 4 minutes later → sheet opens → unsubscribe
+  page → database row `unsubscribed`
+- The live site and `.env.local` use the same database: the test sign-up
+  appeared in it
+
+### Found along the way, fixed on `fix/picture-sort-content` (not yet merged)
+
+The free mission's picture sort scored clues its pictures do not show — tails
+and feet on face-only pictures, "plastic" on a fluffy teddy bear, "fake ears"
+where a bow is drawn. A careful child lost points for looking properly, in the
+one lesson every parent sees. Every answer key now lists only what is on screen;
+the clear cat, dog and rabbit are whole-body pictures; "Strong clues" shows out
+of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
+10 draws as empty boxes are replaced across the courses.
+
+### Still to do
+
+| Item | Who | Note |
+|---|---|---|
+| Merge `fix/picture-sort-content` | Developer | Push to `origin` (`schullegerhard/AI-for-KID`) and merge |
+| `EMAIL_FROM` = `KidTechies <noreply@kidtechies.com>` in Vercel | Developer | Gmail shows only the bare address today |
+| Plausible + `NEXT_PUBLIC_ANALYTICS_DOMAIN` | Developer | The last unticked exit-test line that needs no client |
+| `news.kidtechies.com` for the newsletter | Developer | Optional now that the root domain sends; keeps a marketing complaint off account email |
+| New logo artwork reading "KidTechies" | Client's designer | Header and footer still show "AI for Kids" |
+| Make `EasyOffice2026/kidtechies_market` private | Client | It is public |
+| Move Vercel to the client's repo and a Pro plan | Client + developer, at handover | Vercel Hobby is for non-commercial use; the site takes payments |
+| D4, D14, D6, D15, D1, D11, D7 | Client | Unchanged since 18 October |

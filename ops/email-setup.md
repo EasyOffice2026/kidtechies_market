@@ -9,6 +9,12 @@ created: 2026-10-18
 Everything the parent mailing list needs before its first real send, in order.
 About 30 minutes, most of it waiting for DNS.
 
+> **Status, 2026-11-07: sending works.** Step 1 turned out to be the blocker:
+> kidtechies.com sat in Resend as *Not Started* while its DNS records were
+> already in place. Started and verified on 7 November; migration applied
+> (step 4); the step 5 test passed. Mail goes from `noreply@kidtechies.com`.
+> Steps 2–3 (`news.kidtechies.com`) remain an optional improvement.
+
 ## What is already in place (checked 2026-10-18, public DNS)
 
 | | Found | Meaning |
