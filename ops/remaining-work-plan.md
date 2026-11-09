@@ -516,7 +516,7 @@ the way, all found and fixed on 6–7 November.
 - The live site and `.env.local` use the same database: the test sign-up
   appeared in it
 
-### Found along the way, fixed on `fix/picture-sort-content` (not yet merged)
+### Found along the way, fixed on `fix/picture-sort-content` (live 2026-11-09)
 
 The free mission's picture sort scored clues its pictures do not show — tails
 and feet on face-only pictures, "plastic" on a fluffy teddy bear, "fake ears"
@@ -530,11 +530,10 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 
 | Item | Who | Note |
 |---|---|---|
-| Merge `fix/picture-sort-content` | Developer | Push to `origin` (`schullegerhard/AI-for-KID`) and merge |
 | `EMAIL_FROM` = `KidTechies <noreply@kidtechies.com>` in Vercel | Developer | Gmail shows only the bare address today |
-| Plausible + `NEXT_PUBLIC_ANALYTICS_DOMAIN` | Developer | The last unticked exit-test line that needs no client |
+| Confirm Umami shows `mission_start`, `mission_complete`, `email_captured` | Developer | Umami is live since 2026-11-09 (Plausible sign-up failed; `feature/umami-analytics` added Umami as a provider). Script and disclosure verified on the live site; the events still need one test run |
 | `news.kidtechies.com` for the newsletter | Developer | Optional now that the root domain sends; keeps a marketing complaint off account email |
 | New logo artwork reading "KidTechies" | Client's designer | Header and footer still show "AI for Kids" |
-| Make `EasyOffice2026/kidtechies_market` private | Client | It is public |
+| Make `EasyOffice2026/kidtechies_market` private | Client | It is public; the developer has write, not admin, access |
 | Move Vercel to the client's repo and a Pro plan | Client + developer, at handover | Vercel Hobby is for non-commercial use; the site takes payments |
 | D4, D14, D6, D15, D1, D11, D7 | Client | Unchanged since 18 October |

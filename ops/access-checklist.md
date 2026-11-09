@@ -17,7 +17,7 @@ milestone date.
 | 9 | **Backup approver** named | | [ ] | |
 | 10 | Feedback SLA agreed (same-day / next-day) | Slow review directly delays tuning and sign-off. | [ ] | |
 | 11 | Brand-name decision | | [ ] | D3 |
-| 12 | Analytics tool installed? (Plausible / Fathom / Umami) | Agent 4 input. | [ ] | D2 |
+| 12 | Analytics tool installed? (Plausible / Fathom / Umami) | Agent 4 input. | [x] | D2 — Umami Cloud, live 2026-11-09 |
 | 13 | Custom events for mission start / mission complete | Two of the six weekly metrics. Pageviews alone will not do it. | [ ] | D2 - most commonly missed item on this list |
 | 14 | Parent email capture live? | Metric 4 of 6. | [x] | D2 — live and tested end to end, 2026-11-07 |
 | 15 | Payment export available with agreed fields | Metrics 5 and 6. No card data required. | [ ] | |
