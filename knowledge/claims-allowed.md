@@ -48,6 +48,7 @@ These are descriptions of what the product is, all traceable to
 | **Stale privacy claims** | Any privacy statement not currently true in `product-facts.md`. |
 | **Privacy claims with the mode dropped** | "No account, no sign-up, no email address", "progress never leaves the device", "nothing about your child leaves the device" — stated about the product as a whole. All true of guest mode, all false for parent accounts. Name the mode or do not make the claim. |
 | **Runtime as headline value** | "23:48 of animated film" beside the price. See `product-facts.md`. |
+| **Planned features as if they exist** | "Share your creations with the community." "Choose Beginner, Intermediate or Advanced." "Watch the video lessons." "Play My World." "Subscribe." All are future plans in `ops/product-roadmap.md` (2026-11-11), not features. Describe only what `product-facts.md` lists. |
 | **"Less than three months of the alternatives"** | Retired. The framing assumed competitors at $11–25/month; Tynker is published at $7.50, where $70 is about nine months. A parent can check this in one click. The client chose a different price story on 2026-10-18 — below. |
 
 *Removed 2026-10-18: a row prohibiting the 30-day refund promise "until it is
