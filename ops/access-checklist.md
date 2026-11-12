@@ -6,7 +6,7 @@ milestone date.
 
 | # | Item | Why it matters | Verified | Notes |
 |---|---|---|---|---|
-| 1 | Claude plan supports **scheduled tasks** | All six cadences depend on it. If absent, Stage 1 scheduling is redesigned (see runbook fallback). | [ ] | D4 |
+| 1 | Claude plan supports **scheduled tasks** | All six cadences depend on it. If absent, Stage 1 scheduling is redesigned (see runbook fallback). | [x] | D4 — passed on the client's Pro account, 2026-11-12 |
 | 2 | Claude plan supports **saved skills** | Voice + claims must apply without pasting them each session. | [ ] | |
 | 3 | Claude plan supports **web research** | Market Listener and School Outreach are useless without it. | [ ] | |
 | 4 | **Google Drive** folder access, client-owned | Draft delivery + CSV input location. | [ ] | |
