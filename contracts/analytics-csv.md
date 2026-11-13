@@ -12,7 +12,8 @@ is the designed behaviour, and it is why the contract is frozen.
 
 Delivered to: `Drive/kidtechies-marketing/inbox/analytics-YYYY-MM-DD.csv`
 Cadence: weekly, before Friday's run.
-Source: the cookieless analytics tool (Plausible, Fathom or self-hosted Umami).
+Source: Umami Cloud (live since 2026-11-09) and the product database — produced by
+`npm run marketing:weekly-export` in the product repository. See below.
 
 ## Required columns
 
@@ -25,29 +26,34 @@ Source: the cookieless analytics tool (Plausible, Fathom or self-hosted Umami).
 | `emails_captured` | integer | Parent email opt-ins | Metric 4 of 6 |
 | `pricing_page_views` | integer | Views of the pricing page | Context for conversion |
 
-## The two columns that do not exist yet
+## How the file is produced (2026-11-13)
 
-`mission_1_starts` and `mission_1_completions` are **custom events**. No
-analytics tool produces them from a default install - somebody has to fire them
-from the mission player. Likewise `emails_captured` requires the parent email
-capture from dossier S04 change #1.
+The two custom events this contract once called missing are live: the mission
+player fires `mission_start` and `mission_complete` (once per session, and a
+completion only after a counted start), and the mailing list records each
+confirmation. Nobody assembles the file by hand.
 
-Both are outside this engagement's scope (decision D2). This is the single most
-commonly missed item on the whole project, because it looks like an analytics
-task and is actually a front-end task.
+In the product repository (`.env.local` needs `UMAMI_API_KEY`,
+`NEXT_PUBLIC_UMAMI_WEBSITE_ID`, `DATABASE_URL` and `STRIPE_SECRET_KEY`):
 
-The dossier is blunt about why completion matters most:
+```
+npm run marketing:weekly-export -- --prev-spend 42.00 --spend 63.00 --out "<marketing folder>\inbox"
+```
 
-> Completion rate is the one most founders skip and the one that predicts
-> everything: if children do not finish Mission 1, no amount of traffic will
-> save the funnel, and the problem is the product, not the marketing.
+| Column | Taken from |
+|---|---|
+| `visitors` | Umami stats for the week |
+| `mission_1_starts` / `mission_1_completions` | Umami event data: `mission_start` / `mission_complete` where `mission` is the free mission (`ai-detective-academy/picture-clue-patrol`) |
+| `emails_captured` | Addresses **confirmed** that week, whatever their status now |
+| `pricing_page_views` | Umami page views of `/pricing` |
 
-## Until those events exist
+Weeks run Monday 00:00 to Monday 00:00 **UTC**. The file holds two rows, last
+week then this week, because the analyst compares them. The output format is
+checked byte for byte against `tests/fixtures/analytics-sample.csv` by
+`npm run check:weekly-export`.
 
-The Funnel Analyst runs against `tests/fixtures/analytics-sample.csv` and is
-accepted on **correct arithmetic against a known-good fixture**, not on live
-data. Live acceptance is deferred and recorded as outstanding in the handover.
-Nobody signs off a metric the site cannot yet produce.
+Live acceptance of the Funnel Analyst (Part 3 exit criterion) is the first
+Friday it runs on this file.
 
 ## Rules
 

@@ -79,11 +79,11 @@ file means agents keep writing the old claim.
 
 ### Acceptance
 
-- [ ] `/for-parents` describes guest mode and parent accounts separately
+- [x] `/for-parents` describes guest mode and parent accounts separately — live, checked 2026-11-13
 - [ ] `mission_start` and `mission_complete` appear for the free mission, once per session
-- [ ] Pricing leads with hours; refund promise beside the price
-- [ ] No template text anywhere; one brand name
-- [ ] Teacher page live; Arabic page live after review
+- [x] Pricing leads with hours; refund promise beside the price — live, checked 2026-11-13
+- [ ] No template text anywhere; one brand name — page copy clean; the logo artwork still reads "AI for Kids"
+- [ ] Teacher page live; Arabic page live after review — teacher page live 2026-11-07; Arabic waits on D6
 - [ ] `product-facts.md` matches the site
 
 ### Risks
@@ -536,4 +536,30 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 | New logo artwork reading "KidTechies" | Client's designer | Header and footer still show "AI for Kids" |
 | Make `EasyOffice2026/kidtechies_market` private | Client | It is public; the developer has write, not admin, access |
 | Move Vercel to the client's repo and a Pro plan | Client + developer, at handover | Vercel Hobby is for non-commercial use; the site takes payments |
-| D4, D14, D6, D15, D1, D11, D7 | Client | Unchanged since 18 October |
+| Merge `feature/marketing-ops` (product repo) | Developer | Weekly export, failure alerts, 20 more weekly questions, canonical and www fixes — see "Review, 2026-11-13" below |
+| Vercel: `NEWSLETTER_HEARTBEAT_URL`, `OPS_ALERT_EMAIL` | Developer | Free healthchecks.io check: period 1 day, grace 2 hours |
+| Vercel → Domains: redirect `kidtechies.com` to `www.kidtechies.com` | Developer | Both serve the site today; the site URL is www |
+| `UMAMI_API_KEY` in `.env.local`; first weekly export | Developer | Umami → Settings → API keys |
+| D14, D6, D15, D1, D11, D7, D16, D17 | Client | D4 closed 2026-11-12 on the client's own account |
+
+# Review, 2026-11-13
+
+A full pass over both repositories and the live site. Fixed the same day on
+`feature/marketing-ops` (product) and `develop` (this repository):
+
+| Finding | Fix |
+|---|---|
+| Nobody produced the Funnel Analyst's weekly files; the contract still said Plausible | `npm run marketing:weekly-export` writes both files from Umami, Stripe (KidTechies purchases only) and the database; ad spend typed in. Checked byte for byte against the fixtures |
+| `emails_captured` shrank for past weeks whenever someone unsubscribed | Counted by confirmation date, whatever the status is now |
+| A failed daily email run left no trace after Vercel's one-hour logs | Heartbeat ping (catches the cron not running and mail being down) plus an alert email; never carries an address |
+| Six weekly questions: a repeat every six weeks | Twenty more seed questions, for the approver's review — half a year before a repeat |
+| Every page declared the home page as its canonical URL, so search engines were told to index only `/` | Only the home page declares a canonical |
+| `www` and the bare domain both serve the site; Umami counted only the bare one | Umami counts both; a Vercel redirect is still to set |
+| The content queue (15 READY, three used a week) had no one refilling it | Market Listener reports a queue check and proposes rows below six; the approver adds them |
+| No record of what was posted, when, from which draft | `ops/publishing-log.md` |
+| Runbook still scheduled the paused School Outreach agent | Runbook updated, with a weekly routine for the people around the agents |
+| Handover pack dated 21 September | Rewritten for the current state |
+
+Opened as decisions: D16 (ad test or pause the Creative Tester) and D17
+(account ownership). Not changed, and still the client's: D1, D6, D7, D11,
+D14, D15.

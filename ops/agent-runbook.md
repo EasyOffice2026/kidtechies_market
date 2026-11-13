@@ -16,11 +16,24 @@ operational reference; `operator-guide.md` is the daily one.
 | 1 | Market Listener | Mon 07:00 | Web research | `01-market-listener-briefing.md` |
 | 2 | Content Factory | Mon/Wed/Sat 08:00 | Knowledge base + queue | `02-content-factory-*.md` (4 files) |
 | 3 | Arabic Localiser | On demand | Approved English asset | `03-arabic-*.md` |
-| 4 | Funnel Analyst | Fri | Two CSVs in Drive inbox | `04-funnel-analyst-week-of-*.md` |
-| 5 | Creative Tester | Fortnightly | Results log | `05-creative-tester-round-N.md` |
-| 6 | School Outreach | Tue | Web research + prospect log | `06-school-outreach-batch-N.md` |
+| 4 | Funnel Analyst | Fri | Two CSVs in `inbox/`, written Thursday by `npm run marketing:weekly-export` | `04-funnel-analyst-week-of-*.md` |
+| 5 | Creative Tester | Fortnightly — idle until ads run (D16) | Results log | `05-creative-tester-round-N.md` |
+| 6 | School Outreach | **Paused (D12)** — on request only | Web research + prospect log | `06-school-outreach-batch-N.md` |
 
 All paths are under `drafts/YYYY-MM-DD/`.
+
+## The week, for the people around the agents
+
+| When | Who | What |
+|---|---|---|
+| Daily, before 10:00 | Approver (D14) | Review today's drafts. Approve, edit or reject. Post what was approved and add a line to `ops/publishing-log.md` |
+| Monday | Approver | Read the Market Listener's **queue check**. Below 6 READY items, add the proposals you accept to `queue/content-queue.md` — the agent proposes, it never edits the queue |
+| Thursday | Developer, or whoever holds the product repo | `npm run marketing:weekly-export -- --prev-spend <last week> --spend <this week> --out "<this folder>\inbox"` — ad spend from the approver |
+| Friday | Approver | Read the Funnel Analyst's one recommendation and decide whether to act on it |
+
+The computer that runs the scheduled agents must be **on, with the Claude
+app open,** at each run time. A run missed because the machine slept is not
+an agent failure; move the schedule or keep the machine awake.
 
 ## Expected failure behaviour
 

@@ -37,6 +37,12 @@ birth — and this work must not add anything to that.
 > so Fathom or Umami would record page views and silently drop every mission
 > event. **Use Plausible** — hosted, or a self-hosted Plausible Community
 > Edition. **Approved by the client on 2026-10-18.**
+>
+> **Updated 2026-11-13: Umami, live since 2026-11-09.** The Plausible sign-up
+> failed, so the module gained a second provider (`NEXT_PUBLIC_UMAMI_WEBSITE_ID`),
+> sending the same three events through `umami.track`. The parents page and
+> privacy notice name Umami automatically. The weekly export is produced by
+> `npm run marketing:weekly-export` — see `contracts/analytics-csv.md`.
 
 Plausible is cookieless and does not identify visitors, which is why it fits —
 a standard analytics install would break a published privacy claim.

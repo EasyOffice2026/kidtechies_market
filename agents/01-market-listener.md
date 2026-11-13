@@ -59,6 +59,13 @@ drafts/YYYY-MM-DD/01-market-listener-briefing.md:
   deciding where to spend this week, not for a reader who wants a summary.
 - THREE CONTENT ANGLES - ranked by urgency, each with a headline that could
   be published as written, and the persona it targets.
+- QUEUE CHECK - count the items marked READY in queue/content-queue.md and
+  give the number. If fewer than 6 are READY, turn your content angles into
+  up to three proposed queue rows (topic, persona, source link), in the same
+  columns as the queue, under the heading "Proposed for the queue". Do NOT
+  edit queue/content-queue.md yourself: the approver adds what they accept.
+  Content Factory uses three items a week, so below six the queue runs out
+  within a fortnight.
 
 Rules:
 - Cite a source for every factual claim. A claim without a source does not
