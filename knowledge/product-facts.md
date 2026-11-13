@@ -1,7 +1,7 @@
 ---
 file: product-facts.md
 owner: KidTechies (client) - founder or nominated approver only
-version: 0.8-DRAFT
+version: 0.8.1-DRAFT
 last-approved: PARTIAL — client confirmed brand, price model, company and free tier in writing on 2026-10-18
 site-verified: 2026-09-18 against kidtechies.com; code-verified 2026-10-17
 status: ONE STEP FROM v1.0 — the client's "approved" on the full list (D1)
@@ -161,7 +161,7 @@ overstate what a $25 buyer receives.
 | Anything about a child on a server | **None.** No profile, no progress, no answers. | Nothing writes `child_profile` or `child_progress` |
 | Where progress lives | **In the browser, for everyone** — guests and account holders alike | `localStorage` key `ai-for-kids:learner:v1` |
 | The one thing that leaves the device | What a child types to **Sparky** or the **Creative Studio** goes to Anthropic's Claude for a reply. Not stored, not linked to anyone. | `api/ai-tutor/route.ts`; disclosed in the privacy notice |
-| Analytics | **None** installed | No analytics in code; module built but switched off |
+| Analytics | **Umami**, cookieless, live since 2026-11-09. Counts visits, page views, and three events: free-mission start, free-mission completion, email confirmed. No cookies; no name, email or child data in any event | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` set on Vercel; `sanitiseProps()` in `lib/analytics.ts`; disclosed on `/for-parents` and `/privacy` |
 | Free without an account | Mission 1, Picture Clue Patrol, in full | `FREE_LESSON` |
 
 ### Claims agents may make
@@ -174,7 +174,8 @@ overstate what a $25 buyer receives.
 | "Your child's progress stays in your browser" | ✅ TRUE, for everyone |
 | "Accounts are for parents, to buy courses — your email, nothing about your child" | ✅ TRUE |
 | "What your child types to Sparky goes to Anthropic's Claude to write a reply, and isn't stored" | ✅ TRUE — say it plainly when the tutor comes up |
-| "No advertising, no tracking scripts, no third-party analytics" | ✅ TRUE **today** — false the day analytics is switched on |
+| "No advertising, and no cookies used for tracking" | ✅ TRUE — the live `/for-parents` wording since 2026-11-09 |
+| "We count visits with a cookieless analytics tool. It sets no cookies and does not identify you or your child." | ✅ TRUE — the live `/privacy` wording; Umami may be named |
 | "Sparky never asks for a name, school or address" | ✅ TRUE per site |
 
 ### Claims agents must NOT make
@@ -185,6 +186,7 @@ overstate what a $25 buyer receives.
 | "Nothing about your child leaves the device" | ❌ FALSE. Sparky messages go to Anthropic. Use "is stored on our servers" instead. |
 | "We store a nickname and an age group for each child" | ❌ FALSE today — child profiles are not built (the account page says they "arrive with the next piece of work") |
 | "Your progress is saved to your account" | ❌ FALSE today — nothing syncs to the server yet |
+| "No tracking scripts", "no third-party analytics", "no analytics", "we don't track anything" | ❌ FALSE since 2026-11-09 — Umami is installed. Use "no cookies used for tracking" instead |
 
 ### These change when child-profile sync ships
 
@@ -209,11 +211,10 @@ the false absolute it replaces, and it survives a parent checking.
 | Tracking | "No advertising, no tracking scripts, no third-party analytics" |
 | Erase data | "Erase all progress, badges and activity records" |
 
-> **The tracking line changes the day analytics is installed (D2).** "No
-> third-party analytics" is currently true and currently published. A cookieless
-> tool would make it false. Update this file that morning, and replace the claim
-> with the honest version - naming the tool as a further proof point - rather
-> than letting agents publish a stale absolute.
+> **The tracking line changed on 2026-11-09 (D2).** Umami went live and "no
+> third-party analytics" became false; the site switched its own wording that
+> day. This file was corrected on 2026-11-14, five days late — no draft in
+> that window was published, because D1 still holds every draft back.
 
 ## Named product elements
 
