@@ -55,6 +55,29 @@ checked byte for byte against `tests/fixtures/analytics-sample.csv` by
 Live acceptance of the Funnel Analyst (Part 3 exit criterion) is the first
 Friday it runs on this file.
 
+### On Umami's free plan (the plan in use, 2026-11-15)
+
+Umami Cloud's free plan has no API, so the four Umami numbers are read off the
+dashboard and typed in, each as `last week,this week`. `emails_captured`
+and the payment file stay automatic; `UMAMI_API_KEY` is not needed.
+
+```
+npm run marketing:weekly-export -- --visitors 40,52 --starts 9,11 --completions 6,8 --pricing-views 3,4 --prev-spend 0 --spend 0 --out "<marketing folder>inbox"
+```
+
+Once: Umami → Settings → Preferences → **Timezone: UTC**, so the dashboard's
+weeks match the file's. Then, for each week (Monday to Sunday, custom range):
+
+| Flag | Where on the dashboard |
+|---|---|
+| `--visitors` | The website's **Visitors** total |
+| `--pricing-views` | **Pages** table, the `/pricing` row (views) |
+| `--starts` | **Events** → `mission_start` → property `mission` → `ai-detective-academy/picture-clue-patrol` |
+| `--completions` | The same, for `mission_complete` |
+
+The command refuses anything but two whole numbers per flag, and warns when
+completions exceed starts (usually two numbers swapped).
+
 ## Rules
 
 - No personal data. Aggregate counts only. An export containing individual
