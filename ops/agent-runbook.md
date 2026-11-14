@@ -28,7 +28,7 @@ All paths are under `drafts/YYYY-MM-DD/`.
 |---|---|---|
 | Daily, before 10:00 | Approver (D14) | Review today's drafts. Approve, edit or reject. Post what was approved and add a line to `ops/publishing-log.md` |
 | Monday | Approver | Read the Market Listener's **queue check**. Below 6 READY items, add the proposals you accept to `queue/content-queue.md` — the agent proposes, it never edits the queue |
-| Thursday | Developer, or whoever holds the product repo | `npm run marketing:weekly-export -- --prev-spend <last week> --spend <this week> --out "<this folder>\inbox"` — ad spend from the approver |
+| Thursday | Developer, or whoever holds the product repo | `npm run marketing:weekly-export -- --prev-spend <last week> --spend <this week> --out "<this folder>\inbox"` — on Umami's free plan, add the four Umami numbers from the dashboard (see `contracts/analytics-csv.md`); ad spend from the approver |
 | Friday | Approver | Read the Funnel Analyst's one recommendation and decide whether to act on it |
 
 The computer that runs the scheduled agents must be **on, with the Claude
