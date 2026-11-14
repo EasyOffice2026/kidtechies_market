@@ -23,6 +23,17 @@ Cadence: weekly, before Friday's run.
 | `refunds_usd` | decimal, 2dp | Refunds issued in the week | `0.00` if none |
 | `marketing_spend_usd` | decimal, 2dp | Total ad and creator spend for the week | Needed for metric 6 |
 
+## How the file is produced (2026-11-13)
+
+The same command writes `payments-<monday>.csv` next to the analytics file.
+`orders`, `gross_revenue_usd`, `fees_usd` and `refunds_usd` come from
+Stripe, counting **only** charges and refunds that match a KidTechies purchase
+in the product database — the Stripe account may serve other Easy Office
+business. Fees settled in another currency are converted with Stripe's own
+exchange rate. `marketing_spend_usd` is the one number no system knows: it is
+typed in with `--spend` and `--prev-spend` and is required (`0` for a week
+with no ads), because a guessed spend becomes a wrong cost per sale.
+
 ## No card data. Ever.
 
 Business fields only. No card numbers, no last-four, no cardholder names, no

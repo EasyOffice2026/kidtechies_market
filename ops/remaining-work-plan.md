@@ -79,11 +79,11 @@ file means agents keep writing the old claim.
 
 ### Acceptance
 
-- [ ] `/for-parents` describes guest mode and parent accounts separately
+- [x] `/for-parents` describes guest mode and parent accounts separately — live, checked 2026-11-13
 - [ ] `mission_start` and `mission_complete` appear for the free mission, once per session
-- [ ] Pricing leads with hours; refund promise beside the price
-- [ ] No template text anywhere; one brand name
-- [ ] Teacher page live; Arabic page live after review
+- [x] Pricing leads with hours; refund promise beside the price — live, checked 2026-11-13
+- [ ] No template text anywhere; one brand name — page copy clean; the logo artwork still reads "AI for Kids"
+- [ ] Teacher page live; Arabic page live after review — teacher page live 2026-11-07; Arabic waits on D6
 - [ ] `product-facts.md` matches the site
 
 ### Risks
@@ -136,9 +136,9 @@ for the native reviewer.
 
 ### Acceptance — the Phase 1 exit test
 
-- [ ] A stranger finds the free mission, **finishes it**, leaves an email, **confirms**, and **receives email one**
+- [x] A stranger finds the free mission, **finishes it**, leaves an email, **confirms**, and **receives email one** — on the live site, 2026-11-07 (developer's own Gmail standing in for the stranger)
 - [ ] All of those steps are visible in analytics and the weekly export
-- [ ] Unsubscribe works in one click
+- [x] Unsubscribe works in one click — live, 2026-11-07; the database row reads `unsubscribed`
 - [ ] A re-run of the sequence job sends nothing twice
 
 ### Risks
@@ -404,3 +404,162 @@ there is a deliberate act, not a side effect of a test run.
 - The welcome email's day-6 offer states the refund and "no subscription", and
   deliberately not the suspended "three months" comparison — enforced by a
   check, not by memory.
+
+---
+
+# Part 3 — progress, 2026-10-17
+
+The two tasks that did not need the client's account are done. Everything
+else in Part 3 is waiting on them.
+
+| # | Task | Status |
+|---|---|---|
+| 3.1 | Capability check on the client's Claude account | ⏸ **Client account** — five minutes, and everything below it depends on the answer |
+| 3.2 | Fact sign-off → knowledge base v1.0 | ⏸ Client (D1) |
+| 3.3 | Setup on the client's account | ⏸ After 3.1 |
+| 3.4 | Re-run tests on the client's account | ⏸ After 3.3 |
+| 3.5 | Regenerate the withdrawn drafts | ✅ `drafts/2026-10-17/`: the UAE article (EN + AR) with the privacy paragraph rebuilt from what the code verifies, a new self-check, and ad variants V-011/V-012 replacing V-003/V-004. Social, email and video hook were never affected and stand. The outreach draft's do-not-publish notice was a **false positive** — "no student accounts, no student data" is true — and was removed. |
+| 3.6 | Agent 6 redesign | ✅ Prompt and schema rewritten around what Gulf schools actually publish: institution-level records, a `contact_channel` (web form / inbox / switchboard) instead of a constructed email, `research_minutes` so the founder can budget, and drafts that ask "who should I send this to?" |
+| 3.7 | Funnel Analyst live | ⏸ After Part 1's tracking is switched on |
+| 3.8 | Arabic reviewer; "your child" gender rule | ⏸ Client (D6). A 16th flag on the Arabic article marks the new privacy sentence for first attention |
+| 3.9 | Price framing | ⏸ Client (D8) |
+| 3.10 | Usage cost ceiling | ⏸ Needs real runs on the client's account (D7) |
+| 3.11 | Handover | ⏸ Last |
+
+**Part 3 cannot progress further without the client.** The one unblocker is
+3.1: five minutes on their Claude account to test a scheduled task.
+
+---
+
+# Client-independent work, 2026-10-17
+
+Done while waiting on the client, both on `feature/part-1-website`:
+
+| Work | Why it needed no request |
+|---|---|
+| **Rate limiting** on sign-up, resend, password reset and the newsletter form — 3 per address and 12 per caller per ten minutes | A gap the code documented itself; the newsletter form widened it. Pure engineering, 7 checks |
+| **"Child profiles" promise removed** from the sign-up and account pages | The feature is not built; the account page said so. Copy now matches the code and the marketing |
+
+The PR body in `ops/pr-part-1-2.md` still describes the branch accurately —
+these are two more commits on it. Remaining client-independent item: the
+staging run of the six agents on the developer's own Claude account.
+
+---
+
+# Client answers, 2026-10-18 — what changed
+
+The client answered most of the open questions. Built and recorded the same day.
+
+## In the product (`AI for kid/AI-tutor`, branch `feature/client-decisions`, 4 commits)
+
+| Task | Status |
+|---|---|
+| 1.7 $100 anchor | ✅ **Kept** — the client chose the discount model. No site change needed. |
+| 1.8 Company identity | ✅ Easy Office International, Kuwait, contact@easyofficeq8.com — footer, about page, terms, privacy notice, every email |
+| 1.9 Terms placeholder | ✅ "whoever operates this installation" replaced; refund requests now say where to email |
+| 1.10 Brand | ✅ **KidTechies**, tagline **AI for Kids**: site title, footer, dashboard, certificate, badge, Sparky's introduction. Saved-progress key deliberately unchanged. Logo artwork still reads "AI for Kids" — design task. |
+| 1.4 Analytics | ✅ **Approved.** Public wording now switches by itself with the setting. Plausible signup + one env var remain. |
+| D11 Privacy notice | ✅ Rewritten to match the product: accounts, Stripe, the mailing list, the company. Still marked "pending legal review" — whether a lawyer checks it is the client's call. |
+| Story Shelf | ✅ Confirmed free; now said on the pricing page and in the emails |
+| — | ✅ Fixed my own false claim: "one email a week at most" — the welcome run is five in ten days |
+| — | ✅ Another false line found and fixed: the about page's "nothing about a child leaves their device" |
+| — | ✅ `check:pages` now fails if any retired false claim reappears on any page |
+| — | ✅ Newsletter replies go to the company inbox (Reply-To) |
+
+Verified: tsc clean, lint clean, 8/8 unit checks, analytics 22/22, newsletter
+20/20, rate limit 7/7, 33/33 pages render, production build clean.
+
+## In the marketing system
+
+- Knowledge base: brand, company, discount model, free Story Shelf, worldwide
+  scope; a stale row that still prohibited the refund promise removed.
+- Agent 1: worldwide scope, plus a monthly course-opportunity section.
+- Agent 4: optional "where it is working" country section, with a contract,
+  fixture and test case 4.7.
+- Agent 6: paused — the client is not focusing on schools.
+- GTM plan: owner Ibrahim; the paid lab now finds the message, then the market.
+- `ops/email-setup.md`: Hostinger DNS + Resend, step by step.
+- `ops/client/KidTechies-Email-Review.docx`: the seven emails, generated from
+  the real templates, plus the fact list to approve.
+- `ops/client/course-opportunities-2026-10.md`: the first monthly course brief.
+
+## Still open — the client did not answer these
+
+1. **Scheduled tasks on their Claude account (D4)** — still the biggest blocker
+2. **Who approves content (D14)** — Ibrahim, presumably; they should say so
+3. **Arabic reviewer (D6)**
+4. **Office postal address (D15)** — for US email footers
+5. **"Approved" on the fact list (D1)** — included in the email review pack
+
+---
+
+# Go-live, 2026-11-07
+
+Parts 1 and 2 are live on kidtechies.com. Nothing had moved between 18 October
+and 4 November because the merged work had never deployed; three things were in
+the way, all found and fixed on 6–7 November.
+
+| Blocker | What it was | Fix |
+|---|---|---|
+| The merge never reached the site | Vercel (`ai-for-kid`, Hobby plan, developer's account) deploys from **`schullegerhard/AI-for-KID`**, not `aquacommander/AI-tutor` or `EasyOffice2026/AI-for-kid`. Merges into the other two never deploy. | Branch pushed to `schullegerhard/AI-for-KID` and merged; Vercel deployed it |
+| Mailing-list tables missing | Migration 0002 had never run against the production database | `npm run db:migrate` run by the developer; `check:db` passes |
+| Every email refused | Resend error: "The kidtechies.com domain is not verified". The domain had been added to Resend (account `pochume86`) on 4 September and its DNS records were already at Hostinger, but verification had never been started. This also blocked account sign-up confirmations and password resets. | Verification started 7 Nov; DNS and domain verified within a minute |
+
+### Verified on the live site
+
+- New site: KidTechies name, `/for-teachers`, corrected privacy wording, pricing
+- The daily email job refuses calls without `CRON_SECRET` (401)
+- Full mailing-list path: email box at the end of the free mission → confirmation
+  email (Inbox, from `noreply@kidtechies.com`) → "You are on the list" → welcome
+  email with the printable sheet, 4 minutes later → sheet opens → unsubscribe
+  page → database row `unsubscribed`
+- The live site and `.env.local` use the same database: the test sign-up
+  appeared in it
+
+### Found along the way, fixed on `fix/picture-sort-content` (live 2026-11-09)
+
+The free mission's picture sort scored clues its pictures do not show — tails
+and feet on face-only pictures, "plastic" on a fluffy teddy bear, "fake ears"
+where a bow is drawn. A careful child lost points for looking properly, in the
+one lesson every parent sees. Every answer key now lists only what is on screen;
+the clear cat, dog and rabbit are whole-body pictures; "Strong clues" shows out
+of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
+10 draws as empty boxes are replaced across the courses.
+
+### Still to do
+
+| Item | Who | Note |
+|---|---|---|
+| `EMAIL_FROM` = `KidTechies <noreply@kidtechies.com>` in Vercel | Developer | Gmail shows only the bare address today |
+| Confirm Umami shows `mission_start`, `mission_complete`, `email_captured` | Developer | Umami is live since 2026-11-09 (Plausible sign-up failed; `feature/umami-analytics` added Umami as a provider). Script and disclosure verified on the live site; the events still need one test run |
+| `news.kidtechies.com` for the newsletter | Developer | Optional now that the root domain sends; keeps a marketing complaint off account email |
+| New logo artwork reading "KidTechies" | Client's designer | Header and footer still show "AI for Kids" |
+| Make `EasyOffice2026/kidtechies_market` private | Client | It is public; the developer has write, not admin, access |
+| Move Vercel to the client's repo and a Pro plan | Client + developer, at handover | Vercel Hobby is for non-commercial use; the site takes payments |
+| Merge `feature/marketing-ops` (product repo) | Developer | Weekly export, failure alerts, 20 more weekly questions, canonical and www fixes — see "Review, 2026-11-13" below |
+| Vercel: `NEWSLETTER_HEARTBEAT_URL`, `OPS_ALERT_EMAIL` | Developer | Free healthchecks.io check: period 1 day, grace 2 hours |
+| Vercel → Domains: redirect `kidtechies.com` to `www.kidtechies.com` | Developer | Both serve the site today; the site URL is www |
+| `UMAMI_API_KEY` in `.env.local`; first weekly export | Developer | Umami → Settings → API keys |
+| D14, D6, D15, D1, D11, D7, D16, D17 | Client | D4 closed 2026-11-12 on the client's own account |
+
+# Review, 2026-11-13
+
+A full pass over both repositories and the live site. Fixed the same day on
+`feature/marketing-ops` (product) and `develop` (this repository):
+
+| Finding | Fix |
+|---|---|
+| Nobody produced the Funnel Analyst's weekly files; the contract still said Plausible | `npm run marketing:weekly-export` writes both files from Umami, Stripe (KidTechies purchases only) and the database; ad spend typed in. Checked byte for byte against the fixtures |
+| `emails_captured` shrank for past weeks whenever someone unsubscribed | Counted by confirmation date, whatever the status is now |
+| A failed daily email run left no trace after Vercel's one-hour logs | Heartbeat ping (catches the cron not running and mail being down) plus an alert email; never carries an address |
+| Six weekly questions: a repeat every six weeks | Twenty more seed questions, for the approver's review — half a year before a repeat |
+| Every page declared the home page as its canonical URL, so search engines were told to index only `/` | Only the home page declares a canonical |
+| `www` and the bare domain both serve the site; Umami counted only the bare one | Umami counts both; a Vercel redirect is still to set |
+| The content queue (15 READY, three used a week) had no one refilling it | Market Listener reports a queue check and proposes rows below six; the approver adds them |
+| No record of what was posted, when, from which draft | `ops/publishing-log.md` |
+| Runbook still scheduled the paused School Outreach agent | Runbook updated, with a weekly routine for the people around the agents |
+| Handover pack dated 21 September | Rewritten for the current state |
+
+Opened as decisions: D16 (ad test or pause the Creative Tester) and D17
+(account ownership). Not changed, and still the client's: D1, D6, D7, D11,
+D14, D15.

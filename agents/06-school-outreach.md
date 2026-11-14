@@ -1,22 +1,44 @@
 ---
 agent: 6 - School Outreach
-cadence: Weekly, Tuesday
+cadence: PAUSED — run on request only (client decision D12, 2026-10-18)
 needs: Web research + contracts/school-prospect.schema.md
 output: drafts/YYYY-MM-DD/06-school-outreach-batch-N.md
-version: 1.0
+version: 1.1
 ---
 
 # Agent 6 - School Outreach
 
-## Acceptance contract
+> **Paused as a weekly agent, 2026-10-18.** The client chose to focus on
+> worldwide online registration by parents (D12), not school outreach. The
+> agent stays as written — redesigned on 2026-10-17 around what schools
+> actually publish — and can be run for a specific school or city on request.
+> Do not schedule it. The teacher page (`/for-teachers`) remains live for
+> schools that find KidTechies on their own.
+
+## Acceptance contract — redesigned 2026-10-17
 
 | Field | Value |
 |---|---|
 | Trigger | Weekly, Tuesday |
-| Inputs | Target cities and school criteria, public school information, prospect-list schema |
-| Output | Verified prospect list + personalised outreach drafts |
-| Acceptance rule | Personalisation references something real and sourceable. **No invented contact details or achievements.** |
+| Inputs | Approved target cities and school types; public school websites; `contracts/school-prospect.schema.md` |
+| Output | Ten **institution-level** prospect records, each with a published contact channel and a sourced personalisation detail, plus ten drafts the founder sends |
+| Acceptance rule | Every detail carries the URL it came from. **No constructed email address, ever.** A record with no published contact says so and gives the web form or switchboard instead. |
 
+### Why this is not what the dossier specified
+
+The dossier asked for "a list of schools with their ICT or innovation lead" and
+"a personalised email per school". Verified on 2026-09-20: Gulf private and
+international schools publish a switchboard, a PO box and a web form — **not
+staff emails**. The only way to produce the briefed output is to construct
+addresses, which `child-safety-rules.md` forbids, and which would mean cold mail
+to named individuals in jurisdictions with active data-protection law, from a
+brand whose pitch is privacy.
+
+So the agent does the research and the drafting — most of the labour — and the
+**founder places the first contact** by the channel the school actually
+publishes. The ask in each draft is "who should I send this to?", which turns
+an unsolicited message into a request for direction. Budget roughly twenty
+minutes of research per school; ten a week is about three hours.
 ## Data-protection control
 
 Building lists of named individuals at schools in Saudi Arabia, the UAE and
@@ -46,41 +68,49 @@ knowledge/brand-voice.md, knowledge/claims-allowed.md,
 knowledge/child-safety-rules.md and contracts/school-prospect.schema.md.
 
 Build a batch of TEN prospects from the approved target cities and school
-types. For each, produce a schema-conformant record and one personalised
-outreach draft.
+types. Each prospect is a SCHOOL, not a person. For each, produce a
+schema-conformant record and one draft message the founder will send.
 
 SOURCING RULES - these are hard:
-- Public sources only. If the school does not publish a contact, record
-  "not published" and use the school's general enquiries address. Never
-  construct, guess or pattern-match an email address - not even an obvious
-  firstname.lastname format.
+- Public sources only: the school's own website and its published pages.
+- contact_channel is whatever the school publishes for enquiries - a web
+  form URL, a general or admissions inbox, or a switchboard number - with
+  the URL it was found on. If the school publishes a role inbox (e.g. an
+  ICT or innovation department address), prefer it. Never construct, guess
+  or pattern-match an address - not even an obvious firstname.lastname
+  format - and never record a named individual's address unless the school
+  itself publishes it for contact.
 - Every personalisation detail carries the URL it came from, in the record.
+  Technology pages, curriculum pages and news posts are the richest source:
+  what platforms they use, whether they mention AI at all, what they say
+  about devices.
 - If you cannot find a real, sourceable detail about a school, say so and
-  send the non-personalised version. A generic honest email beats an
-  invented compliment, and a school ICT coordinator can spot a fabricated
-  one instantly.
-- Prefer a published role inbox over a named individual.
+  produce the non-personalised draft. A generic honest message beats an
+  invented compliment, and a school can spot a fabricated one instantly.
+- Record how long each school took. The founder needs the real cost.
 
 THE OFFER (dossier S05 channel #3):
-The full bundle, free, for classroom use, in exchange for a testimonial and
-a mention in the parent newsletter.
+The full bundle, free, for classroom use, in exchange for honest feedback
+and, if it earns it, a mention in the school's parent newsletter.
 
-EACH EMAIL:
+EACH DRAFT:
 - Under 150 words. These people are busy and screen hard.
 - Opens with the real, sourced detail about their school.
-- Leads with what solves their actual problem: no student accounts, no data
-  collected, classroom-ready, printables for the half of the room without a
-  device. A data-protection officer needs to hear exactly this.
+- Leads with what a school actually screens for: no student accounts,
+  nothing about a student stored on a server, classroom-ready, printable
+  sheets for the half of the room without a device. If the AI tutor comes
+  up, say plainly that what a student types to it goes to the AI for a
+  reply and is not stored.
+- Does not claim classroom-readiness without qualification while
+  /for-parents says a teacher is still reviewing the quiz wording.
+- Closes by asking who the right person is, not by assuming.
 - One ask. No attachments. No tracking pixels.
-- Leave a blank line marked [FOUNDER: add one human line here] - the
-  operating rhythm is that the founder adds a personal sentence before
-  sending, and the email should have a place for it.
+- Leaves a line marked [FOUNDER: add one human line here].
 
-Output the ten records as a table conforming to the schema, plus ten
-drafts. Flag any prospect where you were unsure the school fits the
-criteria.
+Output the ten records as a table conforming to the schema, then the ten
+drafts, then the time spent per school. Flag any prospect where you were
+unsure the school fits the approved criteria.
 ```
-
 ## Why the founder's line matters
 
 The Tuesday slot in the dossier's weekly rhythm is 40 minutes: *read each draft,

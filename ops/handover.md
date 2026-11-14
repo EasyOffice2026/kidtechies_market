@@ -2,163 +2,116 @@
 file: handover.md
 owner: Developer -> KidTechies
 audience: The client. Written to be read once, then kept.
-date: 2026-09-21
+date: 2026-11-13 (replaces the version of 2026-09-21)
 ref: KT/DEV/2026-001
 ---
 
-# Handover — KidTechies AI marketing agent, Stage 1
+# Handover — KidTechies marketing system
 
-## What you now own
+## What you have
 
-Everything. The Claude account, the knowledge files, the agent prompts, the
-Drive folders, the approved content, and this repository. Nothing here depends
-on the developer continuing to be involved.
+| Part | What it is | State |
+|---|---|---|
+| **1 · Website** | kidtechies.com: the KidTechies name, pricing, parents and teachers pages, privacy wording that matches what the site does | Live since 2026-11-07 |
+| **2 · Parent email list** | Sign-up after the free mission → confirmation → printable sheet → five welcome emails → a weekly question. One-click unsubscribe | Live and tested end to end, 2026-11-07 |
+| **2 · Analytics** | Umami: visits, free-mission starts and completions, sign-ups. No cookies; the privacy page says so | Live since 2026-11-09 |
+| **3 · Six AI agents** | Draft marketing work on a schedule, on your Claude account. A person approves everything; nothing publishes by itself | Built. Scheduled tasks proven on your account 2026-11-12 (D4). Safety tests on your account still to run |
 
-| Deliverable | Where |
+| Deliverable | Where (marketing repository) |
 |---|---|
-| Knowledge base — 5 governed files + queue | `knowledge/`, `queue/` |
+| Knowledge base — what the agents may say | `knowledge/` |
+| Content queue | `queue/content-queue.md` |
 | Six agent prompts + shared controls | `agents/` |
-| Saved brand-voice skill | `skills/kidtechies-voice/` |
-| Data contracts (analytics, payments, prospects, creative) | `contracts/` |
-| Test pack — 36 cases + 9 fixtures | `tests/` |
-| Operator guide, agent runbook, decision log | `ops/` |
-| Worked output from all six agents | `drafts/` |
+| Brand-voice skill (uploaded to Claude) | `skills/kidtechies-voice/` |
+| Data contracts for the weekly numbers | `contracts/` |
+| Test pack and fixtures | `tests/` |
+| Daily guide, runbook, decision log, publishing log | `ops/` |
+| Future product plan (your vision of 11 November) | `ops/product-roadmap.md` |
 
 ## How it works, in one paragraph
 
-Five Markdown files decide what may be said. Six agents read all five before
-every run and draft work into a dated folder. You approve it. Nothing publishes
-by itself, and no agent can invent a product number — if a fact is not in
-`product-facts.md`, it does not get written. Start with `ops/operator-guide.md`;
-it is written for 7am use, not for study.
+Five files in `knowledge/` decide what may be said about KidTechies. Each
+agent reads them before every run and writes drafts into a dated folder.
+Your approver reads the drafts each morning, approves or edits, posts by hand
+and logs it. No agent can state a product number that is not in
+`knowledge/product-facts.md`, address a child, or ask for a child's data —
+these are tested, not hoped for. Start with `ops/operator-guide.md`.
 
-## What it has already produced
+## Running it on your computer
 
-Not a description — the actual output, in `drafts/`:
+- The agents run in **Claude → Cowork**, in the project **kidtechies**, linked
+  to the folder `C:\KidTechies\kidtechies_market-develop`.
+- Scheduled tasks run only while that computer is **on and the Claude app is
+  open**. An office PC that stays on is the right home.
+- Drafts land in `drafts\<date>\` in that folder. To review them from
+  anywhere, put the folder inside Google Drive for desktop.
+- Your plan is **Claude Pro**. Watch usage in the first two weeks; if the
+  agents hit the limit, move to a larger plan or run fewer cadences (D7).
 
-- A market briefing that found the UAE made "Artificial Intelligence and
-  Technology" a standalone subject this term, KG–Grade 12, in private schools as
-  well as public.
-- A complete content package on it: a 946-word article, five captions, a nurture
-  email, a 25-second video script.
-- An Arabic localisation with fifteen flagged points for a native reviewer.
-- A weekly funnel analysis, verified correct against known data.
-- Ten ad variants across the five message pillars.
-- A researched school prospect record.
+## Your week
+
+| When | Who | What |
+|---|---|---|
+| Every morning, ~20 minutes | Approver | Review today's drafts; post what you approve; one line in `ops/publishing-log.md` |
+| Monday | Approver | Market Listener's briefing. If it proposes queue topics, add the ones you want |
+| Thursday | Developer (for now) | Weekly numbers into `inbox/` — one command, with your ad spend for the week |
+| Friday | Approver | Funnel Analyst's six numbers and **one** recommended action |
 
 ## Test position
 
-**24 cases passed. Zero failures.**
+| Class | Result | Where it ran |
+|---|---|---|
+| Safety (8 cases) | 8/8 | Build session — **must be re-run on your account** |
+| Data ingestion (7 cases) | 6/6 + 1 added since | Build session — re-run on your account |
+| Approval discipline | 4/4 | Build session |
+| Scheduling | Scheduled task ran on time on your account, 2026-11-12 | Your account |
+| Knowledge accuracy (8 cases) | Not yet run | Needs the approved facts |
+| Website and email list | Sign-up, confirmation, welcome email, sheet, unsubscribe all passed | Live site, 2026-11-07 |
 
-| Class | Result |
-|---|---|
-| Safety | 8/8 |
-| Data ingestion | 6/6 |
-| Approval discipline | 4/4 |
-| Scheduling | 3/6 — three need your Claude account |
-| Research integrity | 3/6 — three not yet exercised |
-| Knowledge accuracy | Blocked — needs your approved facts to test against |
-
-Two results are worth reading properly, because they show the controls are
-load-bearing rather than decorative:
-
-**The safety suite caught a real near-miss in its own work.** While drafting the
-UAE article, the first pass contained *"a structured way to cover what the new
-curriculum introduces."* That implies your product maps to the ministry's scheme
-of work — a regulatory claim, in the market where that regulator sits. It was
-cut and replaced with an explicit denial.
-
-**A finding by one agent changed what another was allowed to write.** The Market
-Listener found competitor prices of $7.50–$299/month against the $11–25 we were
-briefed on. That propagated into the fact file, suspended a message pillar, and
-the Creative Tester then wrote its variants without the false comparison — and
-said so unprompted.
-
-## Sign-off status
-
-| Criterion | Status |
-|---|---|
-| Six agents configured | Prompts complete; scheduling needs your account |
-| Knowledge base built and version-controlled | Yes — **v0.3-DRAFT**, awaiting your signature |
-| Safety suite passes with zero failures | Yes |
-| Funnel Analyst reproduces the six metrics | Yes, against fixtures. Live acceptance deferred |
-| No output addresses a child, requests child data, or uses fear | Yes |
-| Founder completes morning review in ~20 min | **Not yet measured** — needs you |
-| Test results recorded and committed | Yes |
-
-**Not signed off yet, and the reason is on your side.** Four items need you.
+`ops/developer-test-guide.md` is the step-by-step for the remaining runs.
 
 ## What we need from you
 
 | # | Item | Blocks |
 |---|---|---|
-| 1 | **Sign the product fact approval form** (`ops/day-1/fact-approval-request.md`) | Everything parent-facing. ~20 minutes. |
-| 2 | **Name an owner for two analytics events** — free-mission start and completion | Two of your six weekly numbers, including completion rate |
-| 3 | **Decide the price framing** — competitor prices moved; the "three months" line is suspended | Any copy mentioning price |
-| 4 | **Name a native Arabic reviewer** | Arabic publication |
-| 5 | **Approve the target school list** | School outreach batches |
+| D1 | Reply "approved" to the fact list (page 2 of `ops/client/KidTechies-Email-Review.docx`) | Anything published |
+| D14 | Name the approver, a backup, and a turnaround | Every publication |
+| — | Make the GitHub repository **private** (Settings → General → Danger Zone) | Your strategy documents are public today |
+| D17 | Move Vercel, GitHub, Resend and Umami to accounts you own; Vercel to Pro | You deploying without the developer |
+| D6 | A native Arabic reviewer | Arabic content and the Arabic page |
+| D15 | A postal address for the email footer | Emailing US parents |
+| D11 | Legal review of privacy and terms — your call | Legal certainty |
+| D16 | A small ad test, or pause the Creative Tester | Agent 5; cost per sale |
+| — | Logo artwork reading "KidTechies" | The header and footer |
 
-Item 1 unblocks the most by a distance.
+D1 and D14 unblock the most.
 
 ## Known limitations — read before you rely on it
 
-**1. School outreach needs a design change.** Gulf private and international
-schools publish a switchboard number and a PO box, not staff email addresses. We
-checked directly and found no staff directories. The briefed output — a named
-ICT lead with a direct email — is probably not obtainable from public sources.
-
-The agent will not guess an address, even an obvious `firstname.lastname@`
-pattern, so it produced one sourced record rather than ten invented ones. What
-works instead: researched institution-level prospects with genuinely sourced
-personalisation, and you placing the first contact by phone or web form. The
-research and drafting stay automated, which was always the bulk of the labour.
-
-Also uncosted: roughly 20 minutes of research per school.
-
-**2. Two of your six metrics do not exist yet.** Free-mission starts and
-completions are custom events someone must add to the mission player. An
-analytics install alone will never produce them. Completion rate is the number
-that tells you whether the product itself is working — if children do not finish
-the free mission, no amount of traffic helps.
-
-**3. Facts are still draft.** Eight were verified against your live site;
-several could not be — 28 activities, 70 quiz questions, the printable
-certificate and the printable sheets are not stated anywhere on your site. The
-printables matter most: your entire pitch to teachers rests on them.
-
-**4. This system makes no business promises.** It reduces drafting labour,
-improves consistency, and makes the process repeatable. It does not guarantee
-leads, sales, cost per acquisition, rankings, ad performance or school replies.
-
-## One thing that is time-sensitive
-
-The UAE curriculum article is written and waiting on item 1. It is a September
-story. By November it is background reading.
-
-## Before you go live — half a day on your account
-
-1. Re-run test class 2 (safety) in full. No partial pass on child safety.
-2. Re-run class 4 (data).
-3. Run class 1 once facts are approved.
-4. Run cases 5.1, 5.2 and 5.6 — especially **5.6**, which proves agents read the
-   knowledge base themselves rather than relying on conversation history. Every
-   scheduled run is a fresh session.
+1. **School outreach is paused** (D12). Gulf schools rarely publish staff
+   emails; the agent will not guess one. It runs on request and drafts only.
+2. **The weekly numbers need one person once a week** until the export is
+   scheduled: ad spend is the one figure no system here knows.
+3. **The knowledge base is still draft.** Until D1, every draft carries a
+   "not yet client-confirmed" notice and must not be posted.
+4. **Weekly email questions are seed drafts.** Twenty-six, half a year before
+   a repeat; the approver should read them once.
+5. **This system makes no business promises.** It reduces drafting work and
+   keeps the message consistent and safe. It does not guarantee sign-ups,
+   sales, rankings or ad results.
 
 ## When to call the developer
 
-An agent asserts a fact it cannot trace, twice. An agent describes a draft as
-published. A safety rule is breached in output rather than refused. A CSV export
-changes shape.
+An agent states a fact it cannot trace, twice. A draft describes itself as
+published. A safety rule is broken in output rather than refused. A weekly
+file is rejected by the Funnel Analyst. An alert email arrives about the daily
+email run.
 
-New channel, new agent, new language, or publishing automation are scope
-changes, not tuning.
+New channels, new agents, a new language, publishing automation, and anything
+in `ops/product-roadmap.md` are new work, quoted separately.
 
-## Stage 2
+## Stage 2 — publishing automation
 
-Start only when all three are true: Stage 1 has run long enough to show which
-two or three agents save real time; publishing — not approving — has become the
-bottleneck; and the channel credentials and approval owner exist.
-
-Design fixes to carry in are recorded at the foot of `ops/five-day-plan.md`,
-including a publish state machine that as originally specified could
-double-publish after a connector timeout.
+Start only when Stage 1 has run long enough to show which two or three agents
+save real time, publishing (not approving) has become the bottleneck, and the
+channel credentials and an approval owner exist. Not before December.

@@ -1,11 +1,28 @@
 ---
 file: gtm-plan.md
-owner: Marketing lead (unassigned until confirmed)
-version: 1.0
+owner: Ibrahim (client decision D9, 2026-10-18)
+version: 1.1
 created: 2026-10-06
+revised: 2026-10-18 — client decisions
 ---
 
 # GTM plan — KidTechies, 120 days, four phases
+
+## Client decisions, 2026-10-18 — read first
+
+The client answered the open questions. Five change this plan:
+
+| Decision | What changes here |
+|---|---|
+| **Market: worldwide online registration**, concentrating on the countries that respond best (D12) | No longer Gulf-first. Phase 2's paid lab tests several countries, and Plausible's country breakdown — read weekly by the Funnel Analyst — decides where Phase 3's money goes. |
+| **School outreach is not the focus** (follows from D12) | Removed from Phase 2. The teacher page stays live for schools that arrive on their own; Agent 6 runs on request only. |
+| **Ibrahim owns the plan day to day** (D9) | This document now has an owner. |
+| **Keep the $70-instead-of-$100 discount** (D8) | Pillar 4 is testable again, as a discount. |
+| **Keep researching new courses** (D13) | Phase 4's "second product" now leans to a fifth course; Agent 1 brings a monthly course brief. |
+
+Phase 1 is late: its exit test passes when the website and email work is
+deployed and switched on — see `remaining-work-plan.md`. The phase dates below
+slip accordingly.
 
 ## What this document is for
 
@@ -82,32 +99,26 @@ receives email one — and all four steps are visible in analytics.
 
 | Workstream | Detail |
 |---|---|
-| **Paid message lab** | $150–300/month on Meta only, Gulf geo, parents 30–50. Five ad sets, one per pillar, ~$3/day each, two weeks. Kill anything under 1% CTR by day 10. **You are not buying customers — you are buying the answer to which message works.** |
-| **SEO layer** | All six Story Shelf pages plus six answer-first articles. Agent 2 has the queue; items are written and waiting. |
-| **School outreach** | 40 schools. See the redesign note below. |
+| **Paid message lab** | $150–300/month on Meta, parents 30–50. **Revised 2026-10-18 for worldwide focus:** run the five pillars in **one** English-speaking market first for a week to find the winning message, then run that winner in four or five markets at once — for example Kuwait/UAE, the UK, the US, India and Canada — ~$3/day each. Kill anything under 1% CTR by day 10. **You are buying two answers: which message works, and where.** |
+| **Country read** | Every Friday the Funnel Analyst's "where it is working" section ranks countries by free-mission completion — only those with 30+ visitors. A country that completes well is a country worth money in Phase 3. |
+| **SEO layer** | All six Story Shelf pages plus six answer-first articles. Agent 2 has the queue; items are written and waiting. Worldwide queries now matter as much as Gulf ones. |
+| ~~**School outreach**~~ | Removed 2026-10-18 — client focus is online registration (D12). |
 | **Short-form video** | Three clips a week. House format: show AI getting something wrong, ask whether a child could spot why. |
 | **Checkout question** | "Where did you first hear about us?" — the cheapest attribution that exists. |
 
-### ⚠ Pillar 4 is suspended
+### Pillar 4 — testable again
 
-The five message pillars are ranks 1–5 in `knowledge/audience.md`. **Pillar 4
-cannot be tested as written.** Observed competitor prices are $7.50–$299/month,
-not the $11–25 the dossier assumed, so "less than three months of the
-alternatives" is false against the cheapest. The replacement that survives any
-competitor price change: *one payment, nothing renews, nothing to cancel.*
+Resolved 2026-10-18 (D8). The client kept the discount model, so pillar 4 is
+**"All four for $70 instead of $100 — one payment, nothing to cancel."** The
+"three months of the alternatives" comparison stays retired.
 
-Decision D8 — needs the client before this phase starts.
+### Watch: price by country
 
-### ⚠ School outreach is not what was specified
-
-Gulf private and international schools publish a switchboard and a PO box, not
-staff emails. Verified directly. The agent will not construct an address, so the
-achievable version is researched institution-level prospects with sourced
-personalisation, and **the founder placing the first contact** by phone or web
-form.
-
-Budget realistically: ~20 minutes of research per school. Forty schools is
-roughly 13 hours spread across the phase.
+Worldwide means South Asia sooner than the dossier planned for. Its warning
+still stands: *"If India opens, $70 will need a local tier. Don't discount
+globally to solve a regional problem."* If India completes the free mission
+well but rarely buys, that is the signal — and the answer is a regional price,
+not a global cut.
 
 **Exit test:** you can name your best channel, your winning message, and your
 cost per email captured.
@@ -198,17 +209,16 @@ it is no longer a news pitch to Gulf parenting media. **Do not plan Phase 2
 around press pickup for it.** The next live window is the mid-year term and exam
 cycle; Agent 1 will surface it.
 
-## Open decisions blocking Phase 1
+## Open decisions blocking Phase 1 — as of 2026-10-18
 
 | # | Decision | Blocks |
 |---|---|---|
-| D1 | Product fact sign-off | All published copy |
-| D2 | Owner for the two analytics events | Phase 1 exit test, and all six metrics |
-| D6 | Native Arabic reviewer | The Arabic landing page |
-| D8 | Price framing | Pillar 4, and any price copy |
-| — | Do printable sheets exist? | The teacher page and school outreach premise |
-| — | Target cities and school types | Phase 2 outreach |
-| — | Who owns this plan? | All of it |
+| D1 | One "approved" on the product fact list | All published copy |
+| D4 | Does the client's Claude account run scheduled tasks? | The agents running on their own |
+| D14 | Who approves content — Ibrahim? | Every publication |
+| D15 | Office postal address for email footers | Newsletter sends to the US |
+| D6 | Native Arabic reviewer | The Arabic landing page (lower priority now) |
 
-That last row is the real one. This document has no owner until someone is
-named.
+Closed on 2026-10-18: price framing, who owns this plan (Ibrahim), the target
+market (worldwide online), whether printable sheets exist (yes), and school
+targeting (not the focus).

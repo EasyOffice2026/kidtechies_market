@@ -6,7 +6,7 @@ milestone date.
 
 | # | Item | Why it matters | Verified | Notes |
 |---|---|---|---|---|
-| 1 | Claude plan supports **scheduled tasks** | All six cadences depend on it. If absent, Stage 1 scheduling is redesigned (see runbook fallback). | [ ] | D4 |
+| 1 | Claude plan supports **scheduled tasks** | All six cadences depend on it. If absent, Stage 1 scheduling is redesigned (see runbook fallback). | [x] | D4 — passed on the client's Pro account, 2026-11-12 |
 | 2 | Claude plan supports **saved skills** | Voice + claims must apply without pasting them each session. | [ ] | |
 | 3 | Claude plan supports **web research** | Market Listener and School Outreach are useless without it. | [ ] | |
 | 4 | **Google Drive** folder access, client-owned | Draft delivery + CSV input location. | [ ] | |
@@ -17,9 +17,9 @@ milestone date.
 | 9 | **Backup approver** named | | [ ] | |
 | 10 | Feedback SLA agreed (same-day / next-day) | Slow review directly delays tuning and sign-off. | [ ] | |
 | 11 | Brand-name decision | | [ ] | D3 |
-| 12 | Analytics tool installed? (Plausible / Fathom / Umami) | Agent 4 input. | [ ] | D2 |
+| 12 | Analytics tool installed? (Plausible / Fathom / Umami) | Agent 4 input. | [x] | D2 — Umami Cloud, live 2026-11-09 |
 | 13 | Custom events for mission start / mission complete | Two of the six weekly metrics. Pageviews alone will not do it. | [ ] | D2 - most commonly missed item on this list |
-| 14 | Parent email capture live? | Metric 4 of 6. | [ ] | D2 |
+| 14 | Parent email capture live? | Metric 4 of 6. | [x] | D2 — live and tested end to end, 2026-11-07 |
 | 15 | Payment export available with agreed fields | Metrics 5 and 6. No card data required. | [ ] | |
 | 16 | Target cities / school types approved | School Outreach boundary. | [ ] | |
 | 17 | Native Arabic reviewer named | | [ ] | D6 |

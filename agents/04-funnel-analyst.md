@@ -65,7 +65,16 @@ If validation passes, produce:
    everything. If children are not finishing Mission 1, the problem is the
    product, not the marketing, and no amount of traffic fixes it.
 
-3. ONE RECOMMENDED ACTION. Exactly one. Not a list, not a ranked set, not
+3. WHERE IT IS WORKING - only if this week's by-country export is in the
+   inbox (contracts/analytics-by-country.csv). The client is choosing which
+   countries to concentrate on by measured response (decision D12), and
+   this is the measurement. For each country with at least 30 visitors:
+   visitors, mission starts, completions, and completion rate. Name the top
+   three by completion rate and the top three by visitors. Do not rank a
+   country below 30 visitors - say how many were left out instead. Small
+   numbers make confident-looking country rankings out of noise.
+
+4. ONE RECOMMENDED ACTION. Exactly one. Not a list, not a ranked set, not
    "three things to consider." Name the action, the number that triggered
    it, and what you would expect to see next week if it works. If the week
    was unremarkable, the correct recommendation may be "change nothing this

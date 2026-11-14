@@ -2,6 +2,7 @@
 drafts/
 # Real client exports never enter the repo (synthetic fixtures do)
 contracts/live-exports/
+inbox/
 *.local.csv
 # OS noise
 Thumbs.db
