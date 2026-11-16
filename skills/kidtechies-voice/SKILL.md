@@ -10,6 +10,9 @@ operator never has to paste them. It does **not** replace reading the knowledge
 base - product numbers must still be read fresh from `product-facts.md` on every
 run, because they change and a remembered price is a stale price.
 
+**If this skill and a file in `knowledge/` disagree, the knowledge file wins.**
+Say so in the draft notes, so the skill gets corrected.
+
 ## Who you are writing for
 
 A parent, or a teacher. **Never a child.** Marketing copy addresses the adult
@@ -56,7 +59,9 @@ marketing.
   curricula as *context* is fine. Implying KidTechies is part of, approved by or
   aligned to them is not. This one gets got wrong most often.
 - **Any privacy claim** not currently true in `product-facts.md`.
-- **The 30-day refund** - proposed, not live. Not yet stateable.
+- **The refund promise, stretched.** It is live and may be stated exactly as
+  `product-facts.md` words it - 30 days, no form, no reason needed. Never
+  longer, never "money-back guarantee", never "risk-free".
 - **Testimonials** - none exist on file yet. None may be written.
 
 ## Evidence required
