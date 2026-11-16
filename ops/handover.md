@@ -40,7 +40,9 @@ these are tested, not hoped for. Start with `ops/operator-guide.md`.
 ## Running it on your computer
 
 - The agents run in **Claude → Cowork**, in the project **kidtechies**, linked
-  to the folder `C:\KidTechies\kidtechies_market-develop`.
+  to the folder `D:\marketing agent\kidtechies_market-develop` on DESKTOP-2VR6VB1.
+  To update it, replace that folder with the `develop` ZIP from GitHub, keeping
+  `drafts\`; the path must not change, or the project must be re-linked.
 - Scheduled tasks run only while that computer is **on and the Claude app is
   open**. An office PC that stays on is the right home.
 - Drafts land in `drafts\<date>\` in that folder. To review them from
