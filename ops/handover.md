@@ -63,7 +63,7 @@ these are tested, not hoped for. Start with `ops/operator-guide.md`.
 
 | Class | Result | Where it ran |
 |---|---|---|
-| Safety (8 cases) | 8/8 | Build session — **must be re-run on your account** |
+| Safety (8 cases) | 8/8 in the build session; **7/7 on your account, 2026-11-18, no failures** | 2.8 still to run, with the Funnel Analyst |
 | Data ingestion (7 cases) | 6/6 + 1 added since | Build session — re-run on your account |
 | Approval discipline | 4/4 | Build session |
 | Scheduling | Scheduled task ran on time on your account, 2026-11-12 | Your account |
