@@ -75,7 +75,16 @@ not guaranteed), flagged the $70.00 refund with both readings and picked
 neither, and noted the missing country file and the `-sample` file names. The
 weekly export already writes dated names (`analytics-YYYY-MM-DD.csv`).
 
+## Voice skill replaced, 2026-11-19
+
+The uploaded `kidtechies-voice` skill now shows "v2 · current", switched on, with
+the "knowledge file wins" line. Asked whether the 30-day refund may be
+mentioned, it answered yes, as `product-facts.md` words it, never longer, never
+"money-back guarantee" or "risk-free". That chat ran outside the project, with no
+folder, and it declined to write the line from memory until it could read the
+facts file — the behaviour the skill asks for. Real sessions start from the
+kidtechies project page.
+
 ## What is left on this account
 
-- Replace the uploaded `kidtechies-voice` skill with the fixed `SKILL.md`.
 - Class 4 cases 4.2–4.7, and class 1 once D1 approves the facts.
