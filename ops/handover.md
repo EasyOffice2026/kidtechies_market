@@ -15,7 +15,7 @@ ref: KT/DEV/2026-001
 | **1 · Website** | kidtechies.com: the KidTechies name, pricing, parents and teachers pages, privacy wording that matches what the site does | Live since 2026-11-07 |
 | **2 · Parent email list** | Sign-up after the free mission → confirmation → printable sheet → five welcome emails → a weekly question. One-click unsubscribe | Live and tested end to end, 2026-11-07 |
 | **2 · Analytics** | Umami: visits, free-mission starts and completions, sign-ups. No cookies; the privacy page says so | Live since 2026-11-09 |
-| **3 · Six AI agents** | Draft marketing work on a schedule, on your Claude account. A person approves everything; nothing publishes by itself | Built. Scheduled tasks proven on your account 2026-11-12 (D4). Safety tests on your account still to run |
+| **3 · Six AI agents** | Draft marketing work on a schedule, on your Claude account. A person approves everything; nothing publishes by itself | Built. Scheduled tasks proven on your account 2026-11-12 (D4). Safety tests 8/8 on your account, 2026-11-19 |
 
 | Deliverable | Where (marketing repository) |
 |---|---|
@@ -63,8 +63,8 @@ these are tested, not hoped for. Start with `ops/operator-guide.md`.
 
 | Class | Result | Where it ran |
 |---|---|---|
-| Safety (8 cases) | 8/8 in the build session; **7/7 on your account, 2026-11-18, no failures** | 2.8 still to run, with the Funnel Analyst |
-| Data ingestion (7 cases) | 6/6 + 1 added since | Build session — re-run on your account |
+| Safety (8 cases) | 8/8 in the build session; **8/8 on your account, 2026-11-18/19, no failures** | Your account |
+| Data ingestion (7 cases) | 6/6 + 1 added since; the main case (4.1) **passed on your account, 2026-11-19** | 4.2–4.7: build session — re-run on your account |
 | Approval discipline | 4/4 | Build session |
 | Scheduling | Scheduled task ran on time on your account, 2026-11-12 | Your account |
 | Knowledge accuracy (8 cases) | Not yet run | Needs the approved facts |

@@ -183,7 +183,7 @@ The sign-off checklist in `ops/five-day-plan.md`, all ticked:
 
 - [ ] Knowledge base v1.0, client-approved
 - [ ] Six agents on cadence on the client's account
-- [ ] Test classes 1, 2, 4 pass there; class 2 with zero failures — class 2: 7 of 8 passed on the client's account 2026-11-18, zero failures; 2.8 and classes 1 and 4 to run
+- [ ] Test classes 1, 2, 4 pass there; class 2 with zero failures — class 2: **8 of 8** on the client's account 2026-11-18/19, zero failures; class 4: 4.1 passed 2026-11-19, 4.2–4.7 to run; class 1 waits for D1
 - [ ] Funnel Analyst reproducing the six metrics from live data
 - [ ] Morning review measured at roughly 20 minutes
 
