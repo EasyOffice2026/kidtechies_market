@@ -536,10 +536,13 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 | New logo artwork reading "KidTechies" | Client's designer | Header and footer still show "AI for Kids" |
 | Make `EasyOffice2026/kidtechies_market` private | Client | It is public; the developer has write, not admin, access |
 | Move Vercel to the client's repo and a Pro plan | Client + developer, at handover | Vercel Hobby is for non-commercial use; the site takes payments |
-| Merge `feature/marketing-ops` (product repo) | Developer | Weekly export, failure alerts, 20 more weekly questions, canonical and www fixes — see "Review, 2026-11-13" below |
-| Vercel: `NEWSLETTER_HEARTBEAT_URL`, `OPS_ALERT_EMAIL` | Developer | Free healthchecks.io check: period 1 day, grace 2 hours |
+| Merge `feature/marketing-ops` (product repo) | Developer | **Done** — PR #3. Weekly export, failure alerts, 20 more weekly questions, canonical and www fixes — see "Review, 2026-11-13" below |
+| Vercel: `NEWSLETTER_HEARTBEAT_URL`, `OPS_ALERT_EMAIL` | Developer | Heartbeat URL saved; `OPS_ALERT_EMAIL` still to add, then one redeploy. Free healthchecks.io check: period 1 day, grace 2 hours |
+| Re-run the daily email job the same day; it must send nothing | Developer | The Phase 1 exit test's last open line. Touches production: run only with the client's OK |
+| Class 4 cases 4.2–4.7 on the client's account | Developer | 4.1 passed there 2026-11-19; fixtures in `tests/fixtures/` |
+| Regenerate the withdrawn drafts (task 3.5) | Developer | UAE package EN + AR, ad variants V-003 / V-004. Arabic is not used before D6; the ad variants only if D16 says test |
 | Vercel → Domains: redirect `kidtechies.com` to `www.kidtechies.com` | Developer | **Done 2026-11-15** — 308 to www, every path kept; checked live |
-| First weekly export (week of 2026-11-09) | Developer | Umami's free plan has no API (2026-11-15): the four Umami numbers are typed from the dashboard — `contracts/analytics-csv.md`. Product branch `feature/umami-free-plan` |
+| First weekly export (week of 2026-11-09) | Developer | Umami's free plan has no API (2026-11-15): the four Umami numbers are typed from the dashboard — `contracts/analytics-csv.md`. Product branch `feature/umami-free-plan`, merge pending. The first run also tests the Stripe half for real |
 | D14, D6, D15, D1, D11, D7, D16, D17 | Client | D4 closed 2026-11-12 on the client's own account |
 
 # Review, 2026-11-13
