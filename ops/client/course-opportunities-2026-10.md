@@ -10,7 +10,8 @@ status: Research for planning. Nothing here is built or promised.
 
 You asked us to keep researching new courses so the platform stays fresh. This
 is the first monthly brief. From now on one arrives on the first Monday of each
-month.
+month; next: 7 December 2026. (No brief was made for 2 November: the Market
+Listener was not yet running on your account. *Note added 2026-11-20.*)
 
 ## What KidTechies teaches today
 
@@ -39,8 +40,9 @@ deepfakes. ([UNICEF, 30 June 2026](https://www.unicef.org/press-releases/childre
 tells them (52%, up from 43%) — but 24% said they simply copy its output.
 ([National Literacy Trust, August 2026, 40,543 young people](https://literacytrust.org.uk/research-services/research-reports/young-people-teachers-and-parents-use-of-ai-to-support-literacy-in-2026/))
 
-**Schools now teach seven areas, and KidTechies covers about three.** The UAE's
-national AI subject, taught from kindergarten to Grade 12, covers: foundational
+**The UAE's schools now teach seven areas; by our reading, KidTechies covers
+about three** (foundational concepts, data and algorithms, ethical awareness).
+The UAE's national AI subject, taught from kindergarten to Grade 12, covers: foundational
 concepts, data and algorithms, software tools, ethical awareness, real-world
 applications, innovation and project design, and policy and community issues.
 Middle school goes into bias in algorithms and ethics; secondary school into
@@ -74,15 +76,16 @@ Ages: the core 9–12, with the usual notes for 6–8 and 13–16.
 
 ### 2 · New course: Ask, Then Check — next
 
-A reframed version of the "Prompt Engineering" course already on the coming-soon
-list: how to ask an AI clearly, and then **how to check what it says** before
+A reframed version of the "Prompt Engineering" topic the site lists under
+"Later in the programme" (a topic being planned, not a course): how to ask an AI clearly, and then **how to check what it says** before
 using it.
 
 - The UAE teaches writing instructions for AI in secondary school, and the UK
   figures show a quarter of teenagers copying AI output unchecked. The checking
   half is the gap.
-- It suits the 13–16 band best, which is the age band KidTechies serves least
-  today.
+- It suits older children (13–16) best. KidTechies is designed for 9–12 and
+  reaches 13–16 only through adaptation notes today, so this is where it is
+  thinnest.
 - Positioning matters: "get AI to do your homework" is what parents fear.
   "Ask well, then check" is what they want, and it is consistent with every
   other KidTechies course.
@@ -98,7 +101,7 @@ using it.
 
 ## What happens next
 
-- A new brief arrives on the first Monday of each month (next: 7 December).
+- A new brief arrives on the first Monday of each month (next: 7 December 2026).
 - To start building recommendation 1, we need about a page of mission outlines
   for you to approve. We can draft that as soon as you want it.
 - Building new missions — film, activities, quiz — is product work, separate

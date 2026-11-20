@@ -2,7 +2,7 @@
 file: handover.md
 owner: Developer -> KidTechies
 audience: The client. Written to be read once, then kept.
-date: 2026-11-13 (replaces the version of 2026-09-21); updated 2026-11-20 — safe folder update, test position; release note of 2026-11-20; what the controls are
+date: 2026-11-13 (replaces the version of 2026-09-21); updated 2026-11-20 — safe folder update, test position; release note of 2026-11-20; what the controls are; round 3 — voice file and changelog kept, queue changes re-applied, skill re-upload
 ref: KT/DEV/2026-001
 ---
 
@@ -14,7 +14,7 @@ ref: KT/DEV/2026-001
 |---|---|---|
 | **1 · Website** | kidtechies.com: the KidTechies name, pricing, parents and teachers pages, privacy wording that matches what the site does | Live since 2026-11-07 |
 | **2 · Parent email list** | Sign-up after the free mission → confirmation → printable sheet → five welcome emails → a weekly question. An unsubscribe link in every email | Live and tested end to end, 2026-11-07 |
-| **2 · Analytics** | Umami: visits, anonymous counts of missions started and finished, and an anonymous count of newsletter confirmations — no names, no addresses. No cookies; the privacy page says so | Live since 2026-11-09; all three events seen on a live run, 2026-11-20 |
+| **1 · Analytics** | Umami: visits, anonymous counts of missions started and finished, and an anonymous count of newsletter confirmations — no names, no addresses. No cookies; the privacy page says so | Live since 2026-11-09; all three events seen on a live run, 2026-11-20 |
 | **3 · Six AI agents** | Draft marketing work on a schedule, on your Claude account. A person approves everything; nothing publishes by itself | Built. Scheduled tasks proven on your account 2026-11-12 (D4). Safety tests 8/8 on your account, 2026-11-19 |
 
 | Deliverable | Where (marketing repository) |
@@ -52,24 +52,33 @@ approver's review is what stops a mistake reaching a parent. Start with
 
 ### Updating the folder safely
 
-Five things in that folder are **your** records. The download from GitHub does
+Seven things in that folder are **your** records. The download from GitHub does
 not have your copies, so replacing the folder without them would wipe them:
-`drafts\`, `inbox\`, `logs\`, `queue\content-queue.md` and
-`ops\publishing-log.md`.
+`drafts\`, `inbox\`, `logs\`, `queue\content-queue.md`,
+`ops\publishing-log.md`, `knowledge\brand-voice.md` and
+`knowledge\CHANGELOG.md`. The last two are where new parent phrases go — **send
+any change you made to them to the developer before you update**, so GitHub's
+copy has it; then the update takes GitHub's copy of both (step 4).
 
 1. Close the Claude app, so no task runs during the update.
-2. Copy those five out — for example into `D:\kidtechies-keep\`, keeping the
+2. Copy those seven out — for example into `D:\kidtechies-keep\`, keeping the
    same sub-folders.
 3. Download the `develop` ZIP from GitHub and unzip it. Delete everything in
    `D:\marketing agent\kidtechies_market-develop`, then put the unzipped files
    in. Same folder, same path.
-4. Copy the five back in, replacing the downloaded copies — **except** any of
-   `logs\creative-results.csv`, `logs\school-prospects.csv` or
+4. Copy the first five back in, replacing the downloaded copies — **except**
+   any of `logs\creative-results.csv`, `logs\school-prospects.csv` or
    `queue\content-queue.md` that the release note below says changed. For
-   those, keep GitHub's copy, then open your saved copy of the queue and set
-   back to DONE every row your agents marked DONE since the last update (with
-   the date from your copy's Notes). If your saved copy of a log has rows that
-   GitHub's copy does not, send both files to the developer to merge.
+   those, keep GitHub's copy, then open your saved copy of the queue and
+   re-apply to GitHub's copy every change made in your folder since the last
+   update: rows marked DONE (with the date from your copy's Notes), rows you
+   added, rows you set to HOLD or back to READY, and the order of the rows. If
+   your saved copy of a log has rows that GitHub's copy does not, send both
+   files to the developer to merge. For `knowledge\brand-voice.md` and
+   `knowledge\CHANGELOG.md`, keep GitHub's copy — your changes reached it
+   through the developer before the update. If you did not send them, send
+   your saved copies now and do not run the agents until the developer
+   confirms they are in.
 5. Open the Claude app. In the kidtechies project, ask: *"Tell me the version
    line of knowledge/product-facts.md."* It must match the version on GitHub.
    If it shows the old one, the files went to a different folder — the agents
@@ -80,7 +89,7 @@ changed. A file it does not name: put your copy back.
 
 | Release | Take GitHub's copy of | Then |
 |---|---|---|
-| **2026-11-20** | `logs\creative-results.csv`, `logs\school-prospects.csv` and `queue\content-queue.md` — this time all three | Set back to DONE any queue rows your agents marked DONE since the last update. Version line: `0.8.3-DRAFT` |
+| **2026-11-20** | `logs\creative-results.csv`, `logs\school-prospects.csv` and `queue\content-queue.md` — this time all three (and, as every time, `knowledge\brand-voice.md` and `knowledge\CHANGELOG.md`) | Re-apply your queue changes (step 4). Version line: `0.8.4-DRAFT`. Then replace the voice skill: in the Claude app, **Customize → Skills** → `kidtechies-voice` → replace it with the new `skills\kidtechies-voice` from this release (zipped). It should show **v3**; if it still shows v2, the agents are using the old wording |
 
 - Your plan is **Claude Pro**. Watch usage in the first two weeks; if the
   agents hit the limit, move to a larger plan or run fewer cadences (D7).

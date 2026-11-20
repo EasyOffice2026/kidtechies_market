@@ -1,7 +1,7 @@
 ---
 file: payment-csv.md
 owner: Developer (schema) / Client (supplies the export)
-version: 1.0-FROZEN — columns unchanged; 2026-11-20: two-row rule stated
+version: 1.0-FROZEN — columns unchanged; 2026-11-20: two-row rule stated; format rules written out (they were only in the analyst prompt)
 ---
 
 # Data contract: weekly payment export
@@ -44,6 +44,17 @@ Stripe needs a **live** key; the command refuses a test key. See
 Exactly two rows, last week then this week, matching the analytics file row
 for row (same `week_starting` in row 1, and in row 2). A file with headers only
 is rejected.
+
+## Format
+
+- `orders`: a whole number. Money columns: a plain number with two decimals
+  (`63.00`), in US dollars.
+- No currency symbols, no thousands separators, no quotes around numbers, no
+  blanks — write `0` or `0.00`.
+- A week with no orders is a row with `0` orders, not a missing row.
+
+The Funnel Analyst stops on any value that breaks these rules
+(`tests/fixtures/payments-malformed.csv` is the test).
 
 ## No card data. Ever.
 

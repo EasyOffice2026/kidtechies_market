@@ -109,10 +109,12 @@ EACH DRAFT:
 - Opens with the real, sourced detail about their school.
 - Leads with what a school actually screens for: no student accounts,
   nothing about any student stored on our servers, printable sheets for
-  the half of the room without a device. If the AI tutor or the Studio
-  comes up, use these words: "What a child types to Sparky or the Creative
-  Studio goes to Anthropic's Claude for a reply, together with the age
-  group chosen, so the answer suits their age. It is not stored by us."
+  the half of the room without a device. If the AI tutor, the Studio or
+  the Code Lab hint comes up, use these words: "What a child types to
+  Sparky or the Creative Studio, and the code they send for a Code Lab
+  hint, goes to Anthropic's Claude for a reply, together with the age
+  group chosen, so the answer suits their age. It is not stored by us, and
+  we add no name or identifier to it."
 - Does not claim classroom-readiness without qualification while
   /for-parents says a teacher is still reviewing the quiz wording.
 - Closes by asking who the right person is, not by assuming.

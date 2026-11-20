@@ -1,10 +1,10 @@
 ---
 agent: 1 - Market Listener
 cadence: Weekly, Monday 07:00 (course-opportunity section on the first Monday of each month)
-revised: 2026-10-18 — worldwide scope (D12) and monthly course research (D13); 2026-11-20 — reads all five knowledge files; competitor prices re-verified or left out; parent questions paraphrased; D5 block marked historical
+revised: 2026-10-18 — worldwide scope (D12) and monthly course research (D13); 2026-11-20 — reads all five knowledge files; competitor prices re-verified or left out; parent questions paraphrased; D5 block marked historical; round 3 — the D5 first-run prompt block deleted
 needs: Web research
 output: drafts/YYYY-MM-DD/01-market-listener-briefing.md
-version: 1.1
+version: 1.2
 ---
 
 # Agent 1 - Market Listener
@@ -93,22 +93,14 @@ and the dossier itself calls it perishable: *"Publish that article in week one,
 not week six."* The dossier is dated 3 September 2026 and cites rollouts from
 the 2025-26 school year.
 
-**The first run must answer:** is this hook still live, is there a fresher
-angle - a new term, a new ministry directive, a parent reaction wave - or has it
-gone stale?
+**The first run had to answer:** was this hook still live, was there a fresher
+angle - a new term, a new ministry directive, a parent reaction wave - or had it
+gone stale? It answered on 2026-09-18: live, but the UAE rather than Saudi
+(`ops/decision-log.md`, D5).
 
-Add this to the first run only:
-
-```
-Additionally, assess one specific question and answer it directly:
-
-Is the Saudi / UAE school AI-curriculum story still a live news hook a Gulf
-parenting publication would run this month, or has it gone stale? Give the
-evidence either way, and if it is stale, identify the freshest adjacent hook
-that is live right now.
-```
-
-The answer unblocks or rewrites item 1 in `queue/content-queue.md`.
+*The prompt block that was added to that first run has been deleted
+(2026-11-20), so it cannot be pasted into a run by mistake. The question it
+asked is the one above.*
 
 ## Failure modes to watch in review
 

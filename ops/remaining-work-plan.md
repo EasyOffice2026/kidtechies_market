@@ -493,7 +493,7 @@ Verified: tsc clean, lint clean, 8/8 unit checks, analytics 22/22, newsletter
 
 ---
 
-# Go-live, 2026-11-07
+# Site launch (test traffic only), 2026-11-07
 
 Parts 1 and 2 are live on kidtechies.com. Nothing had moved between 18 October
 and 4 November because the merged work had never deployed; three things were in
@@ -545,11 +545,13 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 | First weekly export | Developer | **Moved to the first full week after go-live.** Every visit, sign-up and event so far is the developer's own testing (confirmed 2026-11-20), so the week of 2026-11-09 is not a report. Before then: prove the Stripe half once with a **live** read-only key (`.env.local` holds a test key, which the export refuses), exclude the team's own browsers from Umami, and clear test subscribers so week one starts at zero. Free-plan mode merged (PR #5), test-key guard merged (PR #6) |
 | Class 1 on the client's account | Developer | Run now — 1.6 can only be tested before v1.0. Re-run 1.1–1.5, 1.7 and 1.8 after D1 |
 | Cases 5.1, 5.2 and 5.6 on the client's account | Developer | The real schedule (KT 1, 2, 4), no duplicates, a fresh session |
-| Re-upload the voice skill as **v3** | Developer | After this release: `skills/kidtechies-voice/` changed on 2026-11-20 (hours, what leaves the device, Studio / Code Lab, ages, analytics). The client's account still has v2 |
+| Re-upload the voice skill as **v3** | Developer, or the client with the release note | After this release: `skills/kidtechies-voice/` changed on 2026-11-20 (hours, what leaves the device, Studio / Code Lab, ages, analytics; round 3: the agreed Anthropic sentence, fear in disguise, no real identifiable child). The client's account still has v2. In the Claude app: **Customize → Skills** → replace `kidtechies-voice`; it should then show v3 (`ops/handover.md`, release note) |
+| **Deploy `fix/review-round-1`** (product repo) | Developer | **Before anything is published after D1.** It carries the learning-time figures the knowledge base now states ("about 9–12 hours", 30–38 minutes a mission with the free one 30–40, per-course times), the Studio wording in the navigation and on the home page, the agreed Anthropic sentence, the illustration caveat, and the email template changes below. Until it is live the site still says "around 8–9 hours", so nothing using the new figures may be published. After deploying: recheck `knowledge/site-discrepancy-log.md` rows 12 and 13 on the live site and close them |
+| Email templates to match the review document | Developer | Part 1 of `ops/client/KidTechies-Email-Review.docx` was matched to `src/lib/newsletter/templates.ts` on `fix/review-round-1` on 2026-11-20 (email 1's new subject and heading), then five lines were changed in the document only. Make the same five changes in the template, text and HTML, before the document is re-sent, so the client reviews what is actually sent: (1) weekly email: "There is no right answer and that is the point." → **"Most of these have no single right answer."** (several questions do have an answer); (2) email 1: a line "In the mission your child learns to:" before the objectives list; (3) email 2: drop "About ${story.readingMinutes} minutes to read aloud, and free" → "Free — like all six tales on the Story Shelf." (reading time is not an approved fact); (4) email 4: "Then ${n} more in this course" written as a word ("three"), like "three more courses"; (5) email 5: "and most adults freeze" → "and it can be hard to answer on the spot" |
 | Web research on the client's account | Developer | Access checklist row 3 — confirm on the first Market Listener run there |
 | Merge the client folder's logs and queue | Developer, with the approver | Release of 2026-11-20 changes `logs\creative-results.csv`, `logs\school-prospects.csv` and `queue\content-queue.md`; follow `ops/handover.md` ("Updating the folder safely") and re-mark the queue rows the client's runs marked DONE |
 | Empty the client's `inbox\` of test files | Developer | After 4.2–4.7 run there, delete the fixture CSVs, so the first real Friday does not read a test file |
-| Re-send the email review document | Developer | Part 2 of `ops/client/KidTechies-Email-Review.docx` gained eight rows and a new learning-time figure on 2026-11-20; D1 must be answered on that version |
+| Re-send the email review document | Developer | Part 2 of `ops/client/KidTechies-Email-Review.docx` gained eight rows and a new learning-time figure on 2026-11-20 (round 2) and the facts drafts routinely use (round 3, same day); Part 1 now matches the templates about to deploy. D1 must be answered on that version |
 | D14, D6, D15, D1, D11, D7, D16, D17 | Client | D4 closed 2026-11-12 on the client's own account |
 
 # Review, 2026-11-13

@@ -1,7 +1,7 @@
 ---
 file: claims-allowed.md
 owner: KidTechies (client) - client-approved representatives only
-version: 0.8.3-DRAFT
+version: 0.8.4-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL
 ---
@@ -24,11 +24,14 @@ These are descriptions of what the product is, all traceable to
   against monthly alternatives.
 - The privacy architecture, as it actually is: **nothing about any child is
   stored on our servers**; progress stays in the browser for everyone; children
-  never sign in; the only account is the parent's, to buy courses. When the tutor
-  or the Studio comes up, say it plainly, in these words: "What a child types to
-  Sparky or the Creative Studio goes to Anthropic's Claude for a reply, together
-  with the age group chosen, so the answer suits their age. It is not stored by
-  us." Never "the only thing", never "isn't stored" without "by us". See "What is true today" in
+  never sign in; the only account is the parent's, to buy courses. When the tutor,
+  the Studio or the Code Lab hint comes up, say it plainly, in these words: "What
+  a child types to Sparky or the Creative Studio, and the code they send for a
+  Code Lab hint, goes to Anthropic's Claude for a reply, together with the age
+  group chosen, so the answer suits their age. It is not stored by us, and we add
+  no name or identifier to it." Never "the only thing", never "isn't stored"
+  without "by us", never "carries no name or identifier" or "isn't linked to
+  anyone" (a child can type their own name). See "What is true today" in
   `product-facts.md`. *(Corrected 2026-10-17. The 2026-10-07 wording here claimed
   each child is stored as a nickname and age group — false: nothing writes the
   child tables yet.)*

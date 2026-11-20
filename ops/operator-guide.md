@@ -2,14 +2,14 @@
 file: operator-guide.md
 owner: Developer -> KidTechies at handover
 audience: Ibrahim, who runs KidTechies marketing day to day (client decision D9, 2026-10-18). Written to be used at 7am, not studied.
-version: 1.3 — 2026-11-20: review only until D1; schedule; approving for Arabic; personal data in a file; what the controls are; redoing a queue item; no weekly files yet; customer calls before there are customers
+version: 1.4 — 2026-11-20: review only until D1; schedule; approving for Arabic; personal data in a file; what the controls are; redoing a queue item; no weekly files yet; customer calls before there are customers; round 3: parent phrases go to the developer; never approve a draft with the notice; counts
 ---
 
 # Operator guide
 
 The promise this system makes is that your marketing preparation becomes a
-review job instead of a writing job. About five hours a week, most of it
-reading. This guide is how you do that without needing the developer.
+review job instead of a writing job. About four hours a week (the table below
+adds up to 3 hours 35 minutes, plus the odd rerun), most of it reading. This guide is how you do that without needing the developer.
 
 *Where this guide says "the founder", read "Ibrahim" — he runs the plan day to
 day, until the client names the approver (D14). Two changes since it was first
@@ -28,9 +28,12 @@ waits for you, and why nothing goes out that you have not read.
 ## Your week
 
 **Until D1, review only — nothing is posted.** Every draft carries a "not yet
-client-confirmed" notice until the client approves the fact list. Read,
-approve or send back as below, but post nothing. From D1 on, post what you
-approve and add a line to `ops/publishing-log.md`.
+client-confirmed" notice until the client approves the fact list. Read the
+drafts and send back what needs changing, as below, but approve nothing for
+posting and post nothing. **Never approve a draft that carries that notice** —
+before D1 every draft does; after D1 it means the draft uses a fact the client
+has not confirmed, so send it back. From D1 on, post what you approve and add
+a line to `ops/publishing-log.md`.
 
 | Day | Waiting for you | What you do | Time |
 |---|---|---|---|
@@ -51,8 +54,10 @@ ad test. Agents 3 and 6 are never scheduled.
 
 Thursday is the day with no agent work, and it is the most important one. It is
 also where `brand-voice.md` gets better — when a parent says something in their
-own words that lands, put it in the voice file. A voice file that has not
-changed in three months is not being used.
+own words that lands, send it to the developer, who adds it to the voice file
+in the repository. Do not type it only into your folder's copy: the next
+folder update takes GitHub's copy of `brand-voice.md`, and your phrase would be
+lost. A voice file that has not changed in three months is not being used.
 
 ## Reviewing a draft in three passes
 
@@ -69,7 +74,7 @@ about outcomes, anything that could read as fear, anything addressed to a child.
 These should already have been caught. When one gets through, note it — a
 pattern means the knowledge file needs a sharper example.
 
-## The four things you will actually need to do
+## The five things you will actually need to do
 
 ### Rerun an agent
 
@@ -97,9 +102,11 @@ file and add this as its **first line**, with your name and the date:
 approved-by: Ibrahim 2026-12-01
 ```
 
-Only you add this line — never ask an agent to add it. Agent 3 also refuses
-anything while `product-facts.md` is still a DRAFT, so before D1 it will say
-no. That is correct.
+Only you add this line — never ask an agent to add it. **Never add it to a
+draft that still carries the "Contains facts not yet client-confirmed — not
+for publication." notice** — that draft is not approvable; Agent 3 refuses it
+anyway. Agent 3 also refuses anything while `product-facts.md` is still a
+DRAFT, so before D1 it will say no. That is correct.
 
 ### Reject output
 

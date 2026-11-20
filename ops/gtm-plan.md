@@ -1,9 +1,9 @@
 ---
 file: gtm-plan.md
 owner: Ibrahim (client decision D9, 2026-10-18)
-version: 1.2
+version: 1.3
 created: 2026-10-06
-revised: 2026-10-18 — client decisions; 2026-11-20 — analytics status, decisions point to the decision log; same day, round 2: done items marked, hours, agents not yet live, email spend, school items conditional on D12
+revised: 2026-10-18 — client decisions; 2026-11-20 — analytics status, decisions point to the decision log; same day, round 2: done items marked, hours, agents not yet live, email spend, school items conditional on D12; round 3: seasonal offer, Phase 1 status, stale lines
 ---
 
 # GTM plan — KidTechies, 120 days, four phases
@@ -20,9 +20,12 @@ The client answered the open questions. Five change this plan:
 | **Keep the $70-instead-of-$100 discount** (D8) | Pillar 4 is testable again, as a discount. |
 | **Keep researching new courses** (D13) | Phase 4's "second product" now leans to a fifth course; Agent 1 brings a monthly course brief. |
 
-Phase 1 is late: its exit test passes when the website and email work is
-deployed and switched on — see `remaining-work-plan.md`. The phase dates below
-slip accordingly.
+Phase 1 is late. The website and email work has been live since 2026-11-07
+(test traffic only — no real parents yet), and all three analytics events were
+seen on a live run on 2026-11-20; the exit test's last line — re-running the
+daily email job sends nothing — is still open (`remaining-work-plan.md`). The
+phase dates below slip accordingly: nothing is posted, and no paid test runs,
+before D1.
 
 ## What this document is for
 
@@ -69,7 +72,7 @@ Running ads before this is paying to fill a bucket with no bottom.
 | 1 | **Parent email capture** at the end of free Mission 1 — one field, explicitly labelled the parent's | Front-end | 2 days |
 | 2 | **Two analytics events**: mission start, mission complete | Front-end | ½ day |
 | 3 | Cookieless analytics installed (Plausible / Fathom / Umami) | Front-end | 1 day |
-| 4 | Pricing page leads with **hours of guided learning**, not the film runtime — done 2026-11-13; the figure is now "about 9–12 hours, including four final projects" (2026-11-20) | Content | 1 day |
+| 4 | Pricing page leads with **hours of guided learning**, not the film runtime — done 2026-11-13; the figure becomes "about 9–12 hours, including four final projects" when `fix/review-round-1` is deployed (the live site still says "around 8–9 hours") | Content | 1 day |
 | 5 | **Move the refund promise** from the terms page to the pricing page — done 2026-11-13 | Content | ½ day |
 | 6 | Trust furniture: founder name and photo, company location, contact email | Client decision | 1 day |
 | 7 | One brand name in title and footer — KidTechies | Client decision | 1 hour |
@@ -140,7 +143,7 @@ cost per email captured.
 | **Classroom pilots → case studies** | Only if the client restarts school outreach (paused, D12). Each pilot reaches 25–30 families. Case studies name a school only with its written consent, and never a child. A paid classroom licence does not exist — it would be new product work. |
 | **Micro-creators** | Three Gulf / Muslim-parent creators, 5k–50k followers, briefed with the winning message. Bundle plus modest fee or affiliate share, not flat sponsorship. |
 | **Second six articles** | Plus refresh anything ranking on page two. |
-| **Seasonal offer** | A school-holiday or Ramadan family bundle with a gift option. Confirm the Ramadan dates for 2027 before committing a date — do not plan from memory. |
+| **Seasonal offer** | Only if the client decides one and it is recorded in `ops/decision-log.md` first. A family bundle and a gift option do not exist today — either is new product work, and neither may be mentioned to parents before it exists. Any offer is stated without a deadline that pressures: "limited time" and "before the term ends" are prohibited (`child-safety-rules.md`, fear in disguise). If it is timed to Ramadan, confirm the 2027 dates from a dated source — do not plan from memory. |
 
 **Exit test:** a repeatable weekly loop that produces sales without inventing
 something new each Monday.
@@ -207,8 +210,9 @@ amount of traffic saves the funnel and the problem is the product.
 ### On the curriculum hook
 
 The UAE made "Artificial Intelligence and Technology" a standalone subject from
-this academic year, private schools included. The dossier called the hook
-perishable and it was right: that was a September story and it is now October.
+the 2026-27 academic year, private schools included. The dossier called the hook
+perishable and it was right: that was a September story, already past its news
+window when this section was written in October 2026.
 
 The article is written and still usable as evergreen parent-help content — but
 it is no longer a news pitch to Gulf parenting media. **Do not plan Phase 2

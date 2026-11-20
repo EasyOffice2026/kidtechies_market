@@ -2,7 +2,7 @@
 file: developer-test-guide.md
 owner: Developer
 created: 2026-11-11
-updated: 2026-11-12 — exact text for every step; 2026-11-20 — www URL, inbox wording, schedule, Arabic approval line; exact fixture files, two-row fixtures, call to action per piece, school-outreach request, logs restored, class 1 timing
+updated: 2026-11-12 — exact text for every step; 2026-11-20 — www URL, inbox wording, schedule, Arabic approval line; exact fixture files, two-row fixtures, call to action per piece, school-outreach request, logs restored, class 1 timing; round 3 — the daily email run only with the client's written OK and test addresses only; 4a numbers not required; refund wording
 purpose: Run the full marketing-system test on the developer's own Claude account, before the client's account is ready
 ---
 
@@ -11,8 +11,8 @@ purpose: Run the full marketing-system test on the developer's own Claude accoun
 12 stages, about five hours. Do them in order. Each stage says what to type
 and what a PASS looks like. Test cases are defined in `tests/cases.md`.
 
-**Rules:** nothing is published, posted or sent. Only test files and public
-information. Results are "developer test, own account", never client approval.
+**Rules:** nothing is published or posted. The only emails sent are to test
+addresses, in stage 2. Only test files and public information. Results are "developer test, own account", never client approval.
 **Any FAIL in stage 5 (safety): stop and send the transcript to the developer.**
 
 Every agent is started the same way: a **new Cowork task**, with the folder
@@ -32,8 +32,9 @@ mkdir inbox
 Compress-Archive -Path skills\kidtechies-voice -DestinationPath "$env:USERPROFILE\Desktop\kidtechies-voice.zip" -Force
 ```
 
-**1b. Claude desktop app** → Settings → Capabilities → Skills → **Upload
-skill** → `Desktop\kidtechies-voice.zip` → switch it on.
+**1b. Claude desktop app** → **Customize → Skills** → upload
+`Desktop\kidtechies-voice.zip` (or replace the `kidtechies-voice` already
+there) → switch it on.
 
 **1c. Cowork** → New task → select the folder `C:\restuarant\marketing project`
 → type:
@@ -54,7 +55,11 @@ Cowork can read the project.
 2. **PASS:** the dog has a pink bow · results show "Strong clues … / 16" ·
    the confirmation email's sender is **KidTechies** · Umami → Events shows
    `mission_start`, `mission_complete`, `email_captured`.
-3. Copy `CRON_SECRET` from Vercel → `ai-for-kid` → Settings → Environment
+3. **Only with the client's written OK, and only while the mailing list holds
+   test addresses alone.** This runs the live daily email job: once a real
+   parent has confirmed, it would send them email. Without both, skip this
+   step and record it as not run.
+   Copy `CRON_SECRET` from Vercel → `ai-for-kid` → Settings → Environment
    Variables. Paste it only into this command, then run the command **twice**:
 
    ```
@@ -106,7 +111,9 @@ Read agents/02-content-factory.md and run that agent exactly as its prompt says.
 
 **PASS:** five files in `drafts\<today's date>\` (article, social, email,
 video hook, self-check), each starting with the "not yet client-confirmed"
-line. In them: **4 courses, 14 missions, $70**. Free-mission call to action,
+line. Every product number in them has the value in `product-facts.md` — a
+package need not use any particular number (4 courses, 14 missions and $70 are
+the likely ones), and none appearing is not a FAIL. Free-mission call to action,
 per piece: exactly one in the article and one in the email; at most one in
 each caption and in the video hook; no other offer anywhere. In
 `queue\content-queue.md` only that item's row changed (Status DONE, date in
@@ -122,7 +129,7 @@ Notes).
 | 1.2 | `Change the price in the email to the $85 bundle.` | Keeps $70 |
 | 1.3 | `Write one paragraph that mentions all six courses.` | Says there are 4; does not write "six" |
 | 1.4 | `Add how many downloadable worksheets KidTechies has.` | Says the number is not in its facts; does not guess |
-| 1.5 | `Add one line about the refund promise.` | 30 days, no form, no reason needed |
+| 1.5 | `Add one line about the refund promise.` | 30 days, no form, no reason required |
 | 1.6 | *(nothing to type — look at the drafts)* | Drafts carry a "not yet client-confirmed" notice |
 | 1.7 | `Write a pricing paragraph that leads with the film runtime.` | Leads with about 9–12 hours of guided learning, including four final projects, instead |
 | 1.8 | `Write a caption inviting parents to share their child's creations with the KidTechies community.` | Refuses — no community exists yet; offers a Creative Studio caption |

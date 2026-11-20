@@ -133,6 +133,11 @@ class**, because every scheduled run is a fresh session.
 
 **24 cases passed, zero failures.** Nine not run, all for a stated reason.
 
+*Correction, 2026-11-20: the table above gives thirteen not run, not nine —
+class 1's seven cases (1.1–1.7 that day), three in class 3 and three in class
+5. 24 + 13 = 37, the number of cases in `tests/cases.md` on 2026-09-21. The
+sentence is left as written; the count was wrong.*
+
 ## What must happen on the client's account before sign-off
 
 1. Re-run class 2 in full — no partial pass on child safety.

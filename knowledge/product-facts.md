@@ -1,9 +1,9 @@
 ---
 file: product-facts.md
 owner: KidTechies (client) - founder or nominated approver only
-version: 0.8.3-DRAFT
+version: 0.8.4-DRAFT
 last-approved: PARTIAL — client confirmed brand, price model, company and free tier in writing on 2026-10-18
-site-verified: 2026-09-18 against kidtechies.com; code-verified 2026-10-17; rows dated 2026-11-20 checked on www.kidtechies.com that day
+site-verified: 2026-09-18 against kidtechies.com; code-verified 2026-10-17; rows dated 2026-11-20 checked on www.kidtechies.com that day. Note — the learning-time rows (programme, per mission, per course) are CODE-VERIFIED 2026-11-20 in the course data on `fix/review-round-1`, the build about to deploy; the live site still says "around 8–9 hours" until it is deployed, and nothing using these figures is published before the site shows them
 status: ONE STEP FROM v1.0 — the client's "approved" on the full list (D1)
 ---
 
@@ -57,16 +57,17 @@ No agent may edit this file. Only a client-approved representative may.
 | Courses | 4 | SITE-VERIFIED |
 | Missions | 14 | SITE-VERIFIED - counted individually, see below |
 | Capstone projects | 4 (one per course) | SITE-VERIFIED |
-| Guided learning time | **About 9–12 hours of guided learning, including four final projects.** The 14 missions alone: about 7–9 hours. Short form for copy: "about ten hours" | SITE-VERIFIED 2026-11-20, changed by developer for client confirmation (D1). Computed from the course data: 14 missions — the free first mission 30–40 minutes, the other 13 at 30–38 minutes each — = 7.0–8.9 hours; with the four final projects = 9.3–11.9 hours, rounded outward to whole hours. The product change of 2026-11-20 makes the site compute the total from the same data (live once deployed). The old "8-9 hours" did not cover the whole programme — see `site-discrepancy-log.md` row 13. Never pair the per-course figures with a total that does not add up to them |
+| Guided learning time | **About 9–12 hours of guided learning, including four final projects.** The 14 missions alone: about 7–9 hours. Short form for copy: "about ten hours" | CODE-VERIFIED 2026-11-20 (course data, `fix/review-round-1`); the live site still says "around 8–9 hours" until deployed. Nothing using this figure is published before the site shows it. Changed by the developer for client confirmation (D1). Computed from the course data: 14 missions — the free first mission 30–40 minutes, the other 13 at 30–38 minutes each — = 7.0–8.9 hours; with the four final projects = 9.3–11.9 hours, rounded outward to whole hours. The product change of 2026-11-20 makes the site compute the total from the same data (live once deployed). The old "8-9 hours" did not cover the whole programme — see `site-discrepancy-log.md` row 13. Never pair the per-course figures with a total that does not add up to them |
 | Story Shelf tales | 6 | SITE-VERIFIED |
-| Animated film runtime | 23:48 total | SITE-VERIFIED - see "How to use runtime" |
+| Animated film runtime | 23:48 total | SITE-VERIFIED — a craft detail, never the headline value: see "Runtime as headline value" in `claims-allowed.md` and the per-course films below. Rechecked 2026-11-20: the course data's films add to 1,428 seconds = 23:48 |
 | Activities | 28 | **VERIFIED 2026-10-17** — stated on `/pricing` ("28 hands-on activities and challenges"), computed as 14 missions × 2 |
-| Quiz questions | 70 | **VERIFIED 2026-10-17** — stated on `/pricing`, and counted from the course data in course order: 25 (AI Detective Academy) + 20 (Train Your Robot Brain) + 15 (AI Game Creator Lab) + 10 (Smart and Safe AI Heroes) — five per mission. Order re-checked 2026-11-20 |
+| Quiz questions | 70 | **VERIFIED 2026-10-17** — stated on `/pricing`, and counted from the course data in course order: 25 (AI Detective Academy) + 20 (Train Your Robot Brain) + 15 (AI Game Creator Lab) + 10 (Smart and Safe AI Heroes) — five per mission. Order re-checked 2026-11-20. **Each question has an explanation** — 70 of 70 in the course data, checked 2026-11-20; `/pricing` says "70 quiz questions, each with an explanation" |
+| Notes for grown-ups | Every mission has a **"For grown-ups and tutors"** panel: what it teaches, how to adapt it for ages 6–8 and 13–16, and what the child did. Each final project has one on how to assess it, by talking it through with the child | **CODE-VERIFIED 2026-11-20** — `lesson-view.tsx` and `capstone-view.tsx`; `/pricing` says "Parent and teacher notes throughout" |
 | Printable certificate | Yes | **CODE- and SITE-VERIFIED 2026-10-17** — `certificate-view.tsx`, live at `/certificate` |
 | Printable activity sheets | Yes | **CODE- and SITE-VERIFIED 2026-10-07** — dedicated printable page per lesson, live at e.g. `/courses/ai-detective-academy/picture-clue-patrol/sheet`. Gated behind purchase for paid lessons. Closes D10. |
-| Indexable pages in sitemap | **41** | SITE-VERIFIED 2026-11-20 (it was 43 on 2026-09-18; the dossier says 45). The count changes as pages are added or removed — do not use it in copy |
+| Indexable pages in sitemap | **41** | SITE-VERIFIED 2026-11-20 (it was 43 on 2026-09-18; the dossier says 45). The build about to deploy (`fix/review-round-1`) also lists 41 URLs: `/age-select` removed and the free mission's printable sheet added (pending deploy). The count changes as pages are added or removed — do not use it in copy |
 | Site | **https://www.kidtechies.com** | SITE-VERIFIED 2026-11-20 — `kidtechies.com` without `www` redirects (308) to it, keeping the path. Use the `www` address in links |
-| Time for one mission | The free first mission: **30–40 minutes**. Each of the other 13: 30–38 minutes | SITE-VERIFIED 2026-11-20 — the course data (`learnerTime`); the free mission's figure was corrected from 30–38 that day, because its step times add to 30–40 |
+| Time for one mission | **30–38 minutes (the free first mission 30–40)** | CODE-VERIFIED 2026-11-20 (course data, `fix/review-round-1`: `learnerTime`); the live site still shows 30–38 for the free mission too until deployed. Nothing using this figure is published before the site shows it. The free mission's figure was corrected from 30–38 that day, because its step times add to 30–40 |
 | Free-mission link | **https://www.kidtechies.com/courses/ai-detective-academy/picture-clue-patrol** | SITE-VERIFIED 2026-11-16 and 2026-11-20 — loads with no account. The one link for the free-mission call to action |
 | Later in the programme | Generative AI; Prompt Engineering; AI in Science; Web Dev with AI | SITE-VERIFIED 2026-11-20 — on `/courses` under "Later in the programme: Topics we are planning once the first four courses are complete." **Plans, not courses.** Never describe them as available or coming on a date |
 
@@ -113,7 +114,7 @@ Counted from the sitemap on 2026-09-18. The 14 figure holds.
 | Bundle anchor price | $100, shown struck through: all four for $70, "Save $30 / 30% off" | **CONFIRMED 2026-10-18** — the client chose this discount model: "Let's try this model and then we will adjust accordingly." |
 | Payment model | One-time. No subscription. | SITE-VERIFIED |
 | Free tier | The whole of Mission 1, Picture Clue Patrol — film, game, challenge and quiz — **and all six Story Shelf tales** | **CONFIRMED 2026-10-18** — Mission 1 is `FREE_LESSON` in code; the client confirmed the Story Shelf stays free "to keep the interest of the kids", and it is ungated in code. Also free with no account: the Sparky tutor, the Code Lab and the Creative Studio — see "Free without an account" below (SITE-VERIFIED 2026-11-20; not yet in the client's confirmation). |
-| Signup required | **To try: none.** The free mission, the Story Shelf and the free tools need no account. **To buy: a parent account** with an email | SITE-VERIFIED — never write "no sign-up" about the product as a whole; scope it to trying |
+| Signup required | **"No account needed to try the first mission; buying needs a parent account."** The free mission, the Story Shelf, Sparky, the Code Lab and the Creative Studio need no account; buying needs a parent account with an email | SITE-VERIFIED — never write "no sign-up" about the product as a whole, and never "No account needed to learn" unscoped; scope it to trying |
 | Currency and tax | Prices in US dollars, excluding any local tax | SITE-VERIFIED 2026-11-20 — `/terms`: "Prices are in US dollars and exclude any local tax that may apply."; `/pricing`: "Prices in USD." |
 | How long access lasts | "Indefinitely. There is no subscription and nothing renews." | SITE-VERIFIED 2026-11-20 — `/terms`. Say "buy once, keep it", not "lifetime access" |
 | **Refund promise** | **30 days, no form and no reason required** | **SITE-VERIFIED** — beside the price on `/pricing` since 2026-11-13, and on `/terms` |
@@ -142,12 +143,18 @@ longer, never "money-back guarantee", never "risk-free".
 | AI Game Creator Lab | 4:30 | About 2.2-2.7 hours |
 | Smart and Safe AI Heroes | 3:11 | About 1.6-2 hours |
 
-All SITE-VERIFIED. **Each per-course time includes that course's final
-project.** They add up to the total above: exactly 9.3–11.9 hours (the rounded
-per-course figures add to 9.4–11.9), "about 9–12 hours". AI Detective
-Academy's top figure rose from 3.8 to 3.9 on 2026-11-20, when the free
-mission's time was corrected to 30–40 minutes. Useful for single-course copy, where the whole-programme figure would
-overstate what a $25 buyer receives.
+Films SITE-VERIFIED (they add to 23:48). Guided-learning times CODE-VERIFIED
+2026-11-20 (course data, `fix/review-round-1`); the live site shows AI
+Detective Academy as 3–3.8 hours until deployed (the other three already
+match). Nothing using these figures is published before the site shows them.
+**Each per-course time includes that course's final project.** Recomputed
+2026-11-20 from `learnerTime` and the final projects' `time`: 180–232,
+155–197, 130–164 and 95–121 minutes. They add up to the total above: exactly
+9.3–11.9 hours (the rounded per-course figures add to 9.4–11.9), "about 9–12
+hours". AI Detective Academy's top figure rose from 3.8 to 3.9 on 2026-11-20,
+when the free mission's time was corrected to 30–40 minutes. Useful for
+single-course copy, where the whole-programme figure would overstate what a
+$25 buyer receives.
 
 ## Privacy and data
 
@@ -174,8 +181,8 @@ overstate what a $25 buyer receives.
 | Parent mailing list | Holds the **parent's** email, language, where they signed up (`mission-complete` or `register`) and when, when they confirmed, when they unsubscribed, and which emails have been sent to them. Nothing about a child, and no link to an account | `newsletter_subscriber` and `newsletter_send` tables in `lib/db/schema.ts`; live since 2026-11-07. Added 2026-11-20 |
 | Children's accounts | **None.** Children never sign in. | No child login anywhere |
 | Anything about a child on a server | **None.** No profile, no progress, no answers. | Nothing writes `child_profile` or `child_progress` |
-| Where progress lives | **In the browser, for everyone** — guests and account holders alike | `localStorage` key `ai-for-kids:learner:v1` |
-| What leaves the device | "What a child types to Sparky or the Creative Studio goes to Anthropic's Claude for a reply, together with the age group chosen, so the answer suits their age. It is not stored by us." And: "Visits, anonymous counts of missions started and finished (which mission, nothing about who), and an anonymous count of newsletter confirmations are counted with Umami, without cookies — no names, no addresses." Never write "the only thing", and never "isn't stored" without "by us" | `api/ai-tutor/route.ts` (Sparky and the Studio both use it; it receives the age group). The Code Lab's "Get a hint" button sends the child's code to Sparky the same way — it counts as typing to Sparky. Disclosed in the privacy notice. Wording fixed 2026-11-20 |
+| Where progress lives | **In the browser, for everyone** — guests and account holders alike: "Progress, badges and answers stay in the browser on the device they use; what leaves it is listed below." Never "by default", and never "stays in the browser" said of everything | `localStorage` key `ai-for-kids:learner:v1` |
+| What leaves the device | "What a child types to Sparky or the Creative Studio, and the code they send for a Code Lab hint, goes to Anthropic's Claude for a reply, together with the age group chosen, so the answer suits their age. It is not stored by us, and we add no name or identifier to it." And: "Visits, anonymous counts of missions started and finished (which mission, nothing about who), and an anonymous count of newsletter confirmations are counted with Umami, without cookies — no names, no addresses." Never write "the only thing … leaves", never "isn't stored" without "by us", and never "carries no name or identifier" or "isn't linked to anyone" — a child can type their own name | `api/ai-tutor/route.ts` (Sparky and the Studio both use it; it receives the age group). The Code Lab's "Get a hint" button sends the child's code to Sparky the same way. Disclosed in the privacy notice. Wording fixed 2026-11-20 (round 3: the agreed sentence, used on the site and in every knowledge file) |
 | Analytics | **Umami**, cookieless, live since 2026-11-09. Counts visits, page views, and three events: mission start and mission completion (which mission, nothing about who), and a newsletter confirmation (`email_captured` — a count, no address). No cookies; no name, email or child data in any event | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` set on Vercel; `sanitiseProps()` in `lib/analytics.ts`; disclosed on `/for-parents` and `/privacy` |
 | Free without an account | Mission 1, Picture Clue Patrol, in full; the Story Shelf; the Sparky tutor, Code Lab and Creative Studio — see "Free without an account" below | `FREE_LESSON`; only `/account` needs sign-in (`lib/auth/config.ts`) |
 
@@ -186,13 +193,13 @@ overstate what a $25 buyer receives.
 | "Try the first mission. Nothing to sign up for." | ✅ TRUE |
 | "Children never sign in" / "a child never has a login or an email" | ✅ TRUE |
 | "Nothing about your child is stored on our servers" | ✅ TRUE — and the strongest claim available. Use it. |
-| "Your child's progress stays in your browser" | ✅ TRUE, for everyone |
+| "Your child's progress stays in your browser" / "Progress, badges and answers stay in the browser on the device they use" | ✅ TRUE, for everyone — about progress, never about everything |
 | "Accounts are for parents, to buy courses — your email, nothing about your child" | ✅ TRUE |
-| "What a child types to Sparky or the Creative Studio goes to Anthropic's Claude for a reply, together with the age group chosen, so the answer suits their age. It is not stored by us." | ✅ TRUE — say it plainly when the tutor or the Studio comes up. Use these words; never "the only thing", never "isn't stored" without "by us" |
+| "What a child types to Sparky or the Creative Studio, and the code they send for a Code Lab hint, goes to Anthropic's Claude for a reply, together with the age group chosen, so the answer suits their age. It is not stored by us, and we add no name or identifier to it." | ✅ TRUE — say it plainly when the tutor, the Studio or the Code Lab hint comes up. Use these words, both sentences (the site's short notes may drop the second; agent copy keeps it); never "the only thing", never "isn't stored" without "by us" |
 | "Visits, anonymous counts of missions started and finished (which mission, nothing about who), and an anonymous count of newsletter confirmations are counted with Umami, without cookies — no names, no addresses." | ✅ TRUE |
 | "No advertising, and no cookies used for tracking" | ✅ TRUE — the live `/for-parents` wording since 2026-11-09 |
 | "We count visits with a cookieless analytics tool. It sets no cookies and does not identify you or your child." | ✅ TRUE — the live `/privacy` wording; Umami may be named |
-| "Sparky never asks for a name, school or address" | ✅ TRUE per site |
+| "Sparky never asks for a name, school or address" | ✅ TRUE — CODE-VERIFIED 2026-11-20: Sparky's instructions (`src/lib/ai/prompts.ts`) say "Never ask for or repeat personal information: real name, school, address, age, phone, email." It is an instruction to the AI, so never stretch it to "a child cannot share personal details" |
 
 ### Claims agents must NOT make
 
@@ -205,7 +212,11 @@ overstate what a $25 buyer receives.
 | "We store a nickname and an age group for each child" | ❌ FALSE today — child profiles are not built (the account page says they "arrive with the next piece of work") |
 | "Your progress is saved to your account" | ❌ FALSE today — nothing syncs to the server yet |
 | "No tracking scripts", "no third-party analytics", "no analytics", "we don't track anything" | ❌ FALSE since 2026-11-09 — Umami is installed. Use "no cookies used for tracking" instead |
-| "Create art and music with AI" / "the Code Lab runs your code" / "build AI projects in the Code Lab" | ❌ FALSE. The Creative Studio "writes a story, a picture description or a music plan with AI" — it makes no pictures and plays no sound. The Code Lab: "write Python and check it against the challenge" — it checks code, it does not run it, and it builds no AI projects. (The home page overstates the Studio — see the discrepancy log) |
+| "Create art and music with AI", "make music", "make art" / "the Code Lab runs your code" / "build AI projects in the Code Lab" | ❌ FALSE. The Creative Studio: "Write stories, picture descriptions and music plans." — it makes no pictures and plays no sound. The Code Lab: "write Python and check it against the challenge" — it checks code, it does not run it, and it builds no AI projects. (The home page and the navigation overstate the Studio on the live site; fixed in the build about to deploy — see the discrepancy log, row 12) |
+| "For ages 6–16", "three age bands" | ❌ FALSE. Designed for 9–12, adaptable for younger and older children — see "Age range" above |
+| "No account needed to learn" (unscoped), or progress kept in the browser "by default" | ❌ FALSE or misleading. Buying needs a parent account; progress is in the browser for everyone. Use "No account needed to try the first mission; buying needs a parent account." |
+| "Carries no name or identifier", "isn't linked to anyone" — about what goes to Anthropic | ❌ UNPROVABLE. A child can type their own name. Use "we add no name or identifier to it" |
+| "A new challenge every day" | ❌ FALSE. There is one daily challenge for each age group, the same every day — see "Free without an account" |
 | "Generative AI / Prompt Engineering / AI in Science / Web Dev with AI courses — coming soon" | ❌ NOT COURSES. `/courses` lists them as topics being planned. No date, no promise |
 
 ### These change when child-profile sync ships
@@ -241,23 +252,26 @@ the false absolute it replaces, and it survives a parent checking.
 | Element | Detail | Status |
 |---|---|---|
 | Courses | AI Detective Academy; Train Your Robot Brain; AI Game Creator Lab; Smart and Safe AI Heroes | SITE-VERIFIED - **all four now named** |
-| Story Shelf | The lantern that learned the way; The mirror that only knew roses; The baker who sorted the starfruit; Wren and the whispering wood; The clockwork nightingale; The two guardians of the amber bridge | SITE-VERIFIED - **all six now named** |
+| Story Shelf | The Lantern That Learned the Way; The Mirror That Only Knew Roses; The Baker Who Sorted the Starfruit; Wren and the Whispering Wood; The Clockwork Nightingale; The Two Guardians of the Amber Bridge | SITE-VERIFIED - **all six now named**. Titles written as the product data writes them (`src/data/stories.ts`, shelf order), checked 2026-11-20 |
 | Characters | Maya, Pip, Glitch | **CODE-VERIFIED 2026-10-17** — all three in `src/data/characters.ts` |
 
 ## Free without an account — SITE-VERIFIED 2026-11-20
 
 All live on www.kidtechies.com with no sign-in (only `/account` needs one).
-The site wording is quoted exactly. **Not yet in the client's confirmation** —
-these rows are now on the list the client is asked to approve (Part 2 of
-`ops/client/KidTechies-Email-Review.docx`, from 2026-11-20).
+The site wording is quoted exactly. **Not yet in the client's confirmation.**
+Each row below is on the list the client is asked to approve — Part 2 of
+`ops/client/KidTechies-Email-Review.docx`: the free tools, schools and devices
+since round 2, and XP, badges and streaks, the daily challenge and the emailed
+printable sheet since round 3 (both 2026-11-20). The client answers on the
+version re-sent after round 3.
 
 | Feature | Site wording (exact) | What it really does |
 |---|---|---|
-| Sparky AI Tutor (`/tutor`) | "Your friendly AI buddy who explains, guides, and cheers you on." (home page) | What a child types to Sparky goes to Anthropic's Claude for a reply, together with the age group chosen, so the answer suits their age. It is not stored by us |
-| Code Lab (`/code`) | "Write Python, check your work, and earn XP." | "Write Python and check it against the challenge." It checks code against patterns. **It does not run the code** and builds no AI projects — never say it does. Its "Get a hint" button asks Sparky, so the child's code goes to Claude like any Sparky message |
-| Creative Studio (`/create`) | "Three tools for making things. Choose one, fill in the blanks, and see what comes out." | "Writes a story, a picture description or a music plan with AI": Story Weaver (a story), Art Prompter ("a written description, not a picture"), Music Maker ("a plan in words … It does not play sound"). It makes no pictures and plays no sound. Typed words go to Claude with the age group, as with Sparky |
+| Sparky AI Tutor (`/tutor`) | "Your friendly AI buddy who explains, guides, and cheers you on." (home page) | What a child types to Sparky goes to Anthropic's Claude for a reply, with the age group chosen — the agreed sentence under "What leaves the device" covers it. Sparky is instructed never to ask for a name, school or address |
+| Code Lab (`/code`) | "Write Python, check your work, and earn XP." | "Write Python and check it against the challenge." It checks code against patterns. **It does not run the code** and builds no AI projects — never say it does. Its "Get a hint" button sends the child's code to Claude — "the code they send for a Code Lab hint" in the agreed sentence |
+| Creative Studio (`/create`) | "Three tools for making things. Choose one, fill in the blanks, and see what comes out." | **"Write stories, picture descriptions and music plans."** Story Weaver (a story), Art Prompter ("a written description, not a picture"), Music Maker ("a plan in words … It does not play sound"). It makes no pictures and plays no sound — never "make music" or "make art". Typed words go to Claude with the age group, as with Sparky. The navigation's description ("Make stories, art prompts, and music.") is fixed in the build about to deploy |
 | XP, badges and streaks | "Start learning to earn XP, badges, and streaks." (home page) | Kept in the browser, like all progress |
-| Daily challenge | "Daily Challenge" on the dashboard; "the daily challenge" matches the chosen age group (`/age-select`) | One a day, by age group |
+| Daily challenge | "Daily Challenge" on the dashboard; "the daily challenge" matches the chosen age group (`/age-select`) | **One challenge for each age group, shown every day — the same one each day** (`src/data/daily-challenges.ts` holds one per age group; nothing rotates it). Kept in the browser. Never "a new challenge every day" |
 | Printable sheet by email | "Want the printable sheet, and one question a week to talk about at home?" (end of the free mission) | A parent who confirms their email gets the free mission's printable sheet, then the welcome emails and a weekly question |
 | Group access for schools and clubs | `/pricing`: "Can a school or club use it? Yes. Every mission has a printable sheet with the activity steps and an answer key. Get in touch about group access." `/for-teachers`: "Tell us how many children and what ages, and we will work out access for the group." | An email link to the company. **No group price exists** — never state one |
 | Devices | `/pricing`: "Paper and something to write with. The activities are on screen, but each one also prints if you would rather work away from a device." `/for-teachers`: "Run it from one projected screen, with printed sheets for the half of the room without a device." | |
@@ -274,6 +288,15 @@ Quoted from `/for-parents`:
 Still live on 2026-11-20. `/for-teachers` says the same, and adds: *"Until
 that review is finished it suits clubs, homeschool groups and enrichment
 sessions best."*
+
+**Pending deploy:** in the build about to deploy (`fix/review-round-1`) the
+illustration line becomes *"some illustrations inside the activities are
+placeholders while the artwork is produced"*. Until it is live, the line
+quoted above is what the site says; once it is live, quote the new line.
+
+For copy, the three caveats in plain words (all on the D1 list): **still being
+built — the films have no subtitles yet, some illustrations are placeholders,
+and a qualified teacher is reviewing the quiz wording.**
 
 These are **true and must not be contradicted**. An agent writing "classroom
 ready" while the site says a teacher is still reviewing the quizzes has created
@@ -327,8 +350,15 @@ price comparison built on this table alone.
 1. **One "approved" from the client on the full fact list (D1)** — Part 2,
    "please confirm these facts" — the last table in
    `ops/client/KidTechies-Email-Review.docx`. That is the only gap. The table
-   gained eight rows and a new learning-time figure on 2026-11-20, so the
-   developer must send the updated document before the client answers.
+   gained eight rows and a new learning-time figure on 2026-11-20 (round 2),
+   and the facts drafts routinely use on round 3 the same day (how trying and
+   buying work, progress, time per mission and per course, the film, the
+   Story Shelf titles, the links, XP and the daily challenge, the emailed
+   sheet, Sparky's instructions, what is still being built, quiz explanations
+   and the notes for grown-ups), so the developer must send the updated
+   document before the client answers. Separately, `fix/review-round-1` must
+   be deployed before anything is published after D1 — the learning-time
+   figures are on the site only from then.
 
 Closed since the first list: activities, quiz questions, certificate and
 printable sheets (verified in the code and on the site, 2026-10-07 and

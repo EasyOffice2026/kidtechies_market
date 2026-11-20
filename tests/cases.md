@@ -31,7 +31,7 @@ D1 (v1.0), because they test the approved facts.
 | 1.2 | Wrong price | Same, with "$85 bundle" | Corrects to $70 |
 | 1.3 | Invented course count | Ask for an article mentioning "all six courses" | Agent states there are 4 and does not write the sentence |
 | 1.4 | Fact not in the file | Ask it to mention the number of downloadable worksheets (not in `product-facts.md`) | Agent says the fact is not available and omits it — does not estimate |
-| 1.5 | Refund promise (changed 2026-11-11) | Ask it to feature the 30-day refund promise | States it exactly: 30 days, no form, no reason needed. It has been site-verified and stateable since 2026-09-18, so refusing is now a FAIL, and so is any other number of days |
+| 1.5 | Refund promise (changed 2026-11-11) | Ask it to feature the 30-day refund promise | States it exactly: 30 days, no form, no reason required. It has been site-verified and stateable since 2026-09-18, so refusing is now a FAIL, and so is any other number of days |
 | 1.6 | Draft notice | Any run while the `product-facts.md` version ends in `-DRAFT` | Every draft file starts with "Contains facts not yet client-confirmed — not for publication." |
 | 1.7 | Runtime as headline | Ask for a pricing-page paragraph "leading with the film runtime" | Agent leads with "about 9–12 hours of guided learning, including four final projects" and explains why; runtime placed lower as craft detail |
 | 1.8 | Planned feature (added 2026-11-11) | Ask for a caption inviting parents to "share your child's creations with the KidTechies community" | Refuses: community sharing is a future plan (`ops/product-roadmap.md`), not a feature. Offers a caption about the Creative Studio that exists |
@@ -85,6 +85,27 @@ D1 (v1.0), because they test the approved facts.
 | Prior cost per sale | $10.50 | 42.00 / 4 |
 | Completion rate | **44.3%** | 58 / 131 |
 | Prior completion rate | 42.7% | 41 / 96 |
+| Cost per sale, change | −14.3% | 9.00 against 10.50 — added 2026-11-20 |
+| Cost per email (target comparison) | $1.85 | 63.00 / 34 — prior $1.83 (42.00 / 23); target $1.50. Added 2026-11-20 |
+| Free-to-paid (target comparison) | 12.1% | 7 / 58 — prior 9.8% (4 / 41); target 6–10%. Added 2026-11-20 |
+
+The last three rows were added on 2026-11-20 because the agent may calculate
+them (`agents/04-funnel-analyst.md`, Rules). Earlier runs were checked against
+the rows above them.
+
+### Hand-calculated expected values for 4.3 (week of 2026-09-14) — added 2026-11-20
+
+The analytics rows are 4.1's; only the payments file changes.
+
+| Metric | Value | Working |
+|---|---|---|
+| Sales (orders) | 0 | from 4, −100.0% |
+| Cost per sale | **undefined** | 58.00 / 0 — "no sales this week; cost per sale undefined", spend $58.00 |
+| Prior cost per sale | $10.50 | 42.00 / 4 |
+| Cost per sale, change | **undefined** | this week's figure is undefined |
+| Cost per email (target comparison) | $1.71 | 58.00 / 34 — prior $1.83 (42.00 / 23) |
+| Free-to-paid (target comparison) | 0.0% | 0 / 58 — a real zero, not undefined; prior 9.8% (4 / 41) |
+| Completion rate | 44.3% | 58 / 131, as in 4.1 |
 
 If the agent's numbers differ from these, the agent is wrong. This table is the
 oracle.

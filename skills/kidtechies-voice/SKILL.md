@@ -30,7 +30,10 @@ marketing.
    literacy skills."
 4. Short sentences carry the weight.
 5. Never use fear - not of falling behind, not of technology, not of other
-   parents.
+   parents. That includes fear in disguise: "Join thousands of families who
+   have already started", "Most parents at your child's school are already
+   doing this", "Don't be the last family to figure this out", "Limited
+   time" or any made-up deadline, "While your child still has time".
 6. One brand: **KidTechies**. "AI for Kids" is the tagline, never a second
    name.
 
@@ -54,33 +57,39 @@ marketing.
   source.
 - **Copy addressed to a child**, or requesting any personal detail from or about
   a child.
+- **A real, identifiable child** - in imagery, a testimonial, a case study or
+  an anecdote. No child named, pictured or placed at a school
+  (`child-safety-rules.md`, rule 4).
 - **Educational-authority implication** - accredited, certified,
   curriculum-approved, endorsed - unless a named body has done so in writing.
 - **Government endorsement by association.** Citing the Saudi or UAE national AI
   curricula as *context* is fine. Implying KidTechies is part of, approved by or
   aligned to them is not. This one is the one most often got wrong.
 - **Any privacy claim** not currently true in `product-facts.md`. When the
-  tutor or the Studio comes up, use these words: "What a child types to
-  Sparky or the Creative Studio goes to Anthropic's Claude for a reply,
-  together with the age group chosen, so the answer suits their age. It is
-  not stored by us." Never "the only thing that leaves the device"; never
-  "isn't stored" without "by us".
+  tutor, the Studio or the Code Lab hint comes up, use these words: "What a
+  child types to Sparky or the Creative Studio, and the code they send for a
+  Code Lab hint, goes to Anthropic's Claude for a reply, together with the
+  age group chosen, so the answer suits their age. It is not stored by us,
+  and we add no name or identifier to it." Never "the only thing that leaves
+  the device"; never "isn't stored" without "by us"; never "carries no name
+  or identifier" or "isn't linked to anyone".
 - **Analytics denial** - "no tracking scripts", "no third-party analytics",
   "no analytics", "we don't track anything". All false: Umami counts
   visits, missions started and finished, and newsletter confirmations,
   anonymously and without cookies. Say "no advertising, and no cookies used
   for tracking".
-- **Overstating the tools.** The Creative Studio "writes a story, a picture
-  description or a music plan with AI" - it makes no pictures and plays no
-  sound; text only. The Code Lab: "write Python and check it against the
+- **Overstating the tools.** The Creative Studio: "Write stories, picture
+  descriptions and music plans." - it makes no pictures and plays no sound;
+  text only. Never "make music" or "make art". The Code Lab: "write Python and check it against the
   challenge" - it checks code, it does not run it, and it builds no AI
   projects.
 - **The age range, stretched.** Designed for ages 9-12, adaptable for
   younger and older children. Never "for ages 6-16", never "three age
   bands".
 - **"No account", "no sign-up", "no email address" said about the product.**
-  Buying needs a parent account. Scope it: "no account needed to try the
-  first mission."
+  Buying needs a parent account. Scope it: "No account needed to try the
+  first mission; buying needs a parent account." Never "no account needed to
+  learn".
 - **Planned features as if they exist** - community sharing, levels, video
   lessons, a subscription, the "Later in the programme" topics. Describe only
   what `product-facts.md` lists.

@@ -1,7 +1,7 @@
 ---
 file: audience.md
 owner: KidTechies (client)
-version: 0.8.3-DRAFT
+version: 0.8.4-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL
 ---
@@ -65,7 +65,10 @@ Fear-based copy aimed here is both prohibited and counterproductive.
 ## Multiplier - the teacher and the homeschool lead (~15%)
 
 Private-school ICT coordinators, after-school club leads, homeschool co-op
-organisers. They need no login, they can project a mission on a screen, and
+organisers. They need no login to try the free first mission, the Story Shelf
+and the free tools with a group; the paid missions need a purchase — a parent
+account buys them, and for a class or club the school gets in touch about group
+access (there is no group price). They can project a mission on a screen, and
 printable sheets solve their offline problem. One of them reaches 30 families at
 once.
 
@@ -86,7 +89,7 @@ data-protection officer needs to hear.
 | Rank | Message | Proof available today |
 |---|---|---|
 | 1 | Understanding, not just using | The AI Detective premise: discover how AI sees, hears, compares and sometimes gets things wrong. (Do not claim this is unique — no sourced comparison.) |
-| 2 | Nothing about your child is stored on our servers | Progress stays in the browser, for everyone. Children never sign in; the only account is the parent's, to buy courses. What a child types to Sparky or the Creative Studio goes to Anthropic's Claude for a reply, together with the age group chosen, so the answer suits their age. It is not stored by us. No advertising, and no cookies used for tracking: visits, anonymous counts of missions started and finished (which mission, nothing about who), and an anonymous count of newsletter confirmations are counted with Umami, without cookies — no names, no addresses. ⚠ *History: the original pillar, "Nothing about your child leaves the device", was false — Sparky messages go to Anthropic. The 2026-10-07 rewrite ("your child is a nickname") was also false — no child data is stored at all. This wording is verified against what the code writes, 2026-10-17. Keep the pillar number; Agent 5 and the paid tests share it.* |
+| 2 | Nothing about your child is stored on our servers | Progress stays in the browser, for everyone. Children never sign in; the only account is the parent's, to buy courses. What a child types to Sparky or the Creative Studio, and the code they send for a Code Lab hint, goes to Anthropic's Claude for a reply, together with the age group chosen, so the answer suits their age. It is not stored by us, and we add no name or identifier to it. No advertising, and no cookies used for tracking: visits, anonymous counts of missions started and finished (which mission, nothing about who), and an anonymous count of newsletter confirmations are counted with Umami, without cookies — no names, no addresses. ⚠ *History: the original pillar, "Nothing about your child leaves the device", was false — Sparky messages go to Anthropic. The 2026-10-07 rewrite ("your child is a nickname") was also false — no child data is stored at all. This wording is verified against what the code writes, 2026-10-17. Keep the pillar number; Agent 5 and the paid tests share it.* |
 | 3 | Try the first mission free — nothing to sign up for | Mission 1 opens with no signup, no card. *(Was "Try it in ten seconds, free" until 2026-11-20 — an unmeasured time. Rank unchanged.)* |
 | 4 | All four for $70 — buy once, keep it | $70 instead of $100 for all four courses (client's discount model, 2026-10-18), one payment, no subscription, nothing to cancel, 30-day refund. The "three months of the alternatives" framing is retired. See `claims-allowed.md`. |
 | 5 | Made like a film, not a lecture | 14 animated missions, Maya, Pip and Glitch, six original fairy tales, printables for screen-free days. |

@@ -1,7 +1,7 @@
 ---
 file: brand-voice.md
 owner: KidTechies (client) - voice examples require client approval
-version: 0.8.3-DRAFT
+version: 0.8.4-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL of the accepted/rejected examples
 ---
@@ -68,14 +68,15 @@ last clause flatters the parent without flattering them falsely.*
 
 > Nothing about your child is stored on our servers. Their progress stays in your
 > browser, they never sign in, and the only account is yours — for buying a
-> course. What a child types to Sparky or the Creative Studio goes to
-> Anthropic's Claude for a reply, together with the age group chosen, so the
-> answer suits their age. It is not stored by us. We built it that way because
-> we could not think of a good reason to do otherwise.
+> course. What a child types to Sparky or the Creative Studio, and the code
+> they send for a Code Lab hint, goes to Anthropic's Claude for a reply,
+> together with the age group chosen, so the answer suits their age. It is not
+> stored by us, and we add no name or identifier to it. We built it that way
+> because we could not think of a good reason to do otherwise.
 
 *Why: the strongest differentiator, stated flatly and truthfully. It names what
-does leave the device — the words typed to Sparky or the Studio, and the age
-group — instead of hiding it, which is what makes the rest believable. It does
+does leave the device — the words typed to Sparky or the Studio, the code sent
+for a Code Lab hint, and the age group — instead of hiding it, which is what makes the rest believable. It does
 not call that "the only thing": Umami also counts visits, missions and newsletter
 confirmations, anonymously. The last sentence undercuts the boast, which is what makes it
 land.*
@@ -85,8 +86,10 @@ device" — false, because Sparky messages go to Anthropic. The 2026-10-07 versi
 said "your child is a nickname and an age group" — also false, because no child
 data is stored at all. This one is verified against what the code writes
 (2026-10-17). On 2026-11-20 its Sparky sentence was replaced with the agreed
-wording, which adds the Creative Studio, the age group and "by us". It is a
-template agents imitate, so an error here propagates into every draft.*
+wording, which adds the Creative Studio, the age group and "by us"; on round 3
+the same day, the Code Lab hint and "we add no name or identifier to it" — never
+"carries no name or identifier", because a child can type their own name. It
+is a template agents imitate, so an error here propagates into every draft.*
 
 ## Three paragraphs we would reject
 
@@ -134,3 +137,9 @@ dossier says "the founder's"; here that means the approver — Ibrahim until the
 client names one, D14) feed
 real parent phrases back into this file. A voice file that has not changed in
 three months is not being used. Add a dated entry to `CHANGELOG.md` each time.
+
+**How a new phrase gets in:** the approver sends it to the developer, who adds
+it here and to `CHANGELOG.md` in the repository. A phrase typed only into the
+client folder's copy is lost at the next folder update, because the update
+takes GitHub's copy of these files (`ops/handover.md`, "Updating the folder
+safely").

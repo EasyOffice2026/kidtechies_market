@@ -3,7 +3,7 @@ agent: 2 - Content Factory
 cadence: Monday / Wednesday / Saturday 08:00
 needs: Knowledge base + queue/content-queue.md
 output: drafts/YYYY-MM-DD/02-content-factory-<item-slug>-{article,social,email,video-hook,self-check}.md
-version: 1.2 — 2026-11-20: five named files; draft notice while facts are DRAFT; call to action per piece; article opening; queue edit limited to one row; video hook speaks to the parent
+version: 1.3 — 2026-11-20: five named files; draft notice while facts are DRAFT; call to action per piece; article opening; queue edit limited to one row; video hook speaks to the parent; round 3: the email's one link, the LinkedIn persona, the TikTok hook speaks to the parent
 ---
 
 # Agent 2 - Content Factory
@@ -41,12 +41,17 @@ overwrite an existing file.
    rest. One link to the free first mission, placed where it genuinely helps
    the reader. No hard sell.
 
-2. FIVE SOCIAL CAPTIONS - two Instagram, two LinkedIn (aimed at teachers and
-   school ICT coordinators), one TikTok/Reels spoken hook under 20 seconds.
-   Each caption has at most one free-mission call to action.
+2. FIVE SOCIAL CAPTIONS - two Instagram, two LinkedIn, one TikTok/Reels
+   spoken hook under 20 seconds. The Instagram captions and the TikTok hook
+   are aimed at the persona in the queue row; the two LinkedIn captions are
+   always aimed at teachers and school ICT coordinators (the teacher
+   persona in audience.md), whatever the queue row says. The TikTok hook is
+   spoken to the parent watching, never to a child. Each caption has at
+   most one free-mission call to action.
 
 3. ONE NURTURE EMAIL - subject line plus body, under 200 words, one idea,
-   one link.
+   one link: the free-mission link from product-facts.md ("Free-mission
+   link"), as its one call to action. No other link.
 
 4. A 25-SECOND VIDEO HOOK SCRIPT on the house format: show AI getting
    something wrong, then ask the parent watching whether their child could

@@ -2,6 +2,7 @@
 file: product-roadmap.md
 owner: Client (direction) · Developer (phasing and estimates)
 created: 2026-11-11
+updated: 2026-11-20 — the Studio, ages and privacy described as the product works today
 status: For understanding and future planning — nothing here is scheduled or quoted
 ---
 
@@ -38,11 +39,11 @@ described to parents as existing — see `knowledge/claims-allowed.md`.
 |---|---|
 | AI courses with hands-on activities | Four courses, live on kidtechies.com |
 | Text and questionnaires | Lessons, activities, quizzes, printable sheets |
-| Studio / playground | **Creative Studio** at `/create`: story, art and music tools, replies from Claude through the server |
-| Ages | Age groups on the learner profile |
+| Studio / playground | **Creative Studio** at `/create`: write stories, picture descriptions and music plans — text only (no pictures, no sound), replies from Claude through the server |
+| Ages | An age group the child picks, kept in the browser |
 | Parents | Parent accounts, the parents page, the mailing list |
 | Teachers | `/for-teachers` page |
-| Anonymous by default | Guest mode: a nickname, no account, nothing identifying |
+| Anonymous | Children never sign in and have no account; their progress is kept in the browser for everyone, and nothing about a child is stored on our servers. Parents have accounts only to buy |
 
 ## Phases
 
@@ -53,7 +54,7 @@ described to parents as existing — see `knowledge/claims-allowed.md`.
 | **2 — Studio as the playground** | Make the Creative Studio the centre: more tools, linked to each course's lessons | `/create`, Sparky | AI cost per child; every prompt already passes the safety filter |
 | **3 — Anonymous sharing** | A gallery where children share Studio work — see the safety design below | Phase 2 | **Highest legal and safety risk in the plan** |
 | **4 — Community** | Parents and teachers take part: class spaces for teachers, parent view of their child's shared work, the "My World" game | Phases 1–3 | Moderation workload grows with use |
-| **Later** | Videos, subscription pricing, teacher API keys via Google grants, the `kidsai.app` name | Client decisions | See open questions |
+| **Later** | Video lessons (beyond the animated film already in every mission), subscription pricing, teacher API keys via Google grants, the `kidsai.app` name | Client decisions | See open questions |
 
 ## Safety design for sharing (Phase 3) — the minimum, not the ideal
 

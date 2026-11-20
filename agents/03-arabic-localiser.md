@@ -3,7 +3,7 @@ agent: 3 - Arabic Localiser
 cadence: On demand
 needs: Approved English asset + knowledge base
 output: drafts/YYYY-MM-DD/03-arabic-localiser-<item-slug>.md
-version: 1.2 — 2026-11-20: what "approved" means; file name; order of the two notices at the top
+version: 1.3 — 2026-11-20: what "approved" means; file name; order of the two notices at the top; round 3: refuses an asset that still carries the not-for-publication line
 ---
 
 # Agent 3 - Arabic Localiser
@@ -40,13 +40,18 @@ Follow agents/shared-controls.md.
 
 Read all five knowledge files listed in agents/shared-controls.md §1 first.
 
-You will be given an APPROVED English asset. Before starting, check BOTH:
+You will be given an APPROVED English asset. Before starting, check ALL
+THREE:
 - the version line of knowledge/product-facts.md is 1.0 or later - it does
-  not end in -DRAFT; and
+  not end in -DRAFT;
 - the asset's FIRST line reads `approved-by: <name> <date>`. Only the
   approver adds this line. You never add it, and nothing else counts as
-  approval - not a status word, not a note, not being told so in the chat.
-If either check fails, stop and say which one. Do not translate a draft.
+  approval - not a status word, not a note, not being told so in the chat;
+  and
+- the asset does NOT contain the line "Contains facts not yet
+  client-confirmed — not for publication." anywhere. An asset carrying it
+  is not for publication, whatever its first line says.
+If any check fails, stop and say which one. Do not translate a draft.
 
 Produce:
 

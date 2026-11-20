@@ -53,9 +53,18 @@ No agent in Stage 1 has publishing authority. Not one.
   client names one (D14).
 - **Mission** = a lesson. 14 in all, across 4 courses.
 - **Final project** = the capstone at the end of each course (4 in all).
-- **Sign-up** = a parent confirming their email for the mailing list (the
-  `email_captured` event, `emails_captured` in the weekly file) — not creating
-  an account.
+- **Sign-up** (in the numbers) = a parent **confirming** their email for the
+  mailing list (the `email_captured` event, `emails_captured` in the weekly
+  file) — not asking for the emails without confirming, and not creating an
+  account. In copy, "nothing to sign up for" means something else: no account
+  and no email are needed to try the first mission.
+- **Site launch** = 2026-11-07, when the new site and the email list went
+  live. Since then every visit, sign-up and event has been the team's own
+  testing.
+- **Go-live** = the day real parents are first invited: the first post
+  published or ad run, which can only happen after D1. "The first full week
+  after go-live" is the first Monday-to-Sunday week that starts after that
+  day; the first real Friday report covers it.
 
 ## Where to start
 

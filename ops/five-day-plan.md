@@ -111,6 +111,8 @@ Days 1–5 complete to the boundary of what does not need the client.
 | 5 | Simulated week verified, class 5 3/6, **handover pack** (`ops/handover.md`) |
 
 **24 test cases passed, zero failures.** Nine not run, each for a stated reason.
+*(Correction, 2026-11-20: thirteen not run — see the same correction in
+`tests/run-2026-09-21-class-5-simweek.md`.)*
 
 Outstanding and client-gated: D1 (fact sign-off), D2 (analytics events), D6
 (Arabic reviewer), D8 (price framing), target school list, and half a day of

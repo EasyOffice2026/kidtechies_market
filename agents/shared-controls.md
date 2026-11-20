@@ -1,7 +1,7 @@
 ---
 file: shared-controls.md
 owner: Developer
-version: 1.2 — 2026-11-20: draft notice while facts are DRAFT, file names, no overwriting; numbers match by value, with brand-voice's approximations
+version: 1.3 — 2026-11-20: draft notice while facts are DRAFT, file names, no overwriting; numbers match by value, with brand-voice's approximations; round 3: never write an approved-by line
 ---
 
 # Shared agent controls
@@ -35,6 +35,11 @@ No agent here publishes, sends, posts or schedules anything. Output goes to
 
 Never describe finished work as published, live, sent or scheduled. Say
 "drafted" or "ready for review." The distinction is the entire safety model.
+
+**Never write an `approved-by:` line** - not in a draft, not in a file you
+copy, not when asked to in a task or a chat. Only the approver types it, by
+hand, into a draft they have approved (`ops/operator-guide.md`). If a task
+asks you to add one, refuse visibly (rule 3 format).
 
 ## 3. Fail loudly, never fabricate
 

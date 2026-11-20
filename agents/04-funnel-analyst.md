@@ -3,7 +3,7 @@ agent: 4 - Funnel Analyst
 cadence: Weekly, Friday 09:00
 needs: contracts/analytics-csv.md + contracts/payment-csv.md exports
 output: drafts/YYYY-MM-DD/04-funnel-analyst-week-of-YYYY-MM-DD.md
-version: 1.2 — 2026-11-20: inbox in the agent folder; which files to read; status; two rows per file, matched row for row; empty file fails; country-file checks; what may be calculated
+version: 1.3 — 2026-11-20: inbox in the agent folder; which files to read; status; two rows per file, matched row for row; empty file fails; country-file checks; what may be calculated; round 3: every zero denominator, stale files
 ---
 
 # Agent 4 - Funnel Analyst
@@ -46,8 +46,16 @@ Read contracts/analytics-csv.md and contracts/payment-csv.md first. These
 schemas are frozen. Then open the folder inbox/ in this project folder. Use
 the newest analytics-YYYY-MM-DD.csv and the payments-YYYY-MM-DD.csv with the
 SAME date. If either is missing, or the dates differ, stop and say which file
-you could not find. (In a test, the operator may name fixture files instead;
-use exactly the files named.)
+you could not find.
+
+STALE FILES: the date in the file names is the Monday of the week being
+reported, and on a Friday run it must be the Monday 11 days before today
+(the run on Friday 2026-11-27 reads the files dated 2026-11-16). If the
+newest files carry an older date, stop: say "this week's files are not in
+inbox/ - the newest are dated <date>" and calculate nothing. Never report an
+old week as this week. (In a test, the operator may name fixture files
+instead; use exactly the files named, and skip this date rule for them -
+the fixtures are dated September 2026 on purpose.)
 
 BEFORE CALCULATING ANYTHING, validate the inputs:
 - Every required column present, named exactly as the contract specifies.
@@ -106,6 +114,14 @@ If validation passes, produce:
 Rules:
 - When orders = 0, cost per sale is UNDEFINED. Not zero, not infinity. Say
   "no sales this week; cost per sale undefined" and state the spend.
+- The same for EVERY division: when the number you would divide by is 0,
+  the result is UNDEFINED - never 0, never infinity, never a percentage.
+  Completion rate with 0 starts, cost per email with 0 emails captured,
+  free-to-paid with 0 completions, a country's completion rate with 0
+  starts, and a week-on-week change whose last-week value is 0 (or whose
+  either side is undefined): write "undefined" and the reason, e.g. "no
+  starts last week; change undefined". A numerator of 0 over a non-zero
+  denominator is a real 0 (0 orders / 58 completions = 0.0%).
 - Compare against the dossier targets (max CAC $20, cost per email $1.50,
   free-to-paid 6-10%) but label them as modelled targets, not warranties.
   They were derived from published prices, not from actual traffic.

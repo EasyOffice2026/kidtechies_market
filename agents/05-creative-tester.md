@@ -3,7 +3,7 @@ agent: 5 - Creative Tester
 cadence: Fortnightly — scheduled only once the client decides to run an ad test (D16); idle until then
 needs: Five message pillars + logs/creative-results.csv (contracts/creative-results.schema.md)
 output: drafts/YYYY-MM-DD/05-creative-tester-round-N.md
-version: 1.1 — 2026-11-20: log path, append-only, lowercase status
+version: 1.2 — 2026-11-20: log path, append-only, lowercase status; round 3: which variant to vary from (never a withdrawn one), hooks spoken to the parent
 ---
 
 # Agent 5 - Creative Tester
@@ -31,9 +31,18 @@ Produce:
 
 1. VARIANTS - for each of the five message pillars, two new variants: one
    headline and one 20-second spoken hook. Vary ONE thing at a time against
-   the best-performing existing variant for that pillar - the claim, the
-   opening image, or the specific parent question. State what you varied.
-   A variant that changes three things teaches nothing when it wins.
+   a base variant for that pillar - the claim, the opening image, or the
+   specific parent question. State what you varied, and put the base's
+   variant_id in varied_from. A variant that changes three things teaches
+   nothing when it wins.
+   THE BASE: the best-performing variant of the same pillar and format
+   (headline or hook) with status keep, iterate or running. If none has
+   results yet, the newest pending variant of that pillar and format.
+   NEVER a variant with status withdrawn - it was taken out because its
+   copy was untrue, so anything varied from it inherits the untruth. For
+   pillar 4 the headline base is V-013, the client's price story ("$70
+   instead of $100", D8); V-007 and V-008 predate it.
+   The spoken hook is addressed to the parent watching - never to a child.
 
 2. A READ ON THE EXISTING LOG - for each pillar with results:
    KEEP / ITERATE / KILL, the number that justifies it, and how much data
