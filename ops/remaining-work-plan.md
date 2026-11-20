@@ -80,7 +80,7 @@ file means agents keep writing the old claim.
 ### Acceptance
 
 - [x] `/for-parents` describes guest mode and parent accounts separately — live, checked 2026-11-13
-- [ ] `mission_start` and `mission_complete` appear for the free mission, once per session
+- [x] `mission_start` and `mission_complete` appear for the free mission, once per session — live, checked 2026-11-20
 - [x] Pricing leads with hours; refund promise beside the price — live, checked 2026-11-13
 - [ ] No template text anywhere; one brand name — page copy clean; the logo artwork still reads "AI for Kids"
 - [ ] Teacher page live; Arabic page live after review — teacher page live 2026-11-07; Arabic waits on D6
@@ -531,7 +531,7 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 | Item | Who | Note |
 |---|---|---|
 | `EMAIL_FROM` = `KidTechies <noreply@kidtechies.com>` in Vercel | Developer | **Done 2026-11-20** — Gmail shows "KidTechies" on a live sign-up |
-| Confirm Umami shows `mission_start`, `mission_complete`, `email_captured` | Developer | Umami is live since 2026-11-09 (Plausible sign-up failed; `feature/umami-analytics` added Umami as a provider). Script and disclosure verified on the live site; the events still need one test run |
+| Confirm Umami shows `mission_start`, `mission_complete`, `email_captured` | Developer | **Done 2026-11-20** — a live run (free mission, quiz passed, parent email, confirmed) shows all three in Umami Events |
 | `news.kidtechies.com` for the newsletter | Developer | Optional now that the root domain sends; keeps a marketing complaint off account email |
 | New logo artwork reading "KidTechies" | Client's designer | Header and footer still show "AI for Kids" |
 | Make `EasyOffice2026/kidtechies_market` private | Client | It is public; the developer has write, not admin, access |
