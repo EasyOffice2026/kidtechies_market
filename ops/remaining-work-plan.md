@@ -542,7 +542,7 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 | Class 4 cases 4.2–4.7 on the client's account | Developer | 4.1 passed there 2026-11-19; fixtures in `tests/fixtures/` |
 | Regenerate the withdrawn drafts (task 3.5) | Developer | UAE package EN + AR, ad variants V-003 / V-004. Arabic is not used before D6; the ad variants only if D16 says test |
 | Vercel → Domains: redirect `kidtechies.com` to `www.kidtechies.com` | Developer | **Done 2026-11-15** — 308 to www, every path kept; checked live |
-| First weekly export (week of 2026-11-09) | Developer | Umami's free plan has no API (2026-11-15): the four Umami numbers are typed from the dashboard — `contracts/analytics-csv.md`. Free-plan mode merged (PR #5). The first run also tests the Stripe half for real: it needs a **live** read-only Stripe key, set for that run only — `.env.local` holds a test key, which the export now refuses (`fix/export-refuses-test-stripe-key`) |
+| First weekly export | Developer | **Moved to the first full week after go-live.** Every visit, sign-up and event so far is the developer's own testing (confirmed 2026-11-20), so the week of 2026-11-09 is not a report. Before then: prove the Stripe half once with a **live** read-only key (`.env.local` holds a test key, which the export refuses), exclude the team's own browsers from Umami, and clear test subscribers so week one starts at zero. Free-plan mode merged (PR #5), test-key guard merged (PR #6) |
 | D14, D6, D15, D1, D11, D7, D16, D17 | Client | D4 closed 2026-11-12 on the client's own account |
 
 # Review, 2026-11-13
