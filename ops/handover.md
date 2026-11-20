@@ -16,6 +16,7 @@ ref: KT/DEV/2026-001
 | **2 · Parent email list** | Sign-up after the free mission → confirmation → printable sheet → five welcome emails → a weekly question. An unsubscribe link in every email | Live and tested end to end, 2026-11-07 |
 | **1 · Analytics** | Umami: visits, anonymous counts of missions started and finished, and an anonymous count of newsletter confirmations — no names, no addresses. No cookies; the privacy page says so | Live since 2026-11-09; all three events seen on a live run, 2026-11-20 |
 | **3 · Six AI agents** | Draft marketing work on a schedule, on your Claude account. A person approves everything; nothing publishes by itself | Built. Scheduled tasks proven on your account 2026-11-12 (D4). Safety tests 8/8 on your account, 2026-11-19 |
+| **4 · Approval and publishing tool** | `tools/kt.mjs`: approve a draft, publish an article to the site's new "Guides for parents" section, record social posts. Refuses anything unapproved or changed since approval (`ops/publishing-guide.md`) | Built and tested 2026-11-21. The site section is on branch `feature/guides`, not yet deployed. Refuses everything until D1 |
 
 | Deliverable | Where (marketing repository) |
 |---|---|
@@ -161,3 +162,9 @@ in `ops/product-roadmap.md` are new work, quoted separately.
 Start only when Stage 1 has run long enough to show which two or three agents
 save real time, publishing (not approving) has become the bottleneck, and the
 channel credentials and an approval owner exist. Not before December.
+
+**Pulled forward on 2026-11-21** (`ops/review-2026-11-21.md`): the parts that
+need no outside account — the approval gate, the state model, the publication
+record, and one connector, articles to the site. What still waits for the
+gate is direct posting to social platforms, which needs the company accounts
+first.

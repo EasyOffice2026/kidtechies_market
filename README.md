@@ -16,7 +16,10 @@ does not otherwise provide.
 > AI prepares work; policy and product facts constrain it; the founder approves
 > it; publishing stays manual until publishing itself is the bottleneck.
 
-No agent in Stage 1 has publishing authority. Not one.
+No agent has publishing authority. Not one. Since 2026-11-21 the approval is
+also enforced in code: `tools/kt.mjs` approves and publishes, and refuses any
+draft without an approval that matches the file as it is now
+(`ops/publishing-guide.md`). A person runs it; an agent never does.
 
 ## Layout
 
@@ -32,7 +35,8 @@ No agent in Stage 1 has publishing authority. Not one.
 | `ops/` | Operator guide, agent runbook, checklists, decision log | Developer -> client at handover |
 | `drafts/` | `YYYY-MM-DD/` agent output. Git-ignored; the real drafts live in the agent folder on the client's computer (`D:\marketing agent\kidtechies_market-develop`). | Agents write, the approver approves |
 | `inbox/` | The weekly CSV files for the Funnel Analyst. Git-ignored. | Copied in each Thursday |
-| `logs/` | Creative results and school prospects. Agents append rows only. | Agents append; the approver updates results |
+| `logs/` | Creative results and school prospects (agents append rows only); `approvals.jsonl` and `publications.jsonl`, the approval and publication ledger (written only by `tools/kt.mjs`; git-ignored here, kept in the agent folder) | Agents append to the CSVs only; the ledger is the tool's |
+| `tools/` | `kt.mjs` — check, approve and publish drafts; `npm test` runs its tests | Developer |
 
 ## Non-negotiables
 
@@ -43,7 +47,8 @@ No agent in Stage 1 has publishing authority. Not one.
    instead; `CHANGELOG.md` has no header). A file marked
    `AWAITING CLIENT APPROVAL`, or a version ending in `-DRAFT`, is not yet fit
    for parent-facing output.
-3. Agents never publish. They write to `drafts/YYYY-MM-DD/`.
+3. Agents never publish. They write to `drafts/YYYY-MM-DD/`. A person approves
+   and publishes with `tools/kt.mjs`.
 4. Missing source, missing CSV column, missing fact -> the agent says so and
    stops. It does not guess.
 
@@ -69,5 +74,7 @@ No agent in Stage 1 has publishing authority. Not one.
 ## Where to start
 
 `ops/handover.md` for the current state; `ops/operator-guide.md` for the daily
-routine. The original five-day build schedule (`ops/five-day-plan.md`) is a
+routine; `ops/publishing-guide.md` for approving and publishing;
+`ops/review-2026-11-21.md` for why nothing has reached a parent yet, and what
+was built about it. The original five-day build schedule (`ops/five-day-plan.md`) is a
 historical record.

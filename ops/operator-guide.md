@@ -2,7 +2,7 @@
 file: operator-guide.md
 owner: Developer -> KidTechies at handover
 audience: Ibrahim, who runs KidTechies marketing day to day (client decision D9, 2026-10-18). Written to be used at 7am, not studied.
-version: 1.4 — 2026-11-20: review only until D1; schedule; approving for Arabic; personal data in a file; what the controls are; redoing a queue item; no weekly files yet; customer calls before there are customers; round 3: parent phrases go to the developer; never approve a draft with the notice; counts
+version: 1.5 — 2026-11-21: approving and publishing with `kt` (ops/publishing-guide.md); the lock is now code as well as your review. 1.4 — 2026-11-20: review only until D1; schedule; approving for Arabic; personal data in a file; what the controls are; redoing a queue item; no weekly files yet; customer calls before there are customers; round 3: parent phrases go to the developer; never approve a draft with the notice; counts
 ---
 
 # Operator guide
@@ -21,9 +21,11 @@ respond best, once the by-country file is in `inbox\`.*
 
 **Nothing publishes without you.** The agents are instructed never to post,
 send or schedule anything: they write drafts into a dated folder and stop. The
-tests show they follow that instruction — but it is an instruction plus your
-review, not a technical lock. Your review is the lock. That is why every draft
-waits for you, and why nothing goes out that you have not read.
+tests show they follow that instruction. Since 2026-11-21 there is also a
+technical lock: drafts are approved and published with `tools/kt.mjs`
+(`ops/publishing-guide.md`), which refuses anything without your approval, or
+changed since you gave it. The tool checks rules; only your reading checks
+that a draft is good. That is why every draft still waits for you.
 
 ## Your week
 
@@ -95,14 +97,16 @@ evaluative ("make it better").
 
 ### Approve a draft for Arabic
 
-Agent 3 translates only a draft you have approved. To approve one, open the
-file and add this as its **first line**, with your name and the date:
+Agent 3 translates only a draft you have approved. Approve it with the tool,
+which checks it and writes the approval line for you:
 
 ```
-approved-by: Ibrahim 2026-12-01
+node tools/kt.mjs approve drafts/2026-12-01/02-content-factory-lantern-tale-article.md --by Ibrahim
 ```
 
-Only you add this line — never ask an agent to add it. **Never add it to a
+The draft then starts with `approved-by: Ibrahim 2026-12-01`. Typing that line
+by hand still works for Agent 3, but the tool will not publish a draft
+approved that way. Only you approve — never ask an agent to add it. **Never add it to a
 draft that still carries the "Contains facts not yet client-confirmed — not
 for publication." notice** — that draft is not approvable; Agent 3 refuses it
 anyway. Agent 3 also refuses anything while `product-facts.md` is still a
@@ -134,8 +138,8 @@ underspecified. Rejections are data, not waste.
   to you.
 - **Never approve Arabic you cannot read.** It is a draft until your named
   native reviewer has seen it. The flag list tells you what to ask them about.
-- **Never let an agent publish** because it seems reliable now. That change is
-  Stage 2, it needs code-level approval gates, and it is a separate commission.
+- **Never let an agent publish** because it seems reliable now, and never let
+  one run `tools/kt.mjs`. Publishing is something you do, with the tool.
 - **Never paste a customer list into an agent.** Aggregate exports only.
 
 ## When to call the developer

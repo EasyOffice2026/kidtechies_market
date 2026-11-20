@@ -199,6 +199,15 @@ The sign-off checklist in `ops/five-day-plan.md`, all ticked:
 
 # Part 4 — Stage 2: approval-gated publishing automation
 
+> **Update 2026-11-21.** Part of this was built ahead of the gate, because the
+> review that day (`ops/review-2026-11-21.md`) found that most drafts had no
+> destination at all. Built: the approval gate and the knowledge-base checks
+> (week 2), the state model with `PUBLISH_UNKNOWN` and the unique key (week 3),
+> and one connector, articles to the site's `/guides` (week 4) — as
+> `tools/kt.mjs` on JSON-lines files, not SQLite, with 27 tests. Not built:
+> direct social connectors (no accounts exist), the Agent SDK rebuild, and the
+> hosted runtime. Those still wait for the gate below.
+
 **Goal:** an approved draft reaches its channel with no copy-paste, and an
 unapproved draft cannot be published — enforced in code, not in a prompt.
 

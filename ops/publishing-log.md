@@ -6,13 +6,15 @@ created: 2026-11-13
 
 # Publishing log
 
-Until Stage 2 automates publishing (not before December — see
-`ops/remaining-work-plan.md` Part 4), every approved draft is posted by hand.
-This log is the record that it happened, and the only way to answer "what
-went out, when, and from which draft?" a month later.
+Since 2026-11-21 `tools/kt.mjs` writes these rows itself: `kt publish` for a
+guide on the site, `kt confirm` after a post (`ops/publishing-guide.md`). The
+full event history is in `logs/publications.jsonl`. This log is the readable
+record, and the only way to answer "what went out, when, and from which
+draft?" a month later.
 
 **One line per publication, added the same day.** An item that is approved
-but not yet posted is not logged.
+but not yet posted is not logged. Add a row by hand only for something posted
+without the tool, and say so in the "Posted by" column.
 
 | Date posted | Channel | Draft file | Approved by | Posted by | Link to the live post | Knowledge version |
 |---|---|---|---|---|---|---|

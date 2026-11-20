@@ -1,0 +1,11 @@
+{
+  "name": "kidtechies-marketing-agent",
+  "private": true,
+  "type": "module",
+  "description": "Knowledge base, agent prompts and the approval-gated publishing tool (tools/kt.mjs).",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "kt": "node tools/kt.mjs",
+    "test": "node --test tools/test/*.test.mjs"
+  }
+}

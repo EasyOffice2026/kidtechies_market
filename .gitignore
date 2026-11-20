@@ -9,3 +9,5 @@ Thumbs.db
 desktop.ini
 .DS_Store
 ~$*
+# The approval and publication ledger lives in the agent folder; test runs here must not be committed
+logs/*.jsonl

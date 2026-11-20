@@ -20,6 +20,7 @@ of leaving it open is visible. Close by editing the row and committing.
 
 | # | Decision | Resolution | Date |
 |---|---|---|---|
+| — | Build part of Stage 2 before its gate? | **Yes, the parts that need no outside account** (developer, 2026-11-21): the approval gate, the publication ledger and an articles section on the site, so approved drafts have somewhere to go. Direct social posting still waits for accounts and the gate. Why: `ops/review-2026-11-21.md` | 2026-11-21 |
 | - | Version control from Day 1 rather than Stage 2 | Adopted. Git repo initialised at project root; Stage 2's private repo becomes a continuation, not a migration. | 2026-09-17 |
 | D5 | Gulf curriculum news hook still live? | **Yes, re-angled.** Saudi's rollout began 2025-26 and is a year old — context, not news. The **UAE** is live: "Artificial Intelligence and Technology" is a standalone subject from the 2026-27 term, KG–G12, public *and* private schools. Queue item 1 unblocked as a UAE-first piece. | 2026-09-18 |
 | D10 | Do printable activity sheets exist? | **Yes.** In the product code and live at `/courses/<course>/<lesson>/sheet`. Gated behind purchase for paid lessons. | 2026-10-07 |
