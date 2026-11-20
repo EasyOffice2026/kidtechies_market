@@ -39,11 +39,12 @@ marketing.
 | Prefer | Over |
 |---|---|
 | understand AI | master AI, become an AI expert |
-| 8-9 hours of guided learning | 23:48 of animated film |
+| about 9–12 hours of guided learning, including four final projects | 23:48 of animated film |
 | buy once, keep it | lifetime access |
 | try the first mission | start your free trial |
 | your child | your little one, kiddo, superstar |
-| about eight hours | 8.5 hours |
+| about ten hours (the whole programme) | 10.6 hours, or the old "8-9 hours" |
+| about 7–9 hours (the 14 missions alone) | "about ten hours" for the missions without the final projects |
 
 ## Hard prohibitions
 
@@ -57,8 +58,26 @@ marketing.
   curriculum-approved, endorsed - unless a named body has done so in writing.
 - **Government endorsement by association.** Citing the Saudi or UAE national AI
   curricula as *context* is fine. Implying KidTechies is part of, approved by or
-  aligned to them is not. This one gets got wrong most often.
-- **Any privacy claim** not currently true in `product-facts.md`.
+  aligned to them is not. This one is the one most often got wrong.
+- **Any privacy claim** not currently true in `product-facts.md`. When the
+  tutor or the Studio comes up, use these words: "What a child types to
+  Sparky or the Creative Studio goes to Anthropic's Claude for a reply,
+  together with the age group chosen, so the answer suits their age. It is
+  not stored by us." Never "the only thing that leaves the device"; never
+  "isn't stored" without "by us".
+- **Analytics denial** - "no tracking scripts", "no third-party analytics",
+  "no analytics", "we don't track anything". All false: Umami counts
+  visits, missions started and finished, and newsletter confirmations,
+  anonymously and without cookies. Say "no advertising, and no cookies used
+  for tracking".
+- **Overstating the tools.** The Creative Studio "writes a story, a picture
+  description or a music plan with AI" - it makes no pictures and plays no
+  sound; text only. The Code Lab: "write Python and check it against the
+  challenge" - it checks code, it does not run it, and it builds no AI
+  projects.
+- **The age range, stretched.** Designed for ages 9-12, adaptable for
+  younger and older children. Never "for ages 6-16", never "three age
+  bands".
 - **"No account", "no sign-up", "no email address" said about the product.**
   Buying needs a parent account. Scope it: "no account needed to try the
   first mission."
@@ -68,7 +87,7 @@ marketing.
 - **"Less than three months of the alternatives"** or any month-multiple
   against competitors. Retired by the client (D8).
 - **The refund promise, stretched.** It is live and may be stated exactly as
-  `product-facts.md` words it - 30 days, no form, no reason needed. Never
+  `product-facts.md` words it - 30 days, no form, no reason required. Never
   longer, never "money-back guarantee", never "risk-free".
 - **Testimonials** - none exist on file yet. None may be written.
 
@@ -83,12 +102,15 @@ soften, hedge, or rephrase as a question.
 
 > "Try the first mission. Nothing to sign up for."
 
-One natural placement per piece. No second offer stacked beside it. No hard
-sell.
+At most one per piece (an article, a caption, an email, a video hook) -
+exactly one in an article and an email. No second offer stacked beside it.
+No hard sell. A School Outreach draft is the exception: its one ask is "who
+is the right person?".
 
 ## Before you finish, self-check
 
-- Every product number matches `product-facts.md` exactly.
+- Every product number has the value in `product-facts.md`, written as that
+  file writes it or as an approximation `brand-voice.md` allows.
 - No prohibited claim appears in any phrasing.
 - Nothing is addressed to a child; nothing asks for a child's details.
 - No fear-based hook aimed at a parent.

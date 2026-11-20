@@ -1,7 +1,8 @@
 # KidTechies — product fact approval
 
 > **Superseded (banner added 2026-11-20).** This Day 1 request was replaced by
-> page 2 of `ops/client/KidTechies-Email-Review.docx` — the fact list the client
+> Part 2, "please confirm these facts" — the last table in
+> `ops/client/KidTechies-Email-Review.docx` — the fact list the client
 > is asked to approve (D1). Kept as a record. Do not send it.
 
 **To:** The Management, KidTechies

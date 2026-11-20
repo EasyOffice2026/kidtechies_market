@@ -7,12 +7,22 @@ Changes affecting **pricing, privacy, refund terms or educational claims**
 require client approval *before* the file becomes agent context. Record the
 approver.
 
+**One exception — developer corrections.** The developer may change a
+knowledge file without waiting for the client when the change makes it match
+the live site or the product code, or removes a claim. Such a row says "for
+client confirmation" in the "Approved by" column, and every fact it changes is
+put on the D1 list (Part 2, "please confirm these facts" — the last table in
+`ops/client/KidTechies-Email-Review.docx`), so the client confirms it with
+v1.0. A change that adds a claim the site and the code do not support still
+needs the client first.
+
 Newest first. Each file's `version:` header shows the version of the last row
 that changed it. `product-facts.md`'s version is the knowledge-base version
 the publishing log records.
 
 | Date | File | Version | Change | Approved by |
 |---|---|---|---|---|
+| 2026-11-20 | product-facts.md, audience.md, claims-allowed.md, brand-voice.md, site-discrepancy-log.md; logs/creative-results.csv | 0.8.3-DRAFT | **Round 2 of the full audit.** Hours: "8-9 hours" did not cover the whole programme (exactly 9.3–11.9 hours with the final projects; the free mission is 30–40 minutes); now "about 9–12 hours of guided learning, including four final projects" (missions alone "about 7–9 hours"; short form "about ten hours"), computed from the course data — product-facts, brand-voice examples and wording table, discrepancy log row 13, ad variant V-010. What leaves the device: one agreed wording everywhere (Sparky **or the Creative Studio**, with the age group, "not stored by us"; Umami counts visits, missions started and finished, and newsletter confirmations, anonymously — no names, no addresses) — product-facts, claims-allowed, audience pillar 2, brand-voice example 3, V-012. Studio and Code Lab described by what they do. Pillar 1 no longer claims to be unique; pillar 3 is "Try the first mission free — nothing to sign up for". claims-allowed: the call-to-action rule is per piece; School Outreach exception; "video lessons" and "Subscribe" clarified; numbers may use brand-voice's approximations. The promotion rule now confirms only the rows on the approved list. V-008 no longer says "no reminder email"; V-003/V-004 marked `withdrawn`. | Developer — corrections to match the live site and code, for client confirmation with v1.0 (D1) |
 | 2026-11-20 | product-facts.md, audience.md, claims-allowed.md, brand-voice.md, site-discrepancy-log.md; logs/creative-results.csv | 0.8.2-DRAFT | **Corrections from the full audit.** product-facts: quiz count in course order (25/20/15/10); sitemap 41; site, free-mission link and "Later in the programme" rows; free tools without an account (Sparky, Code Lab, Creative Studio, XP, daily challenge, emailed sheet, group access, USD excluding tax, access "indefinitely", devices) with the exact site wording; stored data now lists purchases, email-confirmed time and the mailing list; "Signup required" scoped to trying; refund section shows it beside the price since 2026-11-13; stale "Gaps" list replaced (only D1 remains); one garbled line and one mis-encoded dash fixed. audience: teacher line no longer says "no data collected, classroom-ready"; "hand-animated" removed; curriculum lines marked context needing a source. claims-allowed: "Analytics denial" prohibited; call-to-action scope for emails. brand-voice: "lifetime access" reason. Discrepancy log: resolved rows closed. Ad variants V-002, V-006 and V-009 reworded (an unsourced statistic, an unscoped "no account", "animated by hand"). Headers brought in line with this log. | Developer — corrections to match the live site and code, for client confirmation with v1.0 |
 | 2026-11-14 | product-facts.md, audience.md | 0.8.1-DRAFT | **Analytics correction.** Umami went live 2026-11-09, so "no tracking scripts, no third-party analytics" became false; it was still marked TRUE here and written into pillar 2. Now prohibited; replaced with the site's own live wording ("no cookies used for tracking"). Analytics row describes Umami and its three events. | Developer — correction to match the live site, for client confirmation with v1.0 |
 | 2026-11-11 | claims-allowed.md | 0.1-DRAFT | Added a prohibited row: planned features (community sharing, levels, videos, My World, subscription) must not be described as existing. A restriction only; adds no claim. *(Note 2026-11-20: "0.1-DRAFT" was the file's stale header; the knowledge base was at 0.8-DRAFT that day.)* | Developer — restriction, for client confirmation with v1.0 |
@@ -36,8 +46,9 @@ A knowledge file is `DRAFT` until the client approves it in writing. Until then:
   client-confirmed" notice (`agents/shared-controls.md` §4).
 
 Promote by: client written approval -> update `version` to `1.0`, set
-`last-approved` to the date, flip PENDING, VERIFIED and SITE-VERIFIED rows to
-CONFIRMED, add a line at the top of the table.
+`last-approved` to the date, add a line at the top of the table. On approval,
+set to CONFIRMED only the rows that appear in the list the client approved.
+Rows not on that list keep their status. PENDING rows never change on approval.
 
 ## Feeding the voice file
 

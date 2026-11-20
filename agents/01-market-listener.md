@@ -1,10 +1,10 @@
 ---
 agent: 1 - Market Listener
 cadence: Weekly, Monday 07:00 (course-opportunity section on the first Monday of each month)
-revised: 2026-10-18 — worldwide scope (D12) and monthly course research (D13); 2026-11-20 — reads all five knowledge files
+revised: 2026-10-18 — worldwide scope (D12) and monthly course research (D13); 2026-11-20 — reads all five knowledge files; competitor prices re-verified or left out; parent questions paraphrased; D5 block marked historical
 needs: Web research
 output: drafts/YYYY-MM-DD/01-market-listener-briefing.md
-version: 1.0
+version: 1.1
 ---
 
 # Agent 1 - Market Listener
@@ -36,6 +36,8 @@ Then research and report on the past 7 days:
    Tynker, Juni Learning and Code.org's AI track.
 3. Three questions parents asked publicly this week about children and AI
    (forums, Reddit, Quora, news comments) that KidTechies could answer.
+   Paraphrase each question in your own words and link the public page.
+   Never copy a username, a real name, or any detail about a child.
 
 On the FIRST MONDAY OF EACH MONTH, add a fourth section:
 
@@ -74,13 +76,17 @@ Rules:
   a five-bullet padded one, and padding trains the founder to skim.
 - Never assert a KidTechies product fact that is not in product-facts.md.
 - Competitor prices in product-facts.md are third-party and unverified. If
-  you cite one, re-verify it this run and give the source, or mark it
-  "approximate, last checked [date]".
+  you cite one, re-verify it this run on the vendor's own pricing page and
+  give that page and today's date. If you cannot, leave the price out. Never
+  carry an old figure forward as "approximate".
 - Flag explicitly if a previously reported item has changed or been
   corrected since you last reported it.
 ```
 
-## Standing question for the first run - decision D5
+## Standing question for the first run - decision D5 (HISTORICAL)
+
+> **Historical — do not add this to any run.** D5 was answered on the first
+> run, 2026-09-18, and closed in `ops/decision-log.md`. Kept as a record.
 
 The Growth Dossier's strongest free hook is the Gulf school-curriculum story,
 and the dossier itself calls it perishable: *"Publish that article in week one,

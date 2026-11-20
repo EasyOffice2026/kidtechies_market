@@ -59,7 +59,7 @@ It also contains the one urgent item in the whole plan.
 | 1.2 | Commit the analytics module (already built and tested — 19/19) | Dev | 0.1 day | On `main` |
 | 1.3 | Wire `trackMissionStart` / `trackMissionComplete` into `lesson-view.tsx` — code is in `ops/phase-1-tracking-spec.md` | Dev | ½ day | Both fire once per session on a test run |
 | 1.4 | Pick the analytics provider, set `NEXT_PUBLIC_ANALYTICS_DOMAIN`, and change `/for-parents` line 157 **the same day** | Dev + Client | ½ day | Events visible in the dashboard; "no third-party analytics" no longer claimed |
-| 1.5 | Pricing page leads with **8–9 hours of guided learning**; film runtime moves down as a craft detail | Dev | ½ day | Hours is the headline beside the price |
+| 1.5 | Pricing page leads with **8–9 hours of guided learning**; film runtime moves down as a craft detail | Dev | ½ day | Hours is the headline beside the price. *(2026-11-20: the figure is now "about 9–12 hours, including four final projects", computed from the course data.)* |
 | 1.6 | Move the **30-day refund promise** from `/terms` to beside the price | Dev | ¼ day | Visible on `/pricing` |
 | 1.7 | Apply the client's decision on the **$100 struck-through anchor** | Dev | ¼ day | Blocked on client |
 | 1.8 | Trust furniture: founder name and photo, company location, contact email | Dev | ½ day | Blocked on client supplying them |
@@ -166,9 +166,9 @@ depends on how fast decisions come back.
 | # | Task | Owner | Effort | Done when |
 |---|---|---|---|---|
 | 3.1 | **Capability check on the client's Claude account** (D4) — scheduled tasks, skills, web research, folder reads *inside a scheduled run*. Procedure: `ops/day-1/capability-verification.md` | Dev + Client | ½ day | Confirmed, or manual-trigger mode adopted |
-| 3.2 | **Fact sign-off** (D1) → knowledge base **v1.0**; flip PENDING and SITE-VERIFIED rows to CONFIRMED | Client → Dev | ½ day | `product-facts.md` at v1.0 |
+| 3.2 | **Fact sign-off** (D1) → knowledge base **v1.0**. On approval, set to CONFIRMED only the rows that appear in the list the client approved. Rows not on that list keep their status. PENDING rows never change on approval. | Client → Dev | ½ day | `product-facts.md` at v1.0 |
 | 3.3 | Setup: connect the folder, install the `kidtechies-voice` skill, create the scheduled tasks (no Drive — the folder is on the client's computer; see `ops/agent-runbook.md` for which agents are scheduled) | Dev | ½ day | All scheduled agents on cadence |
-| 3.4 | **Re-run tests on the client's account**: class 1 (needs v1.0), class 2 in full, class 4, cases 5.1 / 5.2 / 5.6 | Dev | ½ day | All pass — no partial pass on child safety |
+| 3.4 | **Re-run tests on the client's account**: class 1 now (1.6 can only be tested before v1.0), then 1.1–1.5, 1.7 and 1.8 again after D1; class 2 in full; class 4; cases 5.1 / 5.2 / 5.6 | Dev | ½ day | All pass — no partial pass on child safety |
 | 3.5 | **Regenerate the withdrawn drafts** — the UAE package (EN + AR) and ad variants V-003 / V-004 were written on the false privacy claim; re-run Agents 2, 3 and 5 against the corrected knowledge base | Dev | ½ day | Five drafts and two variants replaced |
 | 3.6 | **Agent 6 redesign** — institution-level prospects, published channels only, founder places first contact; update prompt and prospect schema; budget ~20 min per school | Dev | 1 day | Batch of ten produced honestly; needs the target school list |
 | 3.7 | **Funnel Analyst live** — once Part 1 tracking is live and the **Stripe** export is mapped to `contracts/payment-csv.md` | Dev | ½ day | Six metrics from real data; D2 closes |
@@ -182,8 +182,8 @@ depends on how fast decisions come back.
 The sign-off checklist in `ops/five-day-plan.md`, all ticked:
 
 - [ ] Knowledge base v1.0, client-approved
-- [ ] Six agents on cadence on the client's account
-- [ ] Test classes 1, 2, 4 pass there; class 2 with zero failures — class 2: **8 of 8** on the client's account 2026-11-18/19, zero failures; class 4: 4.1 passed 2026-11-19, 4.2–4.7 to run; class 1 waits for D1
+- [ ] Scheduled agents on cadence on the client's account: KT 1, KT 2 and KT 4 (KT 5 only after D16 says test; Agents 3 and 6 run on request, never scheduled)
+- [ ] Test classes 1, 2, 4 pass there; class 2 with zero failures — class 2: **8 of 8** on the client's account 2026-11-18/19, zero failures; class 4: 4.1 passed 2026-11-19, 4.2–4.7 to run; class 1: run now (1.6 only testable before v1.0), re-run 1.1–1.5, 1.7, 1.8 after D1
 - [ ] Funnel Analyst reproducing the six metrics from live data
 - [ ] Morning review measured at roughly 20 minutes
 
@@ -333,7 +333,7 @@ since the Stripe commit, and Windows file-watcher noise. Both fixed.
   stored server-side. It isn't — nothing writes the child tables. Corrected from
   what the code actually writes; see `product-facts.md`.
 - **Five fact questions answered from the code**: 28 activities, 70 quiz questions
-  (counted: 25+15+10+20), the certificate, Maya/Pip/Glitch, and the free mission.
+  (counted in course order: 25+20+15+10), the certificate, Maya/Pip/Glitch, and the free mission.
   The client now only needs to supply founder name, company details and contact.
 - **The legal privacy notice is stale** (D11) — the one privacy item I did not
   touch, because it is a legal document.
@@ -539,10 +539,17 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 | Merge `feature/marketing-ops` (product repo) | Developer | **Done** — PR #3. Weekly export, failure alerts, 20 more weekly questions, canonical and www fixes — see "Review, 2026-11-13" below |
 | Vercel: `NEWSLETTER_HEARTBEAT_URL`, `OPS_ALERT_EMAIL` | Developer | Both set, redeployed 2026-11-20. Still to see: healthchecks.io green after the next daily run. Free healthchecks.io check: period 1 day, grace 2 hours |
 | Re-run the daily email job the same day; it must send nothing | Developer | The Phase 1 exit test's last open line. Touches production: run only with the client's OK |
-| Class 4 cases 4.2–4.7 on the client's account | Developer | 4.1 passed there 2026-11-19; fixtures in `tests/fixtures/` |
+| Class 4 cases 4.2–4.7 on the client's account | Developer | 4.1 passed there 2026-11-19; fixtures in `tests/fixtures/`. Four of them gained a second row on 2026-11-20, so run 4.2–4.7 from this release, with the exact files `ops/developer-test-guide.md` names |
 | Regenerate the withdrawn drafts (task 3.5) | Developer | **Done 2026-10-17** — see Part 3 progress: `drafts/2026-10-17/` holds the UAE article (EN + AR) and the self-check; V-011 / V-012 replace V-003 / V-004 in the log. Nothing left to build. The Arabic waits for D6, and the ad variants are tested only if D16 says test |
 | Vercel → Domains: redirect `kidtechies.com` to `www.kidtechies.com` | Developer | **Done 2026-11-15** — 308 to www, every path kept; checked live |
 | First weekly export | Developer | **Moved to the first full week after go-live.** Every visit, sign-up and event so far is the developer's own testing (confirmed 2026-11-20), so the week of 2026-11-09 is not a report. Before then: prove the Stripe half once with a **live** read-only key (`.env.local` holds a test key, which the export refuses), exclude the team's own browsers from Umami, and clear test subscribers so week one starts at zero. Free-plan mode merged (PR #5), test-key guard merged (PR #6) |
+| Class 1 on the client's account | Developer | Run now — 1.6 can only be tested before v1.0. Re-run 1.1–1.5, 1.7 and 1.8 after D1 |
+| Cases 5.1, 5.2 and 5.6 on the client's account | Developer | The real schedule (KT 1, 2, 4), no duplicates, a fresh session |
+| Re-upload the voice skill as **v3** | Developer | After this release: `skills/kidtechies-voice/` changed on 2026-11-20 (hours, what leaves the device, Studio / Code Lab, ages, analytics). The client's account still has v2 |
+| Web research on the client's account | Developer | Access checklist row 3 — confirm on the first Market Listener run there |
+| Merge the client folder's logs and queue | Developer, with the approver | Release of 2026-11-20 changes `logs\creative-results.csv`, `logs\school-prospects.csv` and `queue\content-queue.md`; follow `ops/handover.md` ("Updating the folder safely") and re-mark the queue rows the client's runs marked DONE |
+| Empty the client's `inbox\` of test files | Developer | After 4.2–4.7 run there, delete the fixture CSVs, so the first real Friday does not read a test file |
+| Re-send the email review document | Developer | Part 2 of `ops/client/KidTechies-Email-Review.docx` gained eight rows and a new learning-time figure on 2026-11-20; D1 must be answered on that version |
 | D14, D6, D15, D1, D11, D7, D16, D17 | Client | D4 closed 2026-11-12 on the client's own account |
 
 # Review, 2026-11-13
@@ -563,6 +570,6 @@ A full pass over both repositories and the live site. Fixed the same day on
 | Runbook still scheduled the paused School Outreach agent | Runbook updated, with a weekly routine for the people around the agents |
 | Handover pack dated 21 September | Rewritten for the current state |
 
-Opened as decisions: D16 (ad test or pause the Creative Tester) and D17
+Opened as decisions: D16 (ad test, or keep the Creative Tester idle) and D17
 (account ownership). Not changed, and still the client's: D1, D6, D7, D11,
 D14, D15.

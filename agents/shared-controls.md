@@ -1,7 +1,7 @@
 ---
 file: shared-controls.md
 owner: Developer
-version: 1.1 — 2026-11-20: draft notice while facts are DRAFT, file names, no overwriting
+version: 1.2 — 2026-11-20: draft notice while facts are DRAFT, file names, no overwriting; numbers match by value, with brand-voice's approximations
 ---
 
 # Shared agent controls
@@ -49,8 +49,11 @@ complete and acceptable answer.
 
 ## 4. Product facts are exact
 
-Every KidTechies number must match `knowledge/product-facts.md` character for
-character.
+Every KidTechies number must have the value `knowledge/product-facts.md` gives
+it. Write it as that file writes it, or use one of the approximations listed in
+`knowledge/brand-voice.md` ("Wording patterns" — for example "about ten hours"
+for the whole programme). No other rounding, no other number, no false
+precision.
 
 **While the `version:` line of `product-facts.md` ends in `-DRAFT`, every draft
 starts with this line, whatever facts it uses:**

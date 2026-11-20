@@ -1,7 +1,7 @@
 ---
 file: payment-csv.md
 owner: Developer (schema) / Client (supplies the export)
-version: 1.0-FROZEN
+version: 1.0-FROZEN — columns unchanged; 2026-11-20: two-row rule stated
 ---
 
 # Data contract: weekly payment export
@@ -38,6 +38,12 @@ with no ads), because a guessed spend becomes a wrong cost per sale.
 
 Stripe needs a **live** key; the command refuses a test key. See
 `analytics-csv.md`.
+
+## Rows
+
+Exactly two rows, last week then this week, matching the analytics file row
+for row (same `week_starting` in row 1, and in row 2). A file with headers only
+is rejected.
 
 ## No card data. Ever.
 

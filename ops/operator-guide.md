@@ -2,7 +2,7 @@
 file: operator-guide.md
 owner: Developer -> KidTechies at handover
 audience: Ibrahim, who runs KidTechies marketing day to day (client decision D9, 2026-10-18). Written to be used at 7am, not studied.
-version: 1.2 — 2026-11-20: review only until D1; schedule; approving for Arabic; personal data in a file
+version: 1.3 — 2026-11-20: review only until D1; schedule; approving for Arabic; personal data in a file; what the controls are; redoing a queue item; no weekly files yet; customer calls before there are customers
 ---
 
 # Operator guide
@@ -19,9 +19,11 @@ respond best, once the by-country file is in `inbox\`.*
 
 ## The one rule
 
-**Nothing publishes without you.** No agent here can post, send, or schedule
-anything. They write drafts into a dated folder and stop. That is deliberate,
-and it is the reason you can let them run unsupervised.
+**Nothing publishes without you.** The agents are instructed never to post,
+send or schedule anything: they write drafts into a dated folder and stop. The
+tests show they follow that instruction — but it is an instruction plus your
+review, not a technical lock. Your review is the lock. That is why every draft
+waits for you, and why nothing goes out that you have not read.
 
 ## Your week
 
@@ -35,7 +37,7 @@ approve and add a line to `ops/publishing-log.md`.
 | Monday | Market briefing + content package 1 | Read the briefing, pick the week's angle, approve or redirect the package | 45 min |
 | Tuesday | Nothing — school outreach is **paused** (D12). It runs only when you ask for it | — | — |
 | Wednesday | Content package 2 | Approve or send back. After D1, post what you approved | 45 min |
-| Thursday | — | Talk to two customers. Ask why they bought and what nearly stopped them. | 60 min |
+| Thursday | — | Talk to two customers: ask why they bought and what nearly stopped them. Until there are customers (no real ones yet, before go-live), talk to two parents who tried the free mission, or skip the slot. | 60 min |
 | Friday | Six numbers, week-on-week, one recommendation | Act on the one recommendation. Only one. The first real report is the first full week after go-live | 45 min |
 | Saturday | Content package 3 queued for next week | Skim, queue, close the laptop | 20 min |
 
@@ -78,7 +80,10 @@ prompt.
 ### Redirect a piece of work
 
 Reorder `queue/content-queue.md` — the Content Factory always takes the topmost
-`READY` item. To stop something being written at all, mark it `HOLD`. To send
+`READY` item. To stop something being written at all, mark it `HOLD`. To have
+an item written again from scratch, set its Status back to `READY` (and move
+its row to the top if it should be next); the agent changes only that row's
+Status and Notes when it finishes. To send
 back a specific draft, reply in the task with what is wrong; be concrete ("the
 opening is generic, start with the parent's question") rather than
 evaluative ("make it better").
@@ -108,6 +113,7 @@ underspecified. Rejections are data, not waste.
 |---|---|
 | Agent produced nothing | Check it could read the knowledge folder. This is the usual cause. |
 | Agent says a CSV column is missing | It is right. Fix the export — do not ask it to work around it. |
+| Funnel Analyst says it cannot find this week's files | Normal until the first full week after go-live — no weekly files are made before then. After that, ask whoever makes the Thursday files (the developer, for now). |
 | Funnel Analyst stopped because a file holds personal data (an email address, a name) | **Delete that file from `inbox\` at once.** Do not open it, copy it or run the agent on it again. Ask for a clean export. |
 | A number looks wrong | Stop using that output. Check `product-facts.md`, then rerun. Do not correct it by hand and publish — the next run will reproduce the error. |
 | Agent claims it published something | Serious. It did not, but the wording is a fault. Report it to the developer. |

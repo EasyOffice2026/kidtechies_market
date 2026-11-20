@@ -1,9 +1,9 @@
 ---
 file: gtm-plan.md
 owner: Ibrahim (client decision D9, 2026-10-18)
-version: 1.1
+version: 1.2
 created: 2026-10-06
-revised: 2026-10-18 — client decisions; 2026-11-20 — analytics status, decisions point to the decision log
+revised: 2026-10-18 — client decisions; 2026-11-20 — analytics status, decisions point to the decision log; same day, round 2: done items marked, hours, agents not yet live, email spend, school items conditional on D12
 ---
 
 # GTM plan — KidTechies, 120 days, four phases
@@ -52,7 +52,9 @@ until a second product exists, and it sets every limit below.
 | Monthly budget | **under $500**, of which $150–300 is paid | dossier working assumptions |
 
 These are modelled from published prices, not real traffic. Replace them with
-actual figures the week analytics goes live.
+actual figures once real weekly numbers exist — the first full week after
+go-live. (Analytics has been live since 2026-11-09, but every visit so far is
+the team's own testing.)
 
 ---
 
@@ -67,8 +69,8 @@ Running ads before this is paying to fill a bucket with no bottom.
 | 1 | **Parent email capture** at the end of free Mission 1 — one field, explicitly labelled the parent's | Front-end | 2 days |
 | 2 | **Two analytics events**: mission start, mission complete | Front-end | ½ day |
 | 3 | Cookieless analytics installed (Plausible / Fathom / Umami) | Front-end | 1 day |
-| 4 | Pricing page leads with **8–9 hours of guided learning**, not the film runtime | Content | 1 day |
-| 5 | **Move the refund promise** from the terms page to the pricing page | Content | ½ day |
+| 4 | Pricing page leads with **hours of guided learning**, not the film runtime — done 2026-11-13; the figure is now "about 9–12 hours, including four final projects" (2026-11-20) | Content | 1 day |
+| 5 | **Move the refund promise** from the terms page to the pricing page — done 2026-11-13 | Content | ½ day |
 | 6 | Trust furniture: founder name and photo, company location, contact email | Client decision | 1 day |
 | 7 | One brand name in title and footer — KidTechies | Client decision | 1 hour |
 | 8 | Teacher / school page: no student accounts, nothing about any student stored on our servers | Content | 2 days |
@@ -86,8 +88,10 @@ receives email one — and all four steps are visible in analytics.
 
 ### Already done
 
-- Six agents built and tested; the content engine is live
-- Refund promise found (it exists, buried on `/terms`)
+- Six agents built; safety tests 8/8 on the client's account (2026-11-19).
+  They draft only — nothing is posted until D1
+- Refund promise found on `/terms`, and beside the price on `/pricing` since
+  2026-11-13
 - Age framing corrected to 9–12 adaptable
 - All four course names and six Story Shelf titles recovered
 
@@ -101,9 +105,9 @@ receives email one — and all four steps are visible in analytics.
 |---|---|
 | **Paid message lab** | $150–300/month on Meta, parents 30–50. **Revised 2026-10-18 for worldwide focus:** run the five pillars in **one** English-speaking market first for a week to find the winning message, then run that winner in four or five markets at once — for example Kuwait/UAE, the UK, the US, India and Canada — ~$3/day each. Kill anything under 1% CTR by day 10. **You are buying two answers: which message works, and where.** |
 | **Country read** | Every Friday the Funnel Analyst's "where it is working" section ranks countries by free-mission completion — only those with 30+ visitors. A country that completes well is a country worth money in Phase 3. |
-| **SEO layer** | All six Story Shelf pages plus six answer-first articles. Agent 2 has the queue; items are written and waiting. Worldwide queries now matter as much as Gulf ones. |
+| **SEO layer** | All six Story Shelf pages plus six answer-first articles. Agent 2 has the queue; the topics are queued (most not yet written), and nothing is posted before D1. Worldwide queries now matter as much as Gulf ones. |
 | ~~**School outreach**~~ | Removed 2026-10-18 — client focus is online registration (D12). |
-| **Short-form video** | Three clips a week. House format: show AI getting something wrong, ask whether a child could spot why. |
+| **Short-form video** | Three clips a week. House format: show AI getting something wrong, then ask the parent whether their child could spot why. Spoken to the parent, never to a child. |
 | **Checkout question** | "Where did you first hear about us?" — the cheapest attribution that exists. |
 
 ### Pillar 4 — testable again
@@ -132,8 +136,8 @@ cost per email captured.
 | Workstream | Detail |
 |---|---|
 | **Budget consolidation** | Entire paid budget to the one channel that produced sales. Stop the others — not reduce, stop. |
-| **Email sequences built out** | The nurture sequence plus "Maya's Question of the Week", the retention asset that makes the list worth owning. This is where the email API investment lands. |
-| **Classroom pilots → case studies** | Each pilot reaches 25–30 families. Convert five pilots into named case studies and a paid classroom licence tier. |
+| **Email sequences built out** | The nurture sequence plus "Maya's Question of the Week", the retention asset that makes the list worth owning. Both live since 2026-11-07, on the site's existing email service — no extra email spend was needed. |
+| **Classroom pilots → case studies** | Only if the client restarts school outreach (paused, D12). Each pilot reaches 25–30 families. Case studies name a school only with its written consent, and never a child. A paid classroom licence does not exist — it would be new product work. |
 | **Micro-creators** | Three Gulf / Muslim-parent creators, 5k–50k followers, briefed with the winning message. Bundle plus modest fee or affiliate share, not flat sponsorship. |
 | **Second six articles** | Plus refresh anything ranking on page two. |
 | **Seasonal offer** | A school-holiday or Ramadan family bundle with a gift option. Confirm the Ramadan dates for 2027 before committing a date — do not plan from memory. |
@@ -157,7 +161,7 @@ value, and every dollar of acquisition spend is capped by it.
 |---|---|
 | **Decide the second product** | Three candidates from the dossier: a family / multi-child tier (~$99, removes the two-children friction and raises AOV in the same breath), a fifth course, or a paid classroom licence. Pick one. |
 | **Lifecycle email** | Post-purchase sequence, completion nudges, win-back for non-finishers. The funnel data from Phase 1 tells you where people stop. |
-| **Referral loop** | The product is already shareable — a WhatsApp link with no signup. Make the share deliberate rather than incidental. |
+| **Referral loop** | The free mission is already shareable — a link with nothing to sign up for to try it. Make the share deliberate rather than incidental. |
 | **Regional pricing** | Gulf price sensitivity is low; South Asia's is not. If India opens, $70 needs a local tier. Do not discount globally to solve a regional problem. |
 | **Course 4 depth** | "Smart and Safe AI Heroes" has two missions — the fewest — and is the course the safety-first parent buys *first*. The entry point for a quarter of the market is the thinnest thing on the site. |
 
@@ -172,7 +176,7 @@ value, and every dollar of acquisition spend is capped by it.
 | Email list | 1,000 | 1,400–1,800 |
 | Sales | 60–120 | 110–200 |
 | Revenue | $4.2k–8.4k | $7.7k–14k |
-| Classroom pilots | 5 | 8–12 |
+| Classroom pilots | 5 | 8–12 (only if school outreach restarts — D12) |
 | Second product | undecided | **live** |
 
 Modelled, not promised. They depend on product-market fit, traffic, offer
@@ -193,9 +197,9 @@ amount of traffic saves the funnel and the problem is the product.
 
 | Dossier said | Reality (verified Sep–Oct 2026) |
 |---|---|
-| Competitors $11–25/month | **$7.50–$299** — breaks pillar 4 |
+| Competitors $11–25/month | **$7.50–$299** — broke pillar 4's old "three months" framing, now retired (D8) |
 | Gulf curriculum hook is the strongest free play | **Live, but it was the UAE, not Saudi** — and the September window has largely closed. See below. |
-| No refund promise on the site | **It exists**, buried on `/terms` |
+| No refund promise on the site | **It exists** — on `/terms`, and beside the price on `/pricing` since 2026-11-13 |
 | Three equal age bands | **9–12, adaptable either side** |
 | Site has no analytics | **Fixed:** Umami, cookieless, live 2026-11-09; all three events seen 2026-11-20 |
 | 45 indexable pages | 43, all sharing one `lastmod` date (41 on 2026-11-20) |

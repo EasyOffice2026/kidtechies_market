@@ -1,4 +1,4 @@
-# Drafts are working output, mirrored to Drive - not source
+# Drafts are working output - the real ones live in the agent folder on the client's computer, not in source
 drafts/
 # Real client exports never enter the repo (synthetic fixtures do)
 contracts/live-exports/

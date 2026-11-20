@@ -3,7 +3,7 @@ agent: 2 - Content Factory
 cadence: Monday / Wednesday / Saturday 08:00
 needs: Knowledge base + queue/content-queue.md
 output: drafts/YYYY-MM-DD/02-content-factory-<item-slug>-{article,social,email,video-hook,self-check}.md
-version: 1.1 — 2026-11-20: five named files; draft notice while facts are DRAFT
+version: 1.2 — 2026-11-20: five named files; draft notice while facts are DRAFT; call to action per piece; article opening; queue edit limited to one row; video hook speaks to the parent
 ---
 
 # Agent 2 - Content Factory
@@ -15,7 +15,7 @@ version: 1.1 — 2026-11-20: five named files; draft notice while facts are DRAF
 | Trigger | Mon / Wed / Sat 08:00 |
 | Inputs | Next unused queue item, brand voice, product facts, claims, audience rules |
 | Output | 800-1,000 word article, five social captions, one nurture email, one ~25-second video hook |
-| Acceptance rule | Product numbers exact; forbidden claims absent; no child personal-data prompts; exactly one natural free-mission CTA |
+| Acceptance rule | Product numbers exact; forbidden claims absent; no child personal-data prompts; at most one free-mission CTA per piece (exactly one in the article and the email), and no other CTA |
 
 ## Prompt
 
@@ -35,25 +35,31 @@ agents/shared-controls.md §8: four content files (-article, -social, -email,
 overwrite an existing file.
 
 1. ARTICLE - 800-1000 words, answer-first, aimed at the persona named in the
-   queue row. Open with that parent's real question in their own words, answer
-   it in the first paragraph, then earn the rest. One link to the free first
-   mission, placed where it genuinely helps the reader. No hard sell.
+   queue row. Open with the question that persona asks (audience.md), put
+   plainly as a question. Never present it as a quote from a real person, and
+   never invent a quote. Answer it in the first paragraph, then earn the
+   rest. One link to the free first mission, placed where it genuinely helps
+   the reader. No hard sell.
 
 2. FIVE SOCIAL CAPTIONS - two Instagram, two LinkedIn (aimed at teachers and
    school ICT coordinators), one TikTok/Reels spoken hook under 20 seconds.
+   Each caption has at most one free-mission call to action.
 
 3. ONE NURTURE EMAIL - subject line plus body, under 200 words, one idea,
    one link.
 
 4. A 25-SECOND VIDEO HOOK SCRIPT on the house format: show AI getting
-   something wrong, then ask whether a child could spot why. Include the
-   spoken line and a bracketed note on what is on screen.
+   something wrong, then ask the parent watching whether their child could
+   spot why. The spoken line is addressed to the parent, never to a child.
+   Include the spoken line and a bracketed note on what is on screen. At
+   most one free-mission call to action.
 
 Then run the self-check below, write it to the -self-check file, and put its
-PASS/FAIL lines at the end of your summary. Finally, mark the queue item DONE
-with today's draft folder date,
-and give me a three-line summary: what you wrote, what you were unsure
-about, what you need from me.
+PASS/FAIL lines at the end of your summary. Finally, in
+queue/content-queue.md change only the row of the item you wrote: set its
+Status to DONE and add today's draft folder date to its Notes. Change no
+other row and no other column. Then give me a three-line summary: what you
+wrote, what you were unsure about, what you need from me.
 ```
 
 ## The self-check block
@@ -79,8 +85,10 @@ SELF-CHECK - report each line as PASS or FAIL with the evidence:
 4. CHILD SAFETY - confirm nothing is addressed to a child, nothing requests
    any personal detail from or about a child, no fear-based hook aimed at a
    parent, no real identifiable child depicted.
-5. CTA - confirm exactly one free-mission call to action across the whole
-   package per piece, naturally placed, no second offer stacked beside it.
+5. CTA - for each piece (the article, each caption, the email, the video
+   hook) count the free-mission calls to action. The article and the email
+   have exactly one each; every other piece has at most one. No piece has
+   any other call to action or a second offer. Quote each one.
 6. SOURCES - every external claim has a source link with the date checked.
 7. VOICE - read the article's opening paragraph against the three approved
    examples in brand-voice.md. Does it sound like the same company? If not,

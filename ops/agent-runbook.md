@@ -1,7 +1,7 @@
 ---
 file: agent-runbook.md
 owner: Developer -> KidTechies at handover
-version: 1.1 — 2026-11-20: one schedule everywhere; review only until D1; weekly-file delivery
+version: 1.2 — 2026-11-20: one schedule everywhere; review only until D1; weekly-file delivery; free-plan command first
 ---
 
 # Agent runbook
@@ -29,7 +29,7 @@ scheduled tasks today (KT 1, 2, 4), and four once D16 says test.
 |---|---|---|
 | Daily, before 10:00 | Approver (D14) | Review today's drafts. Approve, edit or reject. **Until D1, review only — nothing is posted.** After D1, post what was approved and add a line to `ops/publishing-log.md` |
 | Monday | Approver | Read the Market Listener's **queue check**. Below 6 READY items, add the proposals you accept to `queue/content-queue.md` — the agent proposes, it never edits the queue |
-| Thursday | Developer, or whoever holds the product repo | 1. `npm run marketing:weekly-export -- --prev-spend <last week> --spend <this week> --out "<a local folder>\inbox"` — on Umami's free plan, add the four Umami numbers from the dashboard (see `contracts/analytics-csv.md`); ad spend from the approver; a **live** Stripe key. 2. If a country file is wanted, type it up from Umami (`contracts/analytics-by-country.csv.md`). 3. **Copy the files into the client's `D:\marketing agent\kidtechies_market-develop\inbox\` before Friday 09:00.** The first real week is the first full week after go-live |
+| Thursday | Developer, or whoever holds the product repo | 1. On Umami's free plan (the plan in use): `npm run marketing:weekly-export -- --visitors A,B --starts A,B --completions A,B --pricing-views A,B --prev-spend <last week> --spend <this week> --out "<a local folder>\inbox"`, with the four Umami numbers read off the dashboard (see `contracts/analytics-csv.md`); ad spend from the approver; a **live** Stripe key. (Without the four Umami flags the command needs the Umami API — paid Umami plan only.) 2. If a country file is wanted, type it up from Umami (`contracts/analytics-by-country.csv.md`). 3. **Copy the files into the client's `D:\marketing agent\kidtechies_market-develop\inbox\` before Friday 09:00.** The first real week is the first full week after go-live |
 | Friday | Approver | Read the Funnel Analyst's one recommendation and decide whether to act on it |
 
 The computer that runs the scheduled agents must be **on, with the Claude

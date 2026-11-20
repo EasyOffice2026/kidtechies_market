@@ -23,7 +23,7 @@ No agent in Stage 1 has publishing authority. Not one.
 | Path | What lives here | Who may change it |
 |---|---|---|
 | `docs/` | The two source documents. Read-only. | Nobody |
-| `knowledge/` | The five governed knowledge files + changelog | Client-approved only |
+| `knowledge/` | The five governed knowledge files the agents read, plus `CHANGELOG.md` and `site-discrepancy-log.md` (a developer record, never a fact source) | Client-approved only; the developer may make corrections that match the live site or code (see `CHANGELOG.md`) |
 | `queue/` | `content-queue.md` - what Content Factory writes next | Founder |
 | `agents/` | The six agent prompts + shared controls | Developer, versioned |
 | `skills/` | Saved Claude skill (voice + claims) | Developer, versioned |
@@ -38,15 +38,24 @@ No agent in Stage 1 has publishing authority. Not one.
 
 1. `knowledge/product-facts.md` is the **only** source of product numbers.
    Not the live site - see `knowledge/site-discrepancy-log.md` for why.
-2. Every knowledge file carries owner / version / last-approved in its header.
-   A file marked `AWAITING CLIENT APPROVAL`, or a version ending in `-DRAFT`,
-   is not yet fit for parent-facing output.
+2. Each of the five governed knowledge files carries owner / version /
+   last-approved in its header (`site-discrepancy-log.md` has last-verified
+   instead; `CHANGELOG.md` has no header). A file marked
+   `AWAITING CLIENT APPROVAL`, or a version ending in `-DRAFT`, is not yet fit
+   for parent-facing output.
 3. Agents never publish. They write to `drafts/YYYY-MM-DD/`.
 4. Missing source, missing CSV column, missing fact -> the agent says so and
    stops. It does not guess.
 
-"The founder" in these files means the approver — Ibrahim, until the client
-names one (D14).
+## Words used in these files
+
+- **The founder** (in the agent files) = the approver — Ibrahim, until the
+  client names one (D14).
+- **Mission** = a lesson. 14 in all, across 4 courses.
+- **Final project** = the capstone at the end of each course (4 in all).
+- **Sign-up** = a parent confirming their email for the mailing list (the
+  `email_captured` event, `emails_captured` in the weekly file) — not creating
+  an account.
 
 ## Where to start
 

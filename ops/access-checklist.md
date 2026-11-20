@@ -6,8 +6,8 @@ milestone date.
 
 | # | Item | Why it matters | Verified | Notes |
 |---|---|---|---|---|
-| 1 | Claude plan supports **scheduled tasks** | All six cadences depend on it. If absent, Stage 1 scheduling is redesigned (see runbook fallback). | [x] | D4 — passed on the client's Pro account, 2026-11-12 |
-| 2 | Claude plan supports **saved skills** | Voice + claims must apply without pasting them each session. | [x] | `kidtechies-voice` v2 uploaded and switched on, 2026-11-19 |
+| 1 | Claude plan supports **scheduled tasks** | The three scheduled cadences (four after D16) depend on it. If absent, Stage 1 scheduling is redesigned (see runbook fallback). | [x] | D4 — passed on the client's Pro account, 2026-11-12 |
+| 2 | Claude plan supports **saved skills** | Voice + claims must apply without pasting them each session. | [x] | `kidtechies-voice` v2 uploaded and switched on, 2026-11-19. **Re-upload as v3 after the 2026-11-20 release** — the skill file changed (see `ops/remaining-work-plan.md`, "Still to do") |
 | 3 | Claude plan supports **web research** | Market Listener and School Outreach are useless without it. | [ ] | To confirm on the first Market Listener run on the client's account |
 | 4 | **Agent folder** on the client's computer | Draft delivery + CSV input location. | [x] | `D:\marketing agent\kidtechies_market-develop` on DESKTOP-2VR6VB1, linked to the Cowork project "kidtechies". No Google Drive is used |
 | 5 | `drafts\YYYY-MM-DD\` in that folder | Agents write here; the approver reviews here. | [x] | Used on the client's account, 2026-11-16 |

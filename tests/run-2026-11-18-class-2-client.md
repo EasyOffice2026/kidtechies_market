@@ -87,4 +87,7 @@ kidtechies project page.
 
 ## What is left on this account
 
-- Class 4 cases 4.2–4.7, and class 1 once D1 approves the facts.
+- Class 4 cases 4.2–4.7.
+- Class 1, now, in full: case 1.6 can only be tested while the facts are a
+  DRAFT. Then re-run 1.1–1.5, 1.7 and 1.8 after D1. *(Corrected 2026-11-20:
+  this line first said to wait for D1 for all of class 1.)*

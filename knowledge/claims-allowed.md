@@ -1,7 +1,7 @@
 ---
 file: claims-allowed.md
 owner: KidTechies (client) - client-approved representatives only
-version: 0.8.2-DRAFT
+version: 0.8.3-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL
 ---
@@ -17,21 +17,27 @@ These are descriptions of what the product is, all traceable to
 `product-facts.md`:
 
 - What the product contains: courses, missions, hours, activities, quizzes,
-  capstones, printables. Numbers exactly as written in `product-facts.md`.
+  capstones, printables. Numbers with the value in `product-facts.md`, written
+  as that file writes them or as one of the approximations `brand-voice.md`
+  allows ("about ten hours").
 - The price and the payment model, including the comparison "one payment"
   against monthly alternatives.
 - The privacy architecture, as it actually is: **nothing about any child is
   stored on our servers**; progress stays in the browser for everyone; children
   never sign in; the only account is the parent's, to buy courses. When the tutor
-  comes up, say plainly that what a child types to Sparky goes to Anthropic's
-  Claude for a reply and is not stored. See "What is true today" in
+  or the Studio comes up, say it plainly, in these words: "What a child types to
+  Sparky or the Creative Studio goes to Anthropic's Claude for a reply, together
+  with the age group chosen, so the answer suits their age. It is not stored by
+  us." Never "the only thing", never "isn't stored" without "by us". See "What is true today" in
   `product-facts.md`. *(Corrected 2026-10-17. The 2026-10-07 wording here claimed
   each child is stored as a nickname and age group — false: nothing writes the
   child tables yet.)*
 - That the free first mission opens with no signup and no card.
 - What the curriculum covers - including, distinctively, that AI guesses, makes
   mistakes, and has failure modes children can learn to spot.
-- Craft claims about the animation, the stories and the characters.
+- Craft claims about the animation, the stories and the characters. The
+  animated films inside the missions exist (23:48 in all) and may be described
+  — as a craft detail, never as the headline value.
 
 ## Prohibited - never, in any phrasing
 
@@ -49,7 +55,7 @@ These are descriptions of what the product is, all traceable to
 | **Privacy claims with the mode dropped** | "No account, no sign-up, no email address", "progress never leaves the device", "nothing about your child leaves the device" — stated about the product as a whole. All true of guest mode, all false for parent accounts. Name the mode or do not make the claim. |
 | **Analytics denial** | "No tracking scripts." "No third-party analytics." "No analytics." "We don't track anything." All false since 2026-11-09: Umami counts visits. Say "no advertising, and no cookies used for tracking", or the `/privacy` line in `product-facts.md`. |
 | **Runtime as headline value** | "23:48 of animated film" beside the price. See `product-facts.md`. |
-| **Planned features as if they exist** | "Share your creations with the community." "Choose Beginner, Intermediate or Advanced." "Watch the video lessons." "Play My World." "Subscribe." All are future plans in `ops/product-roadmap.md` (2026-11-11), not features. Describe only what `product-facts.md` lists. |
+| **Planned features as if they exist** | "Share your creations with the community." "Choose Beginner, Intermediate or Advanced." "Watch the video lessons." "Play My World." "Subscribe." All are future plans in `ops/product-roadmap.md` (2026-11-11), not features. Describe only what `product-facts.md` lists. *Two clarifications:* "video lessons" means a separate video-lesson feature — the animated films inside the missions do exist and may be described. "Subscribe" means a paid subscription, which does not exist; the free parent email list does exist, but the site offers it, not agent copy (see the call to action below). |
 | **"Less than three months of the alternatives"** | Retired. The framing assumed competitors at $11–25/month; Tynker is published at $7.50, where $70 is about nine months. A parent can check this in one click. The client chose a different price story on 2026-10-18 — below. |
 
 *Removed 2026-10-18: a row prohibiting the 30-day refund promise "until it is
@@ -98,10 +104,20 @@ email:
 
 > "Try the first mission. Nothing to sign up for."
 
-One natural placement per piece, where it genuinely helps the reader. Not
-repeated, not stacked with a second offer, never a hard sell.
+**The rule, per piece.** A piece is one article, one social caption, one email
+or one video hook. Each piece has **at most one** free-mission call to action,
+and no other call to action. The article and the email each have **exactly
+one**. A caption or a hook may have none where it would not help. Place it
+where it genuinely helps the reader — never repeated, never stacked with a
+second offer, never a hard sell. Use the link in `product-facts.md`
+("Free-mission link").
 
 *Scope:* the site's own welcome emails are product copy, not agent drafts. Email
 4 there links to the pricing page, after the parent has already finished the
 free mission. That is outside this rule; an agent-drafted email still carries
 only the free-mission link.
+
+*Exception — School Outreach (Agent 6):* a draft to a school has one ask, and
+that ask is "who is the right person to send this to?". It may mention group
+access in the site's words ("Get in touch about group access"). It carries no
+free-mission call to action, because that would be a second ask.

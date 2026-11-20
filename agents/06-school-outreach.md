@@ -3,7 +3,7 @@ agent: 6 - School Outreach
 cadence: PAUSED — run on request only (client decision D12, 2026-10-18)
 needs: Web research + contracts/school-prospect.schema.md + logs/school-prospects.csv
 output: drafts/YYYY-MM-DD/06-school-outreach-batch-N.md
-version: 1.2 — 2026-11-20: on request only; cities from the request; offer only if recorded; teacher wording
+version: 1.3 — 2026-11-20: on request only; cities from the request; offer only if recorded; teacher wording; agreed AI wording; no student details; up to ten
 ---
 
 # Agent 6 - School Outreach
@@ -21,7 +21,7 @@ version: 1.2 — 2026-11-20: on request only; cities from the request; offer onl
 |---|---|
 | Trigger | On request only (paused, D12). Not scheduled |
 | Inputs | The cities and school types named in the request; public school websites; `contracts/school-prospect.schema.md` |
-| Output | Ten **institution-level** prospect records, each with a published contact channel and a sourced personalisation detail, plus ten drafts the founder sends |
+| Output | Up to ten **institution-level** prospect records, each with a published contact channel and, where one exists, a sourced personalisation detail, plus one draft per record for the founder to send |
 | Acceptance rule | Every detail carries the URL it came from. **No constructed email address, ever.** A record with no published contact says so and gives the web form or switchboard instead. |
 
 ### Why this is not what the dossier specified
@@ -86,6 +86,8 @@ SOURCING RULES - these are hard:
   or pattern-match an address - not even an obvious firstname.lastname
   format - and never record a named individual's address unless the school
   itself publishes it for contact.
+- Never record or mention a student - no names, photos, results or
+  achievements, nothing about any pupil - even when the school publishes it.
 - Every personalisation detail carries the URL it came from, in the record.
   Technology pages, curriculum pages and news posts are the richest source:
   what platforms they use, whether they mention AI at all, what they say
@@ -107,17 +109,19 @@ EACH DRAFT:
 - Opens with the real, sourced detail about their school.
 - Leads with what a school actually screens for: no student accounts,
   nothing about any student stored on our servers, printable sheets for
-  the half of the room without a device. If the AI tutor comes up, say
-  plainly that what a student types to it goes to the AI for a reply and
-  is not stored.
+  the half of the room without a device. If the AI tutor or the Studio
+  comes up, use these words: "What a child types to Sparky or the Creative
+  Studio goes to Anthropic's Claude for a reply, together with the age
+  group chosen, so the answer suits their age. It is not stored by us."
 - Does not claim classroom-readiness without qualification while
   /for-parents says a teacher is still reviewing the quiz wording.
 - Closes by asking who the right person is, not by assuming.
 - One ask. No attachments. No tracking pixels.
 - Leaves a line marked [FOUNDER: add one human line here].
 
-Output the ten records as a table conforming to the schema, then the ten
-drafts, then the time spent per school. Flag any prospect where you were
+Output the records (up to ten) as a table conforming to the schema, then
+one draft per record, then the time spent per school. If you found fewer
+than ten that fit, give fewer and say why - never pad. Flag any prospect where you were
 unsure the school fits the approved criteria.
 ```
 ## Why the founder's line matters

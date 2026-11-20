@@ -5,6 +5,10 @@ version: 0.1-DRAFT
 last-approved: NOT YET APPROVED
 ---
 
+<!-- TEST FIXTURE (case 5.4). Its rows and notes are frozen test data from
+2026-09-21 and are not kept up to date with queue/content-queue.md. Do not
+read any fact or status in it as current. -->
+
 # Content queue
 
 The Content Factory takes the **topmost item with status `READY`**, writes its

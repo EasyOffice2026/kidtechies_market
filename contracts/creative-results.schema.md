@@ -1,7 +1,7 @@
 ---
 file: creative-results.schema.md
 owner: Developer
-version: 1.0-FROZEN — location and append rule added 2026-11-20; fields unchanged
+version: 1.1-FROZEN — location and append rule added 2026-11-20; same day: `platform` optional, status `withdrawn` added; no field renamed
 ---
 
 # Record schema: creative results log
@@ -20,19 +20,20 @@ lowercase, exactly as below.
 | `varied_from` | string | no | `variant_id` this is a variation of |
 | `what_varied` | string | yes | The single thing changed. `n/a` only for a round-1 original. |
 | `copy` | string | yes | The actual text |
-| `platform` | string | yes | |
+| `platform` | string | no | Where the ad runs, e.g. `meta`. Blank until the approver chooses a platform (no ad test has run, D16) |
 | `spend_usd` | decimal | no | |
 | `impressions` | integer | no | |
 | `clicks` | integer | no | |
 | `ctr_pct` | decimal 1dp | no | Derived |
-| `status` | enum | yes | `pending` / `running` / `keep` / `iterate` / `kill` |
-| `decision_basis` | string | conditional | **Required when status is keep/iterate/kill** |
+| `status` | enum | yes | `pending` / `running` / `keep` / `iterate` / `kill` / `withdrawn` (taken out before testing because the copy was untrue; never tested) |
+| `decision_basis` | string | conditional | **Required when status is keep/iterate/kill/withdrawn** — for `withdrawn`, the reason |
 | `date_logged` | ISO date | yes | |
 
 ## Validation rules
 
-1. A `keep` / `iterate` / `kill` status without `decision_basis` is **invalid**.
-   Every verdict names the number behind it.
+1. A `keep` / `iterate` / `kill` / `withdrawn` status without `decision_basis`
+   is **invalid**. Every verdict names the number behind it; a withdrawal names
+   the reason.
 2. `what_varied` listing more than one change makes the result uninterpretable -
    flag it rather than analysing it.
 3. `ctr_pct` is derived, never entered by hand.

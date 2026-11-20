@@ -3,7 +3,7 @@ agent: 4 - Funnel Analyst
 cadence: Weekly, Friday 09:00
 needs: contracts/analytics-csv.md + contracts/payment-csv.md exports
 output: drafts/YYYY-MM-DD/04-funnel-analyst-week-of-YYYY-MM-DD.md
-version: 1.1 — 2026-11-20: inbox in the agent folder; which files to read; status
+version: 1.2 — 2026-11-20: inbox in the agent folder; which files to read; status; two rows per file, matched row for row; empty file fails; country-file checks; what may be calculated
 ---
 
 # Agent 4 - Funnel Analyst
@@ -18,6 +18,10 @@ version: 1.1 — 2026-11-20: inbox in the agent folder; which files to read; sta
 | Acceptance rule | Reproduces visitors, starts, completions, emails, sales and cost/sale correctly from the supplied exports |
 
 ## Acceptance status — 2026-11-20
+
+**Readiness:** ready to run on the test files now. Ready for real numbers from
+the first full week after go-live, once the weekly files are made with a live
+Stripe key. Until then, a Friday run that finds no files is normal.
 
 Every input now exists. Email capture is live (2026-11-07). Umami is live
 (2026-11-09), and all three events — `mission_start`, `mission_complete`,
@@ -47,7 +51,12 @@ use exactly the files named.)
 
 BEFORE CALCULATING ANYTHING, validate the inputs:
 - Every required column present, named exactly as the contract specifies.
-- week_starting is a Monday and matches across both files.
+- Each file has exactly TWO data rows: last week first, then this week. A
+  file with no data rows (headers only) fails - say "no data", never
+  report zeros. One row, or more than two, also fails.
+- Every week_starting is a Monday, and the files match ROW FOR ROW: row 1
+  of the analytics file has the same week_starting as row 1 of the
+  payments file, and row 2 the same as row 2. Row 2 is 7 days after row 1.
 - All numeric fields parse as numbers - no currency symbols, no thousands
   separators, no quoted numerics, no blanks.
 - No personal data present in either file.
@@ -75,7 +84,12 @@ If validation passes, produce:
 
 3. WHERE IT IS WORKING - only if this week's by-country file
    (analytics-by-country-YYYY-MM-DD.csv, same date) is in inbox/
-   (contracts/analytics-by-country.csv.md). The client is choosing which
+   (contracts/analytics-by-country.csv.md). Validate it first, the same
+   way: exactly the five columns of that contract; every row's
+   week_starting equals THIS week's week_starting in the main file; country
+   is a two-letter code; whole numbers only, no blanks; no personal data
+   (no city, IP address or visitor). If it fails, leave this section out
+   and say why - the rest of the report still runs. The client is choosing which
    countries to concentrate on by measured response (decision D12), and
    this is the measurement. For each country with at least 30 visitors:
    visitors, mission starts, completions, and completion rate. Name the top
@@ -96,6 +110,13 @@ Rules:
   free-to-paid 6-10%) but label them as modelled targets, not warranties.
   They were derived from published prices, not from actual traffic.
 - Never estimate a missing figure. Never infer one metric from another.
+  The ONLY figures you calculate are: the week-on-week change of each
+  number, the completion rate (completions / starts), cost per sale
+  (marketing_spend_usd / orders), cost per email (marketing_spend_usd /
+  emails_captured) and free-to-paid (orders / completions) for the
+  comparison with the dossier targets, and each country's completion rate.
+  Every other number is read
+  straight from the files.
 - Two decimal places on money, whole numbers on counts, one decimal on
   percentages.
 ```

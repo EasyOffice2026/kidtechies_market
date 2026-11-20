@@ -1,7 +1,7 @@
 ---
 file: brand-voice.md
 owner: KidTechies (client) - voice examples require client approval
-version: 0.8.2-DRAFT
+version: 0.8.3-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL of the accepted/rejected examples
 ---
@@ -50,10 +50,13 @@ product is for children, the reader is the adult holding the card.
 > Your child's school just started teaching AI. If you are not sure what that
 > means, you are in good company - most of us learned about computers from
 > children who were better at them than we were. This is a way to catch up
-> together, in about eight hours, at whatever pace suits a Tuesday evening.
+> together, in about ten hours, at whatever pace suits a Tuesday evening.
 
 *Why: meets the Vision 2030 parent's real question in the first line. Admits the
-gap without shaming anyone. Specific about time. No urgency, no pitch.*
+gap without shaming anyone. Specific about time — "about ten hours" is the short
+form of "about 9–12 hours of guided learning, including four final projects"
+(`product-facts.md`; changed from "about eight hours" on 2026-11-20). No
+urgency, no pitch.*
 
 > AI does not know things. It guesses, very well, from what it has seen before.
 > That is the whole idea, and a nine-year-old can hold it easily once they watch
@@ -65,21 +68,25 @@ last clause flatters the parent without flattering them falsely.*
 
 > Nothing about your child is stored on our servers. Their progress stays in your
 > browser, they never sign in, and the only account is yours — for buying a
-> course. When they talk to Sparky, those words go to the AI to get a reply, and
-> no further. We built it that way because we could not think of a good reason to
-> do otherwise.
+> course. What a child types to Sparky or the Creative Studio goes to
+> Anthropic's Claude for a reply, together with the age group chosen, so the
+> answer suits their age. It is not stored by us. We built it that way because
+> we could not think of a good reason to do otherwise.
 
-*Why: the strongest differentiator, stated flatly and truthfully. It names the one
-thing that does leave the device instead of hiding it, which is what makes the
-rest believable. The last sentence undercuts the boast, which is what makes it
+*Why: the strongest differentiator, stated flatly and truthfully. It names what
+does leave the device — the words typed to Sparky or the Studio, and the age
+group — instead of hiding it, which is what makes the rest believable. It does
+not call that "the only thing": Umami also counts visits, missions and newsletter
+confirmations, anonymously. The last sentence undercuts the boast, which is what makes it
 land.*
 
 *Replaced twice. The original opened "Nothing about your child leaves the
 device" — false, because Sparky messages go to Anthropic. The 2026-10-07 version
 said "your child is a nickname and an age group" — also false, because no child
 data is stored at all. This one is verified against what the code writes
-(2026-10-17). It is a template agents imitate, so an error here propagates into
-every draft.*
+(2026-10-17). On 2026-11-20 its Sparky sentence was replaced with the agreed
+wording, which adds the Creative Studio, the age group and "by us". It is a
+template agents imitate, so an error here propagates into every draft.*
 
 ## Three paragraphs we would reject
 
@@ -109,15 +116,21 @@ the US, not a stylistic preference.*
 | Prefer | Over |
 |---|---|
 | "understand AI" | "master AI" / "become an AI expert" |
-| "8-9 hours of guided learning" | "23:48 of animated film" |
+| "about 9–12 hours of guided learning, including four final projects" | "23:48 of animated film" |
 | "buy once, keep it" | "lifetime access" (a promise about someone's lifetime; the terms say "indefinitely", and that is all we can say) |
 | "try the first mission" | "start your free trial" (implies signup) |
 | "your child" | "your little one", "kiddo", "superstar" |
 | "we are still building X" | silence, or a vague "coming soon" |
-| "about eight hours" | "8.5 hours" (false precision) |
+| "about ten hours" (the whole programme, 9–12 hours) | "10.6 hours" (false precision), or "8-9 hours" (too low since 2026-11-20) |
+| "about 7–9 hours" (the 14 missions alone) | "about ten hours" for the missions without the final projects |
+
+These are the only approximations allowed for a product number. Any other
+number is written as `product-facts.md` writes it.
 
 ## The voice file is alive
 
-The dossier is specific about this: the founder's Thursday customer calls feed
+The dossier is specific about this: the approver's Thursday customer calls (the
+dossier says "the founder's"; here that means the approver — Ibrahim until the
+client names one, D14) feed
 real parent phrases back into this file. A voice file that has not changed in
 three months is not being used. Add a dated entry to `CHANGELOG.md` each time.

@@ -3,7 +3,7 @@ agent: 3 - Arabic Localiser
 cadence: On demand
 needs: Approved English asset + knowledge base
 output: drafts/YYYY-MM-DD/03-arabic-localiser-<item-slug>.md
-version: 1.1 — 2026-11-20: what "approved" means; file name
+version: 1.2 — 2026-11-20: what "approved" means; file name; order of the two notices at the top
 ---
 
 # Agent 3 - Arabic Localiser
@@ -78,7 +78,9 @@ Rules:
   say which specific decisions you considered and why each was
   straightforward.
 - State clearly at the top: "Draft - requires native review before
-  publication."
+  publication." If agents/shared-controls.md §4 also requires its notice
+  ("Contains facts not yet client-confirmed — not for publication."), that
+  notice is the first line and this one the second.
 ```
 
 ## Failure modes to watch in review

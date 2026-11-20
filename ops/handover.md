@@ -2,7 +2,7 @@
 file: handover.md
 owner: Developer -> KidTechies
 audience: The client. Written to be read once, then kept.
-date: 2026-11-13 (replaces the version of 2026-09-21); updated 2026-11-20 — safe folder update, test position
+date: 2026-11-13 (replaces the version of 2026-09-21); updated 2026-11-20 — safe folder update, test position; release note of 2026-11-20; what the controls are
 ref: KT/DEV/2026-001
 ---
 
@@ -13,8 +13,8 @@ ref: KT/DEV/2026-001
 | Part | What it is | State |
 |---|---|---|
 | **1 · Website** | kidtechies.com: the KidTechies name, pricing, parents and teachers pages, privacy wording that matches what the site does | Live since 2026-11-07 |
-| **2 · Parent email list** | Sign-up after the free mission → confirmation → printable sheet → five welcome emails → a weekly question. One-click unsubscribe | Live and tested end to end, 2026-11-07 |
-| **2 · Analytics** | Umami: visits, free-mission starts and completions, sign-ups. No cookies; the privacy page says so | Live since 2026-11-09; all three events seen on a live run, 2026-11-20 |
+| **2 · Parent email list** | Sign-up after the free mission → confirmation → printable sheet → five welcome emails → a weekly question. An unsubscribe link in every email | Live and tested end to end, 2026-11-07 |
+| **2 · Analytics** | Umami: visits, anonymous counts of missions started and finished, and an anonymous count of newsletter confirmations — no names, no addresses. No cookies; the privacy page says so | Live since 2026-11-09; all three events seen on a live run, 2026-11-20 |
 | **3 · Six AI agents** | Draft marketing work on a schedule, on your Claude account. A person approves everything; nothing publishes by itself | Built. Scheduled tasks proven on your account 2026-11-12 (D4). Safety tests 8/8 on your account, 2026-11-19 |
 
 | Deliverable | Where (marketing repository) |
@@ -33,9 +33,12 @@ ref: KT/DEV/2026-001
 Five files in `knowledge/` decide what may be said about KidTechies. Each
 agent reads them before every run and writes drafts into a dated folder.
 Your approver reads the drafts each morning, approves or edits, posts by hand
-and logs it. No agent can state a product number that is not in
-`knowledge/product-facts.md`, address a child, or ask for a child's data —
-these are tested, not hoped for. Start with `ops/operator-guide.md`.
+and logs it. The agents are instructed never to state a product number that is
+not in `knowledge/product-facts.md`, never to address a child and never to ask
+for a child's data, and the tests show they follow those instructions. But
+they are instructions plus a person's review — not a technical lock. The
+approver's review is what stops a mistake reaching a parent. Start with
+`ops/operator-guide.md`.
 
 ## Running it on your computer
 
@@ -60,13 +63,25 @@ not have your copies, so replacing the folder without them would wipe them:
 3. Download the `develop` ZIP from GitHub and unzip it. Delete everything in
    `D:\marketing agent\kidtechies_market-develop`, then put the unzipped files
    in. Same folder, same path.
-4. Copy the five back in, replacing the downloaded copies. **Exception:** if the
-   developer says a release changed the queue or a log, the developer merges
-   that file with yours instead.
+4. Copy the five back in, replacing the downloaded copies — **except** any of
+   `logs\creative-results.csv`, `logs\school-prospects.csv` or
+   `queue\content-queue.md` that the release note below says changed. For
+   those, keep GitHub's copy, then open your saved copy of the queue and set
+   back to DONE every row your agents marked DONE since the last update (with
+   the date from your copy's Notes). If your saved copy of a log has rows that
+   GitHub's copy does not, send both files to the developer to merge.
 5. Open the Claude app. In the kidtechies project, ask: *"Tell me the version
    line of knowledge/product-facts.md."* It must match the version on GitHub.
    If it shows the old one, the files went to a different folder — the agents
    are still reading the old facts.
+
+**Release notes — the rule:** each release note says which of these files
+changed. A file it does not name: put your copy back.
+
+| Release | Take GitHub's copy of | Then |
+|---|---|---|
+| **2026-11-20** | `logs\creative-results.csv`, `logs\school-prospects.csv` and `queue\content-queue.md` — this time all three | Set back to DONE any queue rows your agents marked DONE since the last update. Version line: `0.8.3-DRAFT` |
+
 - Your plan is **Claude Pro**. Watch usage in the first two weeks; if the
   agents hit the limit, move to a larger plan or run fewer cadences (D7).
 
@@ -87,7 +102,7 @@ not have your copies, so replacing the folder without them would wipe them:
 | Data ingestion (7 cases) | 6/6 + 1 added since; the main case (4.1) **passed on your account, 2026-11-19** | 4.2–4.7: build session — re-run on your account |
 | Approval discipline | 4/4 | Build session |
 | Scheduling | A test task ran on time on your account, 2026-11-12 (D4). Cases 5.1, 5.2 and 5.6 — the real schedule, no duplicates, a fresh session — not yet run on your account | Your account |
-| Knowledge accuracy (8 cases) | Not yet run | Needs the approved facts |
+| Knowledge accuracy (8 cases) | Not yet run | Run now, on your account (case 1.6 can only be tested before v1.0); re-run 1.1–1.5, 1.7 and 1.8 after D1 |
 | Website and email list | Sign-up, confirmation, welcome email, sheet, unsubscribe all passed | Live site, 2026-11-07 |
 
 `ops/developer-test-guide.md` is the step-by-step for the remaining runs.
@@ -96,14 +111,14 @@ not have your copies, so replacing the folder without them would wipe them:
 
 | # | Item | Blocks |
 |---|---|---|
-| D1 | Reply "approved" to the fact list (page 2 of `ops/client/KidTechies-Email-Review.docx`) | Anything published |
+| D1 | Reply "approved" to the fact list — Part 2, "please confirm these facts" — the last table in `ops/client/KidTechies-Email-Review.docx` (the version sent after 2026-11-20) | Anything published |
 | D14 | Name the approver, a backup, and a turnaround | Every publication |
 | — | Make the GitHub repository `EasyOffice2026/kidtechies_market` **private** (Settings → General → Danger Zone) | Your strategy documents are public today |
 | D17 | Move Vercel, GitHub, Resend and Umami to accounts you own; Vercel to Pro | You deploying without the developer |
 | D6 | A native Arabic reviewer | Arabic content and the Arabic page |
 | D15 | A postal address for the email footer | Emailing US parents |
 | D11 | Legal review of privacy and terms — your call | Legal certainty |
-| D16 | A small ad test, or pause the Creative Tester | Agent 5; cost per sale |
+| D16 | A small ad test, or keep the Creative Tester idle (it is not scheduled until you decide) | Agent 5; cost per sale |
 | — | Logo artwork reading "KidTechies" | The header and footer |
 
 D1 and D14 unblock the most.

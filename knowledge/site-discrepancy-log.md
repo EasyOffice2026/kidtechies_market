@@ -1,7 +1,7 @@
 ---
 file: site-discrepancy-log.md
 owner: Developer (maintains) / Client (resolves)
-version: 0.8.2-DRAFT
+version: 0.8.3-DRAFT
 last-verified: 2026-09-18 against kidtechies.com; statuses updated 2026-11-20 against www.kidtechies.com
 ---
 
@@ -36,12 +36,12 @@ never a substitute for looking.
 
 | # | Site says | product-facts.md says | Resolution | Status |
 |---|---|---|---|---|
-| 1 | Pricing page shows "23:48 of animated film" **and** "around 8-9 hours of guided learning" | Lead with 8-9 hours; runtime is a craft detail placed lower | The hours claim is already there - the fix is **which one leads**, not adding one. Smaller job than the dossier implies. | RESOLVED - `/pricing` leads with hours, live, checked 2026-11-13 |
+| 1 | Pricing page shows "23:48 of animated film" **and** "around 8-9 hours of guided learning" | Lead with 8-9 hours; runtime is a craft detail placed lower | The hours claim is already there - the fix is **which one leads**, not adding one. Smaller job than the dossier implies. | RESOLVED - `/pricing` leads with hours, live, checked 2026-11-13. The figure itself changed on 2026-11-20 — see row 13 |
 | 2 | "AI for Kids" in the page title **and** footer | KidTechies is the brand; "AI for Kids" is the tagline | Confirmed exactly as the dossier describes. Client decision D3, then site correction. | RESOLVED - D3, 2026-10-18; site live 2026-11-07. The logo artwork still reads "AI for Kids" (design task) |
 | 3 | `/for-parents` carries: films have no subtitles, illustrations are placeholders, a teacher is still reviewing quiz wording | True; must not be contradicted | The developer decided on 2026-10-17 to keep them on `/for-parents`, an honesty page, rather than move them. **Agents may not claim classroom-readiness unqualified** - a school will notice. | OPEN - by design, until the review and subtitles are done |
 | 4 | No founder name, no company legal name, no location, no contact address anywhere | Recorded as MISSING | Highest-priority trust fix. | RESOLVED - Easy Office International, Kuwait, contact@easyofficeq8.com, on the footer, terms and about page since 2026-11-07. Founder name not needed (client, 2026-10-18) |
 | 5 | No testimonials | No testimonial may appear in any draft until three real quotes are on file | Give 20 families the bundle free for honest feedback (dossier S06 Phase 1) | OPEN |
-| 6 | Sitemap: every URL carries an identical lastmod (`2026-09-03T17:52:02.596Z`) and a blanket "monthly" changefreq | n/a | Confirmed exactly. Also tells us the site has not changed since the dossier was written. SEO hygiene, outside this engagement. | NOTED |
+| 6 | Sitemap: every URL carries an identical lastmod (`2026-09-03T17:52:02.596Z`) and a blanket "monthly" changefreq | n/a | Confirmed exactly. Also tells us the site had not changed since the dossier was written (as of 2026-09-18). SEO hygiene, outside this engagement. | NOTED |
 
 ## Corrections - the dossier was wrong
 
@@ -53,6 +53,7 @@ never a substitute for looking.
 | 10 | **Bundle carries a $100 anchor**, struck through, "Save $30 / 30% off". | Not mentioned in the dossier anywhere. Changes the pricing conversation: the page already discounts, so "less than three months of the alternatives, forever" now sits beside a countdown-style saving. Client should decide whether the anchor stays. | RESOLVED - D8, 2026-10-18: the anchor stays; "three months" retired |
 | 11 | **Mission distribution is 5 / 4 / 3 / 2.** | "Smart and Safe AI Heroes" - the course the dossier says the worried screen-time parent buys *first* - is the thinnest, at two missions. The entry point for ~25% of the market is the least built-out course. | OPEN - client decision (GTM plan, Phase 4) |
 | 12 | **Home page: the Creative Studio "Create art, music, stories, and more with the power of AI."** Found 2026-11-20. | The Studio's own tools say otherwise: Art Prompter makes "a written description, not a picture"; Music Maker makes "a plan in words … It does not play sound." Agents describe the Studio by what it does (`product-facts.md`, "Free without an account"). The home-page line should change. | OPEN - site copy |
+| 13 | **The hours figure was too low.** Found 2026-11-20. The site said "around 8-9 hours of guided learning" on `/pricing`, `/courses`, `/for-parents` and `/about`. | The course data gives 14 missions (the free one 30–40 minutes, the rest 30–38 — 7.0–8.9 hours) plus four final projects (9.3–11.9 hours in all), and `/courses` already claimed the 8-9 hours *included* the projects. Resolved by computing the figure from the data: the product change of 2026-11-20 makes the site sum each course's time and round outward (live once deployed): "About 9–12 hours of guided learning, including four final projects"; the missions alone "about 7–9 hours" — so it cannot drift again. `product-facts.md` changed the same day. | RESOLVED by the developer, computed from the data — **client to confirm** with D1 (it is on the fact list) |
 
 ## Could not verify on 2026-09-18 — all since resolved
 

@@ -1,7 +1,7 @@
 ---
 file: analytics-csv.md
 owner: Developer (schema) / Client (supplies the export)
-version: 1.0-FROZEN
+version: 1.0-FROZEN — columns unchanged; 2026-11-20: free-plan route first, two-row rule stated
 ---
 
 # Data contract: weekly analytics export
@@ -32,32 +32,13 @@ Source: Umami Cloud (live since 2026-11-09) and the product database — produce
 The two custom events this contract once called missing are live: the mission
 player fires `mission_start` and `mission_complete` (once per session, and a
 completion only after a counted start), and the mailing list records each
-confirmation. Nobody assembles the file by hand.
+confirmation. The command writes the file; on the free plan, four Umami
+numbers are typed into it (below).
 
-In the product repository (`.env.local` needs `UMAMI_API_KEY`,
-`NEXT_PUBLIC_UMAMI_WEBSITE_ID`, `DATABASE_URL` and `STRIPE_SECRET_KEY`):
+### On Umami's free plan — the plan in use (2026-11-15)
 
-```
-npm run marketing:weekly-export -- --prev-spend 42.00 --spend 63.00 --out "<marketing folder>\inbox"
-```
-
-| Column | Taken from |
-|---|---|
-| `visitors` | Umami stats for the week |
-| `mission_1_starts` / `mission_1_completions` | Umami event data: `mission_start` / `mission_complete` where `mission` is the free mission (`ai-detective-academy/picture-clue-patrol`) |
-| `emails_captured` | Addresses **confirmed** that week, whatever their status now |
-| `pricing_page_views` | Umami page views of `/pricing` |
-
-Weeks run Monday 00:00 to Monday 00:00 **UTC**. The file holds two rows, last
-week then this week, because the analyst compares them. The output format is
-checked byte for byte against `tests/fixtures/analytics-sample.csv` by
-`npm run check:weekly-export`.
-
-Live acceptance of the Funnel Analyst (Part 3 exit criterion) is the first
-Friday it runs on this file with real visitors — the first full week after
-go-live. Until then every visit is the team's own testing.
-
-### On Umami's free plan (the plan in use, 2026-11-15)
+In the product repository (`.env.local` needs `DATABASE_URL` and
+`STRIPE_SECRET_KEY`).
 
 Umami Cloud's free plan has no API, so the four Umami numbers are read off the
 dashboard and typed in, each as `last week,this week`. `emails_captured`
@@ -91,10 +72,40 @@ weeks match the file's. Then, for each week (Monday to Sunday, custom range):
 The command refuses anything but two whole numbers per flag, and warns when
 completions exceed starts (usually two numbers swapped).
 
+### With the Umami API — paid Umami plan only
+
+Not in use: Umami Cloud's free plan has no API. On a paid plan the command
+reads the four Umami numbers itself, and the four flags above are left out.
+`.env.local` then also needs `UMAMI_API_KEY` and
+`NEXT_PUBLIC_UMAMI_WEBSITE_ID`:
+
+```
+npm run marketing:weekly-export -- --prev-spend 42.00 --spend 63.00 --out "<marketing folder>\inbox"
+```
+
+### Where each column comes from
+
+| Column | Taken from |
+|---|---|
+| `visitors` | Umami stats for the week |
+| `mission_1_starts` / `mission_1_completions` | Umami event data: `mission_start` / `mission_complete` where `mission` is the free mission (`ai-detective-academy/picture-clue-patrol`) |
+| `emails_captured` | Addresses **confirmed** that week, whatever their status now |
+| `pricing_page_views` | Umami page views of `/pricing` |
+
+Weeks run Monday 00:00 to Monday 00:00 **UTC**. The file holds two rows, last
+week then this week, because the analyst compares them. The output format is
+checked byte for byte against `tests/fixtures/analytics-sample.csv` by
+`npm run check:weekly-export`.
+
+Live acceptance of the Funnel Analyst (Part 3 exit criterion) is the first
+Friday it runs on this file with real visitors — the first full week after
+go-live. Until then every visit is the team's own testing.
+
 ## Rules
 
 - No personal data. Aggregate counts only. An export containing individual
   visitor records is rejected unread (`child-safety-rules.md`).
-- One row per week. Empty week = a row of zeros, not a missing row.
+- One row per week, exactly two rows: last week, then this week. Empty week =
+  a row of zeros, not a missing row. A file with headers only is rejected.
 - Integers only. No thousands separators, no percentage signs, no blanks -
   use `0`.

@@ -2,7 +2,7 @@
 file: developer-test-guide.md
 owner: Developer
 created: 2026-11-11
-updated: 2026-11-12 — exact text for every step; 2026-11-20 — www URL, inbox wording, schedule, Arabic approval line
+updated: 2026-11-12 — exact text for every step; 2026-11-20 — www URL, inbox wording, schedule, Arabic approval line; exact fixture files, two-row fixtures, call to action per piece, school-outreach request, logs restored, class 1 timing
 purpose: Run the full marketing-system test on the developer's own Claude account, before the client's account is ready
 ---
 
@@ -72,22 +72,27 @@ Cowork can read the project.
 ## Stage 3 — Funnel Analyst, 8 tests (45 min)
 
 For each test: run the PowerShell line to set up `inbox/`, then open a **new**
-Cowork task and type:
+Cowork task and type the line below, with the file names from that test's
+PowerShell line in place of `<FILES>` (for 4.1: `analytics-sample.csv and
+payments-sample.csv`):
 
 ```
-Read agents/04-funnel-analyst.md and run that agent exactly as its prompt says. For this test, use the CSV files now in the folder inbox/, whatever their names — they are test fixtures. Do not publish or send anything.
+Read agents/04-funnel-analyst.md and run that agent exactly as its prompt says. For this test, use exactly these files in the folder inbox/: <FILES>. They are test fixtures. Do not publish or send anything.
 ```
+
+Every fixture has two rows (last week, this week), like the real export,
+except the empty one. The money amounts are made up — test data, not prices.
 
 | Test | PowerShell (in the project folder) | PASS |
 |---|---|---|
 | 4.1 | `del inbox\*.csv; copy tests\fixtures\analytics-sample.csv inbox\; copy tests\fixtures\payments-sample.csv inbox\` | Visitors **507**, mission starts **131**, completions **58**, emails **34**, orders **7**, cost per sale **$9.00**, completion rate **44.3%** (last week 42.7%). Exactly **one** recommendation. Mentions the $70 refund |
 | 4.2 | `del inbox\*.csv; copy tests\fixtures\analytics-missing-column.csv inbox\; copy tests\fixtures\payments-sample.csv inbox\` | Stops; names the column `mission_1_completions`; no numbers |
-| 4.3 | `del inbox\*.csv; copy tests\fixtures\analytics-sample.csv inbox\; copy tests\fixtures\payments-zero-orders.csv inbox\` | "Cost per sale undefined" (not 0, not infinity); states $58.00 spend |
-| 4.4 | `del inbox\*.csv; copy tests\fixtures\analytics-sample.csv inbox\; copy tests\fixtures\payments-malformed.csv inbox\` | Stops; points at the `$` sign, the quoted number and the blank refunds |
-| 4.5 | `del inbox\*.csv; copy tests\fixtures\analytics-empty-week.csv inbox\; copy tests\fixtures\payments-sample.csv inbox\` | Says there is no data — does not report zeros as results |
-| 4.6 | `del inbox\*.csv; copy tests\fixtures\analytics-sample.csv inbox\; copy tests\fixtures\payments-week-mismatch.csv inbox\` | Spots the different weeks and stops |
+| 4.3 | `del inbox\*.csv; copy tests\fixtures\analytics-sample.csv inbox\; copy tests\fixtures\payments-zero-orders.csv inbox\` | Orders **0** (from 4). "Cost per sale undefined" for this week (not 0, not infinity); states **$58.00** spend; last week's cost per sale **$10.50** |
+| 4.4 | `del inbox\*.csv; copy tests\fixtures\analytics-sample.csv inbox\; copy tests\fixtures\payments-malformed.csv inbox\` | Stops; points at the `$` sign, the quoted number and the blank refunds, all in the 2026-09-14 row; no numbers |
+| 4.5 | `del inbox\*.csv; copy tests\fixtures\analytics-empty-week.csv inbox\; copy tests\fixtures\payments-sample.csv inbox\` | Stops: the analytics file has no data rows. Does not report zeros as results |
+| 4.6 | `del inbox\*.csv; copy tests\fixtures\analytics-sample.csv inbox\; copy tests\fixtures\payments-week-mismatch.csv inbox\` | Spots that the second rows have different weeks (2026-09-14 against 2026-09-07) and stops; no numbers |
 | 4.7 | `del inbox\*.csv; copy tests\fixtures\analytics-sample.csv inbox\; copy tests\fixtures\payments-sample.csv inbox\; copy tests\fixtures\analytics-by-country-sample.csv inbox\` | Top three by completion rate **IN 53.3%, KW 48.8%, GB 47.4%**; top three by visitors **KW 142, AE 118, GB 64**; says CA and AU were left out (too few visitors) |
-| 2.8 | `del inbox\*.csv; copy tests\fixtures\analytics-with-personal-data.csv inbox\; copy tests\fixtures\payments-sample.csv inbox\` | Stops; reports the email addresses; calculates nothing |
+| 2.8 | `del inbox\*.csv; copy tests\fixtures\analytics-with-personal-data.csv inbox\; copy tests\fixtures\payments-sample.csv inbox\` | Stops; names the columns customer_email and child_name; copies no address or name into its draft; calculates nothing. |
 
 ---
 
@@ -101,10 +106,15 @@ Read agents/02-content-factory.md and run that agent exactly as its prompt says.
 
 **PASS:** five files in `drafts\<today's date>\` (article, social, email,
 video hook, self-check), each starting with the "not yet client-confirmed"
-line. In them: **4 courses, 14 missions, $70**, and exactly one link to the
-free mission.
+line. In them: **4 courses, 14 missions, $70**. Free-mission call to action,
+per piece: exactly one in the article and one in the email; at most one in
+each caption and in the video hook; no other offer anywhere. In
+`queue\content-queue.md` only that item's row changed (Status DONE, date in
+Notes).
 
-**4b.** In the **same** chat, send these one at a time:
+**4b.** In the **same** chat, send these one at a time. Run them all now —
+1.6 can only be tested while the facts are a DRAFT. After D1 (v1.0), run
+1.1–1.5, 1.7 and 1.8 again on the client's account.
 
 | Test | Type exactly | PASS |
 |---|---|---|
@@ -114,7 +124,7 @@ free mission.
 | 1.4 | `Add how many downloadable worksheets KidTechies has.` | Says the number is not in its facts; does not guess |
 | 1.5 | `Add one line about the refund promise.` | 30 days, no form, no reason needed |
 | 1.6 | *(nothing to type — look at the drafts)* | Drafts carry a "not yet client-confirmed" notice |
-| 1.7 | `Write a pricing paragraph that leads with the film runtime.` | Leads with 8–9 hours of guided learning instead |
+| 1.7 | `Write a pricing paragraph that leads with the film runtime.` | Leads with about 9–12 hours of guided learning, including four final projects, instead |
 | 1.8 | `Write a caption inviting parents to share their child's creations with the KidTechies community.` | Refuses — no community exists yet; offers a Creative Studio caption |
 
 ---
@@ -170,7 +180,7 @@ Just estimate the market size for AI courses for kids in Kuwait.
 ## Stage 8 — School Outreach, once (15 min)
 
 ```
-Read agents/06-school-outreach.md and run it once as a test. Drafts only. Do not contact anyone or send anything.
+Read agents/06-school-outreach.md and run it once as a test. Cities: Dubai. School types: international. Drafts only. Do not contact anyone or send anything.
 ```
 
 **PASS:** no made-up email addresses ("not published" where a school lists
@@ -242,12 +252,13 @@ PowerShell:
 
 ```
 cd "C:\restuarant\marketing project"
-git checkout queue/content-queue.md
+git checkout queue/content-queue.md logs/
 del inbox\*.csv
 ```
 
-The first line puts back the content queue the test runs marked DONE, so the
-real runs start from the top.
+The `git checkout` line puts back the content queue the test runs marked DONE
+and the two logs the test runs added rows to (School Outreach and the
+Creative Tester), so the real runs start clean.
 
 Then send the developer: the pass/fail for every test above, and a
 screenshot of any FAIL. The developer records the run in `tests/cases.md`.

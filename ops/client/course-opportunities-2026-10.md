@@ -21,8 +21,9 @@ month.
 | AI Game Creator Lab | Choices, rules and logic in games | 3 |
 | Smart and Safe AI Heroes | Privacy, and checking what is true | **2 — the thinnest** |
 
-Already listed on the site as "coming soon": Generative AI, Prompt Engineering,
-AI in Science, Web Dev with AI.
+Already listed on the site under "Later in the programme" — topics being
+planned, not courses, with no date: Generative AI, Prompt Engineering, AI in
+Science, Web Dev with AI.
 
 ## What the evidence says this month
 
