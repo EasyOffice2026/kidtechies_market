@@ -7,6 +7,10 @@ version: 1.0
 
 # Capability verification — decision D4
 
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 The specification names this as the risk that can reshape the whole of Stage 1:
 if the client's Claude plan cannot run scheduled tasks, every cadence in the
 design needs rework. It flags the risk and then says Stage 1 "must be

@@ -2,8 +2,8 @@
 agent: 2 - Content Factory
 cadence: Monday / Wednesday / Saturday 08:00
 needs: Knowledge base + queue/content-queue.md
-output: drafts/YYYY-MM-DD/02-content-factory-<item-slug>-*.md
-version: 1.0
+output: drafts/YYYY-MM-DD/02-content-factory-<item-slug>-{article,social,email,video-hook,self-check}.md
+version: 1.1 — 2026-11-20: five named files; draft notice while facts are DRAFT
 ---
 
 # Agent 2 - Content Factory
@@ -22,15 +22,17 @@ version: 1.0
 ```
 Follow agents/shared-controls.md.
 
-Read knowledge/brand-voice.md, knowledge/product-facts.md,
-knowledge/claims-allowed.md, knowledge/audience.md and
-knowledge/child-safety-rules.md before writing anything.
+Read all five knowledge files listed in agents/shared-controls.md §1 before
+writing anything.
 
 Open queue/content-queue.md and take the TOPMOST item with status READY.
 Skip anything marked BLOCKED, DONE or HOLD. Do not invent a topic that is
 not on the queue. If no READY item exists, say so and stop.
 
-Produce one package, four files, in drafts/YYYY-MM-DD/:
+Produce one package in drafts/YYYY-MM-DD/, named as in
+agents/shared-controls.md §8: four content files (-article, -social, -email,
+-video-hook) and a fifth, -self-check, holding the self-check below. Never
+overwrite an existing file.
 
 1. ARTICLE - 800-1000 words, answer-first, aimed at the persona named in the
    queue row. Open with that parent's real question in their own words, answer
@@ -47,8 +49,9 @@ Produce one package, four files, in drafts/YYYY-MM-DD/:
    something wrong, then ask whether a child could spot why. Include the
    spoken line and a bracketed note on what is on screen.
 
-Then run the self-check below and include its results at the end of your
-summary. Finally, mark the queue item DONE with today's draft folder date,
+Then run the self-check below, write it to the -self-check file, and put its
+PASS/FAIL lines at the end of your summary. Finally, mark the queue item DONE
+with today's draft folder date,
 and give me a three-line summary: what you wrote, what you were unsure
 about, what you need from me.
 ```
@@ -65,12 +68,14 @@ SELF-CHECK - report each line as PASS or FAIL with the evidence:
 1. FACTS - list every KidTechies number you used and the line in
    product-facts.md it came from. Any number you cannot trace is a FAIL;
    remove it and say so.
-2. FACT STATUS - if any fact you used is marked PENDING, add a visible
-   note at the top of the article: "Contains facts not yet client-confirmed
-   - not for publication." If any is marked PROPOSED, you should not have
-   used it at all.
+2. FACT STATUS - while the version line of product-facts.md ends in
+   -DRAFT, EVERY file in the package starts with: "Contains facts not yet
+   client-confirmed — not for publication." After v1.0, add it to any file
+   that uses a fact not marked CONFIRMED. If any fact is marked PROPOSED,
+   you should not have used it at all.
 3. CLAIMS - check your copy against every prohibited row in
-   claims-allowed.md. Quote any line you removed and why.
+   claims-allowed.md AND every row of "Claims agents must NOT make" in
+   product-facts.md. Quote any line you removed and why.
 4. CHILD SAFETY - confirm nothing is addressed to a child, nothing requests
    any personal detail from or about a child, no fear-based hook aimed at a
    parent, no real identifiable child depicted.

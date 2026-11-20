@@ -6,6 +6,10 @@ version: 1.0
 
 # The five-day plan
 
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 KT/DEV/2026-001 schedules this as ten days (M1 Days 1–5, M2 Days 6–10). The
 extra five days are mostly client review cycles and live test runs, not
 authoring. Compressing to five works because **all artefact authoring is already

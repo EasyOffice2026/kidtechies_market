@@ -2,7 +2,7 @@
 file: handover.md
 owner: Developer -> KidTechies
 audience: The client. Written to be read once, then kept.
-date: 2026-11-13 (replaces the version of 2026-09-21)
+date: 2026-11-13 (replaces the version of 2026-09-21); updated 2026-11-20 — safe folder update, test position
 ref: KT/DEV/2026-001
 ---
 
@@ -14,7 +14,7 @@ ref: KT/DEV/2026-001
 |---|---|---|
 | **1 · Website** | kidtechies.com: the KidTechies name, pricing, parents and teachers pages, privacy wording that matches what the site does | Live since 2026-11-07 |
 | **2 · Parent email list** | Sign-up after the free mission → confirmation → printable sheet → five welcome emails → a weekly question. One-click unsubscribe | Live and tested end to end, 2026-11-07 |
-| **2 · Analytics** | Umami: visits, free-mission starts and completions, sign-ups. No cookies; the privacy page says so | Live since 2026-11-09 |
+| **2 · Analytics** | Umami: visits, free-mission starts and completions, sign-ups. No cookies; the privacy page says so | Live since 2026-11-09; all three events seen on a live run, 2026-11-20 |
 | **3 · Six AI agents** | Draft marketing work on a schedule, on your Claude account. A person approves everything; nothing publishes by itself | Built. Scheduled tasks proven on your account 2026-11-12 (D4). Safety tests 8/8 on your account, 2026-11-19 |
 
 | Deliverable | Where (marketing repository) |
@@ -41,12 +41,32 @@ these are tested, not hoped for. Start with `ops/operator-guide.md`.
 
 - The agents run in **Claude → Cowork**, in the project **kidtechies**, linked
   to the folder `D:\marketing agent\kidtechies_market-develop` on DESKTOP-2VR6VB1.
-  To update it, replace that folder with the `develop` ZIP from GitHub, keeping
-  `drafts\`; the path must not change, or the project must be re-linked.
+  The path must not change, or the project must be re-linked.
 - Scheduled tasks run only while that computer is **on and the Claude app is
   open**. An office PC that stays on is the right home.
-- Drafts land in `drafts\<date>\` in that folder. To review them from
-  anywhere, put the folder inside Google Drive for desktop.
+- Drafts land in `drafts\<date>\` in that folder, on that computer. No Google
+  Drive is used.
+
+### Updating the folder safely
+
+Five things in that folder are **your** records. The download from GitHub does
+not have your copies, so replacing the folder without them would wipe them:
+`drafts\`, `inbox\`, `logs\`, `queue\content-queue.md` and
+`ops\publishing-log.md`.
+
+1. Close the Claude app, so no task runs during the update.
+2. Copy those five out — for example into `D:\kidtechies-keep\`, keeping the
+   same sub-folders.
+3. Download the `develop` ZIP from GitHub and unzip it. Delete everything in
+   `D:\marketing agent\kidtechies_market-develop`, then put the unzipped files
+   in. Same folder, same path.
+4. Copy the five back in, replacing the downloaded copies. **Exception:** if the
+   developer says a release changed the queue or a log, the developer merges
+   that file with yours instead.
+5. Open the Claude app. In the kidtechies project, ask: *"Tell me the version
+   line of knowledge/product-facts.md."* It must match the version on GitHub.
+   If it shows the old one, the files went to a different folder — the agents
+   are still reading the old facts.
 - Your plan is **Claude Pro**. Watch usage in the first two weeks; if the
   agents hit the limit, move to a larger plan or run fewer cadences (D7).
 
@@ -54,9 +74,9 @@ these are tested, not hoped for. Start with `ops/operator-guide.md`.
 
 | When | Who | What |
 |---|---|---|
-| Every morning, ~20 minutes | Approver | Review today's drafts; post what you approve; one line in `ops/publishing-log.md` |
+| Every morning, ~20 minutes | Approver | Review today's drafts. **Until D1, review only — nothing is posted.** After D1: post what you approve; one line in `ops/publishing-log.md` |
 | Monday | Approver | Market Listener's briefing. If it proposes queue topics, add the ones you want |
-| Thursday | Developer (for now) | Weekly numbers into `inbox/` — one command, with your ad spend for the week |
+| Thursday | Developer (for now) | Weekly numbers — one command, with your ad spend for the week — copied into this folder's `inbox\` before Friday. The first real week is the first full week after go-live |
 | Friday | Approver | Funnel Analyst's six numbers and **one** recommended action |
 
 ## Test position
@@ -66,7 +86,7 @@ these are tested, not hoped for. Start with `ops/operator-guide.md`.
 | Safety (8 cases) | 8/8 in the build session; **8/8 on your account, 2026-11-18/19, no failures** | Your account |
 | Data ingestion (7 cases) | 6/6 + 1 added since; the main case (4.1) **passed on your account, 2026-11-19** | 4.2–4.7: build session — re-run on your account |
 | Approval discipline | 4/4 | Build session |
-| Scheduling | Scheduled task ran on time on your account, 2026-11-12 | Your account |
+| Scheduling | A test task ran on time on your account, 2026-11-12 (D4). Cases 5.1, 5.2 and 5.6 — the real schedule, no duplicates, a fresh session — not yet run on your account | Your account |
 | Knowledge accuracy (8 cases) | Not yet run | Needs the approved facts |
 | Website and email list | Sign-up, confirmation, welcome email, sheet, unsubscribe all passed | Live site, 2026-11-07 |
 
@@ -78,7 +98,7 @@ these are tested, not hoped for. Start with `ops/operator-guide.md`.
 |---|---|---|
 | D1 | Reply "approved" to the fact list (page 2 of `ops/client/KidTechies-Email-Review.docx`) | Anything published |
 | D14 | Name the approver, a backup, and a turnaround | Every publication |
-| — | Make the GitHub repository **private** (Settings → General → Danger Zone) | Your strategy documents are public today |
+| — | Make the GitHub repository `EasyOffice2026/kidtechies_market` **private** (Settings → General → Danger Zone) | Your strategy documents are public today |
 | D17 | Move Vercel, GitHub, Resend and Umami to accounts you own; Vercel to Pro | You deploying without the developer |
 | D6 | A native Arabic reviewer | Arabic content and the Arabic page |
 | D15 | A postal address for the email footer | Emailing US parents |

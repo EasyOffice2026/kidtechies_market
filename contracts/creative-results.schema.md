@@ -1,12 +1,15 @@
 ---
 file: creative-results.schema.md
 owner: Developer
-version: 1.0-FROZEN
+version: 1.0-FROZEN — location and append rule added 2026-11-20; fields unchanged
 ---
 
 # Record schema: creative results log
 
-One row per variant. Maintained as a Sheet/CSV in Drive.
+One row per variant. Kept in `logs/creative-results.csv` in the agent folder.
+**Append-only for agents:** Agent 5 adds new rows at the end and never edits or
+deletes one. Results and verdicts are entered by the approver. Status values are
+lowercase, exactly as below.
 
 | Field | Type | Required | Notes |
 |---|---|---|---|

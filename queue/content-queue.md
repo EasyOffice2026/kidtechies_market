@@ -9,7 +9,8 @@ last-approved: NOT YET APPROVED
 
 The Content Factory takes the **topmost item with status `READY`**, writes its
 package, then marks it `DONE` with the draft folder date. It never picks a
-`BLOCKED` or `DONE` item, and never invents a topic that is not on this list.
+`BLOCKED`, `DONE` or `HOLD` item, and never invents a topic that is not on this
+list.
 
 This is a governed file. It decides what gets written, so it carries the same
 owner/version discipline as the five knowledge files, even though KT/DEV/2026-001
@@ -26,16 +27,16 @@ lists only five. (Analysis finding F5.)
 
 | # | Item | Source | Persona | Status | Notes |
 |---|---|---|---|---|---|
-| 1 | **Your child's school starts teaching AI this term — what they'll learn, and what you can do at home** | Dossier S05 channel #1, re-angled | Vision 2030 parent | **DONE** | Written 2026-09-18 → `drafts/2026-09-18/`. **Regenerated 2026-10-17 → `drafts/2026-10-17/`** after the privacy correction; social, email and video hook unchanged. UAE-first per D5; Saudi used as context only. Article, 5 captions, nurture email, video hook, self-check. **Arabic localisation is the immediate next step** — the hook is perishable and Arabic is the priority market. |
-| 1b | AI sounds certain even when it's wrong — how to teach a nine-year-old to notice | Agent 1 briefing, 2026-09-18 | Worried screen-time parent | READY | The most-cited parent anxiety answered by the product's founding premise. Doubles as nurture email day 4. |
-| 1c | What does an AI course for children actually cost? A plain comparison | Agent 1 briefing, 2026-09-18 | Both parent personas | HOLD | Blocked on the client's price-framing decision. Every competitor price must be re-verified on the vendor's own pricing page before writing — the table in `product-facts.md` is indicative only. |
+| 1 | **Your child's school starts teaching AI this term — what they'll learn, and what you can do at home** | Dossier S05 channel #1, re-angled | Vision 2030 parent | **DONE** | Written 2026-09-18 → `drafts/2026-09-18/`. **Regenerated 2026-10-17 → `drafts/2026-10-17/`** after the privacy correction; social, email and video hook unchanged. UAE-first per D5; Saudi used as context only. Article, 5 captions, nurture email, video hook, self-check. Now evergreen parent help, not news — the September window has closed (`ops/gtm-plan.md`). Arabic waits for a native reviewer (D6); the market is worldwide (D12). Nothing is posted before D1. |
+| 1b | AI sounds certain even when it's wrong — how to teach a nine-year-old to notice | Agent 1 briefing, 2026-09-18 | Worried screen-time parent | **DONE** | Written 2026-11-16 → `drafts/2026-11-16/` on the client's account — the first Content Factory run there. The most-cited parent anxiety answered by the product's founding premise. Doubles as nurture email day 4. |
+| 1c | What does an AI course for children actually cost? A plain comparison | Agent 1 briefing, 2026-09-18 | Both parent personas | HOLD | The price decision is made (D8, 2026-10-18): $70 instead of $100, one payment; no "months of the alternatives" multiple. A comparison with **named** competitors at dated, sourced prices is allowed. Stays on HOLD until the approver releases it. Every competitor price must be re-verified on the vendor's own pricing page before writing — the table in `product-facts.md` is indicative only. |
 | 2 | The lantern that learned the way | Story Shelf | Vision 2030 parent | READY | Story Shelf SEO layer: the story, the AI idea inside it, a discussion question, a printable, internal link to the matching mission. |
 | 3 | The mirror that only knew roses | Story Shelf | Worried screen-time parent | READY | The AI idea here is training-data bias. Strong fit for the safety persona. |
 | 4 | The clockwork nightingale | Story Shelf | Vision 2030 parent | READY | |
 | 5 | The baker who sorted the starfruit | Story Shelf | Vision 2030 parent | READY | Unblocked 2026-09-18 from the live sitemap. |
 | 6 | Wren and the whispering wood | Story Shelf | Worried screen-time parent | READY | Unblocked 2026-09-18 from the live sitemap. |
 | 7 | The two guardians of the amber bridge | Story Shelf | Vision 2030 parent | READY | Unblocked 2026-09-18 from the live sitemap. |
-| 8 | How to explain AI to a 7 year old | Dossier S05 channel #2 | Vision 2030 parent | READY | Answer-first article targeting a real parent query. |
+| 8 | How to explain AI to a 7 year old | Dossier S05 channel #2 | Vision 2030 parent | READY | Answer-first article targeting a real parent query. The courses are designed for 9-12 and adaptable for 6-8 — say so; never present them as built for a 7-year-old (`product-facts.md`, age range). |
 | 9 | Is ChatGPT safe for kids | Dossier S05 channel #2 | Worried screen-time parent | READY | Highest-intent query on the list. Calm voice, no fear. |
 | 10 | What should a 10 year old know about AI | Dossier S05 channel #2 | Vision 2030 parent | READY | |
 | 11 | AI curriculum in Saudi schools - what parents are asking | Dossier S05 channel #2 | Vision 2030 parent | READY | Every ministry claim needs a primary dated source. See `claims-allowed.md`. |
@@ -49,8 +50,8 @@ lists only five. (Analysis finding F5.)
 - Reorder freely. The Factory always takes the top `READY` item.
 - Items 5-7 unblocked on 2026-09-18 — all six Story Shelf titles were recovered
   from the live sitemap, so the full SEO layer is now writable.
-- Item 1 unblocks or gets rewritten after Agent 1's first Monday briefing.
-- Item 14 (the teacher/club article) leans on printable sheets, which could not
-  be verified on the site. Confirm they exist before writing it.
+- Item 14 (the teacher/club article) leans on printable sheets. They exist —
+  one per mission, verified 2026-10-07 (D10). Keep the teacher caveat: a
+  teacher is still reviewing the quiz wording (`product-facts.md`).
 - Keep at least three `READY` items above any `BLOCKED` one so a Monday,
   Wednesday or Saturday run never stalls.

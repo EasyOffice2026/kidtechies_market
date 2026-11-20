@@ -9,7 +9,9 @@ version: 1.0-FROZEN
 **Frozen.** Same rule as the analytics contract: a renamed column is a hard
 failure, not something the agent works around.
 
-Delivered to: `Drive/kidtechies-marketing/inbox/payments-YYYY-MM-DD.csv`
+Delivered to: `inbox/payments-YYYY-MM-DD.csv` in the agent folder (on the
+client's computer, `D:\marketing agent\kidtechies_market-develop\inbox\`), with
+the same date as the analytics file
 Cadence: weekly, before Friday's run.
 
 ## Required columns
@@ -33,6 +35,9 @@ business. Fees settled in another currency are converted with Stripe's own
 exchange rate. `marketing_spend_usd` is the one number no system knows: it is
 typed in with `--spend` and `--prev-spend` and is required (`0` for a week
 with no ads), because a guessed spend becomes a wrong cost per sale.
+
+Stripe needs a **live** key; the command refuses a test key. See
+`analytics-csv.md`.
 
 ## No card data. Ever.
 
@@ -82,3 +87,7 @@ or a routine historical refund — and the agent correctly refused to guess.
 Optional, so existing exports stay valid. Supplied, it lets the analyst report a
 true refund rate. Omitted, the analyst will keep flagging the ambiguity — which
 is correct behaviour, just less useful than the answer.
+
+**Note, 2026-11-20:** `npm run marketing:weekly-export` does not write this
+column today. Expect the analyst to flag every refund week as ambiguous until it
+does.

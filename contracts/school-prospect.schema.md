@@ -1,20 +1,21 @@
 ---
 file: school-prospect.schema.md
 owner: Developer
-version: 1.1-FROZEN — revised 2026-10-17: contact_email became contact_channel after verification that Gulf schools publish forms and switchboards, not staff emails
+version: 1.2-FROZEN — revised 2026-10-17: contact_email became contact_channel after verification that Gulf schools publish forms and switchboards, not staff emails. 2026-11-20: cities from the request; any country (worldwide, D12); log location
 ---
 
 # Record schema: school prospect
 
-One row per school. Maintained as a Sheet/CSV in Drive; handed to the client at
-handover.
+One row per school. Kept in `logs/school-prospects.csv` in the agent folder.
+**Append-only for agents:** Agent 6 adds new rows at the end and never edits or
+deletes one. Status values are lowercase, exactly as below.
 
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `prospect_id` | string | yes | `SCH-0001` ascending. Never reused. |
 | `school_name` | string | yes | As the school writes it |
-| `city` | string | yes | Must be an approved target city |
-| `country` | string | yes | SA / AE / QA / KW |
+| `city` | string | yes | A city named in the request (the agent runs on request only, D12) |
+| `country` | string | yes | ISO 3166-1 alpha-2 code, e.g. `AE`, `KW`, `GB`, `US`. Any country — the market is worldwide (D12) |
 | `school_type` | enum | yes | `private` / `international` / `homeschool-coop` |
 | `contact_role` | string | no | Only if the school publishes a role inbox (e.g. "ICT department"). Blank is expected. |
 | `contact_name` | string | no | Only if the school itself publishes the person for contact. Blank is expected. |

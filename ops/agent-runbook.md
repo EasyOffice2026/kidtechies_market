@@ -1,7 +1,7 @@
 ---
 file: agent-runbook.md
 owner: Developer -> KidTechies at handover
-version: 1.0
+version: 1.1 — 2026-11-20: one schedule everywhere; review only until D1; weekly-file delivery
 ---
 
 # Agent runbook
@@ -11,24 +11,25 @@ operational reference; `operator-guide.md` is the daily one.
 
 ## At a glance
 
-| # | Agent | Cadence | Needs | Writes to |
+| # | Agent | Scheduled task | Needs | Writes to |
 |---|---|---|---|---|
-| 1 | Market Listener | Mon 07:00 | Web research | `01-market-listener-briefing.md` |
-| 2 | Content Factory | Mon/Wed/Sat 08:00 | Knowledge base + queue | `02-content-factory-*.md` (4 files) |
-| 3 | Arabic Localiser | On demand | Approved English asset | `03-arabic-*.md` |
-| 4 | Funnel Analyst | Fri | Two CSVs in `inbox/`, written Thursday by `npm run marketing:weekly-export` | `04-funnel-analyst-week-of-*.md` |
-| 5 | Creative Tester | Fortnightly — idle until ads run (D16) | Results log | `05-creative-tester-round-N.md` |
-| 6 | School Outreach | **Paused (D12)** — on request only | Web research + prospect log | `06-school-outreach-batch-N.md` |
+| 1 | Market Listener | **KT 1** — Mon 07:00 | Web research | `01-market-listener-briefing.md` |
+| 2 | Content Factory | **KT 2** — Mon/Wed/Sat 08:00 | Knowledge base + queue | `02-content-factory-<item>-*.md` (5 files, incl. `-self-check`) |
+| 3 | Arabic Localiser | Not scheduled — on request, after D1 and D6 | Approved English asset (`approved-by:` first line) | `03-arabic-localiser-<item>.md` |
+| 4 | Funnel Analyst | **KT 4** — Fri 09:00 | Two CSVs in `inbox/`, written Thursday by `npm run marketing:weekly-export` | `04-funnel-analyst-week-of-*.md` |
+| 5 | Creative Tester | **KT 5** — fortnightly, created only once D16 says to run an ad test | Results log | `05-creative-tester-round-N.md` |
+| 6 | School Outreach | Not scheduled — **paused (D12)**, on request only | Web research + prospect log | `06-school-outreach-batch-N.md` |
 
-All paths are under `drafts/YYYY-MM-DD/`.
+All paths are under `drafts/YYYY-MM-DD/`. So the client's account has **three**
+scheduled tasks today (KT 1, 2, 4), and four once D16 says test.
 
 ## The week, for the people around the agents
 
 | When | Who | What |
 |---|---|---|
-| Daily, before 10:00 | Approver (D14) | Review today's drafts. Approve, edit or reject. Post what was approved and add a line to `ops/publishing-log.md` |
+| Daily, before 10:00 | Approver (D14) | Review today's drafts. Approve, edit or reject. **Until D1, review only — nothing is posted.** After D1, post what was approved and add a line to `ops/publishing-log.md` |
 | Monday | Approver | Read the Market Listener's **queue check**. Below 6 READY items, add the proposals you accept to `queue/content-queue.md` — the agent proposes, it never edits the queue |
-| Thursday | Developer, or whoever holds the product repo | `npm run marketing:weekly-export -- --prev-spend <last week> --spend <this week> --out "<this folder>\inbox"` — on Umami's free plan, add the four Umami numbers from the dashboard (see `contracts/analytics-csv.md`); ad spend from the approver |
+| Thursday | Developer, or whoever holds the product repo | 1. `npm run marketing:weekly-export -- --prev-spend <last week> --spend <this week> --out "<a local folder>\inbox"` — on Umami's free plan, add the four Umami numbers from the dashboard (see `contracts/analytics-csv.md`); ad spend from the approver; a **live** Stripe key. 2. If a country file is wanted, type it up from Umami (`contracts/analytics-by-country.csv.md`). 3. **Copy the files into the client's `D:\marketing agent\kidtechies_market-develop\inbox\` before Friday 09:00.** The first real week is the first full week after go-live |
 | Friday | Approver | Read the Funnel Analyst's one recommendation and decide whether to act on it |
 
 The computer that runs the scheduled agents must be **on, with the Claude
@@ -68,14 +69,17 @@ scheduler:
 | Day | Paste |
 |---|---|
 | Mon | `01-market-listener.md`, then `02-content-factory.md` |
-| Tue | `06-school-outreach.md` |
 | Wed | `02-content-factory.md` |
 | Fri | `04-funnel-analyst.md` |
 | Sat | `02-content-factory.md` |
-| Alt. Mon | `05-creative-tester.md` |
+| Alt. Mon | `05-creative-tester.md` — only once D16 says to run an ad test |
+
+Agents 3 and 6 run only on request, in either mode. (D4 closed on
+2026-11-12: the client's plan does run scheduled tasks, so this is the
+fallback, not the plan.)
 
 Cost: roughly five minutes a day of copy-paste. Everything else — knowledge
-base, self-checks, Drive delivery, approval discipline — is unchanged, because
+base, self-checks, the agent folder, approval discipline — is unchanged, because
 none of it depends on the scheduler. Nothing about Stage 2 changes either.
 
 This is also why the prompts live in version-controlled Markdown rather than

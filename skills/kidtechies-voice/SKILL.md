@@ -31,7 +31,7 @@ marketing.
 4. Short sentences carry the weight.
 5. Never use fear - not of falling behind, not of technology, not of other
    parents.
-6. One brand: **KidTechies**. "AI for kids" is a descriptor, never a second
+6. One brand: **KidTechies**. "AI for Kids" is the tagline, never a second
    name.
 
 ## Prefer / over
@@ -59,6 +59,14 @@ marketing.
   curricula as *context* is fine. Implying KidTechies is part of, approved by or
   aligned to them is not. This one gets got wrong most often.
 - **Any privacy claim** not currently true in `product-facts.md`.
+- **"No account", "no sign-up", "no email address" said about the product.**
+  Buying needs a parent account. Scope it: "no account needed to try the
+  first mission."
+- **Planned features as if they exist** - community sharing, levels, video
+  lessons, a subscription, the "Later in the programme" topics. Describe only
+  what `product-facts.md` lists.
+- **"Less than three months of the alternatives"** or any month-multiple
+  against competitors. Retired by the client (D8).
 - **The refund promise, stretched.** It is live and may be stated exactly as
   `product-facts.md` words it - 30 days, no form, no reason needed. Never
   longer, never "money-back guarantee", never "risk-free".

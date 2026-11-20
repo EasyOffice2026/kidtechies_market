@@ -1,7 +1,7 @@
 ---
 file: analytics-by-country.csv.md
 owner: Developer (schema) / Ibrahim (supplies the export)
-version: 1.0-FROZEN
+version: 1.0-FROZEN — source and delivery corrected 2026-11-20 (Umami, agent folder); columns unchanged
 created: 2026-10-18
 ---
 
@@ -11,10 +11,25 @@ created: 2026-10-18
 analyst adds a "where it is working" section — the measurement behind the
 client's decision to concentrate on the countries that respond best (D12).
 
-Delivered to: `Drive/kidtechies-marketing/inbox/analytics-by-country-YYYY-MM-DD.csv`
-Source: Plausible → the site dashboard → **Locations / Countries**, filtered to
-the week, with the goals `mission_start` and `mission_complete`. Plausible
-derives country without cookies and without storing the visitor's IP address.
+Delivered to: `inbox/analytics-by-country-YYYY-MM-DD.csv` in the agent folder
+(on the client's computer, `D:\marketing agent\kidtechies_market-develop\inbox\`),
+with the same date as that week's analytics file, before Friday's run.
+
+Source: **Umami Cloud, typed by hand.** `npm run marketing:weekly-export` does
+**not** produce this file. Umami's free plan has no API, so the numbers are read
+off the dashboard:
+
+- Settings → Preferences → **Timezone: UTC** (once), so the week matches the
+  other files.
+- Date range: custom, **Monday to Sunday** of the reporting week.
+- `visitors`: the **Countries** panel, visitors per country.
+- `mission_1_starts` / `mission_1_completions`: **Events** → `mission_start`
+  (then `mission_complete`), property `mission` =
+  `ai-detective-academy/picture-clue-patrol`, with a **Country** filter set to
+  each country in turn.
+
+Umami works out the country without cookies and does not keep the visitor's
+IP address.
 
 ## Columns
 

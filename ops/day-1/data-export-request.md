@@ -1,5 +1,9 @@
 # What we need from your analytics and payment tools
 
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 **To:** The Management, KidTechies
 **From:** Senior Developer · ref KT/DEV/2026-001
 **Date:** _____________

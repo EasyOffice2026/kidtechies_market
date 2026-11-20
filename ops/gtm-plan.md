@@ -3,7 +3,7 @@ file: gtm-plan.md
 owner: Ibrahim (client decision D9, 2026-10-18)
 version: 1.1
 created: 2026-10-06
-revised: 2026-10-18 — client decisions
+revised: 2026-10-18 — client decisions; 2026-11-20 — analytics status, decisions point to the decision log
 ---
 
 # GTM plan — KidTechies, 120 days, four phases
@@ -14,7 +14,7 @@ The client answered the open questions. Five change this plan:
 
 | Decision | What changes here |
 |---|---|
-| **Market: worldwide online registration**, concentrating on the countries that respond best (D12) | No longer Gulf-first. Phase 2's paid lab tests several countries, and Plausible's country breakdown — read weekly by the Funnel Analyst — decides where Phase 3's money goes. |
+| **Market: worldwide online registration**, concentrating on the countries that respond best (D12) | No longer Gulf-first. Phase 2's paid lab tests several countries, and Umami's country breakdown — typed into a weekly file and read by the Funnel Analyst — decides where Phase 3's money goes. |
 | **School outreach is not the focus** (follows from D12) | Removed from Phase 2. The teacher page stays live for schools that arrive on their own; Agent 6 runs on request only. |
 | **Ibrahim owns the plan day to day** (D9) | This document now has an owner. |
 | **Keep the $70-instead-of-$100 discount** (D8) | Pillar 4 is testable again, as a discount. |
@@ -71,7 +71,7 @@ Running ads before this is paying to fill a bucket with no bottom.
 | 5 | **Move the refund promise** from the terms page to the pricing page | Content | ½ day |
 | 6 | Trust furniture: founder name and photo, company location, contact email | Client decision | 1 day |
 | 7 | One brand name in title and footer — KidTechies | Client decision | 1 hour |
-| 8 | Teacher / school page: no student accounts, no data collected | Content | 2 days |
+| 8 | Teacher / school page: no student accounts, nothing about any student stored on our servers | Content | 2 days |
 | 9 | Arabic landing page | Content | 2 days |
 | 10 | Six-email nurture sequence written and scheduled | Marketing | 3 days |
 | 11 | 20 families given the bundle free for honest feedback; publish the best three | Marketing | ongoing |
@@ -151,7 +151,7 @@ problem it names.**
 > "Day 91 arrives, the list is built, and there is nothing left to sell them."
 
 By here the list exists and acquisition works. The ceiling is now lifetime
-value, and every pound of acquisition spend is capped by it.
+value, and every dollar of acquisition spend is capped by it.
 
 | Workstream | Detail |
 |---|---|
@@ -183,7 +183,9 @@ quality and execution — not on the agent system.
 Visitors · free-mission starts · free-mission completions · emails captured ·
 sales · cost per sale.
 
-Agent 4 produces these automatically once the Phase 1 analytics events exist.
+Agent 4 produces these every Friday from the weekly files. The analytics events
+are live and were all seen on a live run on 2026-11-20; the first real report
+is the first full week after go-live.
 Completion rate is the one to watch: if children do not finish Mission 1, no
 amount of traffic saves the funnel and the problem is the product.
 
@@ -195,8 +197,8 @@ amount of traffic saves the funnel and the problem is the product.
 | Gulf curriculum hook is the strongest free play | **Live, but it was the UAE, not Saudi** — and the September window has largely closed. See below. |
 | No refund promise on the site | **It exists**, buried on `/terms` |
 | Three equal age bands | **9–12, adaptable either side** |
-| Site has no analytics | Still true — and two events still missing |
-| 45 indexable pages | 43, all sharing one `lastmod` date |
+| Site has no analytics | **Fixed:** Umami, cookieless, live 2026-11-09; all three events seen 2026-11-20 |
+| 45 indexable pages | 43, all sharing one `lastmod` date (41 on 2026-11-20) |
 
 ### On the curriculum hook
 
@@ -209,16 +211,8 @@ it is no longer a news pitch to Gulf parenting media. **Do not plan Phase 2
 around press pickup for it.** The next live window is the mid-year term and exam
 cycle; Agent 1 will surface it.
 
-## Open decisions blocking Phase 1 — as of 2026-10-18
+## Open decisions
 
-| # | Decision | Blocks |
-|---|---|---|
-| D1 | One "approved" on the product fact list | All published copy |
-| D4 | Does the client's Claude account run scheduled tasks? | The agents running on their own |
-| D14 | Who approves content — Ibrahim? | Every publication |
-| D15 | Office postal address for email footers | Newsletter sends to the US |
-| D6 | Native Arabic reviewer | The Arabic landing page (lower priority now) |
-
-Closed on 2026-10-18: price framing, who owns this plan (Ibrahim), the target
-market (worldwide online), whether printable sheets exist (yes), and school
-targeting (not the focus).
+The live list is `ops/decision-log.md` — this plan no longer keeps its own
+copy, so the two cannot disagree. (The copy that stood here on 2026-10-18 still
+listed D4, closed on 2026-11-12.)

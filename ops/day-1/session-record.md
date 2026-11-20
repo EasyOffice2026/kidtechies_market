@@ -6,6 +6,10 @@ version: 1.0 — TEMPLATE, fill during or immediately after the session
 
 # Day 1 session record
 
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 **Date:** _____________
 **Attending:** _____________
 **Developer:** _____________

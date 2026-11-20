@@ -1,7 +1,7 @@
 ---
 agent: 1 - Market Listener
 cadence: Weekly, Monday 07:00 (course-opportunity section on the first Monday of each month)
-revised: 2026-10-18 — worldwide scope (D12) and monthly course research (D13)
+revised: 2026-10-18 — worldwide scope (D12) and monthly course research (D13); 2026-11-20 — reads all five knowledge files
 needs: Web research
 output: drafts/YYYY-MM-DD/01-market-listener-briefing.md
 version: 1.0
@@ -23,8 +23,7 @@ version: 1.0
 ```
 Follow agents/shared-controls.md.
 
-Read knowledge/brand-voice.md, knowledge/product-facts.md and
-knowledge/audience.md from the kidtechies-marketing folder first.
+Read all five knowledge files listed in agents/shared-controls.md §1 first.
 
 Then research and report on the past 7 days:
 
@@ -44,8 +43,8 @@ On the FIRST MONDAY OF EACH MONTH, add a fourth section:
    learn about AI that KidTechies does not yet teach. Evidence only: what
    national AI curricula cover, what parents ask, what competitors have
    launched, what is in the news. Map each idea against the four existing
-   courses and the "coming soon" list in the catalogue (Generative AI,
-   Prompt Engineering, AI in Science, Web Dev with AI). Rank at most three,
+   courses and the "Later in the programme" row in product-facts.md (topics
+   the site lists as planned, not courses). Rank at most three,
    each with the evidence, the age band it suits, and whether it extends an
    existing course or needs a new one. If the month produced nothing new,
    say so.

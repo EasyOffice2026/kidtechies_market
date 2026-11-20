@@ -5,7 +5,8 @@ Implementation of `docs/KidTechies-AI-Marketing-Agent-Senior-Development-Plan.do
 `docs/KidTechies-Growth-Dossier.docx`.
 
 Stage 1 is **no-code**: Claude scheduled tasks, a governed Markdown knowledge
-base, Google Drive delivery, and human approval before anything is published.
+base, an agent folder on the client's computer (no Google Drive), and human
+approval before anything is published.
 This repository is the version-control mechanism for the knowledge base and the
 agent prompts - the thing the spec's change-control policy (S3.1) requires but
 does not otherwise provide.
@@ -29,19 +30,26 @@ No agent in Stage 1 has publishing authority. Not one.
 | `contracts/` | CSV and record schemas the agents depend on | Frozen; change = change request |
 | `tests/` | Test cases and fixtures for the S9.1 test classes | Developer |
 | `ops/` | Operator guide, agent runbook, checklists, decision log | Developer -> client at handover |
-| `drafts/` | `YYYY-MM-DD/` agent output. Git-ignored; mirrors Drive. | Agents write, founder approves |
+| `drafts/` | `YYYY-MM-DD/` agent output. Git-ignored; the real drafts live in the agent folder on the client's computer (`D:\marketing agent\kidtechies_market-develop`). | Agents write, the approver approves |
+| `inbox/` | The weekly CSV files for the Funnel Analyst. Git-ignored. | Copied in each Thursday |
+| `logs/` | Creative results and school prospects. Agents append rows only. | Agents append; the approver updates results |
 
 ## Non-negotiables
 
 1. `knowledge/product-facts.md` is the **only** source of product numbers.
    Not the live site - see `knowledge/site-discrepancy-log.md` for why.
 2. Every knowledge file carries owner / version / last-approved in its header.
-   A file with `AWAITING CLIENT CONFIRMATION` facts is not yet fit for
-   parent-facing output.
+   A file marked `AWAITING CLIENT APPROVAL`, or a version ending in `-DRAFT`,
+   is not yet fit for parent-facing output.
 3. Agents never publish. They write to `drafts/YYYY-MM-DD/`.
 4. Missing source, missing CSV column, missing fact -> the agent says so and
    stops. It does not guess.
 
-## Five-day build schedule
+"The founder" in these files means the approver — Ibrahim, until the client
+names one (D14).
 
-See `ops/five-day-plan.md`.
+## Where to start
+
+`ops/handover.md` for the current state; `ops/operator-guide.md` for the daily
+routine. The original five-day build schedule (`ops/five-day-plan.md`) is a
+historical record.

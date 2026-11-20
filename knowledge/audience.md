@@ -1,7 +1,7 @@
 ---
 file: audience.md
 owner: KidTechies (client)
-version: 0.1-DRAFT
+version: 0.8.2-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL
 ---
@@ -29,6 +29,12 @@ private or international school. Their child's school has started teaching AI -
 Saudi rolled a national AI curriculum into public education from the 2025-26
 year, and the UAE has made AI compulsory from kindergarten. They feel a gap they
 cannot fill themselves.
+
+*Context for the writer, not a fact to print. Any draft that states what a
+ministry or school system has done needs a primary, dated source checked in the
+same run (`claims-allowed.md`, evidence-required). As checked on 2026-09-18
+(D5): the UAE subject runs from the 2026-27 term, KG–G12; Saudi's rollout began
+in 2025-26.*
 
 **In their own words:**
 > "The school sent a letter about AI classes. I don't know enough to help him
@@ -67,9 +73,11 @@ once.
 > "Is there anything I can run in a 40-minute club with no devices for half the
 > room?"
 
-**What they need to hear first:** no student accounts, no data collected,
-classroom-ready, printables for the half of the room without a device. This is
-also exactly what a school data-protection officer needs to hear.
+**What they need to hear first:** no student accounts, nothing about any student
+stored on our servers, printables for the half of the room without a device —
+and, honestly, a teacher is still reviewing the quiz wording (see the
+build-status caveats in `product-facts.md`). This is also exactly what a school
+data-protection officer needs to hear.
 
 **Treat every teacher as a channel, not a customer.**
 
@@ -81,7 +89,7 @@ also exactly what a school data-protection officer needs to hear.
 | 2 | Nothing about your child is stored on our servers | Progress stays in the browser, for everyone. Children never sign in; the only account is the parent's, to buy courses. No advertising, and no cookies used for tracking — visits are counted with a cookieless tool that identifies no one. ⚠ *History: the original pillar, "Nothing about your child leaves the device", was false — Sparky messages go to Anthropic. The 2026-10-07 rewrite ("your child is a nickname") was also false — no child data is stored at all. This wording is verified against what the code writes, 2026-10-17. Keep the pillar number; Agent 5 and the paid tests share it.* |
 | 3 | Try it in ten seconds, free | Mission 1 opens with no signup, no card. |
 | 4 | All four for $70 — buy once, keep it | $70 instead of $100 for all four courses (client's discount model, 2026-10-18), one payment, no subscription, nothing to cancel, 30-day refund. The "three months of the alternatives" framing is retired. See `claims-allowed.md`. |
-| 5 | Made like a film, not a lecture | 14 hand-animated missions, Maya, Pip and Glitch, six original fairy tales, printables for screen-free days. |
+| 5 | Made like a film, not a lecture | 14 animated missions, Maya, Pip and Glitch, six original fairy tales, printables for screen-free days. |
 
 Ranks 1-5 are also the five message pillars the Creative Tester varies and the
 paid message-lab tests. Keep the numbering stable across all three uses.

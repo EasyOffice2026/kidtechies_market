@@ -97,7 +97,7 @@ using it.
 
 ## What happens next
 
-- A new brief arrives on the first Monday of each month (the next is 2 November).
+- A new brief arrives on the first Monday of each month (next: 7 December).
 - To start building recommendation 1, we need about a page of mission outlines
   for you to approve. We can draft that as soon as you want it.
 - Building new missions — film, activities, quiz — is product work, separate

@@ -1,8 +1,8 @@
 ---
 file: site-discrepancy-log.md
 owner: Developer (maintains) / Client (resolves)
-version: 0.2
-last-verified: 2026-09-18 against kidtechies.com
+version: 0.8.2-DRAFT
+last-verified: 2026-09-18 against kidtechies.com; statuses updated 2026-11-20 against www.kidtechies.com
 ---
 
 # Site discrepancy log
@@ -36,42 +36,40 @@ never a substitute for looking.
 
 | # | Site says | product-facts.md says | Resolution | Status |
 |---|---|---|---|---|
-| 1 | Pricing page shows "23:48 of animated film" **and** "around 8-9 hours of guided learning" | Lead with 8-9 hours; runtime is a craft detail placed lower | The hours claim is already there - the fix is **which one leads**, not adding one. Smaller job than the dossier implies. | OPEN - revised |
-| 2 | "AI for Kids" in the page title **and** footer | KidTechies is the brand; "AI for kids" is a descriptor only | Confirmed exactly as the dossier describes. Client decision D3, then site correction. | OPEN |
-| 3 | `/for-parents` carries: films have no subtitles, illustrations are placeholders, a teacher is still reviewing quiz wording | True; must not be contradicted | Move to a dated "What we're building next" page. **Until then, agents may not claim classroom-readiness unqualified** - a school will notice. | OPEN |
-| 4 | No founder name, no company legal name, no location, no contact address anywhere | Recorded as MISSING | Highest-priority trust fix. See row 9. | OPEN |
+| 1 | Pricing page shows "23:48 of animated film" **and** "around 8-9 hours of guided learning" | Lead with 8-9 hours; runtime is a craft detail placed lower | The hours claim is already there - the fix is **which one leads**, not adding one. Smaller job than the dossier implies. | RESOLVED - `/pricing` leads with hours, live, checked 2026-11-13 |
+| 2 | "AI for Kids" in the page title **and** footer | KidTechies is the brand; "AI for Kids" is the tagline | Confirmed exactly as the dossier describes. Client decision D3, then site correction. | RESOLVED - D3, 2026-10-18; site live 2026-11-07. The logo artwork still reads "AI for Kids" (design task) |
+| 3 | `/for-parents` carries: films have no subtitles, illustrations are placeholders, a teacher is still reviewing quiz wording | True; must not be contradicted | The developer decided on 2026-10-17 to keep them on `/for-parents`, an honesty page, rather than move them. **Agents may not claim classroom-readiness unqualified** - a school will notice. | OPEN - by design, until the review and subtitles are done |
+| 4 | No founder name, no company legal name, no location, no contact address anywhere | Recorded as MISSING | Highest-priority trust fix. | RESOLVED - Easy Office International, Kuwait, contact@easyofficeq8.com, on the footer, terms and about page since 2026-11-07. Founder name not needed (client, 2026-10-18) |
 | 5 | No testimonials | No testimonial may appear in any draft until three real quotes are on file | Give 20 families the bundle free for honest feedback (dossier S06 Phase 1) | OPEN |
 | 6 | Sitemap: every URL carries an identical lastmod (`2026-09-03T17:52:02.596Z`) and a blanket "monthly" changefreq | n/a | Confirmed exactly. Also tells us the site has not changed since the dossier was written. SEO hygiene, outside this engagement. | NOTED |
 
 ## Corrections - the dossier was wrong
 
-| # | # | Finding | Effect |
+| # | Finding | Effect | Status |
 |---|---|---|---|
-| 7 | **The 30-day refund promise exists.** `/terms`: *"If the course is not right for your child, ask for a refund within 30 days and you will get one."* | The dossier says the site has no visible refund promise, and we had marked it PROPOSED - forbidden to state. **It is real.** Agents may state it now. The site job is to *move* it to `/pricing`, not to write one. | RESOLVED - fact promoted |
-| 8 | **Sitemap has 43 URLs, not 45.** | Trivial in itself; matters because it shows dossier figures need checking, not copying. | NOTED |
+| 7 | **The 30-day refund promise exists.** `/terms`: *"If the course is not right for your child, ask for a refund within 30 days and you will get one."* | The dossier says the site has no visible refund promise, and we had marked it PROPOSED - forbidden to state. **It is real.** Agents may state it now. The site job is to *move* it to `/pricing`, not to write one. | RESOLVED - fact promoted; beside the price on `/pricing` since 2026-11-13 |
+| 8 | **Sitemap has 43 URLs, not 45.** | Trivial in itself; matters because it shows dossier figures need checking, not copying. | NOTED - 41 on 2026-11-20 |
 | 9 | **Age structure is not three bands.** Site: *"ages 9-12, adaptable for 6-8 and 13-16."* Dossier presents `6-8 · 9-12 · 13-16` as equal bands. | **Material.** A parent of a 7-year-old sold "a course for their age" who finds 9-12 material adapted down has been misled. Copy must say "designed for 9-12, adaptable for younger and older." | RESOLVED - fact corrected |
-| 10 | **Bundle carries a $100 anchor**, struck through, "Save $30 / 30% off". | Not mentioned in the dossier anywhere. Changes the pricing conversation: the page already discounts, so "less than three months of the alternatives, forever" now sits beside a countdown-style saving. Client should decide whether the anchor stays. | OPEN - client decision |
-| 11 | **Mission distribution is 5 / 4 / 3 / 2.** | "Smart and Safe AI Heroes" - the course the dossier says the worried screen-time parent buys *first* - is the thinnest, at two missions. The entry point for ~25% of the market is the least built-out course. | OPEN - client decision |
+| 10 | **Bundle carries a $100 anchor**, struck through, "Save $30 / 30% off". | Not mentioned in the dossier anywhere. Changes the pricing conversation: the page already discounts, so "less than three months of the alternatives, forever" now sits beside a countdown-style saving. Client should decide whether the anchor stays. | RESOLVED - D8, 2026-10-18: the anchor stays; "three months" retired |
+| 11 | **Mission distribution is 5 / 4 / 3 / 2.** | "Smart and Safe AI Heroes" - the course the dossier says the worried screen-time parent buys *first* - is the thinnest, at two missions. The entry point for ~25% of the market is the least built-out course. | OPEN - client decision (GTM plan, Phase 4) |
+| 12 | **Home page: the Creative Studio "Create art, music, stories, and more with the power of AI."** Found 2026-11-20. | The Studio's own tools say otherwise: Art Prompter makes "a written description, not a picture"; Music Maker makes "a plan in words … It does not play sound." Agents describe the Studio by what it does (`product-facts.md`, "Free without an account"). The home-page line should change. | OPEN - site copy |
 
-## Could not verify
+## Could not verify on 2026-09-18 — all since resolved
 
-Not found on any page checked. Still `PENDING` in `product-facts.md`, so agents
-cannot use them:
+Not found on any page checked on 2026-09-18. Every one has since been verified
+in the code or on the site, so none is blocked:
 
-| Fact | Note |
-|---|---|
-| 28 activities | Plausible as 14 missions x 2, but not stated |
-| 70 quiz questions | Plausible as 14 x 5, but not stated |
-| Printable certificate | Not found |
-| Printable activity sheets | Not found - though the teacher persona's whole pitch depends on them |
-| Maya, Pip and Glitch | Not found on the pages checked |
-| Free-tier boundary | Which mission, which stories |
+| Fact | Then | Now |
+|---|---|---|
+| 28 activities | Plausible as 14 missions x 2, but not stated | VERIFIED 2026-10-17 — stated on `/pricing` |
+| 70 quiz questions | Plausible as 14 x 5, but not stated | VERIFIED 2026-10-17 — on `/pricing`; counted 25/20/15/10 in the course data |
+| Printable certificate | Not found | VERIFIED 2026-10-17 — live at `/certificate` |
+| Printable activity sheets | Not found - though the teacher persona's whole pitch depends on them | VERIFIED 2026-10-07 — one per mission (D10) |
+| Maya, Pip and Glitch | Not found on the pages checked | CODE-VERIFIED 2026-10-17 |
+| Free-tier boundary | Which mission, which stories | CONFIRMED 2026-10-18 — Mission 1 and all six tales |
 
-The printables are the one to chase. The dossier's teacher/homeschool
-multiplier - 15% of effort, and the persona that reaches 30 families at a time -
-is sold almost entirely on "printable sheets solve their offline problem." If
-they do not exist, Agent 6's outreach premise needs rethinking before the first
-batch goes out.
+The printables were the one to chase, because the teacher persona is sold on
+them. They exist.
 
 ## How to use this log
 

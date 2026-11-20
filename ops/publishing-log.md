@@ -21,7 +21,8 @@ but not yet posted is not logged.
 How to fill it in:
 
 - **Draft file** — the path under `drafts/`, e.g.
-  `drafts/2026-11-17/02-content-factory-uae-curriculum-captions.md`.
+  `drafts/2026-11-23/02-content-factory-lantern-tale-social.md` (names as in
+  `agents/shared-controls.md` §8).
 - **Knowledge version** — the `version:` line of `knowledge/product-facts.md`
   on the day it was approved. If a fact later turns out wrong, this shows
   which posts used it.

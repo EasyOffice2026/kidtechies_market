@@ -1,7 +1,7 @@
 ---
 file: child-safety-rules.md
 owner: KidTechies (client) + nominated legal/privacy owner
-version: 0.1-DRAFT
+version: 0.4-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL
 ---

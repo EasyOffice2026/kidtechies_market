@@ -10,7 +10,8 @@ version: 1.0-FROZEN
 Analyst fails loudly on a missing or renamed column rather than guessing - that
 is the designed behaviour, and it is why the contract is frozen.
 
-Delivered to: `Drive/kidtechies-marketing/inbox/analytics-YYYY-MM-DD.csv`
+Delivered to: `inbox/analytics-YYYY-MM-DD.csv` in the agent folder (on the
+client's computer, `D:\marketing agent\kidtechies_market-develop\inbox\`)
 Cadence: weekly, before Friday's run.
 Source: Umami Cloud (live since 2026-11-09) and the product database — produced by
 `npm run marketing:weekly-export` in the product repository. See below.
@@ -53,7 +54,8 @@ checked byte for byte against `tests/fixtures/analytics-sample.csv` by
 `npm run check:weekly-export`.
 
 Live acceptance of the Funnel Analyst (Part 3 exit criterion) is the first
-Friday it runs on this file.
+Friday it runs on this file with real visitors — the first full week after
+go-live. Until then every visit is the team's own testing.
 
 ### On Umami's free plan (the plan in use, 2026-11-15)
 
@@ -62,8 +64,19 @@ dashboard and typed in, each as `last week,this week`. `emails_captured`
 and the payment file stay automatic; `UMAMI_API_KEY` is not needed.
 
 ```
-npm run marketing:weekly-export -- --visitors 40,52 --starts 9,11 --completions 6,8 --pricing-views 3,4 --prev-spend 0 --spend 0 --out "<marketing folder>inbox"
+npm run marketing:weekly-export -- --visitors 40,52 --starts 9,11 --completions 6,8 --pricing-views 3,4 --prev-spend 0 --spend 0 --out "<marketing folder>\inbox"
 ```
+
+**`STRIPE_SECRET_KEY` must be a live key.** The command refuses a test key
+(`sk_test_…`), because test orders would look like real sales. Use a live
+restricted key with read access to charges, refunds and balance (`rk_live_…`),
+set for that run only. `.env.local` holds a test key today. `--analytics-only`
+writes the analytics file alone — but the Funnel Analyst stops without the
+payments file, so it is for checking, not for Friday.
+
+The command writes to a folder on the computer that runs it. If that is not the
+client's computer, copy both files into the client's `inbox\` before Friday's
+run.
 
 Once: Umami → Settings → Preferences → **Timezone: UTC**, so the dashboard's
 weeks match the file's. Then, for each week (Monday to Sunday, custom range):

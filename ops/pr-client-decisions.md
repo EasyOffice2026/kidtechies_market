@@ -5,6 +5,10 @@ created: 2026-10-18
 
 # PR: `feature/client-decisions` → `main`
 
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 Stacked on `feature/part-1-website`. Merge that one first (see
 `pr-part-1-2.md`); this PR then shows only its own four commits.
 

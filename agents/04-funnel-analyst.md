@@ -1,9 +1,9 @@
 ---
 agent: 4 - Funnel Analyst
-cadence: Weekly, Friday
+cadence: Weekly, Friday 09:00
 needs: contracts/analytics-csv.md + contracts/payment-csv.md exports
 output: drafts/YYYY-MM-DD/04-funnel-analyst-week-of-YYYY-MM-DD.md
-version: 1.0
+version: 1.1 — 2026-11-20: inbox in the agent folder; which files to read; status
 ---
 
 # Agent 4 - Funnel Analyst
@@ -17,17 +17,21 @@ version: 1.0
 | Output | Week-on-week comparison and **exactly one** recommended action |
 | Acceptance rule | Reproduces visitors, starts, completions, emails, sales and cost/sale correctly from the supplied exports |
 
-## Acceptance status - decision D2
+## Acceptance status — 2026-11-20
 
-Two of the six metrics depend on site work that is **outside this engagement**:
-`mission_1_starts` / `mission_1_completions` need custom analytics events, and
-`emails_captured` needs the parent email capture from dossier S04 change #1.
+Every input now exists. Email capture is live (2026-11-07). Umami is live
+(2026-11-09), and all three events — `mission_start`, `mission_complete`,
+`email_captured` — were seen on a live run on 2026-11-20.
 
-Until those exist, this agent is accepted against
-`tests/fixtures/analytics-sample.csv` and `payments-sample.csv` - correct
-arithmetic on a known-good fixture, plus correct failure behaviour on the four
-broken fixtures. Live acceptance is deferred and recorded as outstanding in the
-handover. See `contracts/analytics-csv.md`.
+On test files: case 4.1 (`tests/fixtures/analytics-sample.csv` +
+`payments-sample.csv`) and case 2.8 passed on the client's account on
+2026-11-19. Cases 4.2–4.7 — the missing column, zero orders, malformed values,
+empty week, mismatched weeks and the country file — still need a run there.
+
+Live acceptance is the first real weekly report: the first full week after
+go-live, because every visit so far is the team's own testing. The payments
+file needs a **live** Stripe key; the export refuses a test key. See
+`contracts/analytics-csv.md`.
 
 ## Prompt
 
@@ -35,7 +39,11 @@ handover. See `contracts/analytics-csv.md`.
 Follow agents/shared-controls.md.
 
 Read contracts/analytics-csv.md and contracts/payment-csv.md first. These
-schemas are frozen. Then read this week's two exports from the Drive inbox.
+schemas are frozen. Then open the folder inbox/ in this project folder. Use
+the newest analytics-YYYY-MM-DD.csv and the payments-YYYY-MM-DD.csv with the
+SAME date. If either is missing, or the dates differ, stop and say which file
+you could not find. (In a test, the operator may name fixture files instead;
+use exactly the files named.)
 
 BEFORE CALCULATING ANYTHING, validate the inputs:
 - Every required column present, named exactly as the contract specifies.
@@ -65,8 +73,9 @@ If validation passes, produce:
    everything. If children are not finishing Mission 1, the problem is the
    product, not the marketing, and no amount of traffic fixes it.
 
-3. WHERE IT IS WORKING - only if this week's by-country export is in the
-   inbox (contracts/analytics-by-country.csv). The client is choosing which
+3. WHERE IT IS WORKING - only if this week's by-country file
+   (analytics-by-country-YYYY-MM-DD.csv, same date) is in inbox/
+   (contracts/analytics-by-country.csv.md). The client is choosing which
    countries to concentrate on by measured response (decision D12), and
    this is the measurement. For each country with at least 30 visitors:
    visitors, mission starts, completions, and completion rate. Name the top

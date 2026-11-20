@@ -1,3 +1,7 @@
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 ## What this does
 
 The merged site can go live before the mailing-list migration

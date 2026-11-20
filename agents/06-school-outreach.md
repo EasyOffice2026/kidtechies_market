@@ -1,9 +1,9 @@
 ---
 agent: 6 - School Outreach
 cadence: PAUSED — run on request only (client decision D12, 2026-10-18)
-needs: Web research + contracts/school-prospect.schema.md
+needs: Web research + contracts/school-prospect.schema.md + logs/school-prospects.csv
 output: drafts/YYYY-MM-DD/06-school-outreach-batch-N.md
-version: 1.1
+version: 1.2 — 2026-11-20: on request only; cities from the request; offer only if recorded; teacher wording
 ---
 
 # Agent 6 - School Outreach
@@ -19,8 +19,8 @@ version: 1.1
 
 | Field | Value |
 |---|---|
-| Trigger | Weekly, Tuesday |
-| Inputs | Approved target cities and school types; public school websites; `contracts/school-prospect.schema.md` |
+| Trigger | On request only (paused, D12). Not scheduled |
+| Inputs | The cities and school types named in the request; public school websites; `contracts/school-prospect.schema.md` |
 | Output | Ten **institution-level** prospect records, each with a published contact channel and a sourced personalisation detail, plus ten drafts the founder sends |
 | Acceptance rule | Every detail carries the URL it came from. **No constructed email address, ever.** A record with no published contact says so and gives the web form or switchboard instead. |
 
@@ -63,13 +63,19 @@ finding F11.)
 ```
 Follow agents/shared-controls.md.
 
-Read knowledge/audience.md (the teacher/homeschool multiplier persona),
-knowledge/brand-voice.md, knowledge/claims-allowed.md,
-knowledge/child-safety-rules.md and contracts/school-prospect.schema.md.
+Read all five knowledge files listed in agents/shared-controls.md §1 -
+audience.md holds the teacher/homeschool multiplier persona - and
+contracts/school-prospect.schema.md.
 
-Build a batch of TEN prospects from the approved target cities and school
-types. Each prospect is a SCHOOL, not a person. For each, produce a
-schema-conformant record and one draft message the founder will send.
+This agent runs on request only (paused, D12). Use the cities and school
+types named in the request. If the request names none, stop and ask for
+them - do not choose them yourself.
+
+Build a batch of up to TEN prospects from those cities and school types.
+Each prospect is a SCHOOL, not a person. For each, produce a
+schema-conformant record and one draft message the founder will send. Add
+each record as a new row at the END of logs/school-prospects.csv; never edit
+or delete an existing row.
 
 SOURCING RULES - these are hard:
 - Public sources only: the school's own website and its published pages.
@@ -89,18 +95,21 @@ SOURCING RULES - these are hard:
   invented compliment, and a school can spot a fabricated one instantly.
 - Record how long each school took. The founder needs the real cost.
 
-THE OFFER (dossier S05 channel #3):
-The full bundle, free, for classroom use, in exchange for honest feedback
-and, if it earns it, a mention in the school's parent newsletter.
+THE OFFER:
+Make an offer only if one is recorded in ops/decision-log.md. None is
+recorded today, so the draft offers nothing: it introduces KidTechies,
+mentions group access as the site words it ("Get in touch about group
+access"), and asks who the right person is. Never invent a free licence,
+a discount or a price.
 
 EACH DRAFT:
 - Under 150 words. These people are busy and screen hard.
 - Opens with the real, sourced detail about their school.
 - Leads with what a school actually screens for: no student accounts,
-  nothing about a student stored on a server, classroom-ready, printable
-  sheets for the half of the room without a device. If the AI tutor comes
-  up, say plainly that what a student types to it goes to the AI for a
-  reply and is not stored.
+  nothing about any student stored on our servers, printable sheets for
+  the half of the room without a device. If the AI tutor comes up, say
+  plainly that what a student types to it goes to the AI for a reply and
+  is not stored.
 - Does not claim classroom-readiness without qualification while
   /for-parents says a teacher is still reviewing the quiz wording.
 - Closes by asking who the right person is, not by assuming.

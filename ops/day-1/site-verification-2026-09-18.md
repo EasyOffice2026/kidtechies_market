@@ -6,6 +6,10 @@ version: 1.0
 
 # Site verification — 18 September 2026
 
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 Pre-session task from `kickoff-agenda.md`: read the live site against
 `product-facts.md` before walking into the client room.
 

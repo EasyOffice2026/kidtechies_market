@@ -1,7 +1,7 @@
 ---
 file: brand-voice.md
 owner: KidTechies (client) - voice examples require client approval
-version: 0.1-DRAFT
+version: 0.8.2-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL of the accepted/rejected examples
 ---
@@ -110,7 +110,7 @@ the US, not a stylistic preference.*
 |---|---|
 | "understand AI" | "master AI" / "become an AI expert" |
 | "8-9 hours of guided learning" | "23:48 of animated film" |
-| "buy once, keep it" | "lifetime access" (implies an account) |
+| "buy once, keep it" | "lifetime access" (a promise about someone's lifetime; the terms say "indefinitely", and that is all we can say) |
 | "try the first mission" | "start your free trial" (implies signup) |
 | "your child" | "your little one", "kiddo", "superstar" |
 | "we are still building X" | silence, or a vague "coming soon" |

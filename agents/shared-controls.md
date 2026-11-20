@@ -1,7 +1,7 @@
 ---
 file: shared-controls.md
 owner: Developer
-version: 1.0
+version: 1.1 — 2026-11-20: draft notice while facts are DRAFT, file names, no overwriting
 ---
 
 # Shared agent controls
@@ -9,9 +9,14 @@ version: 1.0
 Every agent prompt in this folder opens by referencing this file. These are the
 rules that do not vary by role.
 
+**"The founder" in these files means the approver** — the person who reviews
+drafts. Until the client names one (D14), that is Ibrahim.
+
 ## 1. Read the knowledge base first, every run
 
-Before producing anything, read from the connected `kidtechies-marketing` folder:
+Before producing anything, read these five knowledge files from the project
+folder Cowork is linked to (on the client's computer,
+`D:\marketing agent\kidtechies_market-develop`):
 
 - `knowledge/product-facts.md`
 - `knowledge/brand-voice.md`
@@ -45,9 +50,15 @@ complete and acceptable answer.
 ## 4. Product facts are exact
 
 Every KidTechies number must match `knowledge/product-facts.md` character for
-character. A fact marked `PENDING` may appear in an internal draft but the draft
-must carry a visible note that it is not yet client-confirmed. A fact marked
-`PROPOSED` may never be stated - it is not true yet.
+character.
+
+**While the `version:` line of `product-facts.md` ends in `-DRAFT`, every draft
+starts with this line, whatever facts it uses:**
+
+> Contains facts not yet client-confirmed — not for publication.
+
+After v1.0, add the same line to any draft that uses a fact not marked
+`CONFIRMED`. A fact marked `PROPOSED` may never be stated - it is not true yet.
 
 If a fact you need is not in the file, it does not exist. Say so.
 
@@ -76,7 +87,22 @@ morning review - that promise lives or dies in this summary.
 drafts/YYYY-MM-DD/<agent-number>-<agent-slug>-<item-slug>.md
 ```
 
-Example: `drafts/2026-09-21/02-content-factory-lantern-tale.md`
+`YYYY-MM-DD` is the day of the run. The exact names:
+
+| Agent | Files |
+|---|---|
+| 1 Market Listener | `01-market-listener-briefing.md` |
+| 2 Content Factory | five files: `02-content-factory-<item-slug>-article.md`, `-social.md`, `-email.md`, `-video-hook.md`, `-self-check.md` |
+| 3 Arabic Localiser | `03-arabic-localiser-<item-slug>.md` |
+| 4 Funnel Analyst | `04-funnel-analyst-week-of-<monday>.md` |
+| 5 Creative Tester | `05-creative-tester-round-<N>.md` |
+| 6 School Outreach | `06-school-outreach-batch-<N>.md` |
+
+Example: `drafts/2026-11-23/02-content-factory-lantern-tale-article.md`
+
+**Never overwrite a file.** If the name is already taken in that folder, add
+`-2` (then `-3`) before `.md`, and say so in the summary. A second run on the
+same day must not replace the first run's work.
 
 One file per deliverable, never one file with everything concatenated. The
 founder approves items individually.

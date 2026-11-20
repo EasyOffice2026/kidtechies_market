@@ -7,6 +7,10 @@ version: 1.0
 
 # Day 1 kick-off — 90 minutes
 
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 ## Before the client joins (45 min, alone)
 
 1. Run `capability-verification.md` checks 1–4 on the client's account if you

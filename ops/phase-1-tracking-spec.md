@@ -8,6 +8,13 @@ blocks: GTM Phase 1 exit test; Agent 4 (Funnel Analyst) live acceptance
 
 # Phase 1 tracking spec
 
+> **Historical record — built and live.** All three were built: Umami since
+> 2026-11-09 (not Plausible), the email capture since 2026-11-07, and all three
+> events seen on a live run on 2026-11-20. Kept for how it was designed. Some
+> lines below are out of date — for example, children are not stored as "a
+> nickname and an age group"; nothing about a child is stored at all. For what
+> is true now, read `knowledge/product-facts.md` and `contracts/analytics-csv.md`.
+
 Three things to build on kidtechies.com. Together they unblock four of the six
 weekly metrics and the entire email programme.
 
@@ -153,7 +160,7 @@ From the Growth Dossier:
 > everything: if children don't finish Mission 1, no amount of traffic will save
 > the funnel, and the problem is the product, not the marketing."
 
-Without these two events there is no completion rate, and every pound spent on
+Without these two events there is no completion rate, and every dollar spent on
 traffic is spent blind.
 
 ---
@@ -185,8 +192,11 @@ Want the printable activity sheet and Maya's weekly AI question for parents?
 
 [ parent's email ]                    [ Send it ]
 
-Parent's email, not your child's. One email a week. Unsubscribe any time.
+Parent's email, not your child's. A few emails in the first ten days, then one a week. Unsubscribe any time.
 ```
+
+*(Corrected 2026-11-20 to the live wording. The first version said "One email a
+week", which was false: the welcome run is five emails in ten days.)*
 
 The label **"parent's email, not your child's"** is the entire design. It is
 what keeps the child-privacy promise intact while building a list, and it must

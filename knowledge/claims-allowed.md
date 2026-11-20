@@ -1,7 +1,7 @@
 ---
 file: claims-allowed.md
 owner: KidTechies (client) - client-approved representatives only
-version: 0.1-DRAFT
+version: 0.8.2-DRAFT
 last-approved: NOT YET APPROVED
 status: AWAITING CLIENT APPROVAL
 ---
@@ -47,6 +47,7 @@ These are descriptions of what the product is, all traceable to
 | **Claims about a named child** | No real, identifiable child in copy, imagery or testimonial. |
 | **Stale privacy claims** | Any privacy statement not currently true in `product-facts.md`. |
 | **Privacy claims with the mode dropped** | "No account, no sign-up, no email address", "progress never leaves the device", "nothing about your child leaves the device" — stated about the product as a whole. All true of guest mode, all false for parent accounts. Name the mode or do not make the claim. |
+| **Analytics denial** | "No tracking scripts." "No third-party analytics." "No analytics." "We don't track anything." All false since 2026-11-09: Umami counts visits. Say "no advertising, and no cookies used for tracking", or the `/privacy` line in `product-facts.md`. |
 | **Runtime as headline value** | "23:48 of animated film" beside the price. See `product-facts.md`. |
 | **Planned features as if they exist** | "Share your creations with the community." "Choose Beginner, Intermediate or Advanced." "Watch the video lessons." "Play My World." "Subscribe." All are future plans in `ops/product-roadmap.md` (2026-11-11), not features. Describe only what `product-facts.md` lists. |
 | **"Less than three months of the alternatives"** | Retired. The framing assumed competitors at $11–25/month; Tynker is published at $7.50, where $70 is about nine months. A parent can check this in one click. The client chose a different price story on 2026-10-18 — below. |
@@ -91,9 +92,16 @@ changes, this section changes first — before any agent writes about price.
 ## The free-mission call to action
 
 The dossier is emphatic that the zero-friction trial is the single best asset
-the company owns. It is the **only** call to action in ads, posts and emails:
+the company owns. It is the **only** call to action in everything the agents
+draft — articles, posts, ads, video hooks and the Content Factory's nurture
+email:
 
 > "Try the first mission. Nothing to sign up for."
 
 One natural placement per piece, where it genuinely helps the reader. Not
 repeated, not stacked with a second offer, never a hard sell.
+
+*Scope:* the site's own welcome emails are product copy, not agent drafts. Email
+4 there links to the pricing page, after the parent has already finished the
+free mission. That is outside this rule; an agent-drafted email still carries
+only the free-mission link.

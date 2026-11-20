@@ -1,9 +1,9 @@
 ---
 agent: 5 - Creative Tester
-cadence: Fortnightly
-needs: Five message pillars + contracts/creative-results.schema.md log
+cadence: Fortnightly — scheduled only once the client decides to run an ad test (D16); idle until then
+needs: Five message pillars + logs/creative-results.csv (contracts/creative-results.schema.md)
 output: drafts/YYYY-MM-DD/05-creative-tester-round-N.md
-version: 1.0
+version: 1.1 — 2026-11-20: log path, append-only, lowercase status
 ---
 
 # Agent 5 - Creative Tester
@@ -22,9 +22,9 @@ version: 1.0
 ```
 Follow agents/shared-controls.md.
 
-Read knowledge/audience.md (the five message pillars, ranks 1-5),
-knowledge/brand-voice.md, knowledge/claims-allowed.md and
-knowledge/child-safety-rules.md. Then read the creative results log per
+Read all five knowledge files listed in agents/shared-controls.md §1 -
+audience.md holds the five message pillars, ranks 1-5. Then read the
+creative results log, logs/creative-results.csv, per
 contracts/creative-results.schema.md.
 
 Produce:
@@ -53,8 +53,10 @@ Rules:
 - Every variant obeys claims-allowed.md and child-safety-rules.md. Ad copy
   is the highest-risk surface for a prohibited claim because short copy
   tempts overstatement - check it hardest here.
-- Append every new variant to the results log with a fresh variant_id and
-  status PENDING.
+- Add every new variant as a new row at the END of logs/creative-results.csv,
+  with the next unused variant_id and status `pending` (lowercase, as the
+  schema says). The log is append-only for you: never edit, reorder or
+  delete an existing row. Results and verdicts are entered by the approver.
 ```
 
 ## The budget boundary

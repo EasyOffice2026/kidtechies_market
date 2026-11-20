@@ -6,6 +6,10 @@ created: 2026-10-17
 
 # Merging Parts 1 and 2 — `feature/part-1-website` → `main`
 
+> **Historical record (banner added 2026-11-20).** Kept as written at the time.
+> Parts of it are out of date — do not act on it. For the current state, read
+> `ops/handover.md` and `ops/decision-log.md`.
+
 The product repo (`AI for kid/AI-tutor`) has 15 commits on this branch,
 nothing merged, nothing deployed. The live site still says "No account, no
 sign-up, no email address" to parents. That is the reason to merge soon.

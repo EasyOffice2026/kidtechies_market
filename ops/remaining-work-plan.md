@@ -48,8 +48,8 @@ Part 1 should start before it.
 
 **Repo:** `C:\restuarant\AI for kid\AI-tutor` (Next.js 14, Drizzle/Postgres, Stripe)
 
-**Why it comes first:** the dossier's rule is "fix the funnel before you spend a
-riyal." Running campaigns before this is paying to fill a bucket with no bottom.
+**Why it comes first:** the dossier's rule is to fix the funnel before spending a
+single dollar. Running campaigns before this is paying to fill a bucket with no bottom.
 It also contains the one urgent item in the whole plan.
 
 | # | Task | Owner | Effort | Done when |
@@ -66,7 +66,7 @@ It also contains the one urgent item in the whole plan.
 | 1.9 | Replace the template text on `/terms` — *"whoever operates this installation of AI for Kids"* | Dev | ¼ day | A real company and contact named |
 | 1.10 | One brand name: **KidTechies** in title, footer and metadata; "AI for kids" as descriptor only (D3) | Dev | ¼ day | `SITE.name` and metadata updated |
 | 1.11 | Move the build-status caveats (no subtitles, placeholder art, quizzes under review) to a dated **"What we're building next"** page | Dev | ½ day | Off the page where parents pay |
-| 1.12 | **Teacher / school page**: no student accounts, no data collected, printables, a "request a classroom licence" form | Dev | 2 days | Live, linked from the parent page |
+| 1.12 | **Teacher / school page**: no student accounts, nothing about any student stored on our servers, printables, a "request a classroom licence" form | Dev | 2 days | Live, linked from the parent page |
 | 1.13 | **Arabic landing page**: one RTL page explaining the product for parents who search in Arabic | Dev | 2 days | Live after native review (D6) |
 | ~~1.14~~ | ~~Confirm the certificate route~~ — **done 2026-10-17**: live at `/certificate`, fact promoted to verified | Dev | — | Done |
 
@@ -167,7 +167,7 @@ depends on how fast decisions come back.
 |---|---|---|---|---|
 | 3.1 | **Capability check on the client's Claude account** (D4) — scheduled tasks, skills, web research, folder reads *inside a scheduled run*. Procedure: `ops/day-1/capability-verification.md` | Dev + Client | ½ day | Confirmed, or manual-trigger mode adopted |
 | 3.2 | **Fact sign-off** (D1) → knowledge base **v1.0**; flip PENDING and SITE-VERIFIED rows to CONFIRMED | Client → Dev | ½ day | `product-facts.md` at v1.0 |
-| 3.3 | Setup: connect the folder, install the `kidtechies-voice` skill, create six scheduled tasks, connect Drive | Dev | ½ day | All six on cadence |
+| 3.3 | Setup: connect the folder, install the `kidtechies-voice` skill, create the scheduled tasks (no Drive — the folder is on the client's computer; see `ops/agent-runbook.md` for which agents are scheduled) | Dev | ½ day | All scheduled agents on cadence |
 | 3.4 | **Re-run tests on the client's account**: class 1 (needs v1.0), class 2 in full, class 4, cases 5.1 / 5.2 / 5.6 | Dev | ½ day | All pass — no partial pass on child safety |
 | 3.5 | **Regenerate the withdrawn drafts** — the UAE package (EN + AR) and ad variants V-003 / V-004 were written on the false privacy claim; re-run Agents 2, 3 and 5 against the corrected knowledge base | Dev | ½ day | Five drafts and two variants replaced |
 | 3.6 | **Agent 6 redesign** — institution-level prospects, published channels only, founder places first contact; update prompt and prospect schema; budget ~20 min per school | Dev | 1 day | Batch of ten produced honestly; needs the target school list |
@@ -540,7 +540,7 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 | Vercel: `NEWSLETTER_HEARTBEAT_URL`, `OPS_ALERT_EMAIL` | Developer | Both set, redeployed 2026-11-20. Still to see: healthchecks.io green after the next daily run. Free healthchecks.io check: period 1 day, grace 2 hours |
 | Re-run the daily email job the same day; it must send nothing | Developer | The Phase 1 exit test's last open line. Touches production: run only with the client's OK |
 | Class 4 cases 4.2–4.7 on the client's account | Developer | 4.1 passed there 2026-11-19; fixtures in `tests/fixtures/` |
-| Regenerate the withdrawn drafts (task 3.5) | Developer | UAE package EN + AR, ad variants V-003 / V-004. Arabic is not used before D6; the ad variants only if D16 says test |
+| Regenerate the withdrawn drafts (task 3.5) | Developer | **Done 2026-10-17** — see Part 3 progress: `drafts/2026-10-17/` holds the UAE article (EN + AR) and the self-check; V-011 / V-012 replace V-003 / V-004 in the log. Nothing left to build. The Arabic waits for D6, and the ad variants are tested only if D16 says test |
 | Vercel → Domains: redirect `kidtechies.com` to `www.kidtechies.com` | Developer | **Done 2026-11-15** — 308 to www, every path kept; checked live |
 | First weekly export | Developer | **Moved to the first full week after go-live.** Every visit, sign-up and event so far is the developer's own testing (confirmed 2026-11-20), so the week of 2026-11-09 is not a report. Before then: prove the Stripe half once with a **live** read-only key (`.env.local` holds a test key, which the export refuses), exclude the team's own browsers from Umami, and clear test subscribers so week one starts at zero. Free-plan mode merged (PR #5), test-key guard merged (PR #6) |
 | D14, D6, D15, D1, D11, D7, D16, D17 | Client | D4 closed 2026-11-12 on the client's own account |

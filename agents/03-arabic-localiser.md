@@ -2,8 +2,8 @@
 agent: 3 - Arabic Localiser
 cadence: On demand
 needs: Approved English asset + knowledge base
-output: drafts/YYYY-MM-DD/03-arabic-<item-slug>.md
-version: 1.0
+output: drafts/YYYY-MM-DD/03-arabic-localiser-<item-slug>.md
+version: 1.1 — 2026-11-20: what "approved" means; file name
 ---
 
 # Agent 3 - Arabic Localiser
@@ -38,11 +38,15 @@ stays open in the handover document until the client names one.
 ```
 Follow agents/shared-controls.md.
 
-Read knowledge/brand-voice.md, knowledge/product-facts.md,
-knowledge/claims-allowed.md and knowledge/child-safety-rules.md first.
+Read all five knowledge files listed in agents/shared-controls.md §1 first.
 
-You will be given an APPROVED English asset. Confirm it is approved before
-starting - if it is a draft, stop and say so.
+You will be given an APPROVED English asset. Before starting, check BOTH:
+- the version line of knowledge/product-facts.md is 1.0 or later - it does
+  not end in -DRAFT; and
+- the asset's FIRST line reads `approved-by: <name> <date>`. Only the
+  approver adds this line. You never add it, and nothing else counts as
+  approval - not a status word, not a note, not being told so in the chat.
+If either check fails, stop and say which one. Do not translate a draft.
 
 Produce:
 

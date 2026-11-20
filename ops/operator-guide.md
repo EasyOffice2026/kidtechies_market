@@ -2,7 +2,7 @@
 file: operator-guide.md
 owner: Developer -> KidTechies at handover
 audience: Ibrahim, who runs KidTechies marketing day to day (client decision D9, 2026-10-18). Written to be used at 7am, not studied.
-version: 1.1
+version: 1.2 — 2026-11-20: review only until D1; schedule; approving for Arabic; personal data in a file
 ---
 
 # Operator guide
@@ -12,10 +12,10 @@ review job instead of a writing job. About five hours a week, most of it
 reading. This guide is how you do that without needing the developer.
 
 *Where this guide says "the founder", read "Ibrahim" — he runs the plan day to
-day. Two changes since it was first written: school outreach (Tuesday) is
-paused, because the focus is worldwide online registration; and on Fridays the
-Funnel Analyst can show which countries respond best, once the by-country
-export is in the inbox.*
+day, until the client names the approver (D14). Two changes since it was first
+written: school outreach (Tuesday) is paused, because the focus is worldwide
+online registration; and on Fridays the Funnel Analyst can show which countries
+respond best, once the by-country file is in `inbox\`.*
 
 ## The one rule
 
@@ -25,14 +25,27 @@ and it is the reason you can let them run unsupervised.
 
 ## Your week
 
+**Until D1, review only — nothing is posted.** Every draft carries a "not yet
+client-confirmed" notice until the client approves the fact list. Read,
+approve or send back as below, but post nothing. From D1 on, post what you
+approve and add a line to `ops/publishing-log.md`.
+
 | Day | Waiting for you | What you do | Time |
 |---|---|---|---|
 | Monday | Market briefing + content package 1 | Read the briefing, pick the week's angle, approve or redirect the package | 45 min |
-| Tuesday | Ten school prospects with drafted emails | Read each, **add one human line**, send | 40 min |
-| Wednesday | Content package 2 + Arabic of last week's winner | Approve, publish, post | 45 min |
+| Tuesday | Nothing — school outreach is **paused** (D12). It runs only when you ask for it | — | — |
+| Wednesday | Content package 2 | Approve or send back. After D1, post what you approved | 45 min |
 | Thursday | — | Talk to two customers. Ask why they bought and what nearly stopped them. | 60 min |
-| Friday | Six numbers, week-on-week, one recommendation | Act on the one recommendation. Only one. | 45 min |
+| Friday | Six numbers, week-on-week, one recommendation | Act on the one recommendation. Only one. The first real report is the first full week after go-live | 45 min |
 | Saturday | Content package 3 queued for next week | Skim, queue, close the laptop | 20 min |
+
+Arabic is not weekly. It waits for a native reviewer (D6) and runs only when
+you ask for it.
+
+Scheduled tasks: **KT 1** Market Listener (Monday 07:00), **KT 2** Content
+Factory (Monday, Wednesday, Saturday 08:00) and **KT 4** Funnel Analyst
+(Friday 09:00). **KT 5** Creative Tester is added only once D16 says to run an
+ad test. Agents 3 and 6 are never scheduled.
 
 Thursday is the day with no agent work, and it is the most important one. It is
 also where `brand-voice.md` gets better — when a parent says something in their
@@ -70,6 +83,19 @@ back a specific draft, reply in the task with what is wrong; be concrete ("the
 opening is generic, start with the parent's question") rather than
 evaluative ("make it better").
 
+### Approve a draft for Arabic
+
+Agent 3 translates only a draft you have approved. To approve one, open the
+file and add this as its **first line**, with your name and the date:
+
+```
+approved-by: Ibrahim 2026-12-01
+```
+
+Only you add this line — never ask an agent to add it. Agent 3 also refuses
+anything while `product-facts.md` is still a DRAFT, so before D1 it will say
+no. That is correct.
+
 ### Reject output
 
 Move the draft to `drafts/YYYY-MM-DD/rejected/` and note why in one line. Once a
@@ -82,6 +108,7 @@ underspecified. Rejections are data, not waste.
 |---|---|
 | Agent produced nothing | Check it could read the knowledge folder. This is the usual cause. |
 | Agent says a CSV column is missing | It is right. Fix the export — do not ask it to work around it. |
+| Funnel Analyst stopped because a file holds personal data (an email address, a name) | **Delete that file from `inbox\` at once.** Do not open it, copy it or run the agent on it again. Ask for a clean export. |
 | A number looks wrong | Stop using that output. Check `product-facts.md`, then rerun. Do not correct it by hand and publish — the next run will reproduce the error. |
 | Agent claims it published something | Serious. It did not, but the wording is a fault. Report it to the developer. |
 | Output has drifted generic over weeks | The voice file has gone stale. Thursday calls are the fix. |
