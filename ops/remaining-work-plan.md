@@ -530,14 +530,14 @@ of 16; the printable sheet names the Rabbit folder; and seven emoji that Windows
 
 | Item | Who | Note |
 |---|---|---|
-| `EMAIL_FROM` = `KidTechies <noreply@kidtechies.com>` in Vercel | Developer | Gmail shows only the bare address today |
+| `EMAIL_FROM` = `KidTechies <noreply@kidtechies.com>` in Vercel | Developer | **Done 2026-11-20** — Gmail shows "KidTechies" on a live sign-up |
 | Confirm Umami shows `mission_start`, `mission_complete`, `email_captured` | Developer | Umami is live since 2026-11-09 (Plausible sign-up failed; `feature/umami-analytics` added Umami as a provider). Script and disclosure verified on the live site; the events still need one test run |
 | `news.kidtechies.com` for the newsletter | Developer | Optional now that the root domain sends; keeps a marketing complaint off account email |
 | New logo artwork reading "KidTechies" | Client's designer | Header and footer still show "AI for Kids" |
 | Make `EasyOffice2026/kidtechies_market` private | Client | It is public; the developer has write, not admin, access |
 | Move Vercel to the client's repo and a Pro plan | Client + developer, at handover | Vercel Hobby is for non-commercial use; the site takes payments |
 | Merge `feature/marketing-ops` (product repo) | Developer | **Done** — PR #3. Weekly export, failure alerts, 20 more weekly questions, canonical and www fixes — see "Review, 2026-11-13" below |
-| Vercel: `NEWSLETTER_HEARTBEAT_URL`, `OPS_ALERT_EMAIL` | Developer | Heartbeat URL saved; `OPS_ALERT_EMAIL` still to add, then one redeploy. Free healthchecks.io check: period 1 day, grace 2 hours |
+| Vercel: `NEWSLETTER_HEARTBEAT_URL`, `OPS_ALERT_EMAIL` | Developer | Both set, redeployed 2026-11-20. Still to see: healthchecks.io green after the next daily run. Free healthchecks.io check: period 1 day, grace 2 hours |
 | Re-run the daily email job the same day; it must send nothing | Developer | The Phase 1 exit test's last open line. Touches production: run only with the client's OK |
 | Class 4 cases 4.2–4.7 on the client's account | Developer | 4.1 passed there 2026-11-19; fixtures in `tests/fixtures/` |
 | Regenerate the withdrawn drafts (task 3.5) | Developer | UAE package EN + AR, ad variants V-003 / V-004. Arabic is not used before D6; the ad variants only if D16 says test |
